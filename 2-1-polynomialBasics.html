@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>2.1 Polynomial Basics</title>
+
+		<meta
+			name="description"
+			content="A framework for easily creating beautiful presentations using HTML"
+		/>
+		<meta name="author" content="Hakim El Hattab" />
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+
+		<link rel="stylesheet" href="dist/reset.css" />
+		<link rel="stylesheet" href="dist/reveal.css" />
+		<link rel="stylesheet" href="black.css" id="theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="var(--primary)">
+					<h3>Thursday, August 13, 2026</h3>
+					<h1><span>2.1</span> Polynomial Basics</h1>
+				</section>
+
+				<section>
+					<div class="callout">
+						<h2>What is a <i>polynomial</i>?</h2>
+					</div>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="definition" data-id="top">Polynomial</div>
+						<p data-id="def">The word <b>polynomial</b> literally means <span>"many terms."</span></p>
+						<div data-id="ex" class="examples"></div>
+					</section>
+					<section data-auto-animate>
+						<div class="definition" data-id="top">Polynomial</div>
+						<p data-id="def">The word <b>polynomial</b> literally means <span>"many terms."</span></p>
+						<p>A <b>term</b> consists of a number, called a <span>coefficient</span>, multiplied by a <span>variable</span> with a positive, whole number <span>power</span>.</p>
+						<h6>Terms are separated by \(+\) and \(-\); when separating or rearranging terms, you should keep minuses attached as a negative coefficient.</h6>
+						<div data-id="ex" class="examples"></div>
+					</section>
+					<section data-auto-animate data-auto-animate-restart class="callout">
+						<div data-id="equation">$$f(x) = 3x^3-5x+2$$</div>
+						<h4>polynomial example</h4>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="equation">$$f(x) = {\color{#386ef6}3x^3}-{\color{#386ef6}5x}+{\color{#386ef6}2}$$</div>
+						<h4>terms</h4>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="equation">$$f(x) = {\color{#386ef6}3}x^3{\color{#386ef6}-5}x+{\color{#386ef6}2}$$</div>
+						<h4>coefficients</h4>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="equation">$$f(x) = 3 {\color{#386ef6} x}^3-5{\color{#386ef6} x}+2$$</div>
+						<h4>variable</h4>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="equation">$$f(x) = 3  x^{\color{#386ef6}3}-5 x+2$$</div>
+						<h4>powers</h4>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="equation">$$f(x) = 3  x^{\color{#386ef6}3}-5 x{\color{#386ef6}^1}+2$$</div>
+						<h4>powers</h4>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<div class="definition" data-id="title">Polynomial Degree</div>
+						<p data-id="definition">The <b>degree</b> of a polynomial is the <span>highest power</span> on the variable.</p>
+						<div class="examples"></div>
+					</section>
+					
+					<section data-auto-animate class="callout">
+						<div data-id="eq1">$$f(x)=3x^3- 5x+2$$</div>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="eq1">$$f(x)=3x^{\color{#386ef6} 3} -5x+2$$</div>
+						<h4>3rd degree</h4>
+					</section>
+
+					<section data-auto-animate data-auto-animate-restart class="callout">
+						<div data-id="eq2">$$f(x)=x^2 + 12x + x^8$$</div>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="eq2">$$f(x)=x^2 + 12x + x \color{#386ef6} ^8$$</div>
+						<h4>8th degree</h4>
+					</section>
+					
+					<section data-auto-animate data-auto-animate-restart class="callout">
+						<div data-id="eq3">$$f(x)=7x +8$$</div>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="eq3">$$f(x)=7x +8$$</div>
+						<h4>1st degree</h4>
+					</section>
+					
+					<section data-auto-animate data-auto-animate-restart class="callout">
+						<div data-id="eq3">$$f(x)=x^2+3$$</div>
+					</section>
+					<section data-auto-animate class="callout">
+						<div data-id="eq3">$$f(x)=x^{\color{#386ef6}2}+3$$</div>
+						<h4>2nd degree</h4>
+					</section>
+				</section>
+
+				<section>
+					<div class="definition">Quadratic</div>
+					<p>A <span>second degree</span> polynomial is called a <b>quadratic</b>.</p>
+				</section>
+				
+				<section>
+					<div class="definition">Binomial</div>
+					<p>A polynomial with <span>two terms</span> is called a <b>binomial</b>.</p>
+				</section>
+
+				<section>
+					<section>
+						<div class="definition">Leading Term</div>
+						<p>The <b>leading term</b> contains the <span>variable with the highest power</span>.</p>
+						<h6>It's good practice for this term to be first in the polynomial, and then order the rest of the terms in descending degree.</h6>
+					</section>
+				
+					<section data-transition="none">
+						<div class="pairshare">Workbook P.32</div>
+						<p style="font-size: 3rem;">Identify the leading term, leading degree, and leading coefficient.</p>
+						<div class="problems">
+							<div class="num">a</div>
+							<p>\( f (x) = 3 + 2x^2 + 3x - 3x^3 \)</p>
+							<div class="num">b</div>
+							<p>\( g(x) = 5x^4 - 2x^3 + 2x - 4x^2 \)</p>
+							<div class="num">c</div>
+							<p>\( h(x) = 6 + 5x + 4x^2 \)</p>
+							<div class="num">d</div>
+							<p>\( b(x) = 3x^5 - 8x^7 + 2x - 4x^2 \)</p>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="pairshare">Workbook P.32</div>
+						<p style="font-size: 3rem;">Identify the leading term, leading degree, and leading coefficient.</p>
+						<div class="problems">
+							<div class="num">a</div>
+							<p>\( f (x) = 3 + 2x^2 + 3x \color{#386ef6}- 3x^3 \)</p>
+							<div class="num">b</div>
+							<p>\( g(x) = {\color{#386ef6}5x^4} - 2x^3 + 2x - 4x^2 \)</p>
+							<div class="num">c</div>
+							<p>\( h(x) = 6 + 5x + {\color{#386ef6}4x^2} \)</p>
+							<div class="num">d</div>
+							<p>\( b(x) = 3x^5 {\color{#386ef6}- 8x^7} + 2x - 4x^2 \)</p>
+						</div>
+					</section>
+				</section>
+
+				<section data-background="rgb(var(--accent))">
+					<div class="cover">
+						<h2>Polynomial Algebra</h2>
+						<p>Adding, Subtracting, & Multiplying</p>
+					</div>
+				</section>
+
+				<section class="callout" data-auto-animate>
+					<!-- <h2 style="color: rgb(var(--theorem))">Distributive Property</h2> -->
+					<div data-id="title" class="theorem">Distributive Property</div>
+					$$?$$
+				</section>
+				<section class="callout" data-auto-animate>
+					<!-- <h2 style="color: rgb(var(--theorem))">Distributive Property</h2> -->
+					<div data-id="title" class="theorem">Distributive Property</div>
+					$$(a+b)c = a\cdot c + b\cdot c$$
+				</section>
+
+				<section>
+					<section class="bodySlide">
+						<h2>Adding & Subtracting</h2>
+						<p>Group terms with the same exponents. Only the coefficient changes; the exponent remains the same.</p>
+						<p>This can be called <span>combining like terms</span>.</p>
+					</section>
+					<section data-auto-animate>
+						<div data-id="equation">$$ (x^3+8x+3) + (7x^2-2x+2) = $$</div>
+					</section>
+					<section data-auto-animate>
+						<div data-id="equation">$$ (x^3+8x+3) + (7x^2-2x+2) = $$</div>
+						<div data-id="chart">$$\begin{array}{c c c} +x^3 &  & +8x & +3 \\ & +7x^2 & -2x & +2 \\ \hline \color{#FAFAFA} x^3 & \color{#FAFAFA}+ 7x^2 & \color{#FAFAFA}+ 6x & \color{#FAFAFA}+5 \end{array}$$</div>
+					</section>
+					<section data-auto-animate>
+						<div data-id="equation">$$ (x^3+8x+3) + (7x^2-2x+2) = $$</div>
+						<div data-id="chart">$$\begin{array}{c c c} +x^3 &  & +8x & +3 \\ & +7x^2 & -2x & +2 \\ \hline \color{#386ef6} x^3 & \color{#386ef6} +7x^2 & \color{#386ef6} + 6x & \color{#386ef6} +5 \end{array}$$</div>
+					</section>
+					<section data-auto-animate>
+						<div data-id="equation">$$ (x^3+8x+3) + (7x^2-2x+2) = $$</div>
+						<div>$$\color{#386ef6} x^3 +7x^2 + 6x +5 $$</div>
+					</section>
+					<section data-transition="none">
+						<div class="pairshare">Workbook P.33</div>
+						<div class="problems">
+							<div class="num">a</div>
+							<p>\(4x^2-5x + 1 + 3x^2-8x-9\)</p>
+							<div class="num">b</div>
+							<p>\((-10x^4 - 6x^3 + x) + (6x^4 - 8x^3 -3)\)</p>
+							<div class="num">c</div>
+							<p>\((9x^2 - 7x + 4) - (x^2 - 3x + 8)\)</p>
+							<div class="num">d</div>
+							<p>\(3x^2 - 2x + 9 - (x^2 - 4x + 5)\)</p>
+							<div class="num">e</div>
+							<p>\((6x^4 + 3x^2 + 8x) - (-5x^4 - 4x^2 + 5)\)</p>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="pairshare">Workbook P.33</div>
+						<div class="problems">
+							<div class="num">a</div>
+							<p>\(4x^2-5x + 1 + 3x^2-8x-9\color{#386ef6} = 7x^2 - 13x - 8\)</p>
+							<div class="num">b</div>
+							<p>\((-10x^4 - 6x^3 + x) + (6x^4 - 8x^3 -3)\)</p>
+							<div class="num">c</div>
+							<p>\((9x^2 - 7x + 4) - (x^2 - 3x + 8)\)</p>
+							<div class="num">d</div>
+							<p>\(3x^2 - 2x + 9 - (x^2 - 4x + 5)\)</p>
+							<div class="num">e</div>
+							<p>\((6x^4 + 3x^2 + 8x) - (-5x^4 - 4x^2 + 5) \)</p>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="pairshare">Workbook P.33</div>
+						<div class="problems">
+							<div class="num">a</div>
+							<p>\(4x^2-5x + 1 + 3x^2-8x-9\color{#386ef6} = 7x^2 - 13x - 8\)</p>
+							<div class="num">b</div>
+							<p>\((-10x^4 - 6x^3 + x) + (6x^4 - 8x^3 -3)\color{#386ef6} = -5x^4 - 14x^3 + x - 3\)</p>
+							<div class="num">c</div>
+							<p>\((9x^2 - 7x + 4) - (x^2 - 3x + 8)\)</p>
+							<div class="num">d</div>
+							<p>\(3x^2 - 2x + 9 - (x^2 - 4x + 5)\)</p>
+							<div class="num">e</div>
+							<p>\((6x^4 + 3x^2 + 8x) - (-5x^4 - 4x^2 + 5) \)</p>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="pairshare">Workbook P.33</div>
+						<div class="problems">
+							<div class="num">a</div>
+							<p>\(4x^2-5x + 1 + 3x^2-8x-9\color{#386ef6} = 7x^2 - 13x - 8\)</p>
+							<div class="num">b</div>
+							<p>\((-10x^4 - 6x^3 + x) + (6x^4 - 8x^3 -3)\color{#386ef6} = -5x^4 - 14x^3 + x - 3\)</p>
+							<div class="num">c</div>
+							<p>\((9x^2 - 7x + 4) - (x^2 - 3x + 8)\color{#386ef6} = 8x^2 - 4x - 4\)</p>
+							<div class="num">d</div>
+							<p>\(3x^2 - 2x + 9 - (x^2 - 4x + 5)\)</p>
+							<div class="num">e</div>
+							<p>\((6x^4 + 3x^2 + 8x) - (-5x^4 - 4x^2 + 5) \)</p>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="pairshare">Workbook P.33</div>
+						<div class="problems">
+							<div class="num">a</div>
+							<p>\(4x^2-5x + 1 + 3x^2-8x-9\color{#386ef6} = 7x^2 - 13x - 8\)</p>
+							<div class="num">b</div>
+							<p>\((-10x^4 - 6x^3 + x) + (6x^4 - 8x^3 -3)\color{#386ef6} = -5x^4 - 14x^3 + x - 3\)</p>
+							<div class="num">c</div>
+							<p>\((9x^2 - 7x + 4) - (x^2 - 3x + 8)\color{#386ef6} = 8x^2 - 4x - 4\)</p>
+							<div class="num">d</div>
+							<p>\(3x^2 - 2x + 9 - (x^2 - 4x + 5)\color{#386ef6} = 2x^2 + 2x + 4\)</p>
+							<div class="num">e</div>
+							<p>\((6x^4 + 3x^2 + 8x) - (-5x^4 - 4x^2 + 5) \)</p>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="pairshare">Workbook P.33</div>
+						<div class="problems">
+							<div class="num">a</div>
+							<p>\(4x^2-5x + 1 + 3x^2-8x-9\color{#386ef6} = 7x^2 - 13x - 8\)</p>
+							<div class="num">b</div>
+							<p>\((-10x^4 - 6x^3 + x) + (6x^4 - 8x^3 -3)\color{#386ef6} = -5x^4 - 14x^3 + x - 3\)</p>
+							<div class="num">c</div>
+							<p>\((9x^2 - 7x + 4) - (x^2 - 3x + 8)\color{#386ef6} = 8x^2 - 4x - 4\)</p>
+							<div class="num">d</div>
+							<p>\(3x^2 - 2x + 9 - (x^2 - 4x + 5)\color{#386ef6} = 2x^2 + 2x + 4\)</p>
+							<div class="num">e</div>
+							<p>\((6x^4 + 3x^2 + 8x) - (-5x^4 - 4x^2 + 5) \color{#386ef6} = x^4 + 7x^2 + 8x - 5\)</p>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section class="bodySlide">
+						<h2>Multiplying</h2>
+						<p>Each term is multiplied by each term in the second term, using the Distributive Property repeatedly. Then combine like terms.</p>
+						<p style="max-width: 100%; line-height: 200%; color: rgb(var(--accent));">\( \begin{array}{l l}f(x) &= (3x^2 - 2x + 1) \cdot (2x + 3) \\
+							& = 3x^2 \cdot (2x + 3) - 2x \cdot (2x + 3) + 1 \cdot (2x + 3) \\
+							& = 6x^3 + 9x^2 - 4x^2 - 6x + 2x + 3 \\
+							& = 6x^3 + 5x^2 - 4x + 3 \end{array} \)</p>
+					</section>
+					<section>
+						<div class="pairshare">Workbook P.34</div>
+						<div class="problems2">
+							<div class="num">a</div>
+							<p>\(f(x) = (3x + 2) \cdot (2x^3 - 2x^2 + 4) \)</p>
+							<div class="num">d</div>
+							<p>\(b(x) = (-2x + 5) \cdot (-3x - 4) \)</p>
+							<div class="num">b</div>
+							<p>\(g(x) = (x - 3) \cdot (x^2 + 3x + 4)\)</p>
+							<div class="num">e</div>
+							<p>\(q(x) = (-2x + 7) \cdot (-3x - 8)\)</p>
+							<div class="num">c</div>
+							<p>\(h(x) = (2x - 1) \cdot (3x + 2)\)</p>
+							<div class="num">f</div>
+							<p>\(q(x) = (2x + 3) \cdot (2x + 3)\)</p>
+						</div>
+					</section>
+				</section>
+
+				<section class="bodySlide" data-auto-animate="">
+					<h2 data-id="title">Special Cases</h2>
+					<ul>
+						<li>
+							<p data-id="1"><b>Perfect Squares</b>: two identical binomials multiplied by each other</p>
+							<p data-id="eq1">\( (ax+b)\cdot(ax+b)\)</p>
+						</li>
+						<li data-id="list2">
+							<p data-id="2"><b>Difference of Squares</b>: two similar binomials multiplied by each other with opposite signs</p>
+							<p data-id="eq2">\( (ax+b)\cdot(ax-b)\)</p>
+						</li>
+					</ul>
+				</section>
+				<section class="bodySlide" data-auto-animate="">
+					<h2 data-id="title">Special Cases</h2>
+					<ul>
+						<li>
+							<p data-id="1"><b>Perfect Squares</b>: two identical binomials multiplied by each other</p>
+							<p data-id="eq1">\( (ax+b)\cdot(ax+b) \color{#386ef6}= a^2x^2 + 2abx + b^2\)</p>
+						</li>
+						<li data-id="list2">
+							<p data-id="2"><b>Difference of Squares</b>: two similar binomials multiplied by each other with opposite signs</p>
+							<p data-id="eq2">\( (ax+b)\cdot(ax-b) \color{#386ef6}= a^2x^2-b^2\)</p>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<div class="footer">
+			
+		</div>
+				
+		<script src="dist/reveal.js"></script>
+		<script src="dist/plugin/zoom.js"></script>
+		<script src="dist/plugin/notes.js"></script>
+		<script src="dist/plugin/search.js"></script>
+		<script src="dist/plugin/markdown.js"></script>
+		<script src="dist/plugin/highlight.js"></script>
+		<script>
+			// Also available as an ES module, see: https://revealjs.com/initialization/
+			// import Reveal from 'reveal.js';
+			// import RevealZoom from 'reveal.js/plugin/zoom';
+			// import RevealNotes from 'reveal.js/plugin/notes';
+			// import RevealSearch from 'reveal.js/plugin/search';
+			// import RevealMarkdown from 'reveal.js/plugin/markdown';
+			// import RevealHighlight from 'reveal.js/plugin/highlight';
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,// Remove white margin around the content
+				margin: 0.15,
+				
+				// Optional: Define custom presentation dimensions
+				width: 1920,
+				height: 1084,
+				
+				// Optional: Disable default scaling for full control
+				// disableLayout: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
+			});
+		</script>
+
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		
+        <script>
+            window.MathJax = {
+                loader: {load: ["output/chtml", '[tex]/color', '[tex]/textmacros', "input/tex"]},
+                tex: {packages: {'[+]': ['color'], '[+]': ['textmacros']}},
+				output: {
+					scale: 1,                      // global scaling factor for all expressions
+					minScale: .5,                  // smallest scaling factor to use
+					mtextInheritFont: false,       // true to make mtext elements use surrounding font
+					merrorInheritFont: false,      // true to make merror text use surrounding font
+					mtextFont: '',                 // font to use for mtext, if not inheriting (empty means use MathJax fonts)
+					merrorFont: 'serif',           // font to use for merror, if not inheriting (empty means use MathJax fonts)
+					unknownFamily: 'serif',        // font to use for character that aren't in MathJax's fonts
+					mathmlSpacing: false,          // true for MathML spacing rules, false for TeX rules
+					skipAttributes: {},            // RFDa and other attributes NOT to copy to the output
+					exFactor: .5,                  // default size of ex in em units
+					displayAlign: 'center',        // default for indentalign when set to 'auto'
+					displayIndent: '0',            // default for indentshift when set to 'auto'
+					displayOverflow: 'overflow',   // default for overflow (scroll/scale/truncate/elide/linebreak/overflow)
+					linebreaks: {                  // options for when overflow is linebreak
+					inline: true,                // true for browser-based breaking of inline equations
+					width: '100%',               // a fixed size or a percentage of the container width
+					lineleading: 0.2,             // the default lineleading in em units
+					},
+					font: '',                      // the font component to load
+					fontPath: FONTPATH,            // The path to the font definitions
+					fontExtensions: [],            // The font extensions to load
+					htmlHDW: 'auto',               // 'use', 'force', or 'ignore' data-mjx-hdw attributes
+					preFilters: [],                // A list of pre-filters to add to the output jax
+					postFilters: [],               // A list of post-filters to add to the output jax
+				}
+            };
+        </script>
+
+	</body>
+</html>

@@ -1,43 +1,48 @@
 :root {
+    /* colors */
     --background: #FAFAFA;
     --primary: #111111;
-    --secondary: #bbbbbb;
+    --secondary: #d3d3d3;
     --accent: 56, 110, 246; /* #386ef6 */
-    --definition: 120, 46, 211; /* #782ED3 */
+    --definition: 56, 110, 246; /* #782ED3 */
     --theorem: 233, 84, 15; /* e9540f */
-    --body-font: "Instrument Sans", Helvetica, sans-serif;
-    --body-font-size: 4.5rem;
-    --block-margin: 2rem;
+
+    /* typography */
+    --fontPrimary: "Instrument Serif", Cambria, serif;
     --header-margin: 0 0 3rem 0;
-    --header-font: "Instrument Serif", Cambria, serif;
-    --header-line-height: 110%;
-    --header-font-weight: 400;
+    --fontSecondary: "Instrument Sans", Helvetica, sans-serif;
+    --fontSecondary-size: 4.5rem;
+    --block-margin: 2rem;
+
+    /* misc */
     --code-font: monospace;
     --link-color: #42affa;
     --link-color-dark: #149bf9;
     --link-color-hover: #5ebbfb;
-    --selection-background-color: #0579c8;
+    --selection-backgroundColor: #0579c8;
     --selection-color: #FAFAFA;
     --overlay-element-bg-color: 240, 240, 240;
     --overlay-element-fg-color: 0, 0, 0;
+    --fadeOut: 35%;
 }
 
-.reveal-viewport {
-    background: var(--background);
-}
+/* slides ----------------------------------------------------------------------------------------------------------- */
 
+/* reveal */
+.reveal-viewport { background: var(--background); }
 .reveal {
-    font-family: var(--body-font);
-    font-size: var(--body-font-size);
+    font-family: var(--fontSecondary);
+    font-size: var(--fontSecondary-size);
     color: var(--primary);
     font-weight: 400;
     text-align: left;
 } .reveal ::selection {
     color: var(--selection-color);
-    background: var(--selection-background-color);
+    background: var(--selection-backgroundColor);
     text-shadow: none;
 }
 
+/* slides */
 .slides section, .slides section>section {
     line-height: 135%;
     font-weight: inherit;
@@ -46,69 +51,56 @@
     flex-flow: column !important;
     justify-content: center;
     gap: 2rem;
-    /* align-items: center; */
 }
+.reveal .slides { margin: 0; }
+.reveal .slides > section { padding: 0; }
+.reveal .slides { margin-top: 0 !important; }
 
-.reveal .slides {
-    margin: 0;
-} .reveal .slides > section {
-    padding: 0;
-} .reveal .slides {
-    margin-top: 0 !important;
-}
-
+/* progress bar */
 .reveal .progress {
     background: rgba(0, 0, 0, 0.15);
     color: rgba(0, 0, 0, 0.65);
     height: 6px;
-} .reveal .progress span {
-    background: rgba(0, 0, 0, 0.65);
-} .reveal .progress::-moz-progress-bar {
-    background: rgba(0, 0, 0, 0.65);
-}
+} .reveal .progress span { background: rgba(0, 0, 0, 0.65); }
+.reveal .progress::-moz-progress-bar { background: rgba(0, 0, 0, 0.65); }
+
+/* typography ----------------------------------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: var(--primary);
-    font-weight: var(--header-font-weight);
-    line-height: var(--header-line-height);
-    word-wrap: break-word;
+    line-height: 135%;
     text-align: left;
 } h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child { margin-bottom: 0 }
 
 h1 { /*cover page title*/
-    font-family: var(--header-font);
+    font-family: var(--fontPrimary);
     font-size: 12rem;
-    letter-spacing: -1%;
+    letter-spacing: -1.5%;
     color: var(--background);
-} h1 span {
-    color: rgb(var(--accent));
-}
+} h1 span { color: rgb(var(--accent)); }
 
 h2 { /*slide titles*/
-    font-family: var(--header-font);
-    font-size: 7rem;
+    font-family: var(--fontPrimary);
+    font-size: 6rem;
 }
 
-h3 { /*cover page subtitles*/
-    font-family: var(--body-font);
-    font-size: 3rem;
-    color: var(--secondary);
-}
-
-h4 { /* callout captions */
+h3 { /* callout/example titles */
     font-size: 3.5rem;
-    font-family: var(--body-font);
+    font-family: var(--fontSecondary);
     opacity: 35%;
     text-align: center;
 }
 
-h5 {
-    font-size: 4.5rem;
+h4 { /* subtitles */
+    font-size: 4rem;
+    font-family: var(--fontSecondary);
+    font-weight: 300;
+    margin: -4.5rem 0 0 0;
 }
 
-h6 {
-    font-family: var(--body-font);
+h6 { /* extra notes/disclaimers with body text */
+    font-family: var(--fontSecondary);
     font-size: 3rem;
     font-style: italic;
     opacity: 50%;
@@ -120,45 +112,33 @@ p {
     line-height: 135%;
     max-width: 95vw;
     text-align: left;
-    font-size: 4.5rem;
-} p span {
-    background-color: #FFDE83;
-}
+    font-size: 4rem;
+} p span { background-color: #ffde8385; }
 
 strong, b { font-weight: 700 }
 i, em { font-style: italic }
 
-img, video, iframe {
-    max-width: 95%;
-    max-height: 95%
-}
+/* lists, tables, etc ----------------------------------------------------------------------------------------------------------- */
 
 ol, dl, ul {
+    font-size: 3.5rem;
     text-align: left;
     margin: 0 0 0 1em;
     display: inline-block
-} ol {
-    list-style-type: decimal
-} ul {
-    list-style-type: square;
-} ul ul {
-    list-style-type: square
-} ul ul ul {
-    list-style-type: circle
-} ul ul, ul ol, ol ol, ol ul {
+} ol { list-style-type: decimal }
+ul { list-style-type: square; }
+ul ul { list-style-type: square }
+ul ul ul { list-style-type: circle }
+ul ul, ul ol, ol ol, ol ul {
     margin-left: 40px;
     display: block
-} li {
-    margin: 3rem 0;
-} li p {
+} li { margin: 3rem 0; } li p {
+    font-size: 3.5rem;
     margin: 1.65rem 0;
 }
 
-dt {
-    font-weight: 700
-} dd {
-    margin-left: 40px
-}
+dt { font-weight: 700 }
+dd { margin-left: 40px }
 
 blockquote {
     width: 70%;
@@ -169,13 +149,9 @@ blockquote {
     display: block;
     position: relative;
     box-shadow: 0 0 2px #0003
-} blockquote p:first-child, blockquote p:last-child {
-    display: inline-block
-}
+} blockquote p:first-child, blockquote p:last-child { display: inline-block }
 
-q {
-    font-style: italic
-}
+q { font-style: italic }
 
 pre {
     width: 90%;
@@ -198,52 +174,8 @@ pre {
     padding: 5px;
     display: block;
     overflow: auto
-} .code-wrapper {
-    white-space: normal
-} .code-wrapper code {
-    white-space: pre
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin: auto
-} table th {
-    font-weight: 700
-} table th, table td {
-    text-align: left;
-    border-bottom: 1px solid;
-    padding: .2em .5em
-} table th[align=center], table td[align=center] {
-    text-align: center
-} table th[align=right], table td[align=right] {
-    text-align: right
-} table tbody tr:last-child th, table tbody tr:last-child td {
-    border-bottom: none
-}
-
-sup {
-    vertical-align: super;
-    font-size: smaller
-}
-
-sub {
-    vertical-align: sub;
-    font-size: smaller
-}
-
-small {
-    vertical-align: top;
-    font-size: .6em;
-    line-height: 1.2em;
-    display: inline-block
-} small * {
-    vertical-align: top
-}
-
-img {
-    margin: var(--block-margin) 0
-}
+} .code-wrapper { white-space: normal }
+.code-wrapper code { white-space: pre }
 
 a {
     color: var(--link-color);
@@ -255,12 +187,36 @@ a {
     border: none
 }
 
+/* misc CSS ----------------------------------------------------------------------------------------------------------- */
+
+img, video, iframe {
+    margin: 0;
+    padding: 0;
+    display: block;
+    max-width: 95%;
+    max-height: 95%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: auto
+} table th { font-weight: 700 }
+table th, table td {
+    text-align: left;
+    border-bottom: 1px solid;
+    padding: .2em .5em
+} table th[align=center], table td[align=center] { text-align: center }
+table th[align=right], table td[align=right] { text-align: right }
+table tbody tr:last-child th, table tbody tr:last-child td { border-bottom: none }
+
+sup { vertical-align: super; font-size: smaller }
+sub { vertical-align: sub; font-size: smaller }
+
 .roll span:after {
     color: #fff;
     background: var(--link-color-dark)
-}
-
-.r-frame {
+} .r-frame {
     border: 4px solid var(--primary);
     box-shadow: 0 0 10px #00000026
 } a .r-frame {
@@ -268,18 +224,14 @@ a {
 } a:hover .r-frame {
     border-color: var(--link-color);
     box-shadow: 0 0 20px #0000008c
-}
+} .controls { color: var(--link-color) }
 
-.controls {
-    color: var(--link-color)
-}
+/* section classes ----------------------------------------------------------------------------------------------------------- */
 
 .bodySlide {
     justify-content: flex-start !important;
     gap: 4rem !important;
-} .bodySlide p {
-    font-size: 3.5rem;
-}
+} .bodySlide p { font-size: 3.5rem; }
 
 .cover, .callout {
     text-align: center;
@@ -297,14 +249,23 @@ a {
     color: var(--background);
     opacity: 65%;
     font-size: 3rem;
+} .callout h2 { font-size: 10rem; }
+
+.titleSlide h4 {
+    color: var(--secondary);
+    font-weight: 300;
+    opacity: 65%;
+    margin: 0 0 -3.5rem 0;
 }
+
+/* labelled slides ----------------------------------------------------------------------------------------------------------- */
 
 .definition, .theorem, .pairshare {
     display: flex;
     flex-flow: row;
     align-items: center;
     gap: 1.5rem;
-    font-family: var(--header-font);
+    font-family: var(--fontPrimary);
     font-size: 4rem;
     color: rgb(var(--definition));
     position: fixed;
@@ -318,29 +279,21 @@ a {
     padding: 1rem;
     color: var(--background);
     border-radius: 0.5rem;
-    font-family: var(--body-font);
+    font-family: var(--fontSecondary);
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 1;
-} .definition h4 {
-    color: rgb(var(--definition));
-} .def {
-    font-size: 4.5rem;
-    max-width: 65%;
-}
+} .definition h4 { color: rgb(var(--definition)); }
 
-.theorem {
-    color: rgb(var(--theorem));
-} .theorem::before {
+.theorem { color: rgb(var(--theorem)); }
+.theorem::before {
     content: 'Theorem';
     background-color: rgb(var(--theorem));
-} .theorem h4 {
-    color: var(--primary);
-}
+} .theorem h4 { color: var(--primary); }
 
 .pairshare {
     color: var(--primary);
-    font-family: var(--body-font);
+    font-family: var(--fontSecondary);
     font-size: 2.5rem;
     font-weight: 600;
 } .pairshare::before {
@@ -349,38 +302,16 @@ a {
     color: rgb(var(--accent));
 }
 
-.examples {
-    display: block;
-    margin: 2rem 0 -12rem 0;
-    width: 100%;
-    color: var(--primary);
-    opacity: 35%;
-    text-align: left;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 15%;
-    font-weight: 900;
-} .examples::before {
-    content: 'Examples';
-} .examples::after {
-    content: '';
-    display: block;
-    background-image: url(caret.svg);
-    background-size: contain;
-    height: 24px;
-    width: 48px;
-    margin-top: -0.5rem;
-}
+/* problem sets ----------------------------------------------------------------------------------------------------------- */
 
-.problems, .problems2 {
+.problems { /* 2 by n grid to arrange problems */
     display: grid;
     grid-template-columns: 6rem 1fr;
     align-items: center;
-    row-gap: 5rem;
+    row-gap: 4rem;
     column-gap: 2rem;
-} .problems2 {
-    grid-template-columns: 6rem 1fr 6rem 1fr;
-} .num {
+    margin: 2rem 0;
+} .num { /* number, left side of .problems grid */
     background-color: rgba(var(--accent), 0.2);
     height: 6rem;
     width: 6rem;
@@ -394,34 +325,190 @@ a {
     line-height: 1;
 } .problems p {
     font-size: 3.5rem;
-    max-width: 100%;
+}
+
+.answer { /* right side of .problems */
+    display: flex;
+    flex-flow: row;
     width: 100%;
-} .problems2 p {
+    gap: 1.65rem;
+} .answer>*:nth-child(1) { /* first child is problem */
+    /* width: 135vw; */
+    width: fit-content;
+} .answer>*:nth-child(2) { /* second child is answer (blue + fragment) */
+    color: rgb(var(--accent));
+} .instructions {
+    font-size: 3rem;
+    margin-top: 6rem;
+}
+
+.col2 { /* two columns for 2 .problems */
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    gap: 3rem;
+} .col2>.problems {
+    row-gap: 8rem;
+} .col2>.problems>.answer {
+    width: 100%;
+    flex-flow: column;
+    font-size: 3rem;
+    column-gap: 1.5rem;
+    padding-top: 1.5rem;
+    height: 6rem;
+    gap: 2rem;
+} .col2>.problems>.answer>*:nth-child(1) {
+    width: fit-content;
+} .col2>.problems p {
     font-size: 3rem;
     column-gap: 1.5rem;
 }
+
+/* fixed elements ----------------------------------------------------------------------------------------------------------- */
 
 .footer {
     position: fixed;
     bottom: 2rem;
     left: 7%;
     z-index: 1000000;
-}
-.footer::after {
+} .footer::after {
     display: flex;
     flex-flow: row nowrap;
     font-size: 0.85rem;
-    font-family: var(--body-font);
-    content: 'MATH-18A COLLEGE ALGEBRA • FALL 2026 • LENA PANG';
+    font-family: var(--fontSecondary);
+    text-transform: uppercase;
+    content: 'SJSU • MATH18A College Algebra • Fall 2026 • Lena Pang';
     color: rgba(138, 138, 138, 0.35);
     letter-spacing: 15%;
 }
 
-@media print {
-    .backgrounds {
-        background-color: var(--dark-color)
-    }
+.home {
+    position: fixed;
+    left: 0;
+    top: 2rem;
+    height: 3rem;
+    width: 3rem;
+    z-index: 1000000;
+    background-color: rgba(var(--accent), 0.65);
+    border-radius: 0 2rem 2rem 0;
+    overflow: hidden;
+    color: var(--background);
+    font-family: var(--fontSecondary);
+    font-weight: 600;
+    font-size: 1.15rem;
+    transition: 0.25s ease-in-out;
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: 1rem;
+    opacity: 65%;
+} .home:hover {
+    background-color: rgba(var(--accent), 1);
+    transition: 0.25s ease-in-out;
+    width: 13rem;
+    opacity: 100%;
+} .home::after {
+    content: '<- \00a0 \00a0\00a0\00a0 Return to Index';
+    width: fit-content;
+    white-space: nowrap;
 }
+
+.next {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--background);
+    color: rgb(var(--accent));
+    border-radius: 2rem;
+    transition: 0.25s ease-in-out;
+} .next h2, .next p {
+    color: rgb(var(--accent));
+} .next:hover {
+    transform: translate(0.85rem, -0.85rem);
+    transition: 0.25s ease-in-out;
+    filter: drop-shadow(-1rem 1rem 2.5rem rgba(0,0,0,0.35));
+}
+
+/* boxes, layouts, and buttons ----------------------------------------------------------------------------------------------------------- */
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.exampleBox { /* frame for examples */
+    padding: 0 1.35rem;
+    background-color: rgba(var(--definition), .15);
+    color: rgb(var(--definition));
+    width: fit-content;
+    border-radius: 1.35rem;
+    font-size: 3rem;
+}
+
+.examplesBelow { /* more examples below tag */
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    align-items: center;
+    gap: 1rem;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: fit-content;
+    color: rgb(var(--accent));
+    text-align: left;
+    font-size: 2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 15%;
+    font-weight: 300;
+    border: 2px solid rgb(var(--accent));
+} .examplesBelow::before {
+    content: 'Examples ↓';
+}
+
+.imgBox {
+    position: absolute;
+    margin: 0 auto;
+    height: 105vh;
+    width: 105vh;
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+} .imgBox>* {
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+} .centerBoth {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} .centerHor { /* do not use with centerVer */
+    left: 50%;
+    transform: translateX(-50%);
+} .centerVer { /* do not use with centerHor */
+    top: 50%;
+    transform: translateY(-50%);
+} .alignRight {
+    right: -2rem;
+    text-align: left;
+} .alignTop {
+    top: -4rem;
+}
+
+/* reveal.js ----------------------------------------------------------------------------------------------------------- */
+
+@media print { .backgrounds { background-color: var(--dark-color) } }
 
 /* section.has-light-background,
 section.has-light-background h1,

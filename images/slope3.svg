@@ -1,0 +1,7 @@
+<svg width="115" height="80" viewBox="0 0 115 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.15" d="M14.5 65V15L100.5 65H14.5Z" fill="#386EF6"/>
+<path d="M14.5 15V65H100.5" stroke="#386EF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<circle cx="3" cy="3" r="3" transform="matrix(-1 0 0 1 103.5 62)" fill="#111111"/>
+<circle cx="3" cy="3" r="3" transform="matrix(-1 0 0 1 17.5 12)" fill="#111111"/>
+<path d="M0.5 7L114.5 73" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

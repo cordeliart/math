@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>1.1 Intro to Graphing</title>
+		<meta name="description" content=""/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+
+		<link rel="stylesheet" href="../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../black.css" id="theme" />
+		<link rel="stylesheet" href="../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="var(--primary)" class="titleSlide">
+					<h4>Thursday, August 20, 2026</h4>
+					<h1><span>MATH 18A-38</span> College Algebra</h1>
+					<div class="sticker">Welcome! <span>Please make a name tag :)</span></div>
+				</section>
+
+<!-- INTRODUCTIONS ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))" class="cover">
+					<h2>Introductions</h2>
+				</section>
+
+				<section class="bodySlide">
+					<h2>About Me</h2>
+					<ul>
+						<li><p>Lena Pang</p></li>
+						<li><p>BFA in New Media Design + BS in Applied Math + Minor in Japanese @ Rochester Institute of Technology</p></li>
+						<li><p>likes: skiing, Radiohead, tattoos</p></li>
+						<li><p>dislikes: cooked tomatoes, LaTeX</p></li>
+					</ul>
+				</section>
+
+				<section class="callout">
+					<h2>Now your turn!</h2>
+					<h3>Share your name, your major, & one of your hobbies.</h3>
+				</section>
+
+<!-- PHILOSOPHY ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))" class="cover">
+					<h2>So... College Algebra.</h2>
+				</section>
+
+				<section class="bodySlide">
+					<div style="display: flex; gap: 2.5rem; flex-flow: column; height: 100%; justify-content: center;">
+						<p><b>MATH 18A - College Algebra</b></p>
+						<p style="font-size: 2.25rem;"><i>3 units</i></p>
+						<p style="line-height: 120%;">Review of basic algebra. Complex numbers, functions, graphs, polynomials, inverse functions, exponential and logarithmic functions.</p>
+						<p style="font-size: 2.25rem;">Satisfies B4: Mathematics/Quantitative Reasoning.</p>
+						<p style="font-size: 2.25rem;">Prerequisite(s): Math Enrollment Category M-I, M-II, or M-III; or MATH 1 with a grade of C- or better. MATH 1018AS required as a corequisite for Enrollment Categories M-III and M-IV, and recommended for Enrollment Category M-II.</p>
+						<p style="font-size: 2.25rem;">Corequisite(s): MATH 18AW recommended.</p>
+						<p style="font-size: 2.25rem;">Grading: Letter Graded</p>
+					</div>
+				</section>
+
+				<section class="callout">
+					<h2>Practically, useless.</h2>
+				</section>
+
+				<section class="bodySlide">
+					<h2>The <i>Real</i> Use</h2>
+					<ul>
+						<li><p>learn how to solve problems: the approach, different strategies, what to do when you’re stumped</p></li>
+						<li><p>practice explaining your own logic <br>& understanding others’</p></li>
+						<li><p>work in groups to improve communication skills</p></li>
+						<li><p><b>build confidence</b></p></li>
+					</ul>
+				</section>
+
+				<section class="cover" data-background="rgb(var(--accent))">
+					<h2>My Teaching Philosophy</h2>
+				</section>
+
+				<section class="callout" data-auto-animate="">
+					<p style="max-width: 85%;" data-id="title">It is my responsibility to teach you in a way that makes sense to you. I am here to help; I never want you to leave this class feeling ashamed or confused.</p>
+				</section>
+
+				<section class="callout" data-auto-animate="">
+					<p style="max-width: 85%; opacity: var(--fadeOut);" data-id="title">It is my responsibility to teach you in a way that makes sense to you. I am here to help; I never want you to leave this class feeling ashamed or confused.</p>
+					<p data-id="1">Ask questions.</p>
+				</section>
+
+				<section class="callout" data-auto-animate="">
+					<p style="max-width: 85%; opacity: var(--fadeOut);" data-id="title">It is my responsibility to teach you in a way that makes sense to you. I am here to help; I never want you to leave this class feeling ashamed or confused.</p>
+					<p data-id="1">Ask questions.</p>
+					<p data-id="2">Make mistakes—they help you learn.</p>
+				</section>
+
+				<section class="callout" data-auto-animate="">
+					<p style="max-width: 85%; opacity: var(--fadeOut);" data-id="title">It is my responsibility to teach you in a way that makes sense to you. I am here to help; I never want you to leave this class feeling ashamed or confused.</p>
+					<p data-id="1">Ask questions.</p>
+					<p data-id="2">Make mistakes—they help you learn.</p>
+					<p data-id="3">It's okay to forget.</p>
+				</section>
+
+<!-- SYLLABUS ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))" class="cover">
+					<h2>About This Class</h2>
+				</section>
+
+				<section>
+					<img src="../images/canvas.svg" style="width: 80%; margin: auto;" alt="Canvas by Instructure logo">
+				</section>
+
+				<section class="bodySlide">
+					<h2>Syllabus</h2>
+					<ul>
+						<li><p>my email & office hours (times TBD, in MH 426)</p></li>
+						<li>
+							<p><u>course materials</u>:</p>
+							<ul>
+								<li><p><b>workbook</b> is available at the campus bookstore ($13.90), try to get it by next class</p></li>
+								<li><p>scientific <b>calculator</b></p></li>
+								<li><p><b>homework</b> is online through Canvas (Lumen $35)</p></li>
+								<li><p>paper for warmups</p></li>
+							</ul>
+						</li>
+					</ul>
+					<h6>※ If cost is an issue, email or talk to me after class.</h6>
+				</section>
+
+				<section class="bodySlide" data-auto-animate>  <!-- grading -->
+					<div style="margin: 0 auto; display: grid; grid-template-columns: auto 4rem 48rem; grid-template-rows: 3fr 3fr 4fr 4fr 6fr; row-gap: 4px; column-gap: 4rem; height: 100%; align-items: center;">
+
+						<p class="blue" style="text-align: right;">15%</p>
+						<div style="background-color: rgba(var(--accent), 0.35); height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+						<p><b>Homework</b> — one per class; due before the following test</p>
+
+						<div class="row fragment" data-fragment-index="4" style="gap:2rem; justify-content: flex-end;">
+							<p data-id="test1" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 1</b></p>
+							<p class="blue" style="text-align: right;">15%</p>
+						</div>
+						<div class="fragment blueFill" data-fragment-index="3" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+						<p style="grid-row: span 4;"  class="fragment" data-fragment-index="3"><b>Exams</b> — in person, closed book (except 3×5 notecard & scientific calculator—NO graphing calculators!)</p>
+
+						<div class="row fragment" data-fragment-index="4" style="gap:2rem; justify-content: flex-end;">
+							<p data-id="test2" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 2</b></p>
+							<p class="blue" style="text-align: right;">20%</p>
+						</div>
+						<div class="fragment blueFill" data-fragment-index="3" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+
+						<div class="row fragment" data-fragment-index="4" style="gap:2rem; justify-content: flex-end;">
+							<p data-id="test3" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 3</b></p>
+							<p class="blue" style="text-align: right;">20%</p>
+						</div>
+						<div class="fragment blueFill" data-fragment-index="3" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+
+						<div class="row fragment" data-fragment-index="4" style="gap:2rem; justify-content: flex-end;">
+							<p data-id="test4" class="blue" style="width: fit-content; white-space: nowrap;"><b>Final</b></p>
+							<p class="blue" style="text-align: right;">30%</p>
+						</div>
+						<div class="fragment blueFill" data-fragment-index="3" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+					</div>
+				</section>
+
+				<section data-auto-animate>
+					<div style="display: grid; grid-template-columns: auto auto; gap: 4rem;">
+						<div style="margin-left: auto;">
+							<p data-id="test1" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 1</b></p>
+						</div>
+						<p>September 15</p>
+
+						<div style="margin-left: auto;">
+							<p data-id="test2" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 2</b></p>
+						</div>
+						<p>October 15</p>
+
+						<div style="margin-left: auto;">
+							<p data-id="test3" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 3</b></p>
+						</div>
+						<p>November 17</p>
+
+						<div style="margin-left: auto;">
+							<p data-id="test4" class="blue" style="width: fit-content; white-space: nowrap;"><b>Final</b></p>
+						</div>
+						<p>December 12</p>
+						<div></div>
+						<p class="fragment" data-fragment-index="5" style="margin-top: -4rem;"><b>SATURDAY!! 4-6pm</b></p>
+					</div>
+				</section>
+
+				<section class="bodySlide">
+					<h2>Resources & More</h2>
+
+					<div class="col3" style="margin-top:8rem;">
+						<div>
+							<p><b>Make-Up Credit</b></p>
+							<p>up to 10% of your overall grade, caps at 100%</p>
+							<ul>
+								<li><p>in-class warmups</p></li>
+								<li><p>quizzes (on Canvas, on your own time)</p></li>
+							</ul>
+						</div>
+						<div>
+							<p><b>Independent Activities</b></p>
+							<p>available on Canvas</p>
+							<ul>
+								<li><p>Lumen Learning (linked on class home page)</p></li>
+								<li><p>your workbook & lesson keys, uploaded after class</p></li>
+								<li><p>these slides</p></li>
+							</ul>
+						</div>
+						<div>
+							<p><b>In-Person Help</b></p>
+							<ul>
+								<li><p>my office hours/schedule 1-on-1 time with me</p></li>
+								<li><p>Math Help Lab (MH 426)</p></li>
+								<li><p><a href="https://www.sjsu.edu/peerconnections/programs/courses.php" target="_blank">Peer Connect tutoring</a></p></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="callout">
+					<p>In case you missed it...</p>
+					<h2>The final is on a <i>Saturday</i>!</h2>
+					<p>4-6pm on Saturday, December 12.</p>
+					<p style="margin-top: -2rem; color: var(--warning);"><b>Do NOT travel before then!</b></p>
+				</section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="var(--primary)" class="titleSlide">
+					<h4>Thursday, August 20, 2026</h4>
+					<h1><span>1.1</span> Intro to Graphing</h1>
+				</section>
+
+				<section class="bodySlide">
+					<p style="width: 14ch;">Pick a point and describe it to your elbow partner.</p>
+					
+					<div class="imgBox centerBoth">
+						<div class="xyplane gridFive fragment" data-fragment-index="1"></div>
+						<p class="xaxis fragment" data-fragment-index="1">\(x\)</p>
+						<p class="yaxis fragment" data-fragment-index="1">\(y\)</p>
+						
+						<div class="pointBox centerBoth">
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 70%; top: 20%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 0%; top: 30%"></div>
+							<div class="point alignTL" style="left: 40%; top: 90%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 80%; top: 80%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 30%; top: 60%"></div>
+							<div class="point alignTL" style="left: 10%; top: 70%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 50%; top: 10%"></div>
+							<div class="point alignTL" style="left: 60%; top: 50%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 90%; top: 0%"></div>
+							<div class="point alignTL" style="left: 30%; top: 0%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 90%; top: 60%"></div>
+							<div class="point alignTL" style="left: 100%; top: 40%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 50%; top: 80%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 40%; top: 40%"></div>
+							<div class="point alignTL" style="left: 80%; top: 30%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 70%; top: 70%"></div>
+							<div class="point alignTL fragment" data-fragment-index="0" style="left: 30%; top: 20%"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="bodySlide">
+					<h2>Vocab</h2>
+					<p class="fragment fade-in-then-semi-out" data-fragment-index="0">coordinate plane<br>or “\(xy\)-plane”</p>
+					<div class="imgBox centerBoth">
+						<div class="xyplane" style="z-index: 100;"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+
+						<p style="top: 51%; right: 5%" class="fragment fade-in-then-semi-out" data-fragment-index="1">x-axis</p>
+						<p style="right: 53%; top: 3%;" class="fragment fade-in-then-semi-out" data-fragment-index="1">y-axis</p>
+						
+						<div class="fragment point alignTL offsetX fade-in-then-semi-out" style="left: 50%; top: 50%;" data-fragment-index="3"><p>\((0,0)\)</p></div>
+						<p style="bottom:52%;right:53%;" class="fragment fade-in-then-semi-out" data-fragment-index="3">origin</p>
+
+						<div style="left: 50%; bottom: 50%;; width: 15%; height: 26.2%; outline: dashed 4px rgb(var(--accent)); outline-offset: -2px" class="fragment" data-fragment-index="4"></div>
+						<div class="point alignBR fragment offsetYhalf" data-fragment-index="4" style="bottom: 76%; right: 35%;"><p>\((a,b)\)</p></div>
+						<p class="fragment alignBR blue" data-fragment-index="4" style="right: 60%; bottom: 76%;">\(y=b\)</p>
+						<p class="fragment alignBR blue" data-fragment-index="4" style="right: 35%; bottom: 47%;">\(x=a\)</p>
+						<p class="fragment" data-fragment-index="5" style="left: 58%; bottom: 80%;">ordered pair</p>
+					</div>
+				</section>
+
+				<section class="bodySlide">
+					<h2>Quadrants</h2>
+					<div class="imgBox centerBoth">
+						<div class="xyplane"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+
+						<img src="../images/quadrants.svg" style="width: 35%;" class="centerBoth">
+						<div class="columnCentered alignTL" style="top: 25%; left: 75%;">
+							<p>\(I\)</p>
+							<p>\((+,+)\)</p>
+						</div>
+						<div class="columnCentered alignTL" style="top: 25%; left: 25%;">
+							<p>\(II\)</p>
+							<p>\((-,+)\)</p>
+						</div>
+						<div class="columnCentered alignTL" style="top: 75%; left: 25%;">
+							<p>\(III\)</p>
+							<p>\((-,-)\)</p>
+						</div>
+						<div class="columnCentered alignTL" style="top: 75%; left: 75%;">
+							<p>\(IV\)</p>
+							<p>\((+,-)\)</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="bodySlide">
+					<div class="workbook">
+						<div>2</div>
+						<div>Example 1</div>
+					</div>
+
+					<div class="imgBox centerBoth">
+						<div class="xyplane gridFive"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+
+						<div class="pointBox">
+							<div class="point alignTL offsetY" style="left: 70%; top: 20%">
+								<p>\(A\)</p>
+								<p class="fragment">\( (2,3) \)</p>
+							</div>
+							<div class="point alignTL offset" style="left: 10%; top: 30%">
+								<p>\(B\)</p>
+								<p class="fragment">\( (-4,2) \)</p>
+							</div>
+							<div class="point alignTL offsetX" style="left: 40%; top: 90%">
+								<p>\(C\)</p>
+								<p class="fragment">\( (-1,-4) \)</p>
+							</div>
+							<div class="point alignTL" style="left: 80%; top: 80%">
+								<p>\(D\)</p>
+								<p class="fragment">\( (3,-3) \)</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="workbook">
+						<div>3</div>
+						<div>Example 2</div>
+					</div>
+
+					<table>
+						<thead><tr>
+							<th><p>\(x\)</p></th>
+							<th><p>\(y=-\frac{1}{2}x+1\)</p></th>
+						</tr></thead>
+						<tbody>
+							<tr><th><p>\(-3\)</p></th><th><p class="fragment blue" data-fragment-index="1">\(5/2\)</p></th></tr>
+							<tr><th><p>\(-2\)</p></th><th><p class="fragment blue" data-fragment-index="2">\(2\)</p></th></tr>
+							<tr><th><p>\(-1\)</p></th><th><p class="fragment blue" data-fragment-index="3">\(3/2\)</p></th></tr>
+							<tr><th><p>\(0\)</p></th><th><p class="fragment blue" data-fragment-index="4">\(1\)</p></th></tr>
+							<tr><th><p>\(1\)</p></th><th><p class="fragment blue" data-fragment-index="5">\(1/2\)</p></th></tr>
+							<tr><th><p>\(2\)</p></th><th><p class="fragment blue" data-fragment-index="6">\(0\)</p></th></tr>
+							<tr><th><p>\(3\)</p></th><th><p class="fragment blue" data-fragment-index="7">\(-1/2\)</p></th></tr>
+						</tbody>
+					</table>
+
+					<div class="imgBox centerVer alignRight">
+						<div class="xyplane gridThree"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+						<p class="caption below">\(y=-\frac{1}{2}x+1\)</p>
+
+						<div class="pointBox">
+							<div class="line fragment blueFill" style="width: 122%; left: 50%; top: 33%; transform: translateX(-50%) rotate(26.5deg);" data-fragment-index="8"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 0%; top: 8.3%;" data-fragment-index="1"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 16.6%; top: 16.6%;" data-fragment-index="2"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 33.3%; top: 24.9%;" data-fragment-index="3"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 50%; top: 33.3%;" data-fragment-index="4"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 66.6%; top: 41.2%;" data-fragment-index="5"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 83.3%; top: 50%;" data-fragment-index="6"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 100%; top: 58.3%;" data-fragment-index="7"></div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="definition">x-intercept</div>
+					<p>the <b>\(𝒙\)-intercept</b> is where...</p>
+					<ul>
+						<li><p>the line <span>hits the \(x\)-axis</span></p></li>
+						<li><p><span>\(y=0\)</span></p></li>
+						<li><p>ordered pair is <span>\((\#,0)\)</span></p></li>
+					</ul>
+
+					<div class="imgBox centerVer alignRight">
+						<div class="xyplane gridFive"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+
+						<div class="pointBox">
+							<div class="line centerVer blueFill" style="transform: translateX(11.2%) rotate(56.3deg)"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 70%; top: 50%;"><p class="blue">\((2,0)\)</p></div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="definition">y-intercept</div>
+					<p>the <b>\(𝒚\)-intercept</b> is where...</p>
+					<ul>
+						<li><p>the line <span>hits the \(y\)-axis</span></p></li>
+						<li><p><span>\(x=0\)</span></p></li>
+						<li><p>ordered pair is <span>\((0,\#)\)</span></p></li>
+					</ul>
+
+					<div class="imgBox centerVer alignRight">
+						<div class="xyplane gridFive"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+
+						<div class="pointBox">
+						<div class="line centerVer blueFill" style="transform: translateX(11.2%) rotate(56.3deg)"></div>
+						<div class="point alignTL fragment offsetY blueFill" style="left: 50%; top: 20%;"><p class="blue">\((0,3)\)</p></div>
+					</div>
+				</section>
+
+				<section class="bodySlide">
+					<h2>Solving for Intercepts</h2>
+					<div class="col2">
+						<div>
+							<h5>x-intercept \((\#,0)\)</h5>
+							<p>we know \(y=0\) at the \(x\)-intercept,<br>so we’re <span>looking for \(x\)</span></p>
+							<ol>
+								<li><p>set \(y=0\)</p></li>
+								<li><p>solve for \(x\)</p></li>
+							</ol>
+						</div>
+						<div>
+							<h5>y-intercept \((0,\#)\)</h5>
+							<p>we know \(x=0\) at the \(y\)-intercept,<br>so we’re <span>looking for \(y\)</span></p>
+							<ol>
+								<li><p>set \(x=0\)</p></li>
+								<li><p>solve for \(y\)</p></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="workbook">
+						<div>4</div>
+						<div>Example 3</div>
+					</div>
+					<p class="fragment fade-out" data-fragment-index="10" style="font-size: 2.15rem !important; color: var(--warning); font-weight: 600;">should say \(\frac{1}{2}x\) instead of \(-\frac{1}{2}x\)</p>
+
+					<table class="fragment fade-out" data-fragment-index="10">
+						<thead><tr>
+							<th><p>\(x\)</p></th>
+							<th><p>\(y=\frac{1}{2}x+1\)</p></th>
+						</tr></thead>
+						<tbody>
+							<tr><th><p>\(-3\)</p></th><th><p class="fragment blue" data-fragment-index="1">\(-1/2\)</p></th></tr>
+							<tr><th><p>\(-2\)</p></th><th><p class="fragment blue" data-fragment-index="2">\(0\)</p></th></tr>
+							<tr><th><p>\(-1\)</p></th><th><p class="fragment blue" data-fragment-index="3">\(1/2\)</p></th></tr>
+							<tr><th><p>\(0\)</p></th><th><p class="fragment blue" data-fragment-index="4">\(1\)</p></th></tr>
+							<tr><th><p>\(1\)</p></th><th><p class="fragment blue" data-fragment-index="5">\(3/2\)</p></th></tr>
+							<tr><th><p>\(2\)</p></th><th><p class="fragment blue" data-fragment-index="6">\(2\)</p></th></tr>
+							<tr><th><p>\(3\)</p></th><th><p class="fragment blue" data-fragment-index="7">\(5/2\)</p></th></tr>
+						</tbody>
+					</table>
+
+					<div class="imgBox centerVer alignRight">
+						<div class="xyplane gridThree"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+						<p class="caption below">\(y=\frac{1}{2}x+1\)</p>
+
+						<div class="pointBox">
+							<div class="line fragment blueFill" style="width: 122%; left: 50%; top: 33%; transform: translateX(-50%) rotate(-26.5deg);" data-fragment-index="8"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 0%; top: 58.3%;" data-fragment-index="1"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 16.6%; top: 50%;" data-fragment-index="2"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 33.3%; top: 41.9%;" data-fragment-index="3"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 50%; top: 33.3%;" data-fragment-index="4"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 66.6%; top: 24.9%;" data-fragment-index="5"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 83.3%; top: 16.6%;" data-fragment-index="6"></div>
+							<div class="point alignTL fragment offsetY blueFill" style="left: 100%; top: 8.3%;" data-fragment-index="7"></div>
+						</div>
+					</div>
+
+					<div class="imgBox centerVer alignLeft fragment" data-fragment-index="10">
+						<div class="xyplane gridThree"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+						<p class="caption below">\(y=-\frac{1}{2}x+1\)</p>
+
+						<div class="pointBox">
+							<div class="line bluishFill" style="width: 122%; left: 50%; top: 33%; transform: translateX(-50%) rotate(26.5deg);"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 0%; top: 8.3%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 16.6%; top: 16.6%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 33.3%; top: 24.9%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 50%; top: 33.3%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 66.6%; top: 41.2%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 83.3%; top: 50%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 100%; top: 58.3%;"></div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="imgBox centerBoth fragment semi-fade-out" data-fragment-index="1">
+						<div class="xyplane gridThree"></div>
+						<p class="xaxis">\(x\)</p>
+						<p class="yaxis">\(y\)</p>
+						<p class="caption bluish" style="top: 3%; right: 102%; width: 40rem; text-align: right;">\(y=-\frac{1}{2}x+1\)</p>
+						<p class="caption blue" style="top: 3%; left: 102%; width: 40rem;">\(y=\frac{1}{2}x+1\)</p>
+						
+						<div class="pointBox fragment semi-fade-out" data-fragment-index="1">
+							<div class="line bluishFill" style="width: 122%; left: 50%; top: 33%; transform: translateX(-50%) rotate(26.5deg);"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 0%; top: 8.3%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 16.6%; top: 16.6%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 33.3%; top: 24.9%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 50%; top: 33.3%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 66.6%; top: 41.2%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 83.3%; top: 50%;"></div>
+							<div class="point alignTL offsetY bluishFill" style="left: 100%; top: 58.3%;"></div>
+						</div>
+
+						<div class="pointBox fragment semi-fade-out" data-fragment-index="1">
+							<div class="line blueFill" style="width: 122%; left: 50%; top: 33%; transform: translateX(-50%) rotate(-26.5deg);"></div>
+							<div class="point alignTL offsetY blueFill" style="left: 0%; top: 58.3%;"></div>
+							<div class="point alignTL offsetY blueFill" style="left: 16.6%; top: 50%;"></div>
+							<div class="point alignTL offsetY blueFill" style="left: 33.3%; top: 41.9%;"></div>
+							<div class="point alignTL offsetY blueFill" style="left: 50%; top: 33.3%;"></div>
+							<div class="point alignTL offsetY blueFill" style="left: 66.6%; top: 24.9%;"></div>
+							<div class="point alignTL offsetY blueFill" style="left: 83.3%; top: 16.6%;"></div>
+							<div class="point alignTL offsetY blueFill" style="left: 100%; top: 8.3%;"></div>
+						</div>
+					</div>
+
+					<div class="imgBox centerBoth fragment" data-fragment-index="1">
+						<div class="row dashedRed" style="width: 95%; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(90deg);"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+						<img src="../images/graph-swap.svg" class="centerHor fragment" data-fragment-index="2" style="width: 90%; top: 52%;">
+						
+						<div class="pointBox fragment" data-fragment-index="2">
+							<p class="alignBL" style="bottom:55%; left: 0">\(-3\)</p>
+							<p class="alignBL" style="bottom:55%; left: 16.6%">\(-2\)</p>
+							<p class="alignBL" style="bottom:55%; left: 33.3%">\(-1\)</p>
+							<p class="alignBL" style="bottom:55%; left: 66%">\(1\)</p>
+							<p class="alignBL" style="bottom:55%; left: 83%">\(2\)</p>
+							<p class="alignBL" style="bottom:55%; left: 100%">\(3\)</p>
+						</div>
+					</div>
+					<p class="fragment" data-fragment-index="1" style="width: 28rem;">When you negate \(x\), you swap across the \(y\)-axis</p>
+					<h6 class="fragment" data-fragment-index="2" style="width: 28rem;">Swap \(1\) with \(-1\),<br>\(2\) with \(-2\), etc.</h6>
+				</section>
+
+				<section>
+					<div class="definition">Slope</div>
+					<p>the <b>slope</b> \((m)\) is a number that describes the <span>steepness & direction</span> of a line</p>
+				</section>
+
+				<section class="callout">
+					$$m=\frac{\text{rise}}{\text{run}} = \frac{\text{change in }y}{\text{change in }x}$$
+					<div style="width: 50%; position: relative;">
+						<img src="../images/slope.svg" style="width: 100%;">
+						<p class="blue" style="position: absolute; left: 88%; top: 50%; transform: translate(-50%, -50%);">rise</p>
+						<p class="blue" style="position: absolute; left: 50%; top: 90%; transform: translate(-50%, -50%);">run</p>
+					</div>
+				</section>
+
+				<section class="bodySlide">
+					<h2>Slope Types</h2>
+					<div style="display: grid; grid-template-columns: auto 1fr 1fr 1fr 1fr; width: 100%; gap: 4rem;">
+						<div></div>
+						<div><img src="../images/slope4.svg" style="width: 100%;"></div>
+						<div><img src="../images/slope3.svg" style="width: 100%;"></div>
+						<div><img src="../images/slope1.svg" style="width: 100%;"></div>
+						<div><img src="../images/slope2.svg" style="width: 100%;"></div>
+
+						<div></div>
+						<h6 style="text-align: center; margin-top: -4rem;" class="blue">uphill</h6>
+						<h6 style="text-align: center; margin-top: -4rem;" class="blue">downhill</h6>
+						<h6 style="text-align: center; margin-top: -4rem;" class="blue">horizontal</h6>
+						<h6 style="text-align: center; margin-top: -4rem;" class="blue">vertical</h6>
+
+						<h5>slope</h5>
+						<p style="text-align: center;">positive</p>
+						<p style="text-align: center;">negative</p>
+						<p style="text-align: center;">zero (\(0\))</p>
+						<p style="text-align: center;">undefined</p>
+
+						<h5>form</h5>
+						<p style="text-align: center;">\(\dfrac{+}{+}\) &nbsp;or &nbsp;\(\dfrac{-}{-}\)</p>
+						<p style="text-align: center;">\(\dfrac{-}{+}\) &nbsp;or &nbsp;\(\dfrac{+}{-}\)</p>
+						<p style="text-align: center;">\(\dfrac{0}{\#}\)</p>
+						<p style="text-align: center;">\(\dfrac{\#}{0}\)</p>
+					</div>
+				</section>
+
+				<section class="endSlide" data-background="var(--primary)">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 1.1 homework</p>
+					<p>-> welcome survey</p>
+					<p>-> buy workbook</p>
+				</section>
+
+			</div>
+		</div>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/dist/plugin/zoom.js"></script>
+		<script src="../reveal/dist/plugin/notes.js"></script>
+		<script src="../reveal/dist/plugin/search.js"></script>
+		<script src="../reveal/dist/plugin/markdown.js"></script>
+		<script src="../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../scripts.js"></script>
+	</body>
+</html>

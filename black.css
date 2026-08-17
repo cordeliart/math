@@ -472,7 +472,7 @@ sub { vertical-align: sub; font-size: smaller }
     letter-spacing: 15%;
 }
 
-.home {
+/* .home {
     position: fixed;
     left: 0;
     top: 2rem;
@@ -500,7 +500,7 @@ sub { vertical-align: sub; font-size: smaller }
     content: '<- \00a0 \00a0\00a0\00a0 Return to Index';
     width: fit-content;
     white-space: nowrap;
-}
+} */
 
 .next {
     display: flex;

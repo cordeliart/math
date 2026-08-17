@@ -15,7 +15,8 @@
     --header-margin: 0 0 3rem 0;
     --fontSecondary: "Instrument Sans", Helvetica, sans-serif;
     --block-margin: 2rem;
-    --bodySize: 4rem;
+    --bodySize: 4.35rem;
+    --tiny: 2.65rem;
 
     /* misc */
     --code-font: monospace;
@@ -316,8 +317,9 @@ sub { vertical-align: sub; font-size: smaller }
     flex-flow: row;
     align-items: center;
     gap: 1.5rem;
-    font-family: var(--fontPrimary);
-    font-size: var(--bodySize);
+    /* font-family: var(--fontPrimary); */
+    font-size: 2.65rem;
+    font-weight: 800;
     color: rgb(var(--definition));
     position: fixed;
     height: 4.5rem;
@@ -331,7 +333,7 @@ sub { vertical-align: sub; font-size: smaller }
     color: var(--background);
     border-radius: 0.5rem;
     font-family: var(--fontSecondary);
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     font-weight: 600;
     line-height: 1;
 } .definition h4 { color: rgb(var(--definition)); }
@@ -344,12 +346,14 @@ sub { vertical-align: sub; font-size: smaller }
 
 .workbook>*:first-child {
     border-radius: 0.5rem;
-    background-color: rgba(var(--definition),0.15);
+    /* background-color: rgba(var(--definition),0.15); */
+    background-color: var(--primary);
     width: fit-content;
     padding: 1rem;
-    color: rgb(var(--accent));
+    /* color: rgb(var(--accent)); */
+    color: var(--background);
     font-family: var(--fontSecondary);
-    font-size: 2.5rem;
+    font-size: 2.65rem;
     font-weight: 400;
     line-height: 1;
     padding-right: 1.1rem;
@@ -359,10 +363,11 @@ sub { vertical-align: sub; font-size: smaller }
     /* font-weight: 100; */
     margin-right: 0.65rem;
 } .workbook>*:nth-child(2) {
-    color: rgb(var(--accent));
+    /* color: rgb(var(--accent)); */
+    color: var(--primary);
     font-family: var(--fontSecondary);
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2.65rem;
+    font-weight: 800;
 }
 
 /* problem sets ----------------------------------------------------------------------------------------------------------- */
@@ -401,7 +406,7 @@ sub { vertical-align: sub; font-size: smaller }
 } .answer>*:nth-child(2) { /* second child is answer (blue + fragment) */
     color: rgb(var(--accent));
 } .instructions {
-    font-size: 3rem;
+    font-size: 3rem !important;
     margin-top: 6rem;
 }
 

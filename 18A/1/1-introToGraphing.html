@@ -15,10 +15,10 @@
 		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
 
-		<link rel="stylesheet" href="../reveal/dist/reset.css" />
-		<link rel="stylesheet" href="../reveal/dist/reveal.css" />
-		<link rel="stylesheet" href="../black.css" id="theme" />
-		<link rel="stylesheet" href="../reveal/dist/plugin/highlight/monokai.css"/>
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
 	</head>
 
 	<body>
@@ -116,19 +116,19 @@
 				</section>
 
 				<section>
-					<img src="../images/canvas.svg" style="width: 80%; margin: auto;" alt="Canvas by Instructure logo">
+					<img src="../../images/canvas.svg" style="width: 80%; margin: auto;" alt="Canvas by Instructure logo">
 				</section>
 
 				<section class="bodySlide">
 					<h2>Syllabus</h2>
 					<ul>
-						<li><p>my email & office hours (times TBD, in MH 426)</p></li>
+						<li><p>my email & office hours (times TBD, in MQH 426)</p></li>
 						<li>
 							<p><u>course materials</u>:</p>
 							<ul>
-								<li><p><b>workbook</b> is available at the campus bookstore ($13.90), try to get it by next class</p></li>
+								<li><p>printed copies of the <b>workbook</b> are available at the campus bookstore ($13.90), try to get it by next class</p></li>
 								<li><p>scientific <b>calculator</b></p></li>
-								<li><p><b>homework</b> is online through Canvas (Lumen $35)</p></li>
+								<li><p><b>homework</b> is online ($35 fee per course)</p></li>
 								<li><p>paper for warmups</p></li>
 							</ul>
 						</li>
@@ -136,67 +136,90 @@
 					<h6>※ If cost is an issue, email or talk to me after class.</h6>
 				</section>
 
-				<section class="bodySlide" data-auto-animate>  <!-- grading -->
-					<div style="margin: 0 auto; display: grid; grid-template-columns: auto 4rem 48rem; grid-template-rows: 3fr 3fr 4fr 4fr 6fr; row-gap: 4px; column-gap: 4rem; height: 100%; align-items: center;">
-
-						<p class="blue" style="text-align: right;">15%</p>
-						<div style="background-color: rgba(var(--accent), 0.35); height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
-						<p><b>Homework</b> — one per class; due before the following test</p>
-
-						<div class="row fragment" data-fragment-index="4" style="gap:2rem; justify-content: flex-end;">
-							<p data-id="test1" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 1</b></p>
-							<p class="blue" style="text-align: right;">15%</p>
-						</div>
-						<div class="fragment blueFill" data-fragment-index="3" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
-						<p style="grid-row: span 4;"  class="fragment" data-fragment-index="3"><b>Exams</b> — in person, closed book (except 3×5 notecard & scientific calculator—NO graphing calculators!)</p>
-
-						<div class="row fragment" data-fragment-index="4" style="gap:2rem; justify-content: flex-end;">
-							<p data-id="test2" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 2</b></p>
-							<p class="blue" style="text-align: right;">20%</p>
-						</div>
-						<div class="fragment blueFill" data-fragment-index="3" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
-
-						<div class="row fragment" data-fragment-index="4" style="gap:2rem; justify-content: flex-end;">
-							<p data-id="test3" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 3</b></p>
-							<p class="blue" style="text-align: right;">20%</p>
-						</div>
-						<div class="fragment blueFill" data-fragment-index="3" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
-
-						<div class="row fragment" data-fragment-index="4" style="gap:2rem; justify-content: flex-end;">
-							<p data-id="test4" class="blue" style="width: fit-content; white-space: nowrap;"><b>Final</b></p>
-							<p class="blue" style="text-align: right;">30%</p>
-						</div>
-						<div class="fragment blueFill" data-fragment-index="3" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
-					</div>
-				</section>
-
-				<section data-auto-animate>
-					<div style="display: grid; grid-template-columns: auto auto; gap: 4rem;">
-						<div style="margin-left: auto;">
-							<p data-id="test1" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 1</b></p>
-						</div>
-						<p>September 15</p>
-
-						<div style="margin-left: auto;">
-							<p data-id="test2" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 2</b></p>
-						</div>
-						<p>October 15</p>
-
-						<div style="margin-left: auto;">
-							<p data-id="test3" class="blue" style="width: fit-content; white-space: nowrap;"><b>Test 3</b></p>
-						</div>
-						<p>November 17</p>
-
-						<div style="margin-left: auto;">
-							<p data-id="test4" class="blue" style="width: fit-content; white-space: nowrap;"><b>Final</b></p>
-						</div>
-						<p>December 12</p>
-						<div></div>
-						<p class="fragment" data-fragment-index="5" style="margin-top: -4rem;"><b>SATURDAY!! 4-6pm</b></p>
-					</div>
+				<section class="bodySlide">
+					<h2>A Day in Class</h2>
+					<ol>
+						<li>
+							<p><b>warmups</b>* — will already be up when you get to class; do your work on <span>piece of paper + turn in</span></p>
+							<h6>a couple conceptual questions (review from previous class, or older concepts that are relevant to the day’s lesson)</h6>
+						</li>
+						<li><p><b>workbook</b> — mix of <span>lecture</span> + individual/partner/group work (randomly assigned groups)</p></li>
+					</ol>
+					<p style="max-width: 33ch;"><b>Exams</b> are closed book, but you may bring/use a <span>3×5 notecard</span> and a <span>scientific calculator</span>.</p>
 				</section>
 
 				<section class="bodySlide">
+					<h2>A Day Outside of Class</h2>
+					<ul>
+						<li><p><b>homework</b> — on Canvas via Lumen, should do before the next class but formally due <span>before the next exam</span></p></li>
+						<li>
+							<p><u>optional material</u>:</p>
+							<ul>
+								<li><p>these <b>slides</b></p></li>
+								<li><p>workbook <b>lesson keys</b></p></li>
+								<li><p>lesson <b>quizzes</b>* due before the next exam</p></li>
+								<li><p>other resources: office hours, Lumen learning, Peer Connect Tutoring, Math Help Lab (MQH 426)</p></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="slideTitle" style="position:fixed; top: 0%; left: 0%;">Schedule & Grading</h2>
+
+					<div style="display: grid; grid-template-columns: auto auto; gap: 4rem;">
+						<h5 data-id="test1" style="justify-self: end; width: fit-content; white-space: nowrap;">Test 1</h5>
+						<p>September 15</p>
+
+						<h5 data-id="test2" style="justify-self: end; width: fit-content; white-space: nowrap;">Test 2</h5>
+						<p>October 15</p>
+
+						<h5 data-id="test3" style="justify-self: end; width: fit-content; white-space: nowrap;">Test 3</h5>
+						<p>November 17</p>
+
+						<h5 data-id="test4" style="justify-self: end; width: fit-content; white-space: nowrap;">Final</h5>
+						<p>December 12</p>
+						<div></div>
+						<p style="margin-top: -4rem;" class="blue">SATURDAY!! 4-6pm</p>
+					</div>
+				</section>
+
+				<section class="bodySlide" data-auto-animate>  <!-- grading -->
+					<h2 data-id="slideTitle" style="position:fixed; top: 0%; left: 0%;">Schedule & Grading</h2>
+
+					<div style="margin: 0 auto; display: grid; grid-template-columns: 10rem 4rem 10rem; grid-template-rows: 3fr 3fr 4fr 4fr 6fr; row-gap: 4px; column-gap: 2rem; height: 100%; align-items: center;">
+						<p style="text-align: right;">15%</p>
+						<div style="background-color: rgba(var(--accent),0.3); height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+						<h5 style="margin:0;">Homework</h5>
+
+						<p style="justify-self: end;">15%</p>
+						<div style="background-color: rgba(var(--accent),0.3);  height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+						<h5 data-id="test1" style="margin:0; white-space: nowrap;">Test 1</h5>
+
+						<p style="justify-self: end;">20%</p>
+						<div style="background-color: rgba(var(--accent),0.625); height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+						<h5 data-id="test2" style="margin:0; white-space: nowrap;">Test 2</h5>
+
+						<p style="justify-self: end;">20%</p>
+						<div style="background-color: rgba(var(--accent),0.625); height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+						<h5 data-id="test3" style="margin:0; white-space: nowrap;">Test 3</h5>
+
+						<p style="justify-self: end;">30%</p>
+						<div class="blueFill" style="height: 100%; width: 4rem; border-radius: 0.85rem;"></div>
+						<h5 data-id="test4" style="margin:0; white-space: nowrap;">Final</h5>
+					</div>
+				</section>
+
+				<section class="bodySlide" data-auto-animate>  <!-- grading -->
+					<h2 data-id="slideTitle">Schedule & Grading</h2>
+					<h5>*Quizzes & Warmups</h5>
+					<ul>
+						<li><p>entirely optional, so not doing them will <i>not</i> hurt your grade; HOWEVER, they are an easy option to <span>earn back up to 10%</span> of your overall grade (capping at 100%)</p></li>
+						<li><p>cannot be done retroactively</p></li>
+					</ul>
+				</section>
+
+				<!-- <section class="bodySlide">
 					<h2>Resources & More</h2>
 
 					<div class="col3" style="margin-top:8rem;">
@@ -226,7 +249,7 @@
 							</ul>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 				<section class="callout">
 					<p>In case you missed it...</p>
@@ -249,6 +272,7 @@
 						<div class="xyplane gridFive fragment" data-fragment-index="1"></div>
 						<p class="xaxis fragment" data-fragment-index="1">\(x\)</p>
 						<p class="yaxis fragment" data-fragment-index="1">\(y\)</p>
+						<h6 class="below fragment" data-fragment-index="1">Assume each square is 1 unit × 1 unit.</h6>
 						
 						<div class="pointBox centerBoth">
 							<div class="point alignTL fragment" data-fragment-index="0" style="left: 70%; top: 20%"></div>
@@ -301,7 +325,7 @@
 						<p class="xaxis">\(x\)</p>
 						<p class="yaxis">\(y\)</p>
 
-						<img src="../images/quadrants.svg" style="width: 35%;" class="centerBoth">
+						<img src="../../images/quadrants.svg" style="width: 35%;" class="centerBoth">
 						<div class="columnCentered alignTL" style="top: 25%; left: 75%;">
 							<p>\(I\)</p>
 							<p>\((+,+)\)</p>
@@ -554,7 +578,7 @@
 					<div class="imgBox centerBoth fragment" data-fragment-index="1">
 						<div class="row dashedRed" style="width: 95%; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(90deg);"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
-						<img src="../images/graph-swap.svg" class="centerHor fragment" data-fragment-index="2" style="width: 90%; top: 52%;">
+						<img src="../../images/graph-swap.svg" class="centerHor fragment" data-fragment-index="2" style="width: 90%; top: 52%;">
 						
 						<div class="pointBox fragment" data-fragment-index="2">
 							<p class="alignBL" style="bottom:55%; left: 0">\(-3\)</p>
@@ -578,7 +602,7 @@
 				<section class="callout">
 					$$m=\frac{\text{rise}}{\text{run}} = \frac{\text{change in }y}{\text{change in }x} = \frac{\text{height}}{\text{width}}$$
 					<div style="width: 50%; position: relative;">
-						<img src="../images/slope.svg" style="width: 100%;">
+						<img src="../../images/slope.svg" style="width: 100%;">
 						<p class="blue" style="position: absolute; left: 88%; top: 50%; transform: translate(-50%, -50%);">rise</p>
 						<p class="blue" style="position: absolute; left: 50%; top: 90%; transform: translate(-50%, -50%);">run</p>
 					</div>
@@ -588,10 +612,10 @@
 					<h2>Slope Types</h2>
 					<div style="display: grid; grid-template-columns: auto 1fr 1fr 1fr 1fr; width: 100%; gap: 4rem;">
 						<div></div>
-						<div><img src="../images/slope4.svg" style="width: 100%;"></div>
-						<div><img src="../images/slope3.svg" style="width: 100%;"></div>
-						<div><img src="../images/slope1.svg" style="width: 100%;"></div>
-						<div><img src="../images/slope2.svg" style="width: 100%;"></div>
+						<div><img src="../../images/slope4.svg" style="width: 100%;"></div>
+						<div><img src="../../images/slope3.svg" style="width: 100%;"></div>
+						<div><img src="../../images/slope1.svg" style="width: 100%;"></div>
+						<div><img src="../../images/slope2.svg" style="width: 100%;"></div>
 
 						<div></div>
 						<h6 style="text-align: center; margin-top: -4rem;" class="blue">uphill</h6>
@@ -654,13 +678,13 @@
 
 		<div class="footer"></div>
 		<a href="../index.html"><div class="home"></div></a>
-		<script src="../reveal/dist/reveal.js"></script>
-		<script src="../reveal/dist/plugin/zoom.js"></script>
-		<script src="../reveal/dist/plugin/notes.js"></script>
-		<script src="../reveal/dist/plugin/search.js"></script>
-		<script src="../reveal/dist/plugin/markdown.js"></script>
-		<script src="../reveal/dist/plugin/highlight.js"></script>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-		<script src="../scripts.js"></script>
+		<script src="../../scripts.js"></script>
 	</body>
 </html>

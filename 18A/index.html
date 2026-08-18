@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="stylesheet" href="../main.css"/>
+
+		<title>MATH-18A College Algebra</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>MATH 18A ⁠— College Algebra</h1>
+			<h2>SJSU • Fall 2026 • Lena Pang</h2>
+
+			<div class="tabList">
+				<div class="tab selected" onclick="openCity(event, 'slides')">Slides</div>
+				<div class="tab" onclick="openCity(event, 'info')">Class Info</div>
+			</div>
+		</div>
+
+		<div class="content active" id="slides">
+			<div style="margin-bottom:4rem; max-width: 70ch;">
+				<p>Material listed is made by Lena Pang, using <code>mathJax.js</code> for LaTeX and <code>reveal.js</code>. All decks are navigated using the space bar (or arrow keys) and can be exported to PDFs.</p>
+				<p>Reference text is the SJSU <i>College Algebra Workbook V4</i> by Amanda Frank. Because the workbook is used only by SJSU, please <b>do not share outside of SJSU</b>.</p>
+			</div>
+
+			<div class="box">
+				<h4>1 ⁠— Functions & Linear Equations</h4>
+				<div class="dates">
+					<h5>Aug 20</h5><p><a href="1/1-introToGraphing.html">1.1 — Intro to Graphing</a></p>
+					<h5>Aug 25</h5><p><a href="1/2-equationsOfLines.html">1.2 — Equations of Lines</a></p>
+				</div>
+				<!-- <a href="" target="_blank"><div class="pdf">Chapter 1 Review Sheet</div></a> -->
+			</div>
+		</div>
+
+		<div class="content" id="info">
+			<h4>Course Description</h4>
+			<p>Review of basic algebra. Complex numbers, functions, graphs, polynomials, inverse functions, exponential and logarithmic functions. <i>3 units.</i></p>
+			<p>Satisfies B4: Mathematics/Quantitative Reasoning.</p>
+			<h4>Resources</h4>
+			<p><span>email</span>: lena.pang@sjsu.edu</p>
+			<p><span>office hours</span>: TBD in MQH 426 (Math Help Center)</p>
+			<h4></h4>
+		</div>
+
+		<script>
+			function openCity(evt, cityName) {
+				// Declare all variables
+				var i, content, tabs;
+
+				// Get all elements with class="content" and hide them
+				content = document.getElementsByClassName("content");
+				for (i = 0; i < content.length; i++) { content[i].style.display = "none"; }
+
+				// Get all elements with class="tablinks" and remove the class "active"
+				tabs = document.getElementsByClassName("tab");
+				for (i = 0; i < tabs.length; i++) { tabs[i].className = tabs[i].className.replace("selected", ""); }
+
+				// Show the current tab, and add an "active" class to the button that opened the tab
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += " selected";
+			}
+		</script>
+	</body>
+</html>

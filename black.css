@@ -87,6 +87,7 @@ h1 { /*cover page title*/
 h2 { /*slide titles*/
     font-family: var(--fontPrimary);
     font-size: 6rem;
+    line-height: 115%;
 }
 
 h3 { /* callout/example titles */
@@ -106,7 +107,9 @@ h4 { /* subtitles */
 h5 { /* slide subheaders */
     /* font-size: var(--bodySize); */
     font-weight: 800;
-    margin-bottom: 1.65rem;
+    margin: 0;
+} .bodySlide h5 {
+    margin: 6rem 0 0 0;
 }
 
 h6 { /* extra notes/disclaimers with body text */
@@ -137,6 +140,7 @@ ol, dl, ul {
     /* font-size: 3.5rem; */
     text-align: left;
     margin: 0 0 0 1.35em;
+    padding: 0;
     /* display: inline-block; */
     font-family: var(--fontSecondary);
     font-size: var(--bodySize);
@@ -148,15 +152,15 @@ ul ul, ul ol, ol ol, ol ul {
     margin-left: 40px;
     display: block
 } li {
-    margin: 3rem 0;
+    margin: 0 0 2rem 0;
     font-size: var(--bodySize);
     font-family: var(--fontSecondary);
 }
 li p {
     /* font-size: 3.5rem; */
-    margin: 1.65rem 0;
+    margin: 0 0 1.65rem 0;
 } ul ul li {
-    margin: -0.65rem 0
+    margin: 0 0 1.65rem 0;
 }
 
 dt { font-weight: 700 }

@@ -5,10 +5,12 @@ Reveal.initialize({
     hash: true,// Remove white margin around the content
     margin: 0.15,
     width: 1920,
-    height: 1084,
-    // disableLayout: true, // Disable default scaling for full control
+    height: 1080,
+    disableLayout: true, // Disable default scaling for full control
     plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
 });
+
+// Reveal.configure({ pdfMaxPagesPerSlide: 1 });
 
 window.MathJax = {
     loader: {load: ["output/chtml", '[tex]/color', '[tex]/textmacros', "input/tex"]},

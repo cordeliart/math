@@ -1,0 +1,33 @@
+:root {
+    /* colors */
+    --background: #FAFAFA;
+    --primary: #111111;
+    --secondary: #d3d3d3;
+    --tertiary: #d3d3d34f;
+    --accent2: #6fbaec;
+    --accent: 56, 110, 246; /* #386ef6 */
+    --definition: 56, 110, 246; /* #782ED3 */
+    --theorem: 233, 84, 15; /* e9540f */
+    --warning: #d10808;
+
+    /* typography */
+    --fontPrimary: "Instrument Serif", Cambria, serif;
+    --header-margin: 0 0 2rem 0;
+    --fontSecondary: "Instrument Sans", Helvetica, sans-serif;
+    --block-margin: 1rem;
+    --bodySize: 3.85rem;
+    --headerSize: 14rem;
+    --tiny: 1.85rem;
+    --margin: 7%;
+
+    /* misc */
+    --code-font: monospace;
+    --link-color: rgba(var(--accent));
+    --link-color-dark: rgba(var(--accent), .85);
+    --link-color-hover: rgba(var(--accent), .65);
+    --selection-backgroundColor: #0579c8;
+    --selection-color: #FAFAFA;
+    --overlay-element-bg-color: 240, 240, 240;
+    --overlay-element-fg-color: 0, 0, 0;
+    --fadeOut: 35%;
+}

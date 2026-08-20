@@ -291,17 +291,16 @@ sub { vertical-align: sub; font-size: smaller }
     color: var(--secondary);
     font-weight: 200;
     opacity: 65%;
-    margin: 0 0 1rem;
+    margin: -3rem 0 1rem 0;
 }
 
 .endSlide h2 {
     color: var(--background);
     font-size: var(--headerSize);
-    margin-bottom: 6rem;
 } .endSlide h5, .endSlide p {
     color: var(--secondary);
     opacity: 85%;
-    margin: 0.85rem 0;
+    margin: 6rem 0;
 }
 
 /* labelled slides ----------------------------------------------------------------------------------------------------------- */
@@ -461,7 +460,7 @@ sub { vertical-align: sub; font-size: smaller }
     letter-spacing: 15%;
 }
 
-/* .home {
+.home {
     position: absolute;
     left: 0;
     top: 2rem;
@@ -489,7 +488,7 @@ sub { vertical-align: sub; font-size: smaller }
     content: '<- \00a0 \00a0\00a0\00a0 Return to Index';
     width: fit-content;
     white-space: nowrap;
-} */
+}
 
 .next {
     display: flex;
@@ -627,16 +626,17 @@ sub { vertical-align: sub; font-size: smaller }
 
 .stickerBox {
     height: 1px;
-    /* background-color: red; */
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-end;
-} .sticker {
+    margin-top: -3rem;
+} .sticker, .miniSticker {
     width: calc(var(--bodySize) * calc(0.23 * 39.3));
     height: calc(var(--bodySize) * calc(0.23 * 39));
     display: flex;
+    margin-top: 3rem;
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -651,11 +651,20 @@ sub { vertical-align: sub; font-size: smaller }
     text-align: center;
     transform: rotate(12deg);
     line-height: 105%;
-} .sticker span {
+} .sticker span, .miniSticker span {
     margin-top: 1.15rem;
     font-weight: 400;
     font-size: calc(var(--bodySize) * 0.85);
     line-height: 115%;
+} .miniSticker {
+    width: calc(var(--bodySize) * calc(0.16 * 39.3));
+    height: calc(var(--bodySize) * calc(0.16 * 39));
+    align-self: flex-start;
+    white-space: nowrap;
+} .miniSticker span {
+    font-size: calc(var(--bodySize) * 0.75);
+    margin: 0.2rem 0;
+    white-space: nowrap;
 }
 
 .grid {

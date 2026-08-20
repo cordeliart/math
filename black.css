@@ -207,6 +207,7 @@ img, video, iframe {
     margin: 0;
     padding: 0;
     display: block;
+    width: 100%;
     max-width: 95%;
     max-height: 95%
 }
@@ -297,10 +298,14 @@ sub { vertical-align: sub; font-size: smaller }
 .endSlide h2 {
     color: var(--background);
     font-size: var(--headerSize);
-} .endSlide h5, .endSlide p {
+} .endSlide h5 {
     color: var(--secondary);
     opacity: 85%;
-    margin: 6rem 0;
+    margin: 4rem 0 0.85rem 0;
+} .endSlide p {
+    color: var(--secondary);
+    opacity: 85%;
+    margin: 0.85rem 0;
 }
 
 /* labelled slides ----------------------------------------------------------------------------------------------------------- */
@@ -333,7 +338,7 @@ sub { vertical-align: sub; font-size: smaller }
     gap: var(--bodySize);
     justify-content: center;
 } .definitionText p {
-    font-size: calc(var(--bodySize) * 1.5);
+    font-size: calc(var(--bodySize) * 1.35);
     max-width: 30ch;
 }
 
@@ -554,6 +559,9 @@ sub { vertical-align: sub; font-size: smaller }
     background-position: center;
     background-repeat: none;
     background-size: contain;
+    overflow:visible;
+} .imgBox.shorter {
+    height: 20rem;
 }
 
 .xyplane { /* inside .imgBox, below pointBox */
@@ -619,8 +627,8 @@ sub { vertical-align: sub; font-size: smaller }
 } .line {
     display: block;
     width: 115%;
-    height: 5px;
-    border-radius: 6px;
+    height: 4px;
+    border-radius: 2px;
     background-color: var(--primary);
 }
 
@@ -671,8 +679,11 @@ sub { vertical-align: sub; font-size: smaller }
     display: grid;
     column-gap: 1.65rem;
     row-gap: 1rem;
-} .grid > h5 {
+    justify-content: center;
+    align-items: center;
+} .grid h5, .grid p, .grid h6 {
     margin: 0;
+    text-align: center;
 }
 
 /* layouts ----------------------------------------------------------------------------------------------------------- */

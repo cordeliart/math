@@ -7,7 +7,18 @@ Reveal.initialize({
     width: 1920,
     height: 1080,
     disableLayout: true, // Disable default scaling for full control
+    katex: {
+        version: 'latest',
+        delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true },
+        ],
+        ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    },
     plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
+    // plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.KaTeX],
 });
 
 // Reveal.configure({ pdfMaxPagesPerSlide: 1 });

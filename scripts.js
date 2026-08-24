@@ -21,7 +21,14 @@ Reveal.initialize({
     // plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.KaTeX],
 });
 
-// Reveal.configure({ pdfMaxPagesPerSlide: 1 });
+function updateTime() { // Reveal.configure({ pdfMaxPagesPerSlide: 1 });
+    const now = new Date();
+    // Formats time like "10:45:30 AM" or "22:45:30" depending on locale
+    const timeString = now.toLocaleTimeString(); 
+    document.getElementById('time').textContent = timeString;
+}
+updateTime(); // Update immediately and then every second
+setInterval(updateTime, 1000);
 
 window.MathJax = {
     loader: {load: ["output/chtml", '[tex]/color', '[tex]/textmacros', "input/tex"]},

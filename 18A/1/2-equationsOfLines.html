@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>1.2 Equations of Lines</title>
+		<title>1.2 Equations of Lines | 18A</title>
 		<meta name="description" content=""/>
 		<meta name="author" content="Lena Pang"/>
 
@@ -25,17 +25,362 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background="var(--primary)" class="titleSlide">
-					<h4>Thursday, August 13, 2026</h4>
-					<h1><span>2.1</span> Polynomial Basics</h1>
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:37am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p><b>Write your name and answers</b> on a sheet of paper. <br>(FYI: these are graded on participation not accuracy.)</p>
+					<div class="problems">
+						<div class="num">1</div>
+						<p>What is the <span>format of an \(x\)-intercept</span>, \((0,\#)\) or \((\#,0)\)? Why? You can write/draw graphs/etc to explain <i>your</i> logic.</p>
+						<div></div>
+						<p class="fragment blue">\((\#,0)\) because \(y=0\) where the equation hits the \(x\)-axis</p>
+						<div class="num">2</div>
+						<p>What is the <span>\(y\)-intercept</span> in \(y=mx+b\)? Why?</p>
+						<div></div>
+						<p class="fragment blue">We know \(x=0\) for the \(y\)-intercept. Plugging that in, we get \(y=m(0)+b=0+b=b\), so the intercept is \((0,2)\).</p>
+					</div>
+					<!-- <h6>Warmups are participation based. Getting them right or wrong does not affect your grade, but it will help me gauge your understanding.</h6> -->
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Tuesday, August 25, 2026</h4>
+					<h1><span>1.2</span> Equations of Lines</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 7</div></div>
+				</div></section>
+
+<!-- MAIN CONTENT ------------------------------------------------------------------------------------------------------>
+
+				<!-- <section data-background="rgb(var(--accent))"><div class="cover">
+					<p>equation of a line</p>
+					$$f(x)=10-2x-3x^2$$
+					<p>coefficients</p>
+				</div></section> -->
+
+				<section>
+					<div class="columnDefinition">
+						<div class="definition">Expression</div>
+						<div class="definitionText">
+							<p>an <b>expression</b> consists of <span>numbers</span>, <span>variables</span>, & <span>arithmetic operations</span></p>
+							<div class="exampleBox">Ex: \(3x+2\)</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="columnDefinition">
+						<div class="definition">Equation</div>
+						<div class="definitionText">
+							<p><span>two expressions</span> set equal<br>make an <b>equation</b></p>
+							<div class="exampleBox">Ex: \(3x+2=4\)</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="columnDefinition">
+						<div class="definition">Exponent</div>
+						<div class="definitionText">
+							<p>an <b>exponent</b> represents the number of times a value is <span>multiplied by itself</span></p>
+							<p>\(a^b = \underbrace{a\times a\times ...\times a}_{b\text{ many times}}\)</p>
+							<div class="exampleBox">Ex: \(3^4 = 3\times 3\times 3\times 3\)</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="columnDefinition">
+						<div class="definition">Degree</div>
+						<div class="definitionText">
+							<p>the <b>degree</b> of an expression/equation is the <span>highest exponent</span> on the variable</p>
+							<div class="exampleBox">Ex: \(3^4 + 2x +7\) is degree 4</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="columnDefinition">
+						<div class="definition">Linear</div>
+						<div class="definitionText">
+							<p>an equation is <b>linear</b> if it is <span>degree 1</span></p>
+							<h6>AKA the highest exponent is 1</h6>
+							<div class="exampleBox">Ex: \(5x + 2\) is a  linear expression</div>
+						</div>
+					</div>
 				</section>
 
-<!-- INTRO ------------------------------------------------------------------------------------------------------>
+<!-- EXERCISES ------------------------------------------------------------------------------------------------------>
 
-				<section class="callout">
-					<h2>What is a <i>polynomial</i>?</h2>
-				</section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>7</div><div>Example 1</div></div>
+					<p>Solve for \(x\).</p>
+					<div class="problems">
+						<div class="num">1</div>
+						<div class="answer">
+							<p style="width: 28rem">\(2x+3=5x-2\)</p>
+							<p class="fragment">\(x=-3/5\)</p>
+						</div>
+						<div class="num">2</div>
+						<div class="answer">
+							<p style="width: 28rem">\(6x-3=3x-9\)</p>
+							<p class="fragment">\(x=-2\)</p>
+						</div>
+						<div class="num">3</div>
+						<div class="answer">
+							<p style="width: 28rem">\(-2(x-3)=-5x-9\)</p>
+							<p class="fragment">\(x=-1\)</p>
+						</div>
+						<div class="num">4</div>
+						<div class="answer">
+							<p style="width: 28rem">\(2(x-1)=3(x+2)\)</p>
+							<p class="fragment">\(x=-8\)</p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- GRAPHING LINES ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Graphing Lines</h2>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>8</div><div>Example 2a</div></div>
+						<p>Graph and find the intercepts of <br>\(y=3x-1\).</p>
+						<p>Do <b>NOT</b> do the second equation yet!!</p>
+					</div>
+					<div class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+						<div class="pointBox">
+							<div class="fragment point alignTL blueFill" style="left:50%;top:60%;"data-fragment-index="1"></div>
+							<div class="fragment point alignTL blueFill" style="left:53.33%;top:50%;"data-fragment-index="1"></div>
+							<div class="line fragment blueFill" style="width: 122%; left: 53.3%; top: 49%; transform: translateX(-50%) rotate(-71.7deg);"data-fragment-index="1"></div>
+						</div>
+					</div></div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>(Unofficial) Quick Method</h2>
+						<p>How to <i>not</i> make a table. <u>Lines only</u>.</p>
+						<ol>
+							<li>
+								<p>find a <b>reference point</b></p>
+								<h6>my personal go-to is the \(y\)-intercept (because it is obvious in \(y=mx+b\)), but any point is OK!</h6>
+							</li>
+							<li><p>rewrite your slope as a <b>fraction</b> (rise over run)</p></li>
+							<li><p>use the <b>slope triangle</b> to draw the rest of your line</p></li>
+						</ol>
+					</div>
+					<div class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+						<p class="below blue">\(y=3x-1\)</p>
+						<div class="pointBox">
+							<div class="fragment point alignTL blueFill" style="left:50%;top:60%;"data-fragment-index="1"></div>
+							<div class="slope fragment" style="transform: scaleY(300%); top: 40%; left: 50%;" data-fragment-index="2"></div>
+							<div class="slope fragment" style="transform: scaleY(300%); top: 100%; left: 30%;" data-fragment-index="3"></div>
+							<div class="slope fragment" style="transform: scaleY(300%); top: 70%; left: 40%;" data-fragment-index="3"></div>
+							<div class="slope fragment" style="transform: scaleY(300%); top: 10%; left: 60%;" data-fragment-index="3"></div>
+							<div class="line fragment blueFill" style="width: 122%; left: 53.3%; top: 49%; transform: translateX(-50%) rotate(-71.7deg);"data-fragment-index="3"></div>
+						</div>
+					</div></div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>8</div><div>Example 2b</div></div>
+						<p>Graph and find the intercepts of <br> \(y=-2x+1\).</p>
+						<p class="blue"><u>Quick method</u> (if you want to):</p>
+						<ol class="blue">
+							<li><p>find a <b>reference point</b></p></li>
+							<li><p>rewrite your slope as a <b>fraction</b> (rise over run)</p></li>
+							<li><p>use the <b>slope triangle</b> to draw the rest of your line</p></li>
+						</ol>
+					</div>
+					<div class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+						<div class="pointBox">
+							<div class="fragment point alignTL blueFill" style="left:50%;top:40%;" data-fragment-index="5"></div>
+							<div class="slope fragment" style="transform: scaleY(-200%); top: 85%; left: 70%;" data-fragment-index="7"></div>
+							<div class="slope fragment" style="transform: scaleY(-200%); top: 65%; left: 60%;" data-fragment-index="7"></div>
+							<div class="slope fragment" style="transform: scaleY(-200%); top: 45%; left: 50%;" data-fragment-index="6"></div>
+							<div class="slope fragment" style="transform: scaleY(-200%); top: 25%; left: 40%;" data-fragment-index="7"></div>
+							<div class="slope fragment" style="transform: scaleY(-200%); top: 5%; left: 30%;" data-fragment-index="7"></div>
+							<div class="line fragment blueFill" style="width: 122%; left: 55.1%; top: 49.7%; transform: translateX(-50%) rotate(63.5deg);"data-fragment-index="7"></div>
+						</div>
+					</div></div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>8</div><div>Example 3</div></div>
+						<p>Write an equation with the two points graphed, and then another for \((-1,3)\) and \((1,-1)\).</p>
+						<p class="blue"><u>Quick method</u>: see if you can work backward!</p>
+						<ol class="blue">
+							<li><p>find a <b>reference point</b></p></li>
+							<li><p>rewrite your slope as a <b>fraction</b></p></li>
+							<li><p>use the <b>slope triangle</b> to draw the rest of your line</p></li>
+						</ol>
+					</div>
+					<div class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+						<div class="pointBox">
+							<div class="point alignTL" style="left: 60%; top: 40%;"></div>
+							<div class="point alignTL" style="left: 80%; top: 0%;"></div>
+						</div>
+					</div></div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>8</div><div>Example 3a: Traditional Method</div></div>
+						<ol>
+							<li><div class="answer vert">
+								<p>find slope \(m\)</p>
+								<p class="fragment" style="margin-top: 0.65rem;">\(m= \dfrac{5-1}{3-1} =  \dfrac{4}{2} = 2\)</p>
+							</div></li>
+							<li><div class="answer vert">
+								<p>plug one point to solve for \(b\)</p>
+								<div>
+									<p class="fragment">\(y = mx + b\) using \((1,1)\)</p>
+									<p class="fragment">\((1)=2(1) + b\)</p>
+									<p class="fragment">\(1-2=b\)</p>
+									<p class="fragment">\(-1=b\)</p>
+									<div class="finalAnswer fragment">\(y=2x-1\)</div>
+								</div>
+							</div>
+							</li>
+						</ol>
+					</div>
+
+					<div class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+						<div class="pointBox">
+							<div class="point alignTL" style="left: 60%; top: 40%;"></div>
+							<div class="point alignTL" style="left: 80%; top: 0%;"></div>						
+						</div>
+					</div></div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>8</div><div>Example 3a: Quick Method</div></div>
+						<ol>
+							<li><div class="answer">
+								<p>find slope \(m\)</p>
+								<p class="fragment" data-fragment-index="1">\(= 4/2 = 2\)</p>
+							</div></li>
+							<li><p>finish the line</p></li>
+							<li><div class="answer">
+								<p>find your reference point</p>
+								<p class="fragment" data-fragment-index="3">\((0,-1)\)</p>
+							</div></li>
+							<li><div class="answer vert">
+								<p>plug it all in</p>
+								<p class="finalAnswer fragment" data-fragment-index="4">\(y=2x-1\)</p>
+							</div></li>
+						</ol>
+					</div>
+
+					<div class="graphColumn centerBox removeMargin">
+						<div class="imgBox">
+							<div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+							<div class="pointBox">
+								<div class="line fragment blueFill" style="width: 122%; left: 55.1%; top: 49.7%; transform: translateX(-50%) rotate(-63.5deg);" data-fragment-index="2"></div>
+								<div class="point alignTL" style="left: 60%; top: 40%;"></div>
+								<div class="point alignTL" style="left: 80%; top: 0%;"></div>						
+								<div class="slope fragment" style="transform: scale(200%,400%); top: 15%; left: 65%;" data-fragment-index="1"></div>
+								<div class="slope fragment" style="transform: scale(200%,400%); top: 55%; left: 45%;" data-fragment-index="2"></div>
+								<div class="point fragment alignTL blueFill" style="left: 50%; top: 60%;" data-fragment-index="3"></div>
+							</div>
+						</div>
+					</div>
+				</div></section>
 				
+				<section><div class="bodySlide">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>8</div><div>Example 3b: Traditional Method</div></div>
+						<p>Determine line with points \((-1,3)\)  and \((1,-1)\).</p>
+						<ol>
+							<li><div class="answer vert">
+								<p>find slope \(m\)</p>
+								<p class="fragment" style="margin-top: 0.65rem;">\(m= \dfrac{3-(-1)}{-1-1} =  \dfrac{4}{-2} = -2\)</p>
+							</div></li>
+							<li><div class="answer vert">
+								<p>plug one point to solve for \(b\)</p>
+								<div>
+									<p class="fragment">\(y = mx + b\) using \((1,-1)\)</p>
+									<p class="fragment">\((-1)=-2(1) + b\)</p>
+									<p class="fragment">\(-1+2=b\)</p>
+									<p class="fragment">\(1=b\)</p>
+									<div class="finalAnswer fragment">\(y=-2x+1\)</div>
+								</div>
+							</div>
+							</li>
+						</ol>
+					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<h5>Continue with Examples 4 & 5.</h5>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>10</div><div>Example 6</div></div>
+						<p>The lines are... <b class="fragment" data-fragment-index="0">parallel</b>.</p>
+						<p class="fragment blue" data-fragment-index="1">\(y=2x+1\)</p>
+						<p class="fragment blue" data-fragment-index="1">\(y=2x+5\)</p>
+						<p class="fragment blue" data-fragment-index="1">\(y=2x-3\)</p>
+						<p class="fragment" data-fragment-index="2">They have the <b>same</b> slope.</p>
+					</div>					
+
+					<div class="graphColumn centerBox removeMargin">
+						<div class="imgBox">
+							<div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+							<div class="pointBox">
+								<div class="line blueFill" style="width: 122%; left: 25.1%; top: 49.7%; transform: translateX(-50%) rotate(-63.5deg);"></div>
+								<div class="line blueFill" style="width: 122%; left: 45.1%; top: 49.7%; transform: translateX(-50%) rotate(-63.5deg);"></div>
+								<div class="line blueFill" style="width: 122%; left: 65.1%; top: 49.7%; transform: translateX(-50%) rotate(-63.5deg);"></div>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>10</div><div>Example 7</div></div>
+						<p>The lines are... <b class="fragment" data-fragment-index="0">perpendicular</b>.</p>
+						<p class="fragment blue" data-fragment-index="1">\(y=2x+1\)</p>
+						<p class="fragment blue" data-fragment-index="1">\(y=-\frac{1}{2}x+\frac{1}{2}\)</p>
+						<p class="fragment" data-fragment-index="2">They have the opposite slope:<br><b>reciprocal and negated</b>.</p>
+					</div>
+					
+					<div class="graphColumn centerBox removeMargin">
+						<div class="imgBox">
+							<div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+							<div class="pointBox">
+								<div class="line blueFill" style="width: 122%; left: 50%; top: 54.6%; transform: translateX(-50%) rotate(26.5deg);"></div>
+								<div class="line blueFill" style="width: 122%; left: 65.1%; top: 49.7%; transform: translateX(-50%) rotate(-63.5deg);"></div>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="callout">
+					<h2 data-id="title">tl;dr</h2>
+					<p data-id="top"><b>parallel</b> lines have the <span>same</span> slope</p>
+					<p data-id="mid"><b>perpendicular</b> lines have <span>opposite</span> slope<br>(reciprocal + negative)</p>
+				</div></section>
+
+				<section data-auto-animate><div class="callout">
+					<h2 data-id="title" style="opacity: 50%;">tl;dr</h2>
+					<p data-id="top" style="opacity: 50%;"><b>parallel</b> lines have the <span>same</span> slope</p>
+					<p data-id="mid" style="opacity: 50%;"><b>perpendicular</b> lines have <span>opposite</span> slope<br>(reciprocal + negative)</p>
+					<p><b>With that in mind, finish the last exercise.</b></p>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 1.2 homework</p>
+					<p>-> buy workbook (if you haven't yet)</p>
+				</div></section>
 			</div>
 		</div>
 

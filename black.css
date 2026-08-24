@@ -70,6 +70,11 @@
 } .reveal .progress span { background: rgba(0, 0, 0, 0.65); }
 .reveal .progress::-moz-progress-bar { background: rgba(0, 0, 0, 0.65); }
 
+section.row {
+    /* position: relative; */
+    flex-flow: row !important;
+}
+
 /* typography ----------------------------------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
@@ -85,7 +90,7 @@ h1 { /*cover page title*/
     letter-spacing: -1.5%;
     line-height: 95%;
     color: var(--background);
-    max-width: 15ch;
+    max-width: 16ch;
 } h1 span { color: rgb(var(--accent)); }
 
 h2 { /*slide titles*/
@@ -159,6 +164,10 @@ ul ul, ul ol, ol ol, ol ul {
     font-family: var(--fontSecondary);
 } li p { margin: 0 0 1.65rem 0; }
 ul ul li { margin: 0 0 1.65rem 0; }
+ol.smaller, ol.smaller li, ol.smaller li p {
+    font-size: calc(var(--bodySize) * 0.8) !important;
+    margin: 0.35rem 0;
+}
 
 dt { font-weight: 700 }
 dd { margin-left: 40px }
@@ -316,7 +325,7 @@ sub { vertical-align: sub; font-size: smaller }
     flex-flow: row;
     align-items: center;
     gap: 1rem;
-    font-size: calc(var(--bodySize) * 0.65);
+    font-size: calc(var(--bodySize) * 0.8);
     font-weight: 800;
     color: rgb(var(--definition));
     font-family: var(--fontSecondary);
@@ -324,10 +333,10 @@ sub { vertical-align: sub; font-size: smaller }
 } .definition::before, .theorem::before {
     background-color: rgb(var(--definition));
     width: fit-content;
-    padding: 0.85rem;
+    padding: calc(var(--bodySize) * 0.35);
     content: 'Definition';
     color: var(--background);
-    border-radius: 0.5rem;
+    border-radius: calc(var(--bodySize) * 0.25);
     font-weight: 600;
     line-height: 1;
 } .definition h4 { color: rgb(var(--definition)); }
@@ -369,6 +378,17 @@ sub { vertical-align: sub; font-size: smaller }
     font-weight: 800;
 }
 
+.columnDefinition, .columnWorkbook {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: var(--bodySize) !important;
+    justify-content: center;
+    width: fit-content;
+} .columnWorkbook {
+    justify-content: flex-start;
+}
+
 /* problem sets ----------------------------------------------------------------------------------------------------------- */
 
 .problems { /* 2 by n grid to arrange problems */
@@ -380,18 +400,18 @@ sub { vertical-align: sub; font-size: smaller }
     margin: 2rem 0;
 } .num { /* number, left side of .problems grid */
     background-color: rgba(var(--accent), 0.2);
-    height: 6rem;
-    width: 6rem;
-    border-radius: 1.35rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 800;
     color: rgb(var(--accent));
-    font-size: calc(var(--bodySize) * 0.5);
+    font-size: var(--bodySize);
     line-height: 1;
 } .problems p {
-    font-size: calc(var(--bodySize) * 0.5);
+    font-size: var(--bodySize);
 }
 
 .answer { /* right side of .problems */
@@ -399,6 +419,7 @@ sub { vertical-align: sub; font-size: smaller }
     flex-flow: row;
     width: 100%;
     gap: 1.65rem;
+    height: fit-content;
 } .answer>*:nth-child(1) { /* first child is problem */
     /* width: 135vw; */
     width: fit-content;
@@ -407,6 +428,17 @@ sub { vertical-align: sub; font-size: smaller }
 } .instructions {
     font-size: calc(var(--bodySize) * 1.5) !important;
     margin-top: 6rem;
+} .answer.vert {
+    flex-flow: column;
+    gap: 0.35rem;
+} .finalAnswer {
+    display: block;
+    padding: 0.65rem 1rem;
+    width: fit-content;
+    border-radius: 1rem;
+    border: 2px solid rgb(var(--accent));
+} .answer p {
+    margin: 0;
 }
 
 .col3 {
@@ -446,6 +478,15 @@ sub { vertical-align: sub; font-size: smaller }
 } .col2>.problems p {
     font-size: calc(var(--bodySize) * 1.5);
     column-gap: 1.5rem;
+}
+
+.time {
+    color: rgb(var(--accent));
+    font-size: calc(var(--bodySize) * 1.15);
+    font-weight: 600;
+    align-self: flex-start;
+    font-family: monospace;
+    letter-spacing: -3%;
 }
 
 /* fixed elements ----------------------------------------------------------------------------------------------------------- */
@@ -518,12 +559,14 @@ sub { vertical-align: sub; font-size: smaller }
 /* boxes, layouts, and buttons ----------------------------------------------------------------------------------------------------------- */
 
 .exampleBox { /* frame for examples */
-    padding: 0 1.35rem;
+    padding: calc(var(--bodySize) * 0.5);
     background-color: rgba(var(--definition), .15);
     color: rgb(var(--definition));
     width: fit-content;
-    border-radius: 1.35rem;
-    font-size: 3rem;
+    border-radius: calc(var(--bodySize) * 0.5);
+    font-size: calc(var(--bodySize) * 1.05);
+    font-weight: 500;
+    margin-top: 1.15rem;
 }
 
 .examplesBelow { /* more examples below tag */
@@ -631,6 +674,13 @@ sub { vertical-align: sub; font-size: smaller }
     height: 4px;
     border-radius: 2px;
     background-color: var(--primary);
+} .slope {
+    display: block;
+    width: 10%;
+    height: 10%;
+    background-image: url('images/triangle.svg');
+    background-size: cover;
+    opacity: 20% !important;
 }
 
 .stickerBox {
@@ -738,6 +788,7 @@ sub { vertical-align: sub; font-size: smaller }
     border-radius: 10px;
     background-color: var(--warning);
 } .slideRow {
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -745,6 +796,7 @@ sub { vertical-align: sub; font-size: smaller }
     width: 100%;
     /* background: #0fd10862; */
     height: 100%;
+    gap: 6rem;
 }
 
 .columnCentered {
@@ -766,6 +818,8 @@ sub { vertical-align: sub; font-size: smaller }
     margin-top: -8rem;
 } .centerBox.removeMargin {
     margin-top: 0;
+} .graphColumn {
+    width: 34rem;
 }
 
 /* format overrides ----------------------------------------------------------------------------------------------------------- */

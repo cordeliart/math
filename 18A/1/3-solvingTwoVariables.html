@@ -51,7 +51,7 @@
 					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 11</div></div>
 				</div></section>
 
-<!-- MAIN CONTENT ------------------------------------------------------------------------------------------------------>
+<!-- LINES ------------------------------------------------------------------------------------------------------>
 
 				<section><div class="bodySlide">
 					<div class="definition">Linear (Review from 1.2)</div>
@@ -62,8 +62,68 @@
 					</div>
 				</div></section>
 
+				<section><div class="bodySlide">
+					<h2>Lines in Many Forms</h2>
+
+					<div class="col2">
+						<div>
+							<h5>Equation</h5>
+							<p style="font-size: var(--bigFont);">\(y=mx+b\)</p>
+							<p style="margin-top: 2rem;">The equation can be shuffled however you want: <br>\( ay \pm cx = b\) &nbsp; ✓ <br>\( b = ay \pm cx\) &nbsp; ✓ <br>\( cx \pm b = ay\) &nbsp; ✓</p>
+							<p style="margin-top: 2rem;">All that matters is \(x\) and \(y\) have no exponent \(>2\).</p>
+						</div>
+						<div>
+							<h5>Graphs</h5>
+							<div class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+								<div class="pointBox">
+									<div class="line blueFill" style="width: 122%; left: 53.3%; top: 49%; transform: translateX(-50%) rotate(-71.7deg);"></div>
+									<div class="line blueFill" style="width: 122%; left: 50%; top: 22%; transform: translateX(-50%) rotate(-21.7deg);"></div>
+									<div class="line blueFill" style="width: 122%; left: 50%; top: 72%; transform: translateX(-50%) rotate(6.7deg);"></div>
+								</div>
+							</div></div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Is the equation a line?</h2>
+					<div class="problems">
+						<div class="num">1</div>
+						<div class="answer"><p>\(y=8x+5\)</p><p class="fragment">Yes</p></div>
+						<div class="num">2</div>
+						<div class="answer"><p>\(x-y=1\)</p><p class="fragment">Yes</p></div>
+						<div class="num">3</div>
+						<div class="answer"><p>\(2x+3y=17\)</p><p class="fragment">Yes</p></div>
+						<div class="num">4</div>
+						<div class="answer"><p>\(x^2=y\)</p><p class="fragment">No</p></div>
+						<div class="num">5</div>
+						<div class="answer"><p>\(x=9y\)</p><p class="fragment">Yes</p></div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Is the graph a line?</h2>
+					<div class="centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+						<div class="pointBox fragment fade-out" data-fragment-index="2">
+							<div class="line blueFill" style="width: 118%; left: 50.3%; top: 22%; transform: translateX(-50%) rotate(17deg);"></div>
+						</div>
+						<div class="pointBox fragment fade-in-then-out" data-fragment-index="2">
+							<div class="line blueFill" style="width: 100%; left: 52%; top: 36%; transform: translateX(-50%) rotate(-55.7deg);"></div>
+							<div class="line blueFill" style="width: 32%; left: 10%; top: 70%; transform: translateX(-50%) rotate(26.7deg);"></div>
+						</div>
+						<div class="pointBox fragment fade-in-then-out" data-fragment-index="3">
+							<img src="../../images/curve.svg" style="transform: scale(112%) translate(0.7rem, 2rem);">
+						</div>
+						<div class="pointBox fragment fade-in-then-out" data-fragment-index="4">
+							<div class="line blueFill" style="width: 110%; left: 20%; top: 50%; transform: translateX(-50%) rotate(90deg);"></div>
+						</div>
+					</div></div>
+				</div></section>
+
+<!-- MAIN CONTENT ------------------------------------------------------------------------------------------------------>
+
 				<section data-background="rgb(var(--accent))"><div class="cover">
-					<h2>Systems of Equations</h2>
+					<h2>Linear Systems of Equations</h2>
 				</div></section>
 
 				<section data-transition="slide-in fade-out"><div class="callout">
@@ -74,7 +134,7 @@
 					</div>
 				</div></section>
 
-				<section data-transition="fade"><div class="callout">
+				<section data-transition="fade-in slide-out"><div class="callout">
 					<div>
 						$$x + x + x = 9$$
 						$$y + y = 8$$
@@ -82,21 +142,37 @@
 					</div>
 				</div></section>
 
-				<section data-transition="fade-in slide-out"><div class="callout">
+				<!-- <section data-transition="fade"><div class="callout">
 					<div>
-						$$\begin{cases}x + x + x = 9 \\y + y = 8 \end{cases}$$
+						$$\begin{cases}x + x + x = 9 \\y + y = 8 \\ x+y = ?\end{cases}$$
 					</div>
-				</div></section>
+				</div></section> -->
+
+				<!-- <section data-transition="fade-in slide-out"><div class="callout">
+					<div>
+						$$\begin{cases}x + x + x = 9 \\y + y = 8 \\ x+y = 7\end{cases}$$
+					</div>
+				</div></section> -->
 
 				<section><div class="callout">
 					<p>There are a lot of times in life where we need to meet multiple requirements, so we use <b>systems of equations</b>.</p>
 				</div> </section>
 
-				<section><div class="bodySlide">
+				<section data-auto-animate><div class="bodySlide">
 					<div class="columnDefinition">
-						<div class="definition">System of Equations</div>
+						<div class="definition" data-id="title">System of Equations</div>
 						<div class="definitionText">
-							<p>a <b>system</b> is a collection of equations that must all be <span>true simultaneously</span></p>
+							<p data-id="description">a <b>system</b> is a collection of equations that must all be <span>true simultaneously</span></p>
+						</div>
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div class="columnDefinition">
+						<div class="definition" data-id="title">System of Equations</div>
+						<div class="definitionText">
+							<p data-id="description">a <b>system</b> is a collection of equations that must all be <span>true simultaneously</span></p>
+							<div class="exampleBox">Ex: \( \begin{cases} 3x = 9 \\2y = 8 \end{cases}\)</div>
 						</div>
 					</div>
 				</div></section>
@@ -109,84 +185,163 @@
 							<div class="num">a</div>
 							<div class="answer">
 								<p>\(x=5, y=6\)</p>
-								<p>no, fails 1st equation</p>
+								<p class="fragment">no, fails 1st equation</p>
 							</div>
 							<div class="num">b</div>
 							<div class="answer">
 								<p>\(x=-7, y=-8\)</p>
-								<p>no, fails 2nd equation</p>
+								<p class="fragment">no, fails 2nd equation</p>
 							</div>
 							<div class="num">c</div>
 							<div class="answer">
 								<p>\(x=4, y=3\)</p>
-								<p>valid!</p>
+								<p class="fragment">valid!</p>
 							</div>
 						</div>
 					</div>
-					<div class="graphColumn" style="font-size: calc(var(--bodySize)*1.5);">
+					<div class="graphColumn" style="font-size: var(--bigFont);">
 						$$\begin{cases} x-y=1 \\ 2x+3y=17 \end{cases}$$
 					</div>
 				</div></section>
 
-				<section><div class="bodySlide">
-					<h2>Solving by Substitution</h2>
-					<p style="padding-left: 51.5rem; margin-top: -8rem;">\(\begin{cases} x-y=1 \\ 2x+3y=17 \end{cases}\)</p>
-					<div class="answer">
-						<div style="width: 50rem;">
-							<p>Solve <b>one</b> equation for <b>one</b> variable.</p>
-							<h6 style="margin-top: 0.5rem;">Pick the <u>easier one</u>!!</h6>
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Solving by Substitution</h2>
+
+						<ol>
+							<li class="fragment" data-fragment-index="0">
+								<p style="margin-bottom: 0.35rem;"><b>Isolate one variable</b>: solve one equation for one variable.</p>
+								<h6>Pick the <u>easier one</u>!!</h6>
+							</li>
+							<li class="fragment" data-fragment-index="5">
+								<p style="margin-bottom: 0.35rem;"><b>Substitute</b>: replace the variable you isolated in the other equation.</p>
+								<h6>After substituting, you should only have <br><u>one variable</u> in your equation.</h6>
+							</li>
+							<li class="fragment" data-fragment-index="10"><p><b>Back-substitute</b>: plug the (2) answer into the (1) answer to find the other variable.</p></li>
+							<li class="fragment" data-fragment-index="13"><p><b>Check</b> your solution in BOTH eqs!</p></li>
+						</ol>
+					</div>
+					
+					<div class="columnWorkbook blue" style="width: 40rem;">
+						<p>\(\begin{cases} x-y=1 \\ 2x+3y=17 \end{cases}\)</p>
+						<p class="fragment" data-fragment-index="2" style="margin-top: 1rem;">\(x-y=1 \) <br> <span class="answerBox">\(x = y + 1\)</span></p>
+						<div style="margin: 1.5rem 0;">
+							<p class="fragment" data-fragment-index="6">\(2\) <span class="answerBox">\(x\)</span> \( + 3y = 17\)</p>
+							<p class="fragment" data-fragment-index="7" style="margin-top: 0.5rem;">\( 2(\) <span class="answerBox">\(y+1\)</span>\()+3y=17\)</p>
+							<p class="fragment" data-fragment-index="8">\( \vdots \\\) <span class="finalAnswer">\( y = 3\)</span></p>
 						</div>
-						<p class="fragment" data-fragment-index="0">\(x-y=1 \\ x = y + 1\)</p>
-						<div class="finalAnswer fragment" style="position: absolute; left: 57rem; top: 19.3rem; height: 2rem; width: 10.1rem;" data-fragment-index="2"></div>
-					</div>
-					<div class="answer">
-						<div style="width: 50rem;">
-							<p><b>Substitute the result</b> into the other eq.</p>
-							<h6 style="margin-top: 0.5rem;">After substituting, you should only have <br><u>one variable</u> in your equation.</h6>
+						<div>
+							<p class="fragment" data-fragment-index="11"><span class="answerBox">\(x = y + 1\)</span></span></p>
+							<p class="fragment" data-fragment-index="12">\(x=3+1=\) <span class="finalAnswer">\(4\)</span></p>
 						</div>
-						<p class="fragment" data-fragment-index="1">\(2(y+1)+3y=17 \\ 2y+2 + 3y = 17 \\ 5y = 15 \\ y = 3\)</p>
-					</div>
-					<div class="answer">
-						<p style="width: 50rem;"><b>Back-substitute</b> the (2) answer into the (1) answer to find the other variable.</p>
-						<p class="fragment" data-fragment-index="3">\(x=y+1=3+1=4\)</p>
-						<div class="finalAnswer fragment" style="position: absolute; left: 57rem; top: 40.5rem; height: 2rem; width: 10.1rem;" data-fragment-index="3"></div>
-					</div>
-					<div class="answer">
-						<p style="width: 50rem;"><b>Check</b> your solution.</p>
-						<p class="fragment" data-fragment-index="4">\(x=4, y=3\)</p>
 					</div>
 				</div></section>
 
-
-
 				<section><div class="bodySlide">
 					<div class="workbook"><div>13</div><div>Example 3</div></div>
-					$$\begin{cases} 5x + 4y = 8 \\ 6x + 2y = 14\end{cases}$$
-					<p>Things to consider:</p>
+					<div style="font-size: var(--bigFont);">
+						$$\begin{cases} 5x + 4y = 8 \\ 6x + 2y = 14\end{cases}$$
+					</div>
+					<p><b>Solve by substitution.</b> Some things to consider:</p>
 					<ul>
 						<li><p>Which equation is easier to isolate a variable in?</p></li>
 					</ul>
 				</div></section>
 
-				<section><div class="bodySlide">
-					<h2>Solving by Elimination</h2>
-					<p style="padding-left: 51.5rem; margin-top: -8rem;">\(\begin{cases} x-y=1 \\ 2x+3y=17 \end{cases}\)</p>
-					<div class="answer">
-						<div style="width: 50rem;">
-							<p>Pick a variable to <b>eliminate</b>.</p>
-							<h6 style="margin-top: 0.5rem;">Pick the <u>easier one</u>!!</h6>
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Solving by Elimination</h2>
+						<ol>
+							<li class="fragment" data-fragment-index="0">
+								<p style="margin-bottom: 0.35rem;">Pick a variable to <b>eliminate</b>.</p>
+								<h6>Pick the <u>easier one</u>!!</h6>
+							</li>
+							<li class="fragment" data-fragment-index="5">
+								<p><b>Add</b> the equations to cancel out one variable, and solve for the remaining variable.</p>
+							</li>
+							<li class="fragment" data-fragment-index="10">
+								<p><b>Back-substitute</b> your (2) solution into one of the original eqs.</p>
+							</li>
+							<li class="fragment" data-fragment-index="15">
+								<p><b>Check</b> your solution in BOTH eqs!</p>
+							</li>
+						</ol>
+					</div>
+
+					<div class="columnWorkbook blue" style="width: 40rem;">
+						<p>\(\begin{cases} x-y=1 \\ 2x+3y=17 \end{cases}\)</p>
+						<p class="fragment" data-fragment-index="1">\(3\cdot (x-y=1) \\ 3x -3y = 3\)</p>
+						<div>
+							<p class="fragment" data-fragment-index="6">\( \begin{array}{cccc} &3x -3y = 3 \\ + &2x + 3y = 17 \\ \hline &5x = 20\end{array}\)</p>
+							<p class="fragment" data-fragment-index="7" style="margin-left: 10rem;"><span class="finalAnswer"> \(x = 4 \)</span></p>
 						</div>
-						<p class="fragment">\(3\cdot (x-y=1) \\ 3x -3y = 3\)</p>
+						<div>
+							<p class="fragment" data-fragment-index="11">\(x-y=1 \)</p>
+							<p class="fragment" data-fragment-index="12">\(4-y=1\)</p>
+							<p class="fragment" data-fragment-index="13"><span class="finalAnswer"> \(y=3 \)</span></p>
+						</div>
 					</div>
-					<div class="answer">
-						<p style="width: 50rem;"><b>Add</b> the equations to cancel out one variable, and solve for the remaining variable.</p>
-						<p class="fragment" style="margin-bottom: -1rem;">\( \begin{array}{cccc} &3x -3y = 3 \\ + &2x + 3y = 17 \\ \hline &5x = 20 \\  &x = 4 \end{array}\)</p>
+				</div></section>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Thinking Graphically</h2>
+				</div></section>
+
+				<section data-auto-animate=""><div class="callout">
+					<p data-id="1" style="font-size: var(--bigFont);">Is \(x-y=1\) a line?</p>
+				</div></section>
+
+				<section data-auto-animate=""><div class="callout">
+					<p data-id="1" style="font-size: var(--bigFont); opacity: 20%;">Is \(x-y=1\) a line?</p>
+					<p data-id="2" style="font-size: var(--bigFont);">Is \(2x+3y=17\) a line?</p>
+				</div></section>
+
+				<section data-auto-animate=""><div class="callout">
+					<p data-id="1" style="font-size: var(--bigFont); opacity: 20%;">Is \(x-y=1\) a line?</p>
+					<p data-id="2" style="font-size: var(--bigFont); opacity: 20%;">Is \(2x+3y=17\) a line?</p>
+					<p style="font-size: var(--bigFont);">A <b>linear system</b> is a system of lines.<br>What is the solution?</p>
+				</div></section>
+
+				<section>
+					<div class="centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+						<div class="pointBox">
+							<div class="line blueFill" style="width: 150%; left: 50%; top: 60%; transform: translateX(-50%) rotate(-45deg);"></div>
+							<div class="line blueFill" style="width: 62%; left: 75%; top: 9%; transform: translateX(-50%) rotate(34.7deg);"></div>
+							<div class="point alignTL fragment offsetYhalf" style="left: 90%; top: 20%"><p style="margin-left: 1rem;">\((4,3)\)</p></div>
+						</div>
+					</div></div>
+				</section>
+
+				<section><div class="callout">
+					<h2>How many answers does a linear system have?</h2>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>3 Cases</h2>
+						<ul>
+							<li><p>exactly 1 solution</p></li>
+							<li><p>no solutions</p></li>
+							<li><p>infinite solutions</p></li>
+						</ul>
 					</div>
-					<div class="answer">
-						<p style="width: 50rem;"><b>Back-substitute</b> your (2) solution into one of the original eqs.</p>
-						<p class="fragment" style="margin-bottom: -3.5rem;">\(x-y=1 \\ 4-y=1 \\ y=3\)</p>
-					</div>
-					<p style="width: 50rem;"><b>Check</b> your solution.</p>
+					<div class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane gridFive" style="opacity: 20%;"></div>
+						<div class="pointBox">
+							<div class="line blueFill" style="opacity: 50%; width: 150%; left: 50%; top: 60%; transform: translateX(-50%) rotate(-45deg);"></div>
+
+							<div class="row dashed fragment" data-fragment-index="10" style="width: 150%; left: 50%; top: 60%; transform: translateX(-50%) rotate(-45deg);"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+						</div>
+						<div class="pointBox fragment fade-out" data-fragment-index="10">
+							<div class="line blueFill fragment" data-fragment-index="5" style="width: 120%; left: 40%; top: 40%; transform: translateX(-50%) rotate(-45deg);"></div>
+						</div>
+						<div class="pointBox fragment fade-out" data-fragment-index="5">
+							<div class="line blueFill fragment" data-fragment-index="1" style="width: 62%; left: 75%; top: 9%; transform: translateX(-50%) rotate(34.7deg);"></div>
+							<div class="point alignTL fragment" data-fragment-index="2" style="left: 90%; top: 20%"></div>
+						</div>
+					</div></div>
+
 				</div></section>
 
 			</div>

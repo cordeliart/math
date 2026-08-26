@@ -15,7 +15,7 @@
     --header-margin: 0 0 2rem 0;
     --fontSecondary: "Instrument Sans", Helvetica, sans-serif;
     --block-margin: 1rem;
-    --bodySize: 2.5rem;
+    --bodySize: 2.42rem;
     --headerSize: 10rem;
     --tiny: 1.85rem;
     --margin: 6rem;
@@ -806,6 +806,9 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     /* background: #0fd10862; */
     height: 100%;
     gap: 6rem;
+} .row.top {
+    align-items: flex-start;
+    margin-top: 0;
 }
 
 .columnCentered {

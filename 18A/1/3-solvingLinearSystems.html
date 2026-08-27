@@ -80,7 +80,7 @@
 					<p style="margin-top: -2rem;">\( b = ay \pm cx\) &nbsp; ✓</p>
 					<p style="margin-top: -2rem;">\( cx \pm b = ay\) &nbsp; ✓</p>
 					<p style="margin-top: -2rem;">\(c( x \pm b) = a(y - d)\) &nbsp; ✓</p>
-					<p>All that matters is \(x\) and \(y\) have <span>no exponent \(>2\)</span>.</p>
+					<p>All that matters is \(x\) and \(y\) have <span>no exponent \(>1\)</span>.</p>
 				</div></section>
 
 				<section><div class="slideRow">
@@ -267,9 +267,10 @@
 							<li><p><b>Check</b> your solution in BOTH eqs!</p></li>
 						</ol>
 					</div>
-					<div style="font-size: var(--bigFont);">
+					<div style="font-size: var(--bigFont);" style="width: 40rem;">
 						<div class="workbook"><div>13</div><div>Example 3</div></div>
 						$$\begin{cases} 5x + 4y = 8 \\ 6x + 2y = 14\end{cases}$$
+						<div class="fragment blue">\(x=\frac{20}{7} \\ y=-\frac{11}{7}\)</div>
 					</div>
 				</div></section>
 
@@ -278,7 +279,7 @@
 						<h2>Solving by Elimination</h2>
 						<ol>
 							<li class="fragment" data-fragment-index="0">
-								<p style="margin-bottom: 0.35rem;">Pick a variable to <b>eliminate</b>.</p>
+								<p style="margin-bottom: 0.35rem;">Pick a variable to <b>eliminate</b> and scale the eq appropriately.</p>
 								<h6>Pick the <u>easier one</u>!!</h6>
 							</li>
 							<li class="fragment" data-fragment-index="5">
@@ -313,7 +314,7 @@
 						<h2>Solving by Elimination</h2>
 						<ol>
 							<li>
-								<p style="margin-bottom: 0.35rem;">Pick a variable to <b>eliminate</b>.</p>
+								<p style="margin-bottom: 0.35rem;">Pick a variable to <b>eliminate</b> and scale the eq appropriately.</p>
 								<h6>Pick the <u>easier one</u>!!</h6>
 							</li>
 							<li>
@@ -373,7 +374,7 @@
 
 				<section><div class="slideRow">
 					<div class="columnWorkbook">
-						<h2>3 Cases</h2>
+						<h2>3 Cases (Graphically)</h2>
 						<ul>
 							<li class="fragment" data-fragment-index="2">
 								<p><b>exactly 1 solution</b>: </p>
@@ -405,11 +406,36 @@
 					</div></div>
 				</div></section>
 
+				
+
+				<section><div class="bodySlide">
+					<h2>3 Cases (Numerically)</h2>
+					<ul>
+						<li class="fragment" data-fragment-index="2">
+							<p><b>exactly 1 solution</b>: </p>
+							<p class="fragment" data-fragment-index="3" style="margin-top: calc(var(--bodySize) * -0.65);">get specific \(x\) and \(y\)</p>
+						</li>
+						<li class="fragment" data-fragment-index="6">
+							<p><b>no solutions</b>: </p>
+							<p class="fragment" data-fragment-index="7" style="margin-top: calc(var(--bodySize) * -0.65);">variables cancel out and result is FALSE</p>
+						</li>
+						<li class="fragment" data-fragment-index="11">
+							<p><b>infinite solutions</b>: </p>
+							<p class="fragment" data-fragment-index="12" style="margin-top: calc(var(--bodySize) * -0.65);">variables cancel out and result is TRUE</p>
+						</li>
+					</ul>
+				</div></section>
+
 				<section data-auto-animate><div class="bodySlide">
 					<div class="workbook" data-id="title"><div>16</div><div>Example 6</div></div>
 					<div style="font-size: var(--bigFont);margin-left: auto; margin-right: auto;" class="row">
 						<div data-id="eq1">$$\begin{cases} x+2y=3 \\ 3x+6y=9 \end{cases}$$</div>
 					</div>
+					<ul>
+						<li><p><b>exactly one</b> = get an \(x\) and a \(y\)</p></li>
+						<li><p><b>no solutions</b> = variables cancel and FALSE equation is left</p></li>
+						<li><p><b>infinite solutions</b> = variables cancel and TRUE equation is left</p></li>
+					</ul>
 				</div></section>
 
 				<section data-auto-animate><div class="bodySlide">

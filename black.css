@@ -394,15 +394,15 @@ sub { vertical-align: sub; font-size: smaller }
 
 .problems { /* 2 by n grid to arrange problems */
     display: grid;
-    grid-template-columns: 6rem 1fr;
+    grid-template-columns:  calc(var(--bodySize) * 1.8) 1fr;
     align-items: center;
     row-gap: 1.35rem;
     column-gap: 2rem;
     margin: 2rem 0;
 } .num { /* number, left side of .problems grid */
     background-color: rgba(var(--accent), 0.2);
-    height: 5rem;
-    width: 5rem;
+    height: calc(var(--bodySize) * 1.8);
+    width: calc(var(--bodySize) * 1.8);
     border-radius: 5rem;
     display: flex;
     justify-content: center;
@@ -411,6 +411,7 @@ sub { vertical-align: sub; font-size: smaller }
     color: rgb(var(--accent));
     font-size: var(--bodySize);
     line-height: 1;
+    align-self:flex-start;
 } .problems p {
     font-size: var(--bodySize);
 }
@@ -424,6 +425,7 @@ sub { vertical-align: sub; font-size: smaller }
 } .answer>*:nth-child(1) { /* first child is problem */
     /* width: 135vw; */
     width: fit-content;
+    min-height:  calc(var(--bodySize) * 1.8);
 } .answer>*:nth-child(2) { /* second child is answer (blue + fragment) */
     color: rgb(var(--accent));
 } .instructions {

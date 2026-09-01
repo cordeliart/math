@@ -289,6 +289,7 @@ sub { vertical-align: sub; font-size: smaller }
     font-size: calc(var(--headerSize) * 0.8);
     letter-spacing: -1%;
     color: var(--background);
+    text-align: center;
 } .cover p {
     color: var(--background);
     opacity: 65%;
@@ -749,6 +750,12 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 } .grid h5, .grid p, .grid h6 {
     margin: 0;
     text-align: center;
+} .grid.left {
+    justify-content: left;
+    align-items: left;
+} .grid.left h5, .grid.left p, .grid.left h6 {
+    margin: 0;
+    text-align: left;
 }
 
 /* layouts ----------------------------------------------------------------------------------------------------------- */

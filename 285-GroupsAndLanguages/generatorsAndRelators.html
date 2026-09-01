@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Groups and Generators</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../images/favicon.png">
+
+		<link rel="stylesheet" href="../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../reveal/dist/plugin/highlight/monokai.css"/>
+
+		<style>
+			:root {
+				/* --accent: 183, 60, 231; */
+				--bodySize: 2.8rem;
+				--headerSize: 11rem;
+				--group: #b73ce7;
+				--monoid: #386ef6;
+				--semigroup: #00a597;
+			}
+			p { max-width: 40ch}
+			/* ul {max-width: 28ch;} */
+			/* .callout p { font-size: calc(var(--bodySize) * 1.65);} */
+			/* .callout { font-size: calc(var(--bodySize) * 1.85); } */
+			/* .definitionText p { font-size: var(--bodySize); max-width: 32ch; } */
+			p span {background: none; color: rgb(var(--accent));}
+			.group {color: var(--group)}
+			.semigroup {color: var(--semigroup)}
+			.bodySlide h2 { margin-bottom: 0; }
+			.monoid {color: var(--monoid)}
+			.bodySlide { justify-content: center !important;}
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4 style="color: rgb(var(--accent)); opacity: 100%;"><b>MATH-285</b> • Groups and Languages</h4>
+					<h1>Generators <i>&</i> Relators</h1>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p>Let \(G\) be a set and \(*\) be an operation such that:</p>
+					<ul>
+						<li><p>\(G\) is closed under the associative,<br>binary operation \(*\) <span class="semigroup">➔ “<b>semigroup</b>”</span></p></li>
+						<li class="fragment"><p>and \(G\) contains an identity element \(e\) such that <br>\(ge = g = eg\) &nbsp \(\forall g\in G\) <span class="monoid">➔ “<b>monoid</b>”</span></p></li>
+						<li class="fragment"><p>and \(G\) contains an inverse element \(g^{-1}\) for every element \(g\in G\) such that \(gg^{-1}=e=g^{-1}g\) <span class="group">➔ “<b>group</b>”</span></p></li>
+					</ul>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p>A group \(G\) is <b>generated</b> by elements \(a_1, a_2, ...\) if every \(g\) in \(G\) can be written as a combination of those elements, called <b>generators</b></p>
+					<ul>
+						<li><p style="max-width: 80%;">a group is <b>finitely generated</b> if the set of generators \(X\) is finite</p></li>
+						<span class="group"><li><p style="max-width: 100%;">\(G = \langle a_1, a_2, \ldots \rangle = \langle X \rangle \)</p></li></span>
+					</ul>
+				</div></section>
+
+				<section><div class="bodySlide" style="font-size: 6rem;">
+					<div class="semigroup" style="margin: -5rem auto;">$$\text{Spg}\langle X\rangle$$</div>
+					<div class="monoid" style="margin: -5rem auto;">$$\text{Mon}\langle X\rangle$$</div>
+					<div class="group" style="margin: -5rem auto;">$$\langle X\rangle$$</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid left" style="grid-template-columns: auto 1fr; row-gap: 4rem;">
+						<h5>group</h5>
+						<p>\( (\mathbb{Z}, +) \) integers under addition</p>
+						<h5>elements</h5>
+						<p class="fragment">\(\{..., -2, -1, 0, 1, 2, ... \} \)</p>
+						<h5>generated</h5>
+						<p class="fragment">\(\langle 1 \rangle \)<span class="fragment" style="color: var(--primary);">, \( \langle 2,3\rangle \), \( \langle a,b\rangle \) with any two coprime integers \(a,b\)</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid left" style="grid-template-columns: auto 1fr; row-gap: 4rem;">
+						<h5>group</h5>
+						<p>\( \mathbb{Z} / n\mathbb{Z} \) integers \(\text{mod}(n)\) under addition</p>
+						<h5>elements</h5>
+						<p class="fragment">\(\{0,1,2,...,n-1\} \)</p>
+						<h5>generated</h5>
+						<p class="fragment">\(\langle 1 \rangle\)<span class="fragment" style="color: var(--primary);">, \( \langle a\rangle \) with any integer \(a\) coprime to \(n\)</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid left" style="grid-template-columns: auto 1fr; row-gap: 4rem;">
+						<h5>group</h5>
+						<p>\( \mathbb{Z}^2\) under vector addition</p>
+						<h5>elements</h5>
+						<p class="fragment">\(\{ (x,y) \mid x,y\in\mathbb{Z}\} \)</p>
+						<h5>generated</h5>
+						<p class="fragment">\(\langle (0,1),(1,0) \rangle\)<span class="fragment" style="color: var(--primary);">, \( \langle a,b\rangle \) with any two coordinate pairs \(a,b\) such that the matrix \(\begin{bmatrix} a& b \end{bmatrix} \in \mathbb{Z}\) has a determinant (in \(\mathbb{Z}\), so \(=\pm 1\))</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid left" style="grid-template-columns: auto 1fr; row-gap: 4rem;">
+						<h5>group</h5>
+						<p>\( D_6 \) dihedral group</p>
+						<h5>elements</h5>
+						<p class="fragment">\(\{e, r, r^2, s, sr, sr^2\} \)</p>
+						<h5>generated</h5>
+						<p class="fragment">\(\langle s,r\rangle \)<span class="fragment" style="color: var(--primary);">, \(\langle s,r^2 \rangle\), \(\langle s,srs \rangle\), ...</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p>Given an alphabet \(A\) generated by set \(X\), we have:</p>
+					<ul>
+						<li><p>\(X^\pm = X\cup X^{-1}\)</p></li>
+						<li><p><span class="semigroup">\(X^+\)</span> is all non-empty strings</p></li>
+						<li><p><span class="monoid">\(X^*\)</span> is all strings</p></li>
+						<li><p><span class="group">\(A^*\)</span> with \(A=X^\pm\) is all words over \(X\)</p></li>
+					</ul>
+				</div></section>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Equivalence<br>Relations</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p>an <b>equivalence relation</b> \(\sim \) is binary relationship that, for all \(x,y,z\) in a set \(X\), is:</p>
+					<ul>
+						<li><p><b>reflexive</b> — \(x\sim x\)</p></li>
+						<li><p><b>symmetric</b> — \(x\sim y \iff y\sim x\)</p></li>
+						<li><p><b>transitive</b> — \(x\sim y, y\sim z \implies x\sim z\)</p></li>
+					</ul>
+					<p class="fragment">allows us to partition \(X\) into disjoint <b>equivalence classes</b> <span class="fragment">(example: \(\text{mod}(3)\) partitions \(\mathbb{Z}\) into the classes \([0], [1], [2]\))</span></p>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<p>an equivalence relation is called a <b>congruence</b> in a semigroup \(S\) if</p>
+					<p class="semigroup">\( s_1 \sim s_2, t_1 \sim t_2 \implies s_1t_1 \sim s_2t_2 \)</p>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<p>an equivalence relation is called a <b>congruence</b> in a semigroup \(S\) if</p>
+					<p class="semigroup">\( s_1 \sim s_2, t_1 \sim t_2 \implies s_1t_1 \sim s_2t_2 \)</p>
+					<p style="margin-top: 4rem;">we then define <span class="semigroup">\(S /\sim \)</span> to be the semigroup where the elements <span class="semigroup">\([s]=\{t\in S \mid t\sim s\}\)</span> are the equivalence classes of \(S\), such that \([s_1][s_2]=[s_1s_2]\)</p>
+				</div></section>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Relations <i>&</i><br>Presentations</h2>
+				</div></section>
+
+				<section data-auto-animate data-auto-animate-restart><div class="bodySlide">
+					<p>Put simply, a <b>presentation</b> is a more efficient way of communicating a group's elements <i>and</i> behavior.</p>
+					<p class="fragment group">\(\langle \text{generators}\mid \text{defining equations}\rangle\)</p>
+				</div></section>
+
+				<section><div class="bodySlide" style="font-size: 6rem;">
+					<div class="semigroup" style="margin: -5rem auto;">$$\text{Spg}\langle X \mid R \rangle$$</div>
+					<div class="monoid" style="margin: -5rem auto;">$$\text{Mon}\langle X \mid R \rangle$$</div>
+					<div class="group" style="margin: -5rem auto;">$$\langle X \mid R \rangle$$</div>
+				</div></section>
+
+				<section data-auto-animate data-auto-animate-restart><div class="bodySlide">
+					<p data-id="top">For a semigroup \(S\), let <span class="semigroup">\(\mathcal{R} = \{(\alpha_i,\beta_i): i \in I\}\)</span> be a set of pairs of words from \(X^+\), called <b>relations</b>, where \(\alpha_i =_S \beta_i\) for each \(i\).</p>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<p data-id="top" style="opacity: var(--fadeOut);">For a semigroup \(S\), let <span class="semigroup">\(\mathcal{R} = \{(\alpha_i,\beta_i): i \in I\}\)</span> be a set of pairs of words from \(X^+\), called <b>relations</b>, where \(\alpha_i =_S \beta_i\) for each \(i\).</p>
+
+					<p data-id="p"><span class="semigroup">\(\mathcal{R}\)</span> is a <b>set of defining relations</b> for \(S\), and <span class="semigroup">\(\text{Sgp}\langle X \mid \mathcal{R} \rangle\)</span> is a <b>presentation</b> for \(S\) if:</p>
+					<ul>
+						<li data-id="3"><p>\(\sim \) is the smallest congruence on \(X^+\) containing <span class="semigroup">\(\mathcal{R}\)</span></p></li>
+						<li data-id="4"><p>\(S \cong X^+ / \sim \)</p></li>
+					</ul>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<p data-id="top" style="opacity: var(--fadeOut);">For a monoid \(M\), let <span class="monoid">\(\mathcal{R} = \{(\alpha_i,\beta_i): i \in I\}\)</span> be a set of pairs of words from \(X^*\), called <b>relations</b>, where \(\alpha_i =_M \beta_i\) for each \(i\).</p>
+
+					<p data-id="p"><span class="monoid">\(\mathcal{R}\)</span> is a <b>set of defining relations</b> for \(M\), and <span class="monoid">\(\text{Mon}\langle X \mid \mathcal{R} \rangle\)</span> is a <b>presentation</b> for \(M\) if:</p>
+					<ul>
+						<li data-id="3"><p>\(\sim \) is the smallest congruence on \(X^*\) containing <span class="monoid">\(\mathcal{R}\)</span></p></li>
+						<li data-id="4"><p>\(M \cong X^* / \sim \)</p></li>
+					</ul>
+				</div></section>
+
+				<section data-auto-animate data-auto-animate-restart><div class="bodySlide">
+					<p>For a group \(G = \langle X\rangle\), let <span class="group">\(R=\{\alpha_i \mid i\in I\}\)</span> be a set of elements, called <b>relators</b>, such that \(\alpha =_G \varepsilon\). We let \(\sim \) be some congruence on \(A^*\) containing \( \{(aa^{-1}, \varepsilon),(a^{-1} a, \varepsilon) \mid a \in X\} \).</p>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<p style="opacity: var(--fadeOut);">For a group \(G = \langle X\rangle\), let <span class="group">\(R=\{\alpha_i \mid i\in I\}\)</span> be a set of elements, called <b>relators</b>, such that \(\alpha =_G \varepsilon\). We let \(\sim \) be some congruence on \(A^*\) containing \( \{(aa^{-1}, \varepsilon),(a^{-1} a, \varepsilon) \mid a \in X\} \).</p>
+					
+					<p><span class="group">\(R\)</span> is a <b>set of defining relators</b> for \(G\), and <span class="group">\(\langle X \mid R \rangle\)</span> is a <b>presentation</b> for \(G\) if:</p>
+					<ul>
+						<li><p>\(\sim \) is the smallest congruence on \(A^*\) containing <span class="group">\( \{(\alpha, \varepsilon) \mid \alpha \in R \} \cup \{ (aa^{-1}, \varepsilon) \mid a \in X \} \cup \{ (a^{-1}a, \varepsilon) \mid a \in X \} \)</span></p></li>
+						<li><p>\(G \cong A^* / \sim \)</p></li>
+					</ul>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p>a semigroup/monoid/group is <b>finitely presentable</b> if both the set of generators \(X\) and the set of relations \(\mathcal{R}\) (or relators \(R\)) are finite</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid left" style="grid-template-columns: auto 1fr; row-gap: 4rem;">
+						<h5>group</h5>
+						<p>\( \mathbb{Z} / n\mathbb{Z} \) integers \(\text{mod}(n)\) under addition</p>
+						<h5>elements</h5>
+						<p>\(\{0,1,2,...,n-1\} \)</p>
+						<h5>generated</h5>
+						<p>any integer \(a\) coprime to \(n\)</p>
+						<h5>presentation</h5>
+						<p class="fragment">\( \langle a \mid a^n=1 \rangle \)</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid left" style="grid-template-columns: auto 1fr; row-gap: 4rem;">
+						<h5>group</h5>
+						<p>\( D_6 \) dihedral group</p>
+						<h5>elements</h5>
+						<p>\(\{e, r, r^2, s, sr, sr^2\} \)</p>
+						<h5>generated</h5>
+						<p>\(\langle s,r\rangle \)</p>
+						<h5>presentation</h5>
+						<p class="fragment">\( \langle s,r \mid s^2, r^3, srsr \rangle\)</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid left" style="grid-template-columns: auto 1fr; row-gap: 4rem;">
+						<h5>group</h5>
+						<p>\( \mathbb{Z}^2\) under vector addition</p>
+						<h5>elements</h5>
+						<p>\(\{ (x,y) \mid x,y\in\mathbb{Z}\} \)</p>
+						<h5>generated</h5>
+						<p>\(\langle a,b \rangle \)</p>
+						<h5>presentation</h5>
+						<p class="fragment" data-fragment-index="1">\( \langle a,b \mid aba^{-1}b^{-1} \rangle\)</p>
+						<div></div>
+						<p class="fragment" data-fragment-index="3">\( \langle a,b \mid ab=ba \rangle\)<br><i>relation</i> instead of <i>relator</i></p>
+					</div>
+					<!-- $$aba^{-1}b^{-1} =1 $$ -->
+					<div class="fragment group" data-fragment-index="2" style="position: absolute; right: 6rem; top: 50%; transform: translateY(-50%);">
+						<div style="display: flex; flex-flow: column; align-items: left; text-align: left; gap: 2rem;">
+							<p>\(wba w'\)</p>
+							<p>\(= w (1)ba w'\)</p>
+							<p>\(= w (aba^{-1}b^{-1}) ba w'\)</p>
+							<p>\(= w aba^{-1}(b^{-1} b)a w'\)</p>
+							<p>\(= w ab (a^{-1}a) w'\)</p>
+							<p>\(= wabw'\)</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid left" style="grid-template-columns: auto 1fr; row-gap: 4rem;">
+						<h5>group</h5>
+						<p>\( (\mathbb{Z}, +) \) integers under addition</p>
+						<h5>elements</h5>
+						<p>\(\{..., -2, -1, 0, 1, 2, ... \} \)</p>
+						<h5>generated</h5>
+						<p>\(\langle 1 \rangle \)</p>
+						<h5>presentation</h5>
+						<p class="fragment">\( \langle 1 \mid \varnothing \rangle\), or more commonly \( \langle 1 \mid \rangle\)</p>
+					</div>
+				</div></section>
+				
+				<section data-auto-animate><div class="bodySlide">
+					<p style="max-width: 31ch">a semigroup \(S\) with presentation <span class="semigroup">\(\text{Spg}\langle X \mid \rangle \)</span> is called a <b>free semigroup</b> on \(X\); \(S\cong X^+\)</p>
+					<p style="max-width: 31ch">a monoid \(M\) with presentation <span class="monoid">\(\text{Mod}\langle X \mid \rangle \)</span> is called a <b>free monoid</b> on \(X\); \(M \cong X^*\)</p>
+					<p style="max-width: 31ch">a group \(F\) with presentation <span class="group">\(\langle X \mid \rangle \)</span> is called a <b>free group</b> on \(X\)</p>
+				</div></section>
+				
+				<section data-auto-animate><div class="bodySlide">
+					<p style="max-width: 31ch">a group \(F\) with presentation <span class="group">\(\langle X \mid \rangle \)</span> is called a <b>free group</b> on \(X\)</p>
+					<ul>
+						<li class="fragment"><p>if \(|X| = k\), then \(F\) is the free group of <b>rank \(k\)</b></p></li>
+						<li class="fragment"><p>\(F(X)\) is the free group on \(X\)</p></li>
+						<li class="fragment"><p>\(F_k\) denotes a free group of rank \(k\)</p></li>
+					</ul>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<p>A word \(w\) is <b>reduced</b> if</p>
+					<ul>
+						<li>
+							<p>it has a unique presentation of the form <span>\(x_1^{\varepsilon_1}, x_2^{\varepsilon_2}, ... x_n^{\varepsilon_n}\)</span> where \(n \geq 0, x_i \in X, \varepsilon_i \in \{1, -1\} \forall i\)</p>
+						</li>
+						<li>
+							<p>we do not have both \(x_i = x_{i+1}\) and \(\varepsilon_i = -\varepsilon_{i+1}\) for any \(i\), AKA there is no \(x\) followed by or following its inverse</p>
+						</li>
+					</ul>
+					<p class="fragment">If a reduced word <span class="blue">\(w \neq x^{-1}vx\) or \(xvx^{-1}\)</span> for some \(x\in X\) and \(v \in A^*\), then \(w\) is <b>cyclically reduced</b>.</p>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<p style="max-width: 30ch;">Each word \(v \in A^* \) is equal in \(F(X)\) to a <b>unique reduced word</b> \(w\).</p>
+				</div></section>
+
+				<!-- <section><div class="bodySlide">
+					<h2>Examples</h2>
+					<ul>
+						<li><p>\(G = \langle G \rangle\) for all groups</p></li>
+						<li><p style="max-width: 100%;">\( (\mathbb{Z}, + ) = \{\ldots,-2, -1, 0, 1, 2, \ldots\} = \langle 1, -1\rangle \)</p></li>
+						<li><p>\( (\mathbb{Z}_2, + ) = \{0,1\} = \langle 1 \rangle \)</p></li>
+						<li><p>\( D_6: \langle s,r \mid s^2, r^3 \rangle \)</p></li>
+					</ul>
+				</div></section> -->
+
+			</div>
+		</div>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+
+		<!-- <div class="footer"></div> -->
+		<!-- <a href="../index.html"><div class="home"></div></a> -->
+		<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/dist/plugin/zoom.js"></script>
+		<script src="../reveal/dist/plugin/notes.js"></script>
+		<script src="../reveal/dist/plugin/search.js"></script>
+		<script src="../reveal/dist/plugin/markdown.js"></script>
+		<script src="../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../scripts.js"></script>
+	</body>
+</html>

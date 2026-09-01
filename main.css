@@ -15,6 +15,7 @@ html, body {
     line-height: 135%;
     font-weight: 400;
     font-family: "Instrument Sans", Helvetica, sans-serif;
+    margin-bottom: 4rem;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -174,30 +175,27 @@ ul {
     font-weight: 600;
 }
 
-/* The switch - the box around the slider */
-.switch {
-  position: absolute;
-  right: 0;
-  top: -48px;
-  display: inline-block;
-  /* width: 60px; */
-  height: 34px;
+/* TOGGLE ----------------------------------------------------------------------------------------------------------- */
+
+.switch { /* The switch - the box around the slider */
+    position: absolute;
+    right: 0;
+    top: -48px;
+    display: inline-block;
+    height: 34px;
 } .switch:before {
     content: 'show lesson descriptions';
     padding-right: 60px;
     font-size: 1.15rem;
     line-height: 185%;
+    font-weight: 400;
+} .switch input { /* Hide default HTML checkbox */
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
+.slider { /* The slider */
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -208,9 +206,7 @@ ul {
   -webkit-transition: .4s;
   transition: .4s;
   opacity: 35%;
-}
-
-.slider:before {
+} .slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -225,24 +221,17 @@ ul {
 input:checked + .slider {
   background-color: rgb(var(--accent));
   opacity: 100%;
-}
-
-input:focus + .slider {
+} input:focus + .slider {
     box-shadow: 0 0 1px rgb(var(--accent));
-}
-
-input:checked + .slider:before {
+} input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
-.slider.round {
+.slider.round { /* Rounded sliders */
   border-radius: 34px;
-}
-
-.slider.round:before {
+} .slider.round:before {
   border-radius: 50%;
 }
 
@@ -251,9 +240,7 @@ input:checked + .slider:before {
     transition: 0.25s ease-in-out;
 } input[type="checkbox"]:checked ~ .list {
     display: block !important;
-}
-
-.visible {
+} .visible {
     display: block;
     transition: 0.25s ease-in-out;
 }

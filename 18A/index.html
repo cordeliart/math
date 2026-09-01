@@ -25,25 +25,60 @@
 		</div>
 
 		<div class="content active" id="slides">
-			<div style="margin-bottom:4rem; max-width: 72ch;">
+			<div style="margin-bottom:8rem;">
 				<p>Material listed is made by Lena Pang, using <code>mathJax.js</code> for LaTeX and <code>reveal.js</code>. All decks are navigated using the space bar (or arrow keys).</p>
 				<p>Source text is the SJSU <i>College Algebra Workbook V4</i> by Amanda Frank. Because the workbook is used only by SJSU, please <b>do not share outside of SJSU</b>.</p>
 				<p style="opacity: 0.35; font-style: italic;">Any links not listed here are considered incomplete. For your own sake, do not reference.</p>
 			</div>
 
 			<div class="box">
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round" onClick="toggleDesc(event)"></span>
+				</label>	
 				<h4>1 ⁠— Functions & Linear Equations</h4>
 				<div class="dates">
-					<h5>Aug 20</h5><p><a href="1/1-introToGraphing.html">1.1 — Intro to Graphing (& Course Info)</a></p>
-					<h5>Aug 25</h5><p><a href="1/2-equationsOfLines.html">1.2 — Equations of Lines</a></p>
-					<h5>Aug 27</h5><p><a href="1/3-solvingLinearSystems.html">1.3 — Solving Linear Systems</a></p>
-					<!-- <h5>Aug 25</h5><p><a href="1/4-wordProblems.html">1.4 — Word Problems</a></p> -->
+					<h5>Aug 20</h5>
+					<div>
+						<p><a href="1/1-introToGraphing.html"><b>1.1</b>&nbsp;&nbsp;Intro to Graphing (& Course Info)</a></p>
+						<ul class="toggle">
+							<li><p>reviewing parts of the coordinate plane</p></li>
+							<li><p>graphing simple points+lines</p></li>
+							<li><p>calculating intercepts and slope</p></li>
+						</ul>
+					</div>
+					<h5>Aug 25</h5>
+					<div>
+						<p><a href="1/2-equationsOfLines.html"><b>1.2</b>&nbsp;&nbsp;Equations of Lines</a></p>
+						<ul class="toggle">
+							<li><p>defining expressions, equations, degree, linearity</p></li>
+							<li><p>getting equations from graphed points and vice versa</p></li>
+							<li><p>comparing slopes of parallel and perpendicular lines</p></li>
+						</ul>
+						<p></p>
+					</div>
+					<h5>Aug 27</h5>
+					<div>
+						<p><a href="1/3-solvingLinearSystems.html"><b>1.3</b>&nbsp;&nbsp;Solving Linear Systems</a></p>
+						<ul class="toggle">
+							<li><p>practicing different forms of lines</p></li>
+							<li><p>solving linear systems with substitution and elimination</p></li>
+							<li><p>identifying 3 cases of # of solutions</p></li>
+						</ul>
+						<p></p>
+					</div>
+					<!-- <h5>Aug 25</h5><p><a href="1/4-wordProblems.html">1.4</p><p>Word Problems</a></p> -->
 				</div>
 				<!-- <a href="" target="_blank"><div class="pdf">Chapter 1 Review Sheet</div></a> -->
 			</div>
 		</div>
 
 		<div class="content" id="info">
+			<div>
+				<p>Material listed is made by Lena Pang, using <code>mathJax.js</code> for LaTeX and <code>reveal.js</code>. All decks are navigated using the space bar (or arrow keys).</p>
+				<p>Source text is the SJSU <i>College Algebra Workbook V4</i> by Amanda Frank. Because the workbook is used only by SJSU, please <b>do not share outside of SJSU</b>.</p>
+				<p style="opacity: 0.35; font-style: italic;">Any links not listed here are considered incomplete. For your own sake, do not reference.</p>
+			</div>
 			<h4>Course Description</h4>
 			<p>Review of basic algebra. Complex numbers, functions, graphs, polynomials, inverse functions, exponential and logarithmic functions. <i>3 units.</i></p>
 			<p>Satisfies B4: Mathematics/Quantitative Reasoning.</p>
@@ -60,15 +95,19 @@
 
 				// Get all elements with class="content" and hide them
 				content = document.getElementsByClassName("content");
-				for (i = 0; i < content.length; i++) { content[i].style.display = "none"; }
+				for (i = 0; i < content.length; i++) { content[i].style.display = "none";}
 
 				// Get all elements with class="tablinks" and remove the class "active"
 				tabs = document.getElementsByClassName("tab");
-				for (i = 0; i < tabs.length; i++) { tabs[i].className = tabs[i].className.replace("selected", ""); }
+				for (i = 0; i < tabs.length; i++) { tabs[i].className = tabs[i].className.replace("selected", "");}
 
 				// Show the current tab, and add an "active" class to the button that opened the tab
 				document.getElementById(cityName).style.display = "block";
 				evt.currentTarget.className += " selected";
+			}
+			function toggleDesc(event) {
+				toggles = document.getElementsByClassName("toggle");
+				for (i = 0; i < toggles.length; i++) { toggles[i].classList.toggle('visible');}
 			}
 		</script>
 	</body>

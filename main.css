@@ -49,12 +49,13 @@ h5 { /* dates */
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 5%;
-    font-weight: 500;
+    font-weight: 600;
     text-align: right;
-    opacity: 30%;
+    color: rgb(var(--accent));
+    /* opacity: 30%; */
     margin: 0 0.35rem 0 0;
     width: 100%;
-    padding: 0;
+    padding: 0.8rem 0 0 0;
 } h5>b {
     font-weight: 900;
 }
@@ -64,6 +65,7 @@ p {
     font-weight: 400;
     margin: 0.85rem 0;
     padding: 0;
+    max-width: 62ch;
 }
 
 span {
@@ -74,7 +76,7 @@ span {
 a {
     color: var(--primary);
     transition: 0.25s ease-in-out;
-    text-decoration: underline 2px rgba(var(--accent), 0.35);
+    text-decoration: underline 2px rgba(var(--accent), 0.5);
     text-underline-offset: 0.25rem;
 } a:hover {
     color: rgb(var(--accent));
@@ -86,11 +88,19 @@ code {
     color: rgb(var(--accent));
 }
 
+ul {
+    display: block;
+    opacity: 50%;
+    padding-left: 1.5rem;
+    margin: 0;
+    list-style-type: circle;
+} li { margin: -0.2rem auto; }
+
 /* CUSTOM ----------------------------------------------------------------------------------------------------------- */
 
 .header {
     background-color: rgb(var(--accent));
-    padding: 10rem max(calc(50% - 500px), 5%) 0 max(calc(50% - 500px), 5%);
+    padding: 10rem max(calc(50% - 400px), 5%) 0 max(calc(50% - 400px), 5%);
     box-sizing: border-box;
 }
 
@@ -117,7 +127,7 @@ code {
 }
 
 .content {
-    width: min(90%, 1000px);
+    width: min(90%, 800px);
     margin: 4rem auto;
     display: none;
     transition: 0.35s ease-in-out;
@@ -135,8 +145,7 @@ code {
     font-weight: 500;
 } .dates {
     display: grid;
-    grid-template-columns: 3.32rem 1fr;
-    align-items: center;
+    grid-template-columns: auto 1fr;
     column-gap: 0.85rem;
     row-gap: 0.35rem;
 } .pdf { /* review sheet button */
@@ -159,4 +168,92 @@ code {
     margin-top: 0;
 } .box p {
     margin: 0.35rem 0;
+} .dates p {
+    line-height: 165%;
+} .dates p a b {
+    font-weight: 600;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  right: 0;
+  top: -48px;
+  display: inline-block;
+  /* width: 60px; */
+  height: 34px;
+} .switch:before {
+    content: 'show lesson descriptions';
+    padding-right: 60px;
+    font-size: 1.15rem;
+    line-height: 185%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  background-color: var(--primary);
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 35%;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--background);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(var(--accent));
+  opacity: 100%;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(var(--accent));
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle {
+    display: none;
+    transition: 0.25s ease-in-out;
+} input[type="checkbox"]:checked ~ .list {
+    display: block !important;
+}
+
+.visible {
+    display: block;
+    transition: 0.25s ease-in-out;
 }

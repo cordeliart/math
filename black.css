@@ -15,7 +15,7 @@
     --header-margin: 0 0 2rem 0;
     --fontSecondary: "Instrument Sans", Helvetica, sans-serif;
     --block-margin: 1rem;
-    --bodySize: 2.4rem;
+    --bodySize: 2.75rem;
     --headerSize: 10rem;
     --tiny: 1.85rem;
     --margin: 6rem;
@@ -297,7 +297,7 @@ sub { vertical-align: sub; font-size: smaller }
 } .callout h2 { font-size: calc(var(--headerSize) * 0.8); text-align:center;}
 .callout p {
     text-align: center;
-    font-size: calc(var(--bodySize) * 1.15);
+    font-size: var(--bodySize);
 }
 
 .titleSlide h4 {
@@ -350,7 +350,7 @@ sub { vertical-align: sub; font-size: smaller }
     gap: var(--bodySize);
     justify-content: center;
 } .definitionText p {
-    font-size: calc(var(--bodySize) * 1.35);
+    font-size: calc(var(--bodySize) * 1.2);
     max-width: 30ch;
 }
 
@@ -415,7 +415,7 @@ sub { vertical-align: sub; font-size: smaller }
     align-self:flex-start;
 } .problems p {
     font-size: var(--bodySize);
-}
+} .problems .answer {padding-top: 0.65rem;}
 
 .answer { /* right side of .problems */
     display: flex;
@@ -445,6 +445,7 @@ sub { vertical-align: sub; font-size: smaller }
     background-color: none;
 } .answer p {
     margin: 0;
+    text-align: left !important;
 } .answerBox {
     border: 2px solid rgba(var(--accent), 0.15);
     padding: 0.2rem 0.35rem 0.35rem 0.35rem;
@@ -494,7 +495,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 
 .time {
     color: rgb(var(--accent));
-    font-size: calc(var(--bodySize) * 1.15);
+    font-size: var(--bodySize);
     font-weight: 600;
     align-self: flex-start;
     font-family: monospace;
@@ -616,9 +617,8 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     background-repeat: none;
     background-size: contain;
     overflow:visible;
-} .imgBox.shorter {
-    height: 20rem;
-}
+} .imgBox.shorter { height: 20rem;
+} .imgBox.shortest { height: 9rem; }
 
 .xyplane { /* inside .imgBox, below pointBox */
     display: block;
@@ -686,6 +686,44 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     height: 4px;
     border-radius: 2px;
     background-color: var(--primary);
+    overflow: visible;
+} .arrowL, .arrowR {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 1.85rem;
+    width: 1.01rem;
+    background-image: url('images/arrowhead.svg');
+    background-repeat: none;
+    background-size:cover;
+    overflow: visible;
+} .blueFill>.arrowL, .blueFill>.arrowR {
+    background-image: url('images/arrowheadBlue.svg');
+} .arrowL {
+    left: 0;
+    transform: translate(-2px, -50%);
+} .arrowR {
+    right: 0;
+    transform: scaleX(-1) translate(-2px, -50%);
+} .openL, .openR, .closedL, .closedR {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 1.15rem;
+    width: 1.15rem;
+    border-radius: 1.15rem;
+    background-color: rgb(var(--accent));
+    border: solid 4px rgb(var(--accent));
+} .openL, .openR {
+    background-color: var(--background);
+} .openL, .closedL {
+    left: 0;
+    transform: translate(-50%, -50%);
+} .openR, .closedR {
+    right: 0;
+    transform: scaleX(-1) translate(-50%, -50%);
 } .slope {
     display: block;
     width: 10%;
@@ -694,6 +732,27 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     background-size: cover;
     opacity: 20% !important;
 }
+
+ /* .line.arrows::before, .line.arrows::after, .line.arrowL::before, .line.arrowR::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 3rem;
+    width: 1.65rem;
+    background-image: url('images/arrowhead.svg');
+    background-repeat: none;
+    background-size:cover;
+    overflow: visible;
+} .line.arrows::before, .line.arrowL::before {
+    left: 0;
+    transform: translate(-2px, -50%);
+} .line.arrows::after, .line.arrowR::before {
+    right: 0;
+    transform: scaleX(-1) translate(-2px, -50%);
+} .line.open, .line.openL {
+
+} */
 
 .stickerBox {
     height: 1px;
@@ -711,7 +770,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: calc(var(--bodySize) * 1.35);
+    padding: calc(var(--bodySize) * 1.2);
     box-sizing: border-box;
     background-image: url(images/sticker.svg);
     background-repeat: none;
@@ -760,7 +819,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 
 /* layouts ----------------------------------------------------------------------------------------------------------- */
 
-.imgBox>*, .pointBox>*, .centerBoth, .centerHor, .centerVer, .alignRight, .alignTop, .alignTL, .alignTR, .alignBR, .alignBL {
+.imgBox>*, .pointBox>*, .centerBoth, .centerHor, .centerVer, .alignRight, .alignTop, .alignBottom, .alignTL, .alignTR, .alignBR, .alignBL {
     display: block;
     position: absolute;
     white-space: nowrap;
@@ -779,6 +838,8 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 } .alignRight {
     right: 0;
     text-align: left;
+} .alignBottom {
+    bottom: 0;
 } .alignLeft {
     left: 0;
 } .alignTop {
@@ -869,3 +930,8 @@ section.has-light-background h5,
 section.has-light-background h6 {
     color: var(--background));
 } */
+
+
+.nobg {
+    background: none;
+}

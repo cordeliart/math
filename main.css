@@ -151,8 +151,9 @@ ul {
     row-gap: 0.35rem;
 } .pdf { /* review sheet button */
     display: block;
-    background-color: rgba(var(--accent), 0.15);
-    color: rgb(var(--accent));
+    /* background-color: rgba(var(--accent), 0.15); */
+    background-color: var(--primary);
+    color: var(--background);
     width: fit-content;
     height: fit-content;
     padding: 0.85rem;
@@ -163,7 +164,7 @@ ul {
     border-radius: 0.65rem;
     transition: 0.25s ease-in-out;
 } .pdf:hover {
-    background-color: rgba(var(--accent), 0.3);
+    background-color: rgb(var(--accent));
     transition: 0.25s ease-in-out;
 } .box h4 {
     margin-top: 0;
@@ -173,6 +174,13 @@ ul {
     line-height: 165%;
 } .dates p a b {
     font-weight: 600;
+} .pdf:before {
+    font-weight: 900;
+    font-size: 0.9rem;
+    letter-spacing: 8%;
+    opacity: 50%;
+    content: 'PDF';
+    margin-right: 0.5rem;
 }
 
 /* TOGGLE ----------------------------------------------------------------------------------------------------------- */
@@ -202,10 +210,10 @@ ul {
   right: 0;
   bottom: 0;
   width: 60px;
-  background-color: var(--primary);
+  background-color: rgba(var(--accent), 0.35);
   -webkit-transition: .4s;
   transition: .4s;
-  opacity: 35%;
+  /* opacity: 35%; */
 } .slider:before {
   position: absolute;
   content: "";
@@ -219,7 +227,7 @@ ul {
 }
 
 input:checked + .slider {
-  background-color: rgb(var(--accent));
+  background-color: rgba(var(--accent),1);
   opacity: 100%;
 } input:focus + .slider {
     box-shadow: 0 0 1px rgb(var(--accent));

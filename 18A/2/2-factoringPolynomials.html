@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>2.2 Factoring Polynomials | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>What is the <b>perfect squares</b> special case in factoring polynomials?</p>
+						<p class="fragment">\((ax+b)(ax+b) = a^2x^2+2ab+b^2\)</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>What is the <b>difference of squares</b> special case in factoring polynomials?</p>
+						<p class="fragment">\((ax+b)(ax-b) = a^2x^2-b^2\)</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, September 18, 2026</h4>
+					<h1><span>2.2</span> Factoring Polynomials</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 36</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section data-auto-animate><div class="callout">
+					<h2>What does it mean to<br><i>factor</i> a polynomial?</h2>
+				</div></section>
+				<section data-auto-animate><div class="callout">
+					<h2>What does it mean to<br><i>factor</i> a polynomial?</h2>
+					<div class="row" style="gap: 1rem; margin-top: 4rem;">
+						<p style="font-size: var(--bodyLargish);">\(  (2x - 1) \cdot (3x + 2) \)</p>
+						<div class="blue imgBox shortest" style="height: var(--bodyLargish); width: 10rem;">
+							<p class="centerHor fragment semi-fade-out" data-fragment-index="1" style="top: calc(var(--bodyRegular) * -2);">expanding</p>
+							<div class="line centerHor alignTop blueFill fragment semi-fade-out" data-fragment-index="1"><div class="arrowR"></div></div>
+
+							<p class="centerHor fragment" data-fragment-index="1" style="bottom: calc(var(--bodyRegular) * -2);">factoring</p>
+							<div class="line centerHor alignBottom blueFill fragment" data-fragment-index="1"><div class="arrowL"></div></div>
+						</div>
+						<p style="font-size: var(--bodyLargish);">\(   6x^2 - 11x - 10 \)</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="columnDefinition">
+						<div class="definition">Greatest Common Factor</div>
+						<div class="definitionText">
+							<p>the <b>greatest common factor \((\text{GCF})\)</b> of some numbers is the largest integer that can <span>divide every number</span></p>
+							<h6>We can also call it the <b>greatest common divisor</b> \((\text{GCD})\).</h6>
+							<div class="exampleBox">Ex: the \(\text{GCF}\) of \(12\) and \(18\) is \(6\)</div>
+						</div>
+					</div>
+				</div></section>
+
+<!-- FACTORING ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>32</div><div>Example 1</div></div>
+					<p>Find all solutions by isolating \(x\).</p>
+					<div class="problem withNum even">
+						<div>a</div>
+						<p>\( x^2 + 3x - 54 = 3(x + 9) \)</p>
+						<p class="fragment">\(x=\pm 9\)</p>
+					</div>
+					<div class="problem withNum even">
+						<div>b</div>
+						<p>\( 2x^2 - x + 4 = x^2 - 8x + 1 \)</p>
+						<p class="fragment">:(</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="columnDefinition">
+						<div class="definition">Zero Product Property</div>
+						<div class="definitionText">
+							<p>The Zero Product Property states that...</p>
+							<p><b>if</b> \(A\cdot B=0\),</p>
+							<p><b>then</b> \(A=0\) and/or \(B=0\).</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>39</div><div>Example 3</div></div>
+					<div class="problem withNum long">
+						<div>a</div>
+						<p>Find all real solutions to \( (2x + 1)(x + 3) = 0 \) using the ZPP.</p>
+						<p class="fragment">\( x= -1/2, -3 \)</p>
+					</div>
+					<div class="problem withNum long">
+						<div>b</div>
+						<p>Fully expand \( (2x + 1)(x + 3) = 0 \).</p>
+						<p class="fragment">\( 2x^2 + 7x + 3 = 0 \)</p>
+					</div>
+					<div class="problem withNum long">
+						<div>c</div>
+						<p>How do the solutions to (a) relate to the equation you found in (b)?</p>
+						<p class="fragment">They’re the same! Factoring/expanding <b>does not change</b> the solutions.</p>
+					</div>
+				</div></section>
+
+<!-- FACTORING ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<h2>Factoring Quadratics</h2>
+					<p>There are multiple ways to factor quadratics. As long as you show your work and it makes sense, you'll get credit!</p>
+					<p>The main idea is to get from...</p>
+					$$ ax^2+bx+c \longrightarrow (px + m)(qx + n)$$
+				</div></section>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Method 1: Diamond</h2>
+				</div></section>
+
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="slideRow">
+						<div class="columnWorkbook">
+							<h2>Diamond Method</h2>
+							<ol>
+								<li><p>Make sure you have zero on one side:<br>\(ax^2+bx+c=0\).</p></li>
+								<li class="fragment" data-fragment-index="1"><p>Identify \(a\), \(b\), and \(c\).</p></li>
+								<li class="fragment" data-fragment-index="2"><p>Set up your diamond.</p></li>
+								<li class="fragment" data-fragment-index="5"><p>Find two numbers whose <b>product is \(ac\)</b><br>and <b>sum is \(b\)</b>.</p></li>
+								<li class="fragment" data-fragment-index="10"><p>Set up your box and solve for the sides.</p></li>
+							</ol>
+						</div>
+						<div style="width: 30rem;">
+							<p class="blue" style="font-size: var(--bodyLarger); text-align: center;">\( 2x^2 + 7x + 3 = 0 \)</p>
+							<div class="imgBox fragment" data-fragment-index="2" style="margin: 2rem auto; height: 16rem; width: 16rem;">
+								<div class="line centerVer" style="left: -1.1rem; transform: rotate(45deg);"></div>
+								<div class="line centerVer" style="left: -1.1rem; transform: rotate(-45deg);"></div>
+								<p class="centerHor" style="top:0; font-size: var(--bodyLarger)">\(2\cdot 3\)</p>
+								<p class="centerHor" style="bottom:0; font-size: var(--bodyLarger)">\(7\)</p>
+								<p class="centerVer blue fragment" data-fragment-index="6" style="right:0; font-size: var(--bodyLarger)">\( 6\)</p>
+								<p class="centerVer blue fragment" data-fragment-index="6" style="left:0; font-size: var(--bodyLarger)">\(1\)</p>
+							</div>
+							<div class="grid fragment" data-fragment-index="10" style="grid-template-columns: 8rem 1fr 1fr; gap: 0;">
+								<p style="font-size: var(--bodyLarger); padding: 2px 20px;">\(  \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( \# x \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( \# \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( \# x \)</p>
+								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 2x^2 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 1 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( \# \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 6 \)</p>
+								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 3 \)</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="slideRow">
+						<div class="columnWorkbook">
+							<h2>Diamond Method</h2>
+							<ol>
+								<li><p>Make sure you have zero on one side:<br>\(ax^2+bx+c=0\).</p></li>
+								<li><p>Identify \(a\), \(b\), and \(c\).</p></li>
+								<li><p>Set up your diamond.</p></li>
+								<li><p>Find two numbers whose <b>product is \(ac\)</b><br>and <b>sum is \(b\)</b>.</p></li>
+								<li><p>Set up your box and solve for the sides.</p></li>
+							</ol>
+						</div>
+						<div style="width: 30rem;">
+							<p class="blue" style="font-size: var(--bodyLarger); text-align: center;">\( 2x^2 + 7x + 3 = 0 \)</p>
+							<div class="imgBox" style="margin: 2rem auto; height: 16rem; width: 16rem;">
+								<div class="line centerVer" style="left: -1.1rem; transform: rotate(45deg);"></div>
+								<div class="line centerVer" style="left: -1.1rem; transform: rotate(-45deg);"></div>
+								<p class="centerHor" style="top:0; font-size: var(--bodyLarger)">\(2\cdot 3\)</p>
+								<p class="centerHor" style="bottom:0; font-size: var(--bodyLarger)">\(7\)</p>
+								<p class="centerVer blue" style="right:0; font-size: var(--bodyLarger)">\( 6\)</p>
+								<p class="centerVer blue" style="left:0; font-size: var(--bodyLarger)">\(1\)</p>
+							</div>
+							<div class="grid" style="grid-template-columns: 8rem 1fr 1fr; gap: 0;">
+								<p style="font-size: var(--bodyLarger); padding: 2px 20px;">\(  \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( 2x \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( 1 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( x \)</p>
+								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 2x^2 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 1 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( 3 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 6 \)</p>
+								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 3 \)</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="slideRow">
+						<div class="columnWorkbook">
+							<h2>Diamond Method</h2>
+							<ol start="6">
+								<li>
+									<p>Write out your factored equation.</p>
+									<p class="blue fragment" data-fragment-index="0" style="margin: var(--spaceSmall) 0;">\( (2x+1)(x+3) = 0 \)</p>
+								</li>
+								<li class="fragment" data-fragment-index="1">
+									<p>Solve with the <b>Zero Product Property</b>.</p>
+									<div class="row fragment" data-fragment-index="2" style="gap: 8rem;">
+										<div>
+											<p class="blue">\( 2x+1 = 0\)</p>
+											<p class="blue fragment" data-fragment-index="3">\( x = -1/2 \)</p>
+										</div>
+										<div>
+											<p class="blue">\( x + 3 = 0 \)</p>
+											<p class="blue fragment" data-fragment-index="3">\( x = -3 \)</p>
+										</div>
+									</div>
+								</li>
+								<li class="fragment" data-fragment-index="4"><p>Check your answer by distributing.</p></li>
+							</ol>
+						</div>
+						<div style="width: 30rem;">
+							<div class="grid" style="grid-template-columns: 8rem 1fr 1fr; gap: 0;">
+								<p style="font-size: var(--bodyLarger); padding: 2px 20px;">\(  \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( 2x \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( 1 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( x \)</p>
+								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 2x^2 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 1 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( 3 \)</p>
+								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 6 \)</p>
+								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 3 \)</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="slideRow">
+						<div class="columnWorkbook">
+							<ol>
+								<li><p>Make sure you have zero on one side:<br>\(ax^2+bx+c=0\).</p></li>
+								<li><p>Identify \(a\), \(b\), and \(c\).</p></li>
+								<li><p>Set up your diamond.</p></li>
+								<li><p>Find two numbers whose <b>product is \(ac\)</b><br>and <b>sum is \(b\)</b>.</p></li>
+								<li><p>Set up your table and solve for the sides.</p></li>
+								<li><p>Write out your factored equation.</p></li>
+								<li><p>Solve with the <b>Zero Product Property</b>.</p></li>
+							</ol>
+						</div>
+						<div style="width: 24rem;">
+							<p class="blue" style="text-align: center;">\( ax^2 + bx + c = 0 \)</p>
+							<div class="imgBox" style="margin: 2rem auto; height: 16rem; width: 16rem;">
+								<div class="line centerVer" style="left: -1.1rem; transform: rotate(45deg);"></div>
+								<div class="line centerVer" style="left: -1.1rem; transform: rotate(-45deg);"></div>
+								<p class="centerHor" style="top:0;">\(ac\)</p>
+								<p class="centerHor" style="bottom:0;">\(b\)</p>
+								<p class="centerVer blue" style="right:0;">\(\sigma_2\)</p>
+								<p class="centerVer blue" style="left:0;">\(\sigma_1\)</p>
+							</div>
+							<div class="grid" style="grid-template-columns: 8rem 1fr 1fr; gap: 0; margin: 0 auto 3rem auto;">
+								<p style="padding: 2px 20px;">\(  \)</p>
+								<p style="padding: 2px 20px;">\( px \)</p>
+								<p style="padding: 2px 20px;">\( m \)</p>
+								<p style="padding: 8px 20px;">\( q x \)</p>
+								<p style="padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( ax^2 \)</p>
+								<p class="blue" style="padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( \sigma_1 \)</p>
+								<p style="padding: 8px 20px;">\( n \)</p>
+								<p class="blue" style="padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( \sigma_2 \)</p>
+								<p style="padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( c \)</p>
+							</div>
+							<p class="blue" style="text-align: center;">\(px+m=0\)</p>
+							<p class="blue" style="text-align: center;">\(qx+n=0\)</p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- EXAMPLES ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>39</div><div>Example 4</div></div>
+					<p>Solve for \(x\) by factoring.  Your final answer should include BOTH the factorization of the equation AND the solutions.</p>
+					$$x^2 -13x-30 = 0$$
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">
+						$$ (x - 15)(x + 2) = 0$$
+					</div>
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">
+						$$ x=15, -2 $$
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>39</div><div>Example 5</div></div>
+					<p>Solve for \(x\) by factoring.  Your final answer should include BOTH the factorization of the equation AND the solutions.</p>
+					$$15x^2 +7x-2=0$$
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">
+						$$ (5x-1)(3x + 2) = 0$$
+					</div>
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">
+						$$ x= 1/5, -2/3 $$
+					</div>
+				</div></section>
+
+<!-- QUADRATIC FORMULA ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Method 2:<br>Quadratic Formula</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>The Quadratic Formula</h2>
+					<p>Not every polynomial can be factored. In which case, the solutions are given by the formula:</p>
+					$$ x = \dfrac{-b \pm \sqrt{b^2-4ac} }{2a} $$
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Downsides</h2>
+					<p>When we use the quadratic formula, we might get an <b>imaginary number</b> as a solution, instead of a real number.</p>
+					<p>All imaginary numbers are of the form \(ai + b\), where \(i=\sqrt{-1}\).</p>
+					<img src="../../images/numbers.png" style="width: 60rem; margin: 3rem auto;">
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>40</div><div>Example 6</div></div>
+					<p>Solve for \( x\) by using the quadratic formula.</p>
+					$$4x^2 - 8x + 53 = 0$$
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">
+						$$ x=\dfrac{8\pm \sqrt{64-848} }{8} $$
+					</div>
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -1);">
+						no real solution
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>41</div><div>Example 7</div></div>
+					<p>Solve for \( x\) by using the quadratic formula.</p>
+					$$3x^2 - 5x - 3 = 0$$
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">
+						$$ x=\dfrac{5\pm \sqrt{61} }{6} $$
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>41</div><div>Example 8</div></div>
+					<p>To check the solutions are real numbers, use a calculator to get decimal approximations for the solutions for 7.</p>
+					$$ x=\dfrac{5\pm \sqrt{61} }{6} $$
+					<div class="blue fragment row">
+					<p style="width: 100%; text-align: center;">\( x=\dfrac{5+ \sqrt{61} }{6}  \approx 2.1350  \checkmark \)</p>
+					<p style="width: 100%; text-align: center;">\( x=\dfrac{5- \sqrt{61} }{6}  \approx -0.4684  \checkmark \)</p>
+					</div>
+				</div></section>
+				
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 2.2 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

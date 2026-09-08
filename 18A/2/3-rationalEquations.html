@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>2.3 Rational Equations | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>What are the <b>top</b> and <b>bottom</b> of a fraction called?</p>
+						<p class="fragment">The top is the <b>numerator</b> & the bottom is the <b>denominator</b></p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>What is the <b>difference of squares</b> special case in factoring polynomials?</p>
+						<p class="fragment">\((ax+b)(ax-b) = a^2x^2-b^2\)</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, September 24, 2026</h4>
+					<h1><span>2.3</span> Rational Equations</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 43</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section data-auto-animate><div class="callout">
+					<h2>What does <i>rational</i> mean?</h2>
+				</div></section>
+				<section data-auto-animate><div class="callout">
+					<h2>What does <i>rational</i> mean?</h2>
+					<p>Rational refers to <b>fractions</b>.</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="columnDefinition">
+						<div class="definition">Rational Equation</div>
+						<div class="definitionText">
+							<p>a <b>rational equation</b> is one that has a <span>variable in the denominator</span></p>
+							<div class="exampleBox">Ex: \(y= \dfrac{1}{x}+3\)</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Clearing Fractions</h2>
+					<p>We carefully <b>multiply</b> the whole equation by <b>each denominator</b> to cancel all of them out.</p>
+					<div class="col2">
+						<div>
+							<ol>
+								<li><p>multiply by each denominator</p></li>
+								<li><p>cancel out the fractions</p></li>
+								<li><p>rewrite the fraction-less equation</p></li>
+								<li><p>solve as usual</p></li>
+							</ol>
+						</div>
+
+						<div class="blue" style="display: flex; flex-flow: column; gap: var(--spaceLarger);">
+							<p class="fragment" data-fragment-index="1"><span class="fragment" data-fragment-index="2">\( \color{#111111} \big(\)</span> \( \dfrac{1}{x} -5 = \dfrac{2}{x} \) <span class="fragment" data-fragment-index="2">\( \color{#111111}\big) \cdot x \)</span></p>
+							<p class="fragment" data-fragment-index="3">\( \dfrac{1 {\color{#111111}\cdot x}}{x} - 5 {\color{#111111}\cdot x} = \dfrac{2 {\color{#111111}\cdot x}}{x} \)</p>
+							<div class="line fragment" data-fragment-index="4" style="width: 6rem; position: absolute; top: 61vh; left: 51vw; transform: rotate(-70deg);"></div>
+							<div class="line fragment" data-fragment-index="4" style="width: 6rem; position: absolute; top: 61vh; left: 67.2vw; transform: rotate(-70deg);"></div>
+							<p class="fragment" data-fragment-index="5">\( 1-5x = 2 \)</p>
+							<p class="fragment" data-fragment-index="6">\( x=-2/5 \)</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>44</div><div>Example 2</div></div>
+					<p>Find all real solutions, and simplify as much as possible. (If there are no real solutions, explain why.)</p>
+					$$  \frac{1}{x} = \frac{6}{5x}+ 1 $$
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">$$ x=5/11 $$</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>44</div><div>Example 3</div></div>
+					<p>Find all real solutions, and simplify as much as possible. (If there are no real solutions, explain why.)</p>
+					$$  \frac{1}{6k^2} = \frac{1}{3k^2} - \frac{1}{k} $$
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">$$ k=1/6 $$</div>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div class="definition" data-id="top">Extraneous Solution</div>
+					<div class="definitionText">
+						<p>an <b>extraneous solution</b> is a result that <span>does not work</span> when plugged into the original equation</p>
+						<!-- <div class="exampleBox">Ex: \(y= \dfrac{1}{x}+3\)</div> -->
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div class="definition" data-id="top">Extraneous Solution</div>
+					<div class="definitionText">
+						<p>an <b>extraneous solution</b> is a result that <span>does not work</span> when plugged into the original equation</p>
+						<!-- <div class="exampleBox">Ex: \(y= \dfrac{1}{x}+3\)</div> -->
+						<h6>BEWARE: <b>Extraneous solutions are rare!</b> Make sure you didn’t make a mistake while (1) trying to solve, or (2) plugging in to check. Double check before you claim a solution is extraneous!</h6>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="row">
+						<div style="width: 50%;">
+							<div class="workbook"><div>44</div><div>Example 2</div></div>
+							$$ \frac{1}{x} = \frac{6}{5x}+ 1 $$
+							<!-- <div class="blue" style="margin-top: calc(var(--space) * -1);">$$ x=5/11 $$</div> -->
+							<div class="fragment blue">$$ x\neq 0 $$</div>
+						</div>
+						<div style="width: 50%;">
+							<div class="workbook"><div>44</div><div>Example 3</div></div>
+							$$ \frac{1}{6k^2} = \frac{1}{3k^2} - \frac{1}{k} $$
+							<!-- <div class="blue" style="margin-top: calc(var(--space) * -1);">$$ k=1/6 $$</div> -->
+							<div class="fragment blue">$$ k\neq 0 $$</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>45</div><div>Example 4</div></div>
+					<p>Find all real solutions, and simplify as much as possible. (If there are no real solutions, explain why.)</p>
+					$$   1 = \frac{v + 2}{v - 4} + \frac{6v - 42}{v-4} $$
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">$$ v=6, 4 $$</div>
+					<div class="blue fragment" style="margin-top: calc(var(--spaceLarger) * -2);">the denominator cannot equal \(0\), so <span class="finalAnswer">\(v=6\)</span></div>
+				</div></section>
+
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>46</div><div>Example 5 & 6</div></div>
+					<p>Find all real solutions, and simplify as much as possible. (If there are no real solutions, explain why.)</p>
+
+					<div class="blue" style="display: flex; flex-flow: column; gap: var(--spaceLarger);">
+						<p class="fragment" data-fragment-index="1"><span class="fragment" data-fragment-index="2">\( \color{#111111} \big(\)</span> \( \dfrac{x}{x+1} -5= \dfrac{3}{x} \) <span class="fragment" data-fragment-index="2">\( \color{#111111}\big) \cdot (x+1)(x) \)</span></p>
+						<p class="fragment" data-fragment-index="3">\( \dfrac{x {\color{#111111}\cdot (x+1)(x)}}{x+1} - 5 {\color{#111111}\cdot (x+1)(x)} = \dfrac{3 {\color{#111111}\cdot (x+1)(x)}}{x} \)</p>
+						<div class="line fragment" data-fragment-index="4" style="width: 6rem; position: absolute; top: 53.5vh; left: 10.5vw; transform: rotate(-25deg);"></div>
+						<div class="line fragment" data-fragment-index="4" style="width: 6rem; position: absolute; top: 60vh; left: 11vw; transform: rotate(-25deg);"></div>
+						<div class="line fragment" data-fragment-index="4" style="width: 4rem; position: absolute; top: 53.5vh; left: 55.5vw; transform: rotate(-35deg);"></div>
+						<div class="line fragment" data-fragment-index="4" style="width: 4rem; position: absolute; top: 60vh; left: 50vw; transform: rotate(-35deg);"></div>
+						<p class="fragment" data-fragment-index="5">\( x(x) - 5(x+1)x = 3(x+1) \)</p>
+						<p class="fragment" data-fragment-index="6">\( x=-3/2, -1/2 \)</p>
+					</div>
+				</div></section>
+
+				
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 2.2 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

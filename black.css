@@ -19,6 +19,7 @@
     --bodyLargest: calc(var(--bodyRegular) * 1.8);
     --bodyLargish: calc(var(--bodyRegular) * 1.5);
     --bodyLarger: calc(var(--bodyRegular) * 1.35);
+    --bodyLarge: calc(var(--bodyRegular) * 1.15);
     --bodySmaller: calc(var(--bodyRegular) * 0.8);
     --bodySmallest: calc(var(--bodyRegular) * 0.65);
     --bodyTiny: calc(var(--bodyRegular) * 0.35);
@@ -156,7 +157,7 @@ u { text-decoration: underline 3px; text-underline-offset: 5px; }
 /* lists, tables, etc ----------------------------------------------------------------------------------------------------------- */
 
 ol, dl, ul {
-    margin: 0 0 0 var(--bodyRegular);
+    margin: var(--bodySmallest) 0 0 var(--bodyRegular);
     padding: 0;
     /* display: inline-block; */
     font-family: var(--fontSecondary);
@@ -370,7 +371,7 @@ sub { vertical-align: sub; font-size: smaller }
 } .definitionText p {
     font-size: var(--bodyLarger);
     max-width: 30ch;
-} .definitionText span {
+} .definitionText span, span .highlight {
     background-color: #ffde8385;
 }
 
@@ -746,6 +747,29 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     opacity: 20% !important;
 }
 
+.completeSquare {
+    display: grid;
+    grid-template-columns: auto 17rem 5rem auto;
+    grid-template-rows: auto 17rem 5rem auto;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+} .completeSquare>div {
+    background: rgba(var(--accent), 0.2);
+    outline: 2px solid rgba(var(--accent), 0.35);
+    outline-offset: -2px;
+    /* border: rgba(var(--accent), 0.5) 2px solid; */
+    border-radius: 0.15rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} .completeSquare p {
+    text-align: center;
+    color: rgb(var(--accent));
+}
+
  /* .line.arrows::before, .line.arrows::after, .line.arrowL::before, .line.arrowR::after {
     content: '';
     display: block;
@@ -828,6 +852,43 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 } .grid.left h5, .grid.left p, .grid.left h6 {
     margin: 0;
     text-align: left;
+}
+
+.diamond {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    background-image: url('images/diamond.svg');
+    background-size: contain;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--spaceLargest) auto;
+} .diamond>div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: rgb(var(--accent));
+} .diamond p {
+    font-size: var(--bodyLarge);
+    margin: -1rem;
+}
+
+.theBox {
+    display: grid;
+    grid-template-columns: 6rem 1fr 1fr;
+    gap: 0;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: var(--spaceLargest) auto;
+} .theBox>p, .theBox>div {
+    font-size: var(--bodyLarge);
+    padding: 2px 20px;
+    text-align: center;
+} .theBox>div {
+    padding: 8px 20px;
+    outline: 4px solid var(--primary);
+    outline-offset: -2px;
 }
 
 /* layouts ----------------------------------------------------------------------------------------------------------- */
@@ -926,6 +987,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 .blueFill { background-color: rgb(var(--accent)); }
 .bluish { color: var(--accent2); }
 .bluishFill { background-color: var(--accent2); }
+.bluhFill { background-color: rgba(var(--accent), 0.65); }
 
 /* reveal.js ----------------------------------------------------------------------------------------------------------- */
 

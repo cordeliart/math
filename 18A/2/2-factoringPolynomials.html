@@ -33,17 +33,17 @@
 						<h5 class="time" id="time"></h5>
 					</div>
 
-					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					<p>Write your <u>name & answers</u> on a sheet of paper to turn in.</p>
 					
 					<div class="problem long withNum">
 						<div>1</div>
-						<p>What is the <b>perfect squares</b> special case in factoring polynomials?</p>
-						<p class="fragment">\((ax+b)(ax+b) = a^2x^2+2ab+b^2\)</p>
+						<p>What are the <b>special cases</b> in factoring polynomials?</p>
+						<p class="fragment">\((ax+b)(ax+b) = a^2x^2+2ab+b^2 \\ (ax+b)(ax-b) = a^2x^2-b^2\)</p>
 					</div>
 					<div class="problem long withNum">
 						<div>2</div>
-						<p>What is the <b>difference of squares</b> special case in factoring polynomials?</p>
-						<p class="fragment">\((ax+b)(ax-b) = a^2x^2-b^2\)</p>
+						<p>Find two integers that multiply to make 12, and add to make 7.</p>
+						<p class="fragment">3 and 4</p>
 					</div>
 				</div></section>
 
@@ -74,7 +74,7 @@
 				</div></section>
 
 				<section><div class="bodySlide">
-=						<div class="definition">Greatest Common Factor</div>
+						<div class="definition">Greatest Common Factor</div>
 					<div class="definitionText">
 						<p>the <b>greatest common factor \((\text{GCF})\)</b> of some numbers is the largest integer that can <span>divide every number</span></p>
 						<h6>We can also call it the <b>greatest common divisor</b> \((\text{GCD})\).</h6>
@@ -137,161 +137,195 @@
 				</div></section>
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
-					<h2>Method 1: Diamond</h2>
-				</div></section>
-
-				<section data-transition="slide-in fade-out"><div class="bodySlide">
-					<div class="slideRow">
-						<div class="columnWorkbook">
-							<h2>Diamond Method</h2>
-							<ol>
-								<li><p>Make sure you have zero on one side:<br>\(ax^2+bx+c=0\).</p></li>
-								<li class="fragment" data-fragment-index="1"><p>Identify \(a\), \(b\), and \(c\).</p></li>
-								<li class="fragment" data-fragment-index="2"><p>Set up your diamond.</p></li>
-								<li class="fragment" data-fragment-index="5"><p>Find two numbers whose <b>product is \(ac\)</b><br>and <b>sum is \(b\)</b>.</p></li>
-								<li class="fragment" data-fragment-index="10"><p>Set up your box and solve for the sides.</p></li>
-							</ol>
-						</div>
-						<div style="width: 30rem;">
-							<p class="blue" style="font-size: var(--bodyLarger); text-align: center;">\( 2x^2 + 7x + 3 = 0 \)</p>
-							<div class="imgBox fragment" data-fragment-index="2" style="margin: 2rem auto; height: 16rem; width: 16rem;">
-								<div class="line centerVer" style="left: -1.1rem; transform: rotate(45deg);"></div>
-								<div class="line centerVer" style="left: -1.1rem; transform: rotate(-45deg);"></div>
-								<p class="centerHor" style="top:0; font-size: var(--bodyLarger)">\(2\cdot 3\)</p>
-								<p class="centerHor" style="bottom:0; font-size: var(--bodyLarger)">\(7\)</p>
-								<p class="centerVer blue fragment" data-fragment-index="6" style="right:0; font-size: var(--bodyLarger)">\( 6\)</p>
-								<p class="centerVer blue fragment" data-fragment-index="6" style="left:0; font-size: var(--bodyLarger)">\(1\)</p>
-							</div>
-							<div class="grid fragment" data-fragment-index="10" style="grid-template-columns: 8rem 1fr 1fr; gap: 0;">
-								<p style="font-size: var(--bodyLarger); padding: 2px 20px;">\(  \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( \# x \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( \# \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( \# x \)</p>
-								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 2x^2 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 1 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( \# \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 6 \)</p>
-								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 3 \)</p>
-							</div>
-						</div>
-					</div>
-				</div></section>
-
-				<section data-transition="fade"><div class="bodySlide">
-					<div class="slideRow">
-						<div class="columnWorkbook">
-							<h2>Diamond Method</h2>
-							<ol>
-								<li><p>Make sure you have zero on one side:<br>\(ax^2+bx+c=0\).</p></li>
-								<li><p>Identify \(a\), \(b\), and \(c\).</p></li>
-								<li><p>Set up your diamond.</p></li>
-								<li><p>Find two numbers whose <b>product is \(ac\)</b><br>and <b>sum is \(b\)</b>.</p></li>
-								<li><p>Set up your box and solve for the sides.</p></li>
-							</ol>
-						</div>
-						<div style="width: 30rem;">
-							<p class="blue" style="font-size: var(--bodyLarger); text-align: center;">\( 2x^2 + 7x + 3 = 0 \)</p>
-							<div class="imgBox" style="margin: 2rem auto; height: 16rem; width: 16rem;">
-								<div class="line centerVer" style="left: -1.1rem; transform: rotate(45deg);"></div>
-								<div class="line centerVer" style="left: -1.1rem; transform: rotate(-45deg);"></div>
-								<p class="centerHor" style="top:0; font-size: var(--bodyLarger)">\(2\cdot 3\)</p>
-								<p class="centerHor" style="bottom:0; font-size: var(--bodyLarger)">\(7\)</p>
-								<p class="centerVer blue" style="right:0; font-size: var(--bodyLarger)">\( 6\)</p>
-								<p class="centerVer blue" style="left:0; font-size: var(--bodyLarger)">\(1\)</p>
-							</div>
-							<div class="grid" style="grid-template-columns: 8rem 1fr 1fr; gap: 0;">
-								<p style="font-size: var(--bodyLarger); padding: 2px 20px;">\(  \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( 2x \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( 1 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( x \)</p>
-								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 2x^2 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 1 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( 3 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 6 \)</p>
-								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 3 \)</p>
-							</div>
-						</div>
-					</div>
-				</div></section>
-
-				<section data-transition="fade-in slide-out"><div class="bodySlide">
-					<div class="slideRow">
-						<div class="columnWorkbook">
-							<h2>Diamond Method</h2>
-							<ol start="6">
-								<li>
-									<p>Write out your factored equation.</p>
-									<p class="blue fragment" data-fragment-index="0" style="margin: var(--spaceSmall) 0;">\( (2x+1)(x+3) = 0 \)</p>
-								</li>
-								<li class="fragment" data-fragment-index="1">
-									<p>Solve with the <b>Zero Product Property</b>.</p>
-									<div class="row fragment" data-fragment-index="2" style="gap: 8rem;">
-										<div>
-											<p class="blue">\( 2x+1 = 0\)</p>
-											<p class="blue fragment" data-fragment-index="3">\( x = -1/2 \)</p>
-										</div>
-										<div>
-											<p class="blue">\( x + 3 = 0 \)</p>
-											<p class="blue fragment" data-fragment-index="3">\( x = -3 \)</p>
-										</div>
-									</div>
-								</li>
-								<li class="fragment" data-fragment-index="4"><p>Check your answer by distributing.</p></li>
-							</ol>
-						</div>
-						<div style="width: 30rem;">
-							<div class="grid" style="grid-template-columns: 8rem 1fr 1fr; gap: 0;">
-								<p style="font-size: var(--bodyLarger); padding: 2px 20px;">\(  \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( 2x \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 2px 20px;">\( 1 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( x \)</p>
-								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 2x^2 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 1 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px;">\( 3 \)</p>
-								<p class="blue" style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 6 \)</p>
-								<p style="font-size: var(--bodyLarger); padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( 3 \)</p>
-							</div>
-						</div>
-					</div>
+					<p>Factoring: Method 1</p>
+					<h2>Diamond Method</h2>
 				</div></section>
 
 				<section><div class="bodySlide">
-					<div class="slideRow">
+					<h2>The Diamond</h2>
+					<p>Find two numbers that <b>multiply</b> to make the top,<br>and <b>add</b> to make the bottom.</p>
+					<div class="row" style="margin: -2rem 0;">
+						<div class="diamond fragment" style="margin-left: 1rem;">
+							<p>\(6\)</p>
+							<div class="fragment">
+								<p>\(6\)</p>
+								<p>\(1\)</p>
+							</div>
+							<p>\(7\)</p>
+						</div>
+						<div class="diamond fragment">
+							<p>\(12\)</p>
+							<div class="fragment">
+								<p>\(3\)</p>
+								<p>\(4\)</p>
+							</div>
+							<p>\(7\)</p>
+						</div>
+						<div class="diamond fragment">
+							<p>\(9\)</p>
+							<div class="fragment">
+								<p>\(3\)</p>
+								<p>\(3\)</p>
+							</div>
+							<p>\(6\)</p>
+						</div>
+						<div class="diamond fragment" style="margin-right: 1rem;">
+							<p>\(20\)</p>
+							<div class="fragment">
+								<p>\(4\)</p>
+								<p>\(5\)</p>
+							</div>
+							<p>\(9\)</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="slideRow">
+					
+					<!-- <div class="slideRow"> -->
 						<div class="columnWorkbook">
-							<ol>
-								<li><p>Make sure you have zero on one side:<br>\(ax^2+bx+c=0\).</p></li>
-								<li><p>Identify \(a\), \(b\), and \(c\).</p></li>
-								<li><p>Set up your diamond.</p></li>
-								<li><p>Find two numbers whose <b>product is \(ac\)</b><br>and <b>sum is \(b\)</b>.</p></li>
-								<li><p>Set up your table and solve for the sides.</p></li>
-								<li><p>Write out your factored equation.</p></li>
-								<li><p>Solve with the <b>Zero Product Property</b>.</p></li>
+							<h2>The Box</h2>
+							<p>Behaves like a mini multiplication table.</p>
+							<ol class="fragment" data-fragment-index="5">
+								<li><p>Find the GCF of the first row.</p></li>
+								<li><p>Find the GCF of the first column.</p></li>
+								<li><p>Work backwards for the last two spots.</p></li>
 							</ol>
 						</div>
-						<div style="width: 24rem;">
-							<p class="blue" style="text-align: center;">\( ax^2 + bx + c = 0 \)</p>
-							<div class="imgBox" style="margin: 2rem auto; height: 16rem; width: 16rem;">
-								<div class="line centerVer" style="left: -1.1rem; transform: rotate(45deg);"></div>
-								<div class="line centerVer" style="left: -1.1rem; transform: rotate(-45deg);"></div>
-								<p class="centerHor" style="top:0;">\(ac\)</p>
-								<p class="centerHor" style="bottom:0;">\(b\)</p>
-								<p class="centerVer blue" style="right:0;">\(\sigma_2\)</p>
-								<p class="centerVer blue" style="left:0;">\(\sigma_1\)</p>
+						<div style="margin-right: 4rem;">
+							<div class="theBox fragment" data-fragment-index="1">
+								<p>\(  \)</p>
+								<p>\( 2 x \)</p>
+								<p>\( 1 \)</p>
+								
+								<p>\( x \)</p>
+								<div><span class="fragment" data-fragment-index="2">\( 2x^2 \)</span></div>
+								<div><span class="fragment" data-fragment-index="2">\( 1x \)</span></div>
+								
+								<p>\( 3 \)</p>
+								<div><span class="fragment" data-fragment-index="2">\( 6x \)</span></div>
+								<div><span class="fragment" data-fragment-index="2">\( 3 \)</span></div>
 							</div>
-							<div class="grid" style="grid-template-columns: 8rem 1fr 1fr; gap: 0; margin: 0 auto 3rem auto;">
-								<p style="padding: 2px 20px;">\(  \)</p>
-								<p style="padding: 2px 20px;">\( px \)</p>
-								<p style="padding: 2px 20px;">\( m \)</p>
-								<p style="padding: 8px 20px;">\( q x \)</p>
-								<p style="padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( ax^2 \)</p>
-								<p class="blue" style="padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( \sigma_1 \)</p>
-								<p style="padding: 8px 20px;">\( n \)</p>
-								<p class="blue" style="padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( \sigma_2 \)</p>
-								<p style="padding: 8px 20px; outline: 4px solid var(--primary); outline-offset: -2px;">\( c \)</p>
+							
+							<div class="theBox fragment" data-fragment-index="5">
+								<p>\(  \)</p>
+								<p class="fragment" data-fragment-index="7">\( 3 x \)</p>
+								<p class="fragment" data-fragment-index="9">\( 1 \)</p>
+								
+								<p class="fragment" data-fragment-index="6">\( 2x \)</p>
+								<div>\( 6x^2 \)</div>
+								<div>\( 2x \)</div>
+								
+								<p class="fragment" data-fragment-index="9">\( 1 \)</p>
+								<div>\( 3x \)</div>
+								<div>\( 1 \)</div>
 							</div>
-							<p class="blue" style="text-align: center;">\(px+m=0\)</p>
-							<p class="blue" style="text-align: center;">\(qx+n=0\)</p>
+							
+							<div class="theBox fragment" data-fragment-index="10">
+								<p>\(  \)</p>
+								<p class="fragment" data-fragment-index="12">\( x \)</p>
+								<p class="fragment" data-fragment-index="14">\( 3 \)</p>
+								
+								<p class="fragment" data-fragment-index="11">\( 5x \)</p>
+								<div>\( 5x^2 \)</div>
+								<div>\( 15x \)</div>
+								
+								<p class="fragment" data-fragment-index="14">\( -2 \)</p>
+								<div>\( -2x \)</div>
+								<div>\( -6 \)</div>
+							</div>
+					<!-- </div> -->
+					</div>
+				</div></section>
+
+				<section><div class="slideRow" style="gap: 1rem;">
+					<ol>
+						<li><p>Make sure you have zero on one side:<br>\(ax^2+bx+c=0\). Identify \(a\), \(b\), and \(c\).</p></li>
+						<li style="width: 33ch;" class="fragment" data-fragment-index="1"><p>Complete a <b>diamond</b> with \(ac\) top and \(b\) bottom.</p></li>
+						<li class="fragment" data-fragment-index="5"><p>Complete a <b>box</b> with \(ax^2\) and \(c\) in opposite<br>corners, and the diamond #s in the others.</p></li>
+						<li class="fragment" data-fragment-index="10"><p>Write out your factored equation.</p></li>
+						<li class="fragment" data-fragment-index="15">
+							<p>Solve with the <b>Zero Product Property</b>.</p>
+							<div class="row fragment" data-fragment-index="16" style="gap: 8rem;">
+								<div>
+									<p class="blue" style="margin: -1rem 0 -0.5rem 0;">\( 2x+1 = 0\)</p>
+									<p class="blue fragment" data-fragment-index="17">\( x = -1/2 \)</p>
+								</div>
+								<div>
+									<p class="blue" style="margin: -1rem 0 -0.5rem 0;">\( x + 3 = 0 \)</p>
+									<p class="blue fragment" data-fragment-index="17">\( x = -3 \)</p>
+								</div>
+							</div>
+						</li>
+						<li class="fragment"><p>Check your answer by distributing.</p></li>
+					</ol>
+
+					<div>
+						<p class="blue" style="font-size: var(--bodyLarge); text-align: center;">\( 2x^2 + 7x + 3 = 0 \)</p>
+						<div class="diamond fragment" data-fragment-index="1">
+							<p>\(2\cdot 3\)</p>
+							<div class="fragment" data-fragment-index="2"><p>\(6\)</p><p>\(1\)</p></div>
+							<p>\(7\)</p>
 						</div>
+						<div class="theBox fragment" data-fragment-index="5">
+							<p>\(  \)</p>
+							<p class="blue fragment" data-fragment-index="8">\( 2 x \)</p>
+							<p class="blue fragment" data-fragment-index="9">\( 1 \)</p>
+							
+							<p class="blue fragment" data-fragment-index="7">\( x \)</p>
+							<div>\( 2x^2 \)</div>
+							<div class="blue"><span class="fragment" data-fragment-index="6">\( 1x \)</span></div>
+							
+							<p class="blue fragment" data-fragment-index="9">\( 3 \)</p>
+							<div class="blue"><span class="fragment" data-fragment-index="6">\( 6x \)</span></div>
+							<div>\( 3 \)</div>
+						</div>
+						<p class="blue fragment" data-fragment-index="11" style="font-size: var(--bodyLarge); text-align: center;">\( (2x+1)(x+3) = 0 \)</p>
+					</div>
+				</div></section>
+
+				<section><div class="slideRow" style="gap: 1rem;">
+					<ol>
+						<li><p>Make sure you have zero on one side:<br>\(ax^2+bx+c=0\). Identify \(a\), \(b\), and \(c\).</p></li>
+						<li style="width: 33ch;"><p>Complete a <b>diamond</b> with \(ac\) top and \(b\) bottom.</p></li>
+						<li><p>Complete a <b>box</b> with \(ax^2\) and \(c\) in opposite<br>corners, and the diamond #s in the others.</p></li>
+						<li><p>Write out your factored equation.</p></li>
+						<li>
+							<p>Solve with the <b>Zero Product Property</b>.</p>
+							<div class="row" style="gap: 8rem;">
+								<div>
+									<p class="blue" style="margin: -1rem 0 -0.5rem 0;">\( px+m = 0\)</p>
+									<p class="blue">\( x =  \)</p>
+								</div>
+								<div>
+									<p class="blue" style="margin: -1rem 0 -0.5rem 0;">\( qx+n = 0 \)</p>
+									<p class="blue">\( x =  \)</p>
+								</div>
+							</div>
+						</li>
+						<li ><p>Check your answer by distributing.</p></li>
+					</ol>
+					<div>
+						<p class="blue" style="font-size: var(--bodyLarge);text-align: center;">\( ax^2 + bx + c = 0 \)</p>
+						<div class="diamond">
+							<p>\(a\cdot c\)</p>
+							<div><p>\(\alpha\)</p><p>\(\beta\)</p></div>
+							<p>\(b\)</p>
+						</div>
+						<div class="theBox">
+							<p>\(  \)</p>
+							<p class="blue">\( p x \)</p>
+							<p class="blue">\( m \)</p>
+							
+							<p class="blue">\( qx \)</p>
+							<div>\( ax^2 \)</div>
+							<div class="blue">\( \alpha \)</div>
+							
+							<p class="blue">\( n \)</p>
+							<div class="blue">\( \beta \)</div>
+							<div>\( c \)</div>
+						</div>
+						<p class="blue" style="width: 17ch; font-size: var(--bodyLarge); text-align: center;">\((px+m)(qx+n)=0\)</p>
 					</div>
 				</div></section>
 
@@ -324,7 +358,8 @@
 <!-- QUADRATIC FORMULA ------------------------------------------------------------------------------------------------------>
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
-					<h2>Method 2:<br>Quadratic Formula</h2>
+					<p>Factoring: Method 2</p>
+					<h2>Quadratic Formula</h2>
 				</div></section>
 
 				<section><div class="bodySlide">

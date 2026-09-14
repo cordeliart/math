@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>2.4 Quadratics and Parabolas | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p></p>
+						<p class="fragment"></p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p></p>
+						<p class="fragment"></p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, September 24, 2026</h4>
+					<h1><span>2.4</span> Quadratics <br><i>&</i> Parabolas</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 51</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+
+				<section><div class="bodySlide">
+					<div class="definition">Polynomial (Review from 2.1)</div>
+					<div class="definitionText">
+						<p>A <b>polynomial</b>, meaning <span>“multiple terms,”</span> is a type of expression that only has terms with a variable (like \(x\)) with an exponent and a coefficient</p>
+						<div class="exampleBox">Ex: \(7x^3+x+1\)</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Degree (Review from 1.2)</div>
+					<div class="definitionText">
+						<p>the <b>degree</b> of a polynomial the <span>highest exponent</span> on the variable</p>
+						<div class="exampleBox">Ex: \(3x^4 + 2x +7\) is degree 4</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Linear (Review from 1.2)</div>
+					<div class="definitionText">
+						<p>an equation is <b>linear</b> if it is <span>degree 1</span></p>
+						<h6>AKA the highest exponent is 1</h6>
+						<div class="exampleBox">Ex: \(5x + 2\) is a  linear expression</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Quadratic (Review from 2.1)</div>
+					<div class="definitionText">
+						<p>a <b>quadratic</b> is a polynomial of <span>degree 2</span></p>
+						<div class="exampleBox">Ex: \(5x^2 - 8x +1\)</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>51</div><div>Example 1a</div></div>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<p>vertex: \((1,-4)\)</p>
+							<p>y-intercept: \( (0,-3)\)</p>
+							<p>parabola opens up</p>
+							<p class="blue">\( f(x) = (x-1)^2-4 \)</p>
+						</div>
+						<div>
+							<div class="imgBox" alt="blank graph with range x=[-5,-5] and y=[-5,5]"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+								<img src="../../images/parabola-short.svg" class="centerHor" style="width: 48%; top: -1.5%; opacity: 35%;">
+								<img src="../../images/parabola.svg" style="width: 65%; top: -3.5%; left: 20%;">
+								<div class="pointBox">
+									<div class="point alignTL blueFill" style="top: 90%; left: 60%;"></div>
+									<div class="point alignTL blueFill" style="top: 80%; left: 50%;"></div>
+									<div class="point alignTL blueFill" style="top: 80%; left: 70%;"></div>
+									<div class="point alignTL blueFill" style="top: 50%; left: 40%;"></div>
+									<div class="point alignTL blueFill" style="top: 50%; left: 80%;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>51</div><div>Example 1b</div></div>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<p>vertex: \((-2,5)\)</p>
+							<p>y-intercept: \( (0,1)\)</p>
+							<p>parabola opens down</p>
+							<p class="blue">\( f(x) = -(x+2)^2+5 \)</p>
+						</div>
+						<div>
+							<div class="imgBox" alt="blank graph with range x=[-5,-5] and y=[-5,5]"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+								<img src="../../images/parabola.svg" class="centerHor" style="width: 50%; top: -2rem;">
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Parabola</div>
+					<div class="definitionText">
+						<p>a <b>parabola</b> is the <span>U-shaped graph</span> that a quadratic makes</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Vertex</div>
+					<div class="definitionText">
+						<p>the <b>vertex</b> is the <span>maximum or minimum</span> of the parabola</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Axis of Symmetry</div>
+					<div class="definitionText">
+						<p>the <b>axis of symmetry</b> is the <span>vertical line</span> that splits a parabola into perfectly symmetrical halves</p>
+					</div>
+				</div></section>
+
+<!-- COMPLETING THE SQUARE ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<p>Factoring: Method 3</p>
+					<h2>Completing the Square</h2>
+				</div></section>
+
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<h2>Completing the Square</h2>
+					<p><b>The Goal</b>: to get from \(0 = ax^2+bx+c \) to \( 0 = a(x-h)^2 + k \) by adding a number to both sides</p>
+					<div class="grid blue" style="gap: 4rem; grid-template-columns: 1fr auto 2fr auto 2fr">
+						<p>\(0 \)</p>
+						<p>\(=\)</p>
+						<p>\( x^2 + 2x+2\)</p>
+						<p>\(=\)</p>
+						<div class="completeSquare">
+							<p></p>
+							<p>\(x\)</p>
+							<p>\(1\)</p><p></p>
+							<p>\(x\)</p>
+							<div><p>\( x^2\)</p></div>
+							<div><p>\( x\)</p></div><p></p>
+							<p>\(1\)</p>
+							<div><p>\( x\)</p></div>
+							<div><p>\( 1\)</p></div>
+							<div style="width: 5rem;"><p>\( 1\)</p></div>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<h2>Completing the Square</h2>
+					<p><b>The Goal</b>: to get from \(0 = ax^2+bx+c \) to \( 0 = a(x-h)^2 + k \) by adding a number to both sides</p>
+					<div class="grid blue" style="gap: 4rem; grid-template-columns: 1fr auto 2fr auto 2fr">
+						<p>\(0 - 1\)</p>
+						<p>\(=\)</p>
+						<p>\( x^2 + 2x + 2 - 1\)</p>
+						<p>\(=\)</p>
+						<div class="completeSquare">
+							<p></p>
+							<p>\(x\)</p>
+							<p>\(1\)</p><p></p>
+							<p>\(x\)</p>
+							<div><p>\( x^2\)</p></div>
+							<div><p>\( x\)</p></div><p></p>
+							<p>\(1\)</p>
+							<div><p>\( x\)</p></div>
+							<div><p>\( 1\)</p></div>
+							<div style="width: 5rem; background: none; outline-style: dashed;"><p>\( 1\)</p></div>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<h2>Completing the Square</h2>
+					<p><b>The Goal</b>: to get from \(0 = ax^2+bx+c \) to \( 0 = a(x-h)^2 + k \) by adding a number to both sides</p>
+					<div class="grid blue" style="gap: 4rem; grid-template-columns: 1fr auto 2fr auto 2fr">
+						<p>\(0 - 1\)</p>
+						<p>\(=\)</p>
+						<p>\( (x+1)^2\)</p>
+						<p>\(=\)</p>
+						<div class="completeSquare">
+							<p></p>
+							<p>\(x\)</p>
+							<p>\(1\)</p><p></p>
+							<p>\(x\)</p>
+							<div><p>\( x^2\)</p></div>
+							<div><p>\( x\)</p></div><p></p>
+							<p>\(1\)</p>
+							<div><p>\( x\)</p></div>
+							<div><p>\( 1\)</p></div>
+							<div style="width: 5rem; background: none; outline-style: dashed;"><p>\( 1\)</p></div>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<h2>Completing the Square</h2>
+					<p><b>The Goal</b>: to get from \(0 = ax^2+bx+c \) to \( 0 = a(x-h)^2 + k \) by adding a number to both sides</p>
+					<div class="grid blue" style="gap: 4rem; grid-template-columns: 1fr auto 2fr auto 2fr">
+						<p>\(0 \)</p>
+						<p>\(=\)</p>
+						<p>\( (x+1)^2+1\)</p>
+						<p>\(=\)</p>
+						<div class="completeSquare">
+							<p></p>
+							<p>\(x\)</p>
+							<p>\(1\)</p><p></p>
+							<p>\(x\)</p>
+							<div><p>\( x^2\)</p></div>
+							<div><p>\( x\)</p></div><p></p>
+							<p>\(1\)</p>
+							<div><p>\( x\)</p></div>
+							<div><p>\( 1\)</p></div>
+							<div style="width: 5rem;"><p>\( 1\)</p></div>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Completing the Square</h2>
+						<ol>
+							<li><p>Identify \(a\), \(b\), and \(c\), and then isolate \(c\)</p></li>
+							<li class="fragment" data-fragment-index="1"><p>Calculate \(h=b/2a\) <span class="fragment blue" data-fragment-index="2">\(  = 2/(2\cdot 1) = \)<span class="answerBox" style="margin-left: 4px;">\(1\)</span></span></p></li>
+							<li class="fragment" data-fragment-index="5"><p>Add \(h^2\) to BOTH sides</p></li>
+							<li class="fragment" data-fragment-index="10"><p>Change the side with \(x\) into the squared form</p></li>
+							<li class="fragment" data-fragment-index="15"><p>Move everything onto one side \(=0\)</p></li>
+						</ol>
+						<p class="fragment" data-fragment-index="16"><b>You should get</b>: \( a(x+h)^2 + c - h^2\)</p>
+					</div>
+					<div class="blue columnWorkbook">
+						<p style="margin-top: 2rem;">\(0 = x^2 + 2x + 2\)</p>
+						<p class="fragment" data-fragment-index="0" style="margin-top: 2rem;">\(-2 = x^2 + 2x\)</p>
+						<p class="fragment" data-fragment-index="6" style="margin-top: 6.5rem">\( -2\)<span class="answerBox" style="margin-left: 4px;">\(+1\)</span>\(= x^2 + 2x\)<span class="answerBox" style="margin-left: 4px;">\(+1\)</span></p>
+						<p class="fragment" data-fragment-index="10" style="margin-top: 0.79rem">\( -1 = (x+1)^2 \)</p>
+						<p class="fragment" data-fragment-index="15" style="margin-top: 0.79rem">\( 0 = (x+1)^2+1 \)</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>52</div><div>Example 2</div></div>
+					<div class="col2">
+						<div class="problem withNum">
+							<div>a</div>
+							<p>\( f(x)=x^2-2x-3\)</p>
+						</div>
+						<div class="problem withNum">
+							<div>b</div>
+							<p>\( f(x)=-x^2-4x+1\)</p>
+						</div>
+					</div>
+					<ol style="margin-top: 2rem;">
+						<li><p>Identify \(a\), \(b\), and \(c\), and then isolate \(c\)</p></li>
+						<li><p>Calculate \(h=b/2a\)</p></li>
+						<li><p>Add \(h^2\) to BOTH sides</p></li>
+						<li><p>Change the side with \(x\) into the squared form</p></li>
+						<li><p>Move everything onto one side \(=0\)</p></li>
+					</ol>
+				</div></section>
+
+<!-- EXAMPLE 3 ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Reading Equation Types</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>53</div><div>Example 3a</div></div>
+					<p>How can we pull the vertex out of the equation?</p>
+					<div style="margin-left: 33vw; width: fit-content;" class="fragment">
+						<p class="blue" style="margin-top: 0.5rem; margin-bottom: 0.5rem; text-align: center; padding-right: 1.5rem;"><b>x-offset</b> sign FLIPS!</p>
+						<img src="../../images/arrow.svg" style="width: 35rem; height: auto; top: 0; left: 38%;">
+					</div>
+					<div class="row" style="margin: -0.85rem auto -1.65rem auto; position: relative;">
+						\(f(x) = (x-1)^2 - 4\) with vertex \((1,-4)\)
+					</div>
+					<div style="margin-left: 41vw; width: fit-content;" class="fragment">
+						<img src="../../images/arrow.svg" style="width: 35rem; height: auto; top: 13rem; left: 46.2%; transform: scaleY(-100%);">
+						<p class="blue" style="margin-top: 0.5rem; margin-bottom: 0.5rem; text-align: center; padding-right: 1.5rem;"><b>y-offset</b> sign does NOT flip</p>
+					</div>
+					<p>Calculate the y-intercept. <span class="fragment blue">\((0,-3)\)</span></p>
+					<p>The parabola opens up because... <span class="fragment blue">\(a=1\) is positive</span></p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>53</div><div>Example 3b</div></div>
+					<p>How can we pull the vertex out of the equation?</p>
+					<div style="margin-left: 35vw; width: fit-content;" class="fragment">
+						<p class="blue" style="margin-top: 0.5rem; margin-bottom: 0.5rem; text-align: center; padding-right: 1.5rem;"><b>x-offset</b> sign FLIPS!</p>
+						<img src="../../images/arrow.svg" style="width: 35rem; height: auto; top: 0; left: 38%;">
+					</div>
+					<div class="row" style="margin: -0.85rem auto -1.65rem auto; position: relative;">
+						\(f(x) = -(x+2)^2 + 5\) with vertex \((-2,5)\)
+					</div>
+					<div style="margin-left: 43.5vw; width: fit-content;" class="fragment">
+						<img src="../../images/arrow.svg" style="width: 35rem; height: auto; top: 13rem; left: 46.2%; transform: scaleY(-100%);">
+						<p class="blue" style="margin-top: 0.5rem; margin-bottom: 0.5rem; text-align: center; padding-right: 1.5rem;"><b>y-offset</b> sign does NOT flip</p>
+					</div>
+					<p>Calculate the y-intercept. <span class="fragment blue">\((0,1)\)</span></p>
+					<p>The parabola opens down because... <span class="fragment blue">\(a=-1\) is negative (vertical flip)</span></p>
+				</div></section>
+
+<!-- TYPES ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="slideRow callout">
+					<!-- <h2>Quadratic Forms</h2> -->
+					<!-- <p>There are two special cases for factoring polynomials. If you can learn to recognize these patterns, it will make your life much easier!</p> -->
+					<!-- <div class="col2"> -->
+						<div style="width: 50%;">
+							<h5 style="margin: var(--spaceLarge) auto 0 auto; text-align: center;">Vertex Form</h5>
+							$$ a(x-h)^2+k $$
+						</div>
+						<div style="width: 50%;">
+							<h5 style="margin: var(--spaceLarge) auto 0 auto; text-align: center;">ABC Form</h5>
+							$$ ax^2+bx+c $$
+						</div>
+					<!-- </div> -->
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Switching from ABC to Vertex</h2>
+					<ol style="margin-top: 2rem;">
+						<li><p>Identify \(a\), \(b\), and \(c\)</p></li>
+						<li><p>Calculate \(h=-b/2a\)</p></li>
+						<li>
+							<p>Calculate \(k\) by plugging \(h\) into the ABC form</p>
+							<h6>The derivation for this is in the appendix.</h6>
+						</li>
+						<li><p>Plug \(a\), \(h\), and \(k\) into vertex form</p></li>
+					</ol>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Sketching Graphs</h2>
+					<ol style="margin-top: 2rem;">
+						<li>
+							<p>Plot and label the <b>vertex</b> in the correct quadrant</p>
+							<h6>It does not need to be to scale! Do not draw a bunch of tick marks. Labeling the point with an ordered pair is enough.</h6>
+						</li>
+						<li><p>Plot and label the <b>y-intercept</b></p></li>
+						<li><p>Connect points with a parabola</p>
+						<h6>Check that the way it opens matches \(a\)!</h6></li>
+					</ol>
+				</div></section>
+
+<!-- EXAMPLES ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>55</div><div>Example 4</div></div>
+					$$ f(x) = -3x^2 -600x - 31000$$
+					<div class="problem withNum long">
+						<div>a</div><p>Write \(f(x)\) in <b>vertex form.</b></p><p class="fragment">\(f(x)= -3(x + 101)^2 - 397 \)</p>
+					</div>
+					<div class="problem withNum long">
+						<div>b</div><p>Sketch the <b>graph</b>, with labeled vertex and intercepts.</p><p></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>56</div><div>Example 6</div></div>
+					$$ f(x) = 4x^2 -600x - 22510$$
+					<div class="problem withNum long">
+						<div>a</div><p>Write \(f(x)\) in <b>vertex form.</b></p><p class="fragment">\(f(x)= 4(x -75)^2 +10 \)</p>
+					</div>
+					<div class="problem withNum long">
+						<div>b</div><p>Sketch the <b>graph</b>, with labeled vertex and intercepts.</p><p></p>
+					</div>
+				</div></section>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 2.4 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

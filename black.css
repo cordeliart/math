@@ -634,7 +634,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 } .imgBox.shorter { height: 20rem;
 } .imgBox.shortest { height: 9rem; }
 
-.xyplane { /* inside .imgBox, below pointBox */
+.xyplane, .xyparabola { /* inside .imgBox, below pointBox */
     display: block;
     height: 33.5rem;
     width: 33.5rem;
@@ -660,6 +660,8 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     font-size: 2rem;
     color: rgba(0,0,0,0.35);
     white-space: nowrap;
+} .xyparabola {
+    background-image: url("images/parabola-base.svg");
 }
 
 .pointBox { /* inside .imgBox, over pointBox, contains points on .gridFive/*/

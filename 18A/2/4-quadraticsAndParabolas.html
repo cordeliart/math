@@ -33,17 +33,27 @@
 						<h5 class="time" id="time"></h5>
 					</div>
 
-					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					<p>Fill in <b>in your workbook</b> on page 51. These will NOT be collected.</p>
 					
-					<div class="problem long withNum">
+					<div class="problem withNum">
 						<div>1</div>
-						<p></p>
-						<p class="fragment"></p>
+						<p><u>Recall</u>: polynomial</p>
+						<p class="fragment">type of expression with “many terms”<br>separated by \(+\) and \(-\)</p>
 					</div>
-					<div class="problem long withNum">
+					<div class="problem withNum">
 						<div>2</div>
-						<p></p>
-						<p class="fragment"></p>
+						<p><u>Recall</u>: degree</p>
+						<p class="fragment">the highest power on the variable</p>
+					</div>
+					<div class="problem withNum">
+						<div>3</div>
+						<p><u>Recall</u>: linear</p>
+						<p class="fragment">polynomial of degree 1</p>
+					</div>
+					<div class="problem withNum">
+						<div>4</div>
+						<p><u>Recall</u>: quadratic</p>
+						<p class="fragment">polynomial of degree 2</p>
 					</div>
 				</div></section>
 
@@ -55,37 +65,6 @@
 
 <!-- START ------------------------------------------------------------------------------------------------------>
 
-
-				<section><div class="bodySlide">
-					<div class="definition">Polynomial (Review from 2.1)</div>
-					<div class="definitionText">
-						<p>A <b>polynomial</b>, meaning <span>“multiple terms,”</span> is a type of expression that only has terms with a variable (like \(x\)) with an exponent and a coefficient</p>
-						<div class="exampleBox">Ex: \(7x^3+x+1\)</div>
-					</div>
-				</div></section>
-				<section><div class="bodySlide">
-					<div class="definition">Degree (Review from 1.2)</div>
-					<div class="definitionText">
-						<p>the <b>degree</b> of a polynomial the <span>highest exponent</span> on the variable</p>
-						<div class="exampleBox">Ex: \(3x^4 + 2x +7\) is degree 4</div>
-					</div>
-				</div></section>
-				<section><div class="bodySlide">
-					<div class="definition">Linear (Review from 1.2)</div>
-					<div class="definitionText">
-						<p>an equation is <b>linear</b> if it is <span>degree 1</span></p>
-						<h6>AKA the highest exponent is 1</h6>
-						<div class="exampleBox">Ex: \(5x + 2\) is a  linear expression</div>
-					</div>
-				</div></section>
-				<section><div class="bodySlide">
-					<div class="definition">Quadratic (Review from 2.1)</div>
-					<div class="definitionText">
-						<p>a <b>quadratic</b> is a polynomial of <span>degree 2</span></p>
-						<div class="exampleBox">Ex: \(5x^2 - 8x +1\)</div>
-					</div>
-				</div></section>
-
 				<section><div class="bodySlide">
 					<div class="workbook"><div>51</div><div>Example 1a</div></div>
 					<div class="col2">
@@ -96,10 +75,10 @@
 							<p class="blue">\( f(x) = (x-1)^2-4 \)</p>
 						</div>
 						<div>
-							<div class="imgBox" alt="blank graph with range x=[-5,-5] and y=[-5,5]"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
-								<img src="../../images/parabola-short.svg" class="centerHor" style="width: 48%; top: -1.5%; opacity: 35%;">
-								<img src="../../images/parabola.svg" style="width: 65%; top: -3.5%; left: 20%;">
+							<div class="imgBox" alt="blank graph with range x=[-5,-5] and y=[-5,5]">
+								<div class="xyparabola"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
 								<div class="pointBox">
+									<img src="../../images/parabola.svg" style="width: 64%; bottom: 9%; left: 60%; transform: translateX(-50%);">
 									<div class="point alignTL blueFill" style="top: 90%; left: 60%;"></div>
 									<div class="point alignTL blueFill" style="top: 80%; left: 50%;"></div>
 									<div class="point alignTL blueFill" style="top: 80%; left: 70%;"></div>
@@ -121,11 +100,25 @@
 							<p class="blue">\( f(x) = -(x+2)^2+5 \)</p>
 						</div>
 						<div>
-							<div class="imgBox" alt="blank graph with range x=[-5,-5] and y=[-5,5]"><div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
-								<img src="../../images/parabola.svg" class="centerHor" style="width: 50%; top: -2rem;">
+							<div class="imgBox" alt="blank graph with range x=[-5,-5] and y=[-5,5]"><div class="xyparabola"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(y\)</p>
+								<div class="pointBox">
+									<img src="../../images/parabola.svg" style="width: 64%; top: -1%; left: 30%; transform: translateX(-50%) scaleY(-100%);">
+								</div>
 							</div>
 						</div>
 					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<p>Do you notice any patterns between<br>the <b>equation</b> and the <b>graph</b>?</p>
+					<!-- <div class="row"> -->
+						<div>
+							<p class="blue" style="padding-left: 5rem;">\(x\)-offset</p>
+							<p>\( f(x) = (x{\color{#386ef6}-1})^2{\color{#386ef6}-4} \)</p>
+							<p class="blue" style="padding-left: 24rem;">\(y\)-offset</p>
+						</div>
+						<!-- <p class="blue">\( f(x) = -(x+2)^2+5 \)</p> -->
+					<!-- </div> -->
 				</div></section>
 
 				<section><div class="bodySlide">
@@ -247,7 +240,7 @@
 						<h2>Completing the Square</h2>
 						<ol>
 							<li><p>Identify \(a\), \(b\), and \(c\), and then isolate \(c\)</p></li>
-							<li class="fragment" data-fragment-index="1"><p>Calculate \(h=b/2a\) <span class="fragment blue" data-fragment-index="2">\(  = 2/(2\cdot 1) = \)<span class="answerBox" style="margin-left: 4px;">\(1\)</span></span></p></li>
+							<li class="fragment" data-fragment-index="1"><p>Calculate \(h=-b/2a\) <span class="fragment blue" data-fragment-index="2">\(  = -2/(2\cdot 1) = \)<span class="answerBox" style="margin-left: 4px;">\(-1\)</span></span></p></li>
 							<li class="fragment" data-fragment-index="5"><p>Add \(h^2\) to BOTH sides</p></li>
 							<li class="fragment" data-fragment-index="10"><p>Change the side with \(x\) into the squared form</p></li>
 							<li class="fragment" data-fragment-index="15"><p>Move everything onto one side \(=0\)</p></li>
@@ -277,7 +270,7 @@
 					</div>
 					<ol style="margin-top: 2rem;">
 						<li><p>Identify \(a\), \(b\), and \(c\), and then isolate \(c\)</p></li>
-						<li><p>Calculate \(h=b/2a\)</p></li>
+						<li><p>Calculate \(h=-b/2a\)</p></li>
 						<li><p>Add \(h^2\) to BOTH sides</p></li>
 						<li><p>Change the side with \(x\) into the squared form</p></li>
 						<li><p>Move everything onto one side \(=0\)</p></li>
@@ -389,6 +382,105 @@
 					</div>
 					<div class="problem withNum long">
 						<div>b</div><p>Sketch the <b>graph</b>, with labeled vertex and intercepts.</p><p></p>
+					</div>
+				</div></section>
+
+<!-- BONUS: ROOTS ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Bonus: Roots</h2>
+				</div></section>
+
+				<section><div class="callout">
+					<p>Throwback to last class, when we<br>were solving things like...</p>
+					<p>\( (x+2)(x-5)=0\)</p>
+					<p>\(x=-2,5\)</p>
+				</div></section>
+
+				<section data-auto-animate><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Thinking Graphically</h2>
+						<p>Roots actually show up in the parabola! There are 3 cases:</p>
+						<ul>
+							<li><p><b>2 real roots</b>: hits \(x\)-axis twice</p></li>
+						</ul>
+					</div>
+					<div data-id="grid" class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane"></div>
+						<div class="pointBox">
+							<img src="../../images/parabola.svg" style="width: 64%; bottom: 9%; left: 28%;">
+							<div class="point blueFill alignTL" style="top: 50%; left: 39.5%;"></div>
+							<div class="point blueFill alignTL" style="top: 50%; left: 80%;"></div>
+						</div>
+					</div></div>
+				</div></section>
+				<section data-auto-animate><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Thinking Graphically</h2>
+						<p>Roots actually show up in the parabola! There are 3 cases:</p>
+						<ul>
+							<li><p><b>2 real roots</b>: hits \(x\)-axis twice</p></li>
+							<li><p><b>1 double root</b>: hits \(x\)-axis once</p></li>
+						</ul>
+					</div>
+					<div data-id="grid" class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane"></div>
+						<div class="pointBox">
+							<img src="../../images/parabola.svg" style="width: 64%; bottom: 49%; left: 28%;">
+							<div class="point blueFill alignTL" style="top: 50%; left: 59.6%;"></div>
+						</div>
+					</div></div>
+				</div></section>
+				<section data-auto-animate><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Thinking Graphically</h2>
+						<p>Roots actually show up in the parabola! There are 3 cases:</p>
+						<ul>
+							<li><p><b>2 real roots</b>: hits \(x\)-axis twice</p></li>
+							<li><p><b>1 double root</b>: hits \(x\)-axis once</p></li>
+							<li><p><b>2 imaginary roots</b>: never hits \(x\)-axis</p></li>
+						</ul>
+					</div>
+					<div data-id="grid" class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane"></div>
+						<div class="pointBox">
+							<img src="../../images/parabola.svg" style="width: 64%; bottom: 55%; left: 28%;">
+						</div>
+					</div></div>
+				</div></section>
+
+				<section data-auto-animate><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Thinking Graphically</h2>
+						<p>This makes it easy to find the vertex!<br>If there’s one real root, that’s the vertex. But if there’s two...</p>
+						<ol>
+							<li><p>Find the distance between the two roots, and halve it.</p></li>
+							<li><p>Find the \(x\) value of the midpoint.</p></li>
+							<li><p>Plug in that \(x\) into the eq to find the \(y\). Done!</p></li>
+						</ol>
+					</div>
+					<div data-id="grid" class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane"></div>
+						<div class="pointBox">
+							<img src="../../images/parabola.svg" style="width: 64%; bottom: 9%; left: 28%;">
+							<div class="point blueFill alignTL" style="top: 50%; left: 39.5%;"></div>
+							<div class="point blueFill alignTL" style="top: 50%; left: 80%;"></div>
+							<div class="row dashed" style="transform: rotate(90deg) translate(15rem, -2.92rem); opacity: 35%;"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+						</div>
+					</div></div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Summary: Finding Vertices</h2>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<h5>Vertex Form</h5>
+							<p class="blue">\( a(x-h)^2+k \)</p>
+							<p>Vertex is \((h, k)\).</p>
+							<h6 style="width: 24ch;">Useful when ALREADY in vertex form! But they’ll very rarely give you vertex form :(</h6>
+						</div>
+						<div class="columnWorkbook">
+							<h5>Using Roots</h5>
+							<p class="blue">\( (x+n)(x+m) \)</p>
+							<p style="width: 24ch;">Find the \(x\) halfway between the roots. Solve for \(y\) at that \(x\).</p>
+							<p class="fragment" style="margin-top: 12vh;"><b>ABC Form?</b> &nbsp;Don’t. That’s<br>calculus territory.</p>
+						</div>
 					</div>
 				</div></section>
 

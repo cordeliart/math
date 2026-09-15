@@ -42,7 +42,7 @@
 					</div>
 					<div class="problem long withNum">
 						<div>2</div>
-						<p>Find two integers that multiply to make 12, and add to make 7.</p>
+						<p>Find two integers that <b>multiply</b> to make 12, and <b>add</b> to make 7.</p>
 						<p class="fragment">3 and 4</p>
 					</div>
 				</div></section>
@@ -55,30 +55,41 @@
 
 <!-- START ------------------------------------------------------------------------------------------------------>
 
-				<section data-auto-animate><div class="callout">
-					<h2>What does it mean to<br><i>factor</i> a polynomial?</h2>
-				</div></section>
-				<section data-auto-animate><div class="callout">
-					<h2>What does it mean to<br><i>factor</i> a polynomial?</h2>
-					<div class="row" style="gap: 1rem; margin-top: 4rem;">
-						<p style="font-size: var(--bodyLargish);">\(  (2x - 1) \cdot (3x + 2) \)</p>
-						<div class="blue imgBox shortest" style="height: var(--bodyLargish); width: 10rem;">
-							<p class="centerHor fragment semi-fade-out" data-fragment-index="1" style="top: calc(var(--bodyRegular) * -2);">expanding</p>
-							<div class="line centerHor alignTop blueFill fragment semi-fade-out" data-fragment-index="1"><div class="arrowR"></div></div>
-
-							<p class="centerHor fragment" data-fragment-index="1" style="bottom: calc(var(--bodyRegular) * -2);">factoring</p>
-							<div class="line centerHor alignBottom blueFill fragment" data-fragment-index="1"><div class="arrowL"></div></div>
-						</div>
-						<p style="font-size: var(--bodyLargish);">\(   6x^2 - 11x - 10 \)</p>
-					</div>
-				</div></section>
-
 				<section><div class="bodySlide">
-						<div class="definition">Greatest Common Factor</div>
+					<div class="definition">Greatest Common Factor</div>
 					<div class="definitionText">
 						<p>the <b>greatest common factor \((\text{GCF})\)</b> of some numbers is the largest integer that can <span>divide every number</span></p>
 						<h6>We can also call it the <b>greatest common divisor</b> \((\text{GCD})\).</h6>
 						<div class="exampleBox">Ex: the \(\text{GCF}\) of \(12\) and \(18\) is \(6\)</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>GCF Practice</h2>
+					<div class="problem withNum fragment">
+						<div>1</div>
+						<p style="width: 8ch;">12 and 18</p>
+						<p class="fragment">= 6</p>
+					</div>
+					<div class="problem withNum fragment">
+						<div>2</div>
+						<p style="width: 8ch;">3 and 7</p>
+						<p class="fragment">= 1</p>
+					</div>
+					<div class="problem withNum fragment">
+						<div>3</div>
+						<p style="width: 8ch;">4 and 12</p>
+						<p class="fragment">= 4</p>
+					</div>
+					<div class="problem withNum fragment">
+						<div>4</div>
+						<p style="width: 8ch;">6 and 4</p>
+						<p class="fragment">= 2</p>
+					</div>
+					<div class="problem withNum fragment">
+						<div>5</div>
+						<p style="width: 8ch;">15 and 35</p>
+						<p class="fragment">= 5</p>
 					</div>
 				</div></section>
 
@@ -123,7 +134,31 @@
 					<div class="problem withNum long">
 						<div>c</div>
 						<p>How do the solutions to (a) relate to the equation you found in (b)?</p>
-						<p class="fragment">They’re the same! Factoring/expanding <b>does not change</b> the solutions.</p>
+						<p class="fragment">They’re the same! Factoring/expanding<br><b>does not change</b> the solutions.</p>
+					</div>
+				</div></section>
+
+<!-- FACTORING ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Factoring Polynomials</h2>
+				</div></section>
+				
+				<section data-auto-animate><div class="callout">
+					<h2>What does it mean to<br><i>factor</i> a polynomial?</h2>
+				</div></section>
+				<section data-auto-animate><div class="callout">
+					<h2>What does it mean to<br><i>factor</i> a polynomial?</h2>
+					<div class="row" style="gap: 1rem; margin-top: 4rem;">
+						<p style="font-size: var(--bodyLargish);">\(  (2x - 1) \cdot (3x + 2) \)</p>
+						<div class="blue imgBox shortest" style="height: var(--bodyLargish); width: 10rem;">
+							<p class="centerHor fragment semi-fade-out" data-fragment-index="1" style="top: calc(var(--bodyRegular) * -2);">expanding</p>
+							<div class="line centerHor alignTop blueFill fragment semi-fade-out" data-fragment-index="1"><div class="arrowR"></div></div>
+
+							<p class="centerHor fragment" data-fragment-index="1" style="bottom: calc(var(--bodyRegular) * -2);">factoring</p>
+							<div class="line centerHor alignBottom blueFill fragment" data-fragment-index="1"><div class="arrowL"></div></div>
+						</div>
+						<p style="font-size: var(--bodyLargish);">\(   6x^2 - 11x - 10 \)</p>
 					</div>
 				</div></section>
 
@@ -131,7 +166,7 @@
 
 				<section><div class="bodySlide">
 					<h2>Factoring Quadratics</h2>
-					<p>There are multiple ways to factor quadratics. As long as you show your work and it makes sense, you'll get credit!</p>
+					<p>There are multiple ways to factor quadratics. As long as you show your work and it makes sense, you’ll get credit!</p>
 					<p>The main idea is to get from...</p>
 					$$ ax^2+bx+c \longrightarrow (px + m)(qx + n)$$
 				</div></section>
@@ -144,7 +179,8 @@
 				<section><div class="bodySlide">
 					<h2>The Diamond</h2>
 					<p>Find two numbers that <b>multiply</b> to make the top,<br>and <b>add</b> to make the bottom.</p>
-					<div class="row" style="margin: -2rem 0;">
+					<h6>Tip: if you can’t figure it out, start by finding <b>any two numbers</b> that add up. Multiply and check. If they don’t work, \(+1\) one and \(-1\) the other. Example: 1 &6, then 2 & 5, then 4 & 3,...</h6>
+					<div class="row">
 						<div class="diamond fragment" style="margin-left: 1rem;">
 							<p>\(6\)</p>
 							<div class="fragment">
@@ -181,7 +217,6 @@
 				</div></section>
 
 				<section><div class="slideRow">
-					
 					<!-- <div class="slideRow"> -->
 						<div class="columnWorkbook">
 							<h2>The Box</h2>
@@ -236,6 +271,10 @@
 							</div>
 					<!-- </div> -->
 					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<p>Now let’s put that into practice.</p>
 				</div></section>
 
 				<section><div class="slideRow" style="gap: 1rem;">
@@ -327,6 +366,11 @@
 						</div>
 						<p class="blue" style="width: 17ch; font-size: var(--bodyLarge); text-align: center;">\((px+m)(qx+n)=0\)</p>
 					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<p>The solutions for \(x\) are called<br><b>roots</b> of the polynomial.</p>
+					<h6>More on that in future lessons.</h6>
 				</div></section>
 
 <!-- EXAMPLES ------------------------------------------------------------------------------------------------------>

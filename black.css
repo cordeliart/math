@@ -4,11 +4,14 @@
     --primary: #111111;
     --secondary: #d3d3d3;
     --tertiary: #d3d3d34f;
+    --tertiary: #8f8f8f;
     --accent2: #6fbaec;
     --accent: 56, 110, 246; /* #386ef6 */
     --definition: 56, 110, 246; /* #782ED3 */
     --theorem: 233, 84, 15; /* e9540f */
     --warning: #d10808;
+
+    /* replace rgb(0,0,0) with #8f8f8f  */
 
     /* typography */
     --fontPrimary: "Instrument Serif", Cambria, serif;
@@ -135,7 +138,7 @@ h5 { /* slide subheaders */
 
 h6 { /* extra notes/disclaimers with body text */
     font-family: var(--fontSecondary);
-    font-size: var(--bodyRegular);
+    font-size: var(--bodySmaller);
     font-style: italic;
     max-width: 50ch;
     line-height: 135%;

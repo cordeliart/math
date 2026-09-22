@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>2.7 Graphing Polynomials | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p><b>Expand</b> the expression \( (x-7)(x+2)(x-3) \).</p>
+						<p class="fragment">\( x^3-8x^2+x+42 \)</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>What is the <b>leading term</b> of a polynomial?</p>
+						<p class="fragment">The leading term has the variable with the <b>highest exponent</b>.</p>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<h2>Chapter 2</h2>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<h5>Traditional Method</h5>
+							<p>techniques specifically <br>for quadratics</p>
+							<p style="margin-left: var(--spaceLarge)">\(\downarrow\)</p>
+							<p>patterns for all polynomials <span class="blue">(2.7)</span></p>
+						</div>
+						<div class="columnWorkbook">
+							<h5>Reordered</h5>
+							<p>patterns for all polynomials <span class="blue">(2.7)</span></p>
+							<p style="margin-left: var(--spaceLarge)">\(\downarrow\)</p>
+							<p>techniques specifically <br>for quadratics</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Tuesday, September 29, 2026</h4>
+					<h1><span>2.7</span> Graphing Polynomials</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 70</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<h2>The Plan</h2>
+					<ul>
+						<li><p>Today will have some jumping around in the workbook. I’ll specify any pages you need.</p></li>
+						<li><p>After today, it will be straightforward again from 2.2.</p></li>
+					</ul>
+				</div></section>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Some Definitions</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Polynomial (Review from 2.1)</div>
+					<div class="definitionText">
+						<p>A <b>polynomial</b>, meaning <span>“multiple terms,”</span> is a type of expression that only has terms with a variable (like \(x\)) with an exponent and a coefficient</p>
+						<div class="exampleBox">Ex: \(7x^3+x+1\)</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Degree (Review from 1.2)</div>
+					<div class="definitionText">
+						<p>the <b>degree</b> of a polynomial the <span>highest exponent</span> on the variable</p>
+						<div class="exampleBox">Ex: \(3x^4 + 2x +7\) is degree 4</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Leading Term (Review from 2.1)</div>
+					<div class="definitionText">
+						<p>the <b>leading term</b> is the term with the <span>highest exponent</span></p>
+						<div class="exampleBox">Ex: \(3x^4 + 2x +7\) has leading term \(3x^4\)</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Leading Coefficient</div>
+					<div class="definitionText">
+						<p>the <span>leading term’s coefficient</span> is called the <b>leading coefficient</b></p>
+						<div class="exampleBox">Ex: \(3x^4 + 2x +7\) has leading coefficient \(3\)</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Constant Term</div>
+					<div class="definitionText">
+						<p>a <b>constant term</b> is a term with <span>no variable</span></b></p>
+						<div class="exampleBox">Ex: \(3x^4 + 2x +7\) constant term is <span class="fragment nobg">\(7\)</span></div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Descending Order</div>
+					<div class="definitionText">
+						<p style="max-width: 34ch;">a polynomial is in <b>descending order</b> if the terms are arranged from <span>highest to lowest</span> degree</b></p>
+						<h6>You can think of it as the <b>exponents count down</b>.<br>It’s ok if a number is skipped!</h6>
+						<div class="exampleBox">Ex: \(3x^4 + 2x +7\) is in descending order</div>
+					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<h2>Note</h2>
+					<p style="max-width: 28ch;">If we do “skip” an exponent, we can just say that term has coefficient \(0\).</p>
+					<div class="blue">$$ 3x^4 + {\color{#6fbaec} 0x^3 + 0x^2} + 2x +7 $$</div>
+				</div></section>
+
+<!-- GRAPHING ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Graphing</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>70</div><div>Example 1</div></div>
+					<p>Go to <b>desmos.com</b> on your phone or laptop.</p>
+					<div class="problem withNum">
+						<div>1</div>
+						<p>Click the “Graphing Calculator”button</p>
+						<p></p>
+					</div>
+					<div class="problem withNum">
+						<div>2</div>
+						<p>Enter three separate equations to see them at the same time.</p>
+						<p></p>
+					</div>
+					<div class="problem withNum">
+						<div>3</div>
+						<p>To enter exponents, use ^ (or press the \(a^b\) button on mobile).</p>
+						<p></p>
+					</div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>71</div><div>Example 1a</div></div>
+						<p>Graph, sketch, and mark the correct checkboxes.</p>
+						<div class="row" style="width: 100%; justify-content: space-around; font-size: var(--bodyLarger);">
+							$$ x^2 $$
+							$$ x^4 $$
+							$$ x^6 $$
+						</div>
+						<p>Leading coefficient is... <b class="fragment blue" data-fragment-index="1">positive</b></p>
+						<p>Degree is... <b class="fragment blue" data-fragment-index="2">even</b></p>
+					</div>
+					<div class="fragment" style="width: 60%;" data-fragment-index="0">
+						<iframe src="https://www.desmos.com/calculator/wnozpmxj3r?embed" width="600" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>71</div><div>Example 1b</div></div>
+						<p>Graph, sketch, and mark the correct checkboxes.</p>
+						<div class="row" style="width: 100%; justify-content: space-around; font-size: var(--bodyLarger);">
+							$$ -x^2 $$
+							$$ -x^4 $$
+							$$ -x^6 $$
+						</div>
+						<p>Leading coefficient is... <b class="fragment blue" data-fragment-index="1">negative</b></p>
+						<p>Degree is... <b class="fragment blue" data-fragment-index="2">even</b></p>
+					</div>
+					<div class="fragment" style="width: 60%;" data-fragment-index="0">
+						<iframe src="https://www.desmos.com/calculator/cqcpnlrgst?embed" width="600" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>71</div><div>Example 1c</div></div>
+						<p>Graph, sketch, and mark the correct checkboxes.</p>
+						<div class="row" style="width: 100%; justify-content: space-around; font-size: var(--bodyLarger);">
+							$$ x^3 $$
+							$$ x^5 $$
+							$$ x^7 $$
+						</div>
+						<p>Leading coefficient is... <b class="fragment blue" data-fragment-index="1">positive</b></p>
+						<p>Degree is... <b class="fragment blue" data-fragment-index="2">odd</b></p>
+					</div>
+					<div class="fragment" style="width: 60%;" data-fragment-index="0">
+						<iframe src="https://www.desmos.com/calculator/umjbu7kb5k?embed" width="600" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>71</div><div>Example 1d</div></div>
+						<p>Graph, sketch, and mark the correct checkboxes.</p>
+						<div class="row" style="width: 100%; justify-content: space-around; font-size: var(--bodyLarger);">
+							$$ -x^3 $$
+							$$ -x^5 $$
+							$$ -x^7 $$
+						</div>
+						<p>Leading coefficient is... <b class="fragment blue" data-fragment-index="1">negative</b></p>
+						<p>Degree is... <b class="fragment blue" data-fragment-index="2">odd</b></p>
+					</div>
+					<div class="fragment" style="width: 60%;" data-fragment-index="0">
+						<iframe src="https://www.desmos.com/calculator/orrdkzu4jt?embed" width="600" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">End Behavior</div>
+					<div class="definitionText">
+						<p>the way \(y\) behaves as \(x\) goes to \(\pm \infty\) is called <b>end behavior</b></p>
+						<ul>
+							<li><p style="font-size: var(--bodyLarge); max-width: 100%;">“As \( x \rightarrow \infty\)” means we are looking at the <b>Right Hand Side</b> (RHS)</p></li>
+							<li><p style="font-size: var(--bodyLarge); max-width: 100%;">“As \( x \rightarrow -\infty\)” means we are looking at the <b>Left Hand Side</b> (LHS)</p></li>
+						</ul>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>72</div><div>Example 2</div></div>
+					<div class="grid" style="grid-template-columns: auto 500px 500px; row-gap: 0.1rem; column-gap: 0; margin-top: calc(var(--spaceLargest) * -1);">					
+						<p></p>
+						<div class="fragment">
+							<p><b>positive</b> leading coeff.</p>
+							<p class="blue">right goes UP</p>
+						</div>
+						<div class="fragment">
+							<p><b>negative</b> leading coeff.</p>
+							<p class="blue">right goes DOWN</p>
+						</div>
+						<div class="fragment" style="padding-right: 0.85rem;">
+							<p style="text-align: right;"><b>odd</b> degree</p>
+							<p class="blue" style="text-align: right;">opposites</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/gjtvwos4tr?embed" width="600" height="275" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<iframe src="https://www.desmos.com/calculator/qndb9t1weg?embed" width="600" height="275" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<div class="fragment" style="padding-right: 0.85rem;">
+							<p style="text-align: right;"><b>even</b> degree</p>
+							<p class="blue" style="text-align: right;">matching</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/ql7k6dyx0r?embed" width="600" height="275" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<iframe src="https://www.desmos.com/calculator/nx1witi33r?embed" width="600" height="275" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+				</div></section>
+
+<!-- ZEROES ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Zeroes of a Polynomial</h2>
+				</div></section>
+
+				<section><div class="callout">
+					<p style="margin-bottom: calc(var(--bodyRegular) * -1)">What is the \(x\)-intercept?</p>
+					<iframe src="https://www.desmos.com/calculator/orzgdlbvqs?embed" width="600" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+					<p style="margin-top: calc(var(--bodyRegular) * -1)">There are <b>multiple</b>!</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Real Zero</div>
+					<div class="definitionText">
+						<p style="max-width: 34ch;">a <b>real zero</b>, or “root”, is an <span>x-intercept</span> of a polynomial</b> (and there can be multiple!)</p>
+						<h6>AKA, an \(x\) you plug in to make the polynomial \(=0\).</h6>
+					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<p>What is the <b>real zero</b> (x-intercept)?</p>
+					<div class="fragment">\( y= x - 8\) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue fragment">\( x=8\)</span></div>
+					<div class="fragment">\( y= x + 2\) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue fragment">\( x=-2\)</span></div>
+					<div class="fragment">\( y= (x - 8)(x+2)\) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue fragment">\( x=-2,8\)</span></div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Zero Product Property <span style="color:var(--warning);">PAGE 37</span></div>
+					<div class="definitionText">
+						<p>The Zero Product Property (ZPP) states:</p>
+						<p><b>If</b> \(A\cdot B=0\), <b>then</b> \(A=0\) and/or \(B=0\).</p>
+						<h6 class="fragment">If we multiply several things and get zero,<br>at least one of them must be zero.</h6>
+						<div class="exampleBox fragment">Ex: \((x-8)(x+2)=0\) means \(x-8=0\) and/or \(x+2=0\)</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>73</div><div>Example 3</div></div>
+					\( f(x) = (x + 12)(x- 1)(x - 7) \)
+					<div class="problem withNum long">
+						<div>a</div>
+						<p>List the <b>real zeroes</b> of \(f(x)\).</p>
+						<div class="fragment">
+							<div class="row" style="width: auto; margin: 0 auto var(--spaceLarge) auto; gap: calc(var(--spaceLargest)*2)">
+								<p>\(\begin{array}{rcl} x+12 & = & 0 \\ x & = & -12 \end{array}\)</p>
+								<p>\(\begin{array}{rcl} x-1 & = & 0 \\ x & = & 1 \end{array}\)</p>
+								<p>\(\begin{array}{rcl} x-7 & = & 0 \\ x & = & 7 \end{array}\)</p>
+							</div>
+							<p class="finalAnswer fragment">\(x=-12, 1,7\)</p>
+						</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>73</div><div>Example 3</div></div>
+					\( f(x) = (x + 12)(x- 1)(x - 7) \)
+					<div class="problem withNum long">
+						<div>b</div>
+						<p>Should the y-intercept be <b>above or below</b> the x-axis?</p>
+						<div class="columnWorkbook">
+							<p class="fragment">We only have to know whether the y-intercept is \(+\) or \(-\)!</p>
+							<p class="fragment"><u>Remember</u>: y-intercept is where \(x=0\)</p>
+							<div class="columnWorkbook">
+								<p class="fragment">\( (0+12)(0-1)(0-7) \)</p>
+								<p class="fragment">\( =(12)(-1)(-7) \)</p>
+								<p class="fragment">\( = (+)(-)(-) \)</p>
+								<p class="fragment">\( =+\) &nbsp; so&nbsp; <span class="finalAnswer">above \(x\)-axis</span></p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>73</div><div>Example 3</div></div>
+					\( f(x) = (x + 12)(x- 1)(x - 7) \)
+					<div class="problem withNum long">
+						<div>c</div>
+						<p><b>Expand</b> \(f(x)\). What end behavior would you expect?</p>
+						<div class="columnWorkbook">
+							<p class="fragment">\(x^3 + 4x^2 - 89x + 84\)</p>
+							<p class="fragment">Positive leading term, so RHS goes <b>up</b></p>
+							<p class="fragment">Odd degree, so LHS is opposite and goes <b>down</b></p>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<h2>Note</h2>
+					<p>To get the leading term, all we need to do is<br>multiply the factors' leading terms.</p>
+					<p class="blue fragment">\( (x+12)(x-1)(x-7) \) becomes \( (x)(x)(x) = x^3 \)</p>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>74-75</div><div>Example 4</div></div>
+					<div style="font-size: var(--bodyLarge)">
+						\( f(x) = (x + 11)(x + 23)(x + 36)(42 - x)(x - 50)(x - 61) \)
+					</div>
+					<div class="problem withNum">
+						<div>a</div>
+						<p>List the <b>real zeroes</b>.</p>
+						<p class="fragment">\(x = -11, -23, -36, 42, 50, 61\)</p>
+					</div>
+					<div class="problem withNum">
+						<div>b</div>
+						<p>Should the y-intercept be <b>above or below</b> the x-axis?</p>
+						<p class="fragment">above</p>
+					</div>
+					<div class="problem withNum long">
+						<div>c</div>
+						<p>What is the <b>leading term</b>, and what end behavior would you expect?</p>
+						<div class="columnWorkbook">
+							<p class="fragment">\(-x^6\)</p>
+							<p class="fragment">Negative leading term, so RHS goes <b>down</b></p>
+							<p class="fragment">Even degree, so LHS matches and goes <b>down</b></p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- MULTIPLICITY ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Multiplicity</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Multiplicity</div>
+					<div class="definitionText">
+						<p style="max-width: 34ch;">the <b>multiplicity</b> of a zero is the <span>exponent</span> of the corresponding factor</p>
+						<div class="exampleBox fragment">Ex: \((x-8)^3(x+2)=0\) has zero \(x=8\) with multiplicity \(3\)</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="grid" style="grid-template-columns: 650px 650px; row-gap: 0.1rem; column-gap: 0;">
+						<iframe src="https://www.desmos.com/calculator/gjtvwos4tr?embed" width="600" height="575" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<iframe src="https://www.desmos.com/calculator/ql7k6dyx0r?embed" width="600" height="575" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<p>odd multiplicity<br><b>crosses</b></p>
+						<p>even multiplicity<br><b>bounces</b></p>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>76</div><div>Example 5</div></div>
+					<div style="font-size: var(--bodyLarge)">
+						\( f(x) = (x+7)^2(x-8)^3 \)
+					</div>
+					<div class="problem withNum long">
+						<div>a</div>
+						<p>List the <b>real zeroes</b> and their <b>multiplicities</b>.</p>
+						<div class="columnWorkbook fragment">
+							<p>\(x=-7\) with multiplicity 2 (bounces)</p>
+							<p>\(x=8\) with multiplicity 3 (crosses)</p>
+						</div>
+					</div>
+					<div class="problem withNum">
+						<div>b</div>
+						<p>Should the y-intercept be <b>above or below</b> the x-axis?</p>
+						<p class="fragment">below</p>
+					</div>
+					<div class="problem withNum long">
+						<div>c</div>
+						<p>What is the <b>leading term</b>, and what end behavior would you expect?</p>
+						<div class="columnWorkbook">
+							<p class="fragment">\(x^5\), \(+\) so RHS goes <b>up</b>, odd so LHS goes <b>down</b></p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- MULTIPLICITY ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Working Backward</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Finding Polynomials via Graphs</h2>
+					<p>Given a graph, you can come with a reasonable equation. It might not be unique, but that's ok!</p>
+					<ol>
+						<li class="fragment"><p><b>Zeroes & Factors</b>: every zero, or x-intercept, has a factor \( (x-\) zero\()\)</p></li>
+						<li class="fragment"><p><b>Multiplicity</b>: if it crosses like normal, no exponent on the factor</p>
+							<ul>
+								<li><p>if it <u>bounces</u>, use an even degree (like \(2\))</p></li>
+								<li><p>if it <u>squiggly crosses</u>, use an odd exponent (like \(3,5,...\))</p></li>
+							</ul>
+						</li>
+						<li class="fragment"><p><b>End Behavior</b>: if RHS goes down, put negative in front</p></li>
+					</ol>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>78</div><div>Example 6</div></div>
+					<div class="problem withNum">
+						<div>a</div>
+						<p>List the <b>real zeroes</b>.</p>
+						<p class="fragment">\(x=-3, \frac{7}{4},9\)</p>
+					</div>
+					<div class="problem withNum long">
+						<div>b</div>
+						<p>Assuming all zeroes are real, what is a reasonable <b>equation</b>?</p>
+						<div class="columnWorkbook">
+							<p class="fragment"><u>bounce</u> at \(x=-3\), so \( (x+3)^2\)</p>
+							<p class="fragment"><u>normal</u> at \(x=\frac{7}{4}\), so \( (x-\frac{7}{4})\)</p>
+							<p class="fragment"><u>bounce</u> at \(x=9\), so \( (x-9)^2\)</p>
+							<p class="fragment">RHS goes down, so put negative in front</p>
+							<p class="fragment">\( -(x+3)^2(x-\frac{7}{4})(x-9)^2 \) <span class="fragment">\(=\) <span class="finalAnswer"> \(-(x+3)^2(4x-7)(x-9)^2\)</span></span></p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 2.7 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

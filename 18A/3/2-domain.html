@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>3.2 Domain | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>What is an <b>extraneous solution</b>?</p>
+						<p class="fragment">A solution that doesn't work with the original equation.</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>What value of \(x\) would <b>break</b> the expression \(1/x\)?</p>
+						<p class="fragment">The leading term has the variable with the <b>highest exponent</b>.</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, September 18, 2026</h4>
+					<h1><span>3.2</span> Domain</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 85</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="definition">Domain (Review from 3.1)</div>
+					<div class="definitionText">
+						<p>the <b>domain</b> \(D\) of a function is the collection of <span>all valid inputs</span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Range (Review from 3.1)</div>
+					<div class="definitionText">
+						<p>the <b>range</b> of a function is the collection of <span>all possible outputs</span></p>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>85</div><div>Example 1</div></div>
+					<div class="problem withNum long">
+						<div>a</div>
+						<div class="col2">
+							<div class="columnWorkbook">
+								<p>\( f(x)=x-2\)</p>
+								<div class="problem"><p>\(f(-3) =\)</p><p class="fragment">\(-5 \)</p></div>
+								<div class="problem"><p>\(f(-2) =\)</p><p class="fragment">\( -4\)</p></div>
+								<div class="problem"><p>\(f(-1) =\)</p><p class="fragment">\( -3\)</p></div>
+								<div class="problem"><p>\(f(0) =\)</p><p class="fragment">\( -2\)</p></div>
+							</div>
+							<div class="columnWorkbook">
+								<div class="problem"><p>\(f(1) =\)</p><p class="fragment">\( -1\)</p></div>
+								<div class="problem"><p>\(f(2) =\)</p><p class="fragment">\( 0\)</p></div>
+								<div class="problem"><p>\(f(3) =\)</p><p class="fragment">\( 1\)</p></div>
+								<div class="problem long">
+									<p>What do you think the domain is?</p>
+									<p class="fragment">all real numbers</p>
+								</div>
+							</div>
+						</div>
+						<p></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>85</div><div>Example 1</div></div>
+					<div class="problem withNum long">
+						<div>b</div>
+						<div class="col2">
+							<div class="columnWorkbook">
+								<p>\( f(x)=\dfrac{1}{x-2}\)</p>
+								<div class="problem"><p>\(f(-3) =\)</p><p class="fragment">\(-1/5 \)</p></div>
+								<div class="problem"><p>\(f(-2) =\)</p><p class="fragment">\( -1/4\)</p></div>
+								<div class="problem"><p>\(f(-1) =\)</p><p class="fragment">\( -1/3\)</p></div>
+								<div class="problem"><p>\(f(0) =\)</p><p class="fragment">\( -1/2\)</p></div>
+							</div>
+							<div class="columnWorkbook">
+								<div class="problem"><p>\(f(1) =\)</p><p class="fragment">\( -1\)</p></div>
+								<div class="problem"><p>\(f(2) =\)</p><p class="fragment">undefined</p></div>
+								<div class="problem"><p>\(f(3) =\)</p><p class="fragment">\( 1\)</p></div>
+								<div class="problem long">
+									<p>What do you think the domain is?</p>
+									<p class="fragment">all real numbers except \(x=2\)</p>
+								</div>
+							</div>
+						</div>
+						<p></p>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>86</div><div>Example 2</div></div>
+					<div class="problem withNum long">
+						<div>a</div>
+						<div class="col2">
+							<div class="columnWorkbook">
+								<p>\( f(x) = \sqrt[3]{x-2} \)</p>
+								<div class="problem"><p>\(f(-3) =\)</p><p class="fragment">\(\sqrt[3]{-5  } \approx -1.7100\)</p></div>
+								<div class="problem"><p>\(f(-2) =\)</p><p class="fragment">\( \sqrt[3]{-4 } \approx -1.5874\)</p></div>
+								<div class="problem"><p>\(f(-1) =\)</p><p class="fragment">\( \sqrt[3]{-3 } \approx -1.4422\)</p></div>
+								<div class="problem"><p>\(f(0) =\)</p><p class="fragment">\( \sqrt[3]{-2 } \approx -1.2599\)</p></div>
+							</div>
+							<div class="columnWorkbook">
+								<div class="problem"><p>\(f(1) =\)</p><p class="fragment">\( -1 \)</p></div>
+								<div class="problem"><p>\(f(2) =\)</p><p class="fragment">\( 0\)</p></div>
+								<div class="problem"><p>\(f(3) =\)</p><p class="fragment">\( 1\)</p></div>
+								<div class="problem long">
+									<p>What do you think the domain is?</p>
+									<p class="fragment">all real numbers</p>
+								</div>
+							</div>
+						</div>
+						<p></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>86</div><div>Example 2</div></div>
+					<div class="problem withNum long">
+						<div>b</div>
+						<div class="col2">
+							<div class="columnWorkbook">
+								<p>\( f(x) = \sqrt{x-2} \)</p>
+								<div class="problem"><p>\(f(-3) =\)</p><p class="fragment">\(\sqrt{-5} = \) error</p></div>
+								<div class="problem"><p>\(f(-2) =\)</p><p class="fragment">\( \sqrt{-4} =\) error</p></div>
+								<div class="problem"><p>\(f(-1) =\)</p><p class="fragment">\( \sqrt{-3} =\) error</p></div>
+								<div class="problem"><p>\(f(0) =\)</p><p class="fragment">\( \sqrt{-2} =\) error</p></div>
+							</div>
+							<div class="columnWorkbook">
+								<div class="problem"><p>\(f(1) =\)</p><p class="fragment">\( \sqrt{-1}=\) error</p></div>
+								<div class="problem"><p>\(f(2) =\)</p><p class="fragment">\(0\)</p></div>
+								<div class="problem"><p>\(f(3) =\)</p><p class="fragment">\( 1\)</p></div>
+								<div class="problem long">
+									<p>What do you think the domain is?</p>
+									<p class="fragment">all real numbers greater than or equal to \(2\)</p>
+								</div>
+							</div>
+						</div>
+						<p></p>
+					</div>
+				</div></section>
+
+<!-- FINDING DOMAIN ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Finding the Domain Algebraically</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Four Cases</h2>
+					<div class="grid" style="grid-template-columns: auto 1fr 0.65fr 0.65fr 0.65fr; row-gap: var(--spaceLargest)">
+						<p style="opacity: var(--fadeOut); margin: calc(var(--space)*-1) 0; text-align: right;">Type</p>
+						<p style="opacity: var(--fadeOut); margin: calc(var(--space)*-1)">Example</p>
+						<p style="margin: calc(var(--space)*-1)">Negative #s</p>
+						<p style="margin: calc(var(--space)*-1)">Zero</p>
+						<p style="margin: calc(var(--space)*-1)">Positive #s</p>
+
+						<h5 style="text-align:right;">fraction</h5>
+						<p>\( \dfrac{\text{top}}{ {\color{#d10808} \text{bottom}}} \)</p>
+						<p>\(\checkmark\)</p>
+						<p style="color: var(--warning);">✘</p>
+						<p>\(\checkmark\)</p>
+
+						<h5 style="text-align:right;">even root</h5>
+						<p>\( \sqrt[\text{even}]{ {\color{#d10808} \text{inside} } } \)</p>
+						<p style="color: var(--warning);">✘</p>
+						<p>\(\checkmark\)</p>
+						<p>\(\checkmark\)</p>
+
+						<h5 style="text-align:right;">even root <i>top</i></h5>
+						<p>\( \dfrac{\sqrt[\text{even}]{ {\color{#d10808} \text{inside} } }}{{\color{#d10808} \text{bottom}}} \)</p>
+						<p style="grid-column: span 3;">combine above</p>
+						
+						<h5 style="text-align:right;">even root<br><i>bottom</i></h5>
+						<p>\( \dfrac{\text{top}}{\sqrt[\text{even}]{ {\color{#d10808} \text{inside} } }} \)</p>
+						<p style="color: var(--warning);">✘</p>
+						<p style="color: var(--warning);">✘</p>
+						<p>\(\checkmark\)</p>
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="callout">
+					<p style="max-width: 32ch;">Each of these danger zones can create <b>extraneous solutions</b>.</p>
+				</div></section>
+				<section data-auto-animate><div class="callout">
+					<p style="max-width: 32ch;">Each of these danger zones can create <b>extraneous solutions</b>.</p>
+					<p style="max-width: 36ch;">In interval notation, each one is a gap in the domain, which we call a <b>hole</b>. This is one type of <b>critical point</b> that can show up in equations.</p>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>87</div><div>Example 3</div></div>
+					<p style="max-width: 100%;">Find the domain of \( f(x) = \dfrac{ x^2-4x-5 }{ x-5 }\) & express in interval notation.</p>
+					<p class="blue fragment" style="margin-top: var(--spaceLargest);">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
+					<p class="blue fragment">\( x-5\neq 0\)</p>
+					<p class="blue fragment">\( x\neq 5 \)</p>
+					<p class="blue fragment finalAnswer">\(D = ( -\infty, 5)\cup (5 ,\infty) \)</p>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>87</div><div>Example 4</div></div>
+					<p style="max-width: 100%;">Find the domain of \( f(x) = \dfrac{ x+1 }{ x^2-4x-5 }\) & express in interval notation.</p>
+					<p class="blue fragment" style="margin-top: var(--spaceLargest);">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
+					<p class="blue fragment">\( x^2 - 4x - 5 \neq 0\)</p>
+					<p class="blue fragment">\( (x -5)(x+1) \neq 0\)</p>
+					<p class="blue fragment">\( x\neq -1,5\)</p>
+					<p class="blue fragment finalAnswer">\(D = ( -\infty, -1)\cup (-1,5) \cup (5,\infty) \)</p>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>88</div><div>Example 5</div></div>
+					<p style="max-width: 100%;">Find the domain of \(f(x) = \dfrac{ x^2-4x-5 }{ x+11 } \) & express in interval notation.</p>
+					<p class="blue fragment" style="margin-top: var(--spaceLargest);">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
+					<p class="blue fragment">\( x+11 \neq 0\)</p>
+					<p class="blue fragment">\( x\neq -11 \)</p>
+					<p class="blue fragment finalAnswer">\(D = ( -\infty, -11)\cup (-11 ,\infty) \)</p>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>87</div><div>Example 6</div></div>
+					<p style="max-width: 100%;">Find the domain of \( f(x) = \dfrac{ x+11 }{ x^2-4x-5 }\) & express in interval notation.</p>
+					<p class="blue fragment" style="margin-top: var(--spaceLargest);">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
+					<p class="blue fragment">Same as previous example!</p>
+					<p class="blue fragment finalAnswer">\(D = ( -\infty, -1)\cup (-1,5) \cup (5,\infty) \)</p>
+				</div></section>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 3.2 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

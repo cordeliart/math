@@ -289,7 +289,7 @@ sub { vertical-align: sub; font-size: smaller }
     display: flex;
     flex-flow: column;
     justify-content: flex-start !important;
-    gap: var(--space) !important;
+    gap: var(--spaceLarge) !important;
     font-size: var(--bodyLargish);
 }
 
@@ -667,6 +667,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     white-space: nowrap;
 } .xyparabola {
     background-image: url("images/parabola-base.svg");
+    background-position: center;
 }
 
 .pointBox { /* inside .imgBox, over pointBox, contains points on .gridFive/*/
@@ -756,8 +757,8 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 
 .completeSquare {
     display: grid;
-    grid-template-columns: auto 17rem 5rem auto;
-    grid-template-rows: auto 17rem 5rem auto;
+    grid-template-columns: auto 17rem 4rem 4rem 4rem;
+    grid-template-rows: auto 17rem 4rem 4rem;
     gap: 6px;
     align-items: center;
     justify-content: center;

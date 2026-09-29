@@ -31,8 +31,8 @@ updateTime(); // Update immediately and then every second
 setInterval(updateTime, 1000);
 
 window.MathJax = {
-    loader: {load: ["output/chtml", '[tex]/color', '[tex]/textmacros', "input/tex"]},
-    tex: {packages: {'[+]': ['color'], '[+]': ['textmacros']}}
+    loader: {load: ["output/chtml", '[tex]/color', '[tex]/textmacros', "input/tex", '[tex]/mathtools']},
+    tex: {packages: {'[+]': ['color'], '[+]': ['textmacros'], '[+]': ['mathtools']}}
     // output: {
     // 	scale: 1,                      // global scaling factor for all expressions
     // 	minScale: .5,                  // smallest scaling factor to use

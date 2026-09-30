@@ -37,10 +37,17 @@
 					
 					<div class="problem long withNum">
 						<div>1</div>
-						<p>How do you <b>find the vertex</b> of a quadratic?</p>
+						<div class="columnWorkbook">
+							<p>Rewrite \(f(x)=2x^2-4x+7\) in <b>vertex form</b>.</p>
+							<!-- <p>Step 1: factor out \(a\)</p> -->
+							<p><b style="font-weight: 500">Step 1</b>: solve \( h=-b/2a\) <span class="blue fragment">\(=\dfrac{-(-4)}{2\cdot 2} =\) <span class="answerBox">\(1\)</span></span></p>
+							<p style="width: 100%; max-width: 100%;"><b style="font-weight: 500">Step 2</b>: plug \(x=h\) to solve \( k=f(h) \) <span class="blue fragment">\(=f(1)=2(1)^2-4(1)+7=\) <span class="answerBox">\(5\)</span></span></p>
+							<p style="margin-top:calc(var(--space)*0.8);"><b style="font-weight: 500">Step 3</b>: plug into \(f(x)=a(x-h)^2+k\)</p>
+						</div>
 						<div class="fragment columnWorkbook">
-							<p>1. Rewrite the equation in <b>vertex form</b> and pull it out</p>
-							<p>2. Find the \(x\) in middle of the two roots and <b>solve for the midpoint</b></p>
+							
+							
+							<p class="finalAnswer">\( f(x)=2\left(x-1\right)^2+5\)</p>
 						</div>
 					</div>
 					<!-- <div class="problem long withNum">
@@ -57,19 +64,54 @@
 				</div></section>
 
 <!-- START ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Switching Up Variables</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="centerBox removeMargin">
+						<div class="imgBox">
+							<p class="xaxis fragment fade-out" data-fragment-index="1">\(x\)</p>
+							<p class="yaxis fragment fade-out" data-fragment-index="1">\(y\)</p>
+							<p class="xaxis fragment fade-in" data-fragment-index="1" style="left: 103%;">\(t\) (time)</p>
+							<p class="yaxis fragment fade-in" data-fragment-index="1">\(h\) (height)</p>
+							<div class="xyplane"></div>
+							<div class="pointBox">
+								<img src="../../images/parabola.svg" style="width: 64%; bottom: 9%; left: 18.5%; transform: scaleY(-100%);">
+							</div>
+						</div>
+					</div>
+				</div></section>
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>57</div><div></div></div>
 					<div class="problem long withNum">
 						<div>a</div>
 						<p>How would we find the <b>max or min height</b> of a quadratic?</p>
-						<p class="fragment">The \(y\) value of the vertex</b></p>
+						<div class="fragment">
+							<p>The <b>\(\boldsymbol{y}\)-value</b> of the vertex (\(k\) in vertex form)</p>
+							<!-- <ul>
+								<li><p>OR find the middle of the parabola</p></li>
+							</ul> -->
+						</div>
 					</div>
 					<div class="problem long withNum">
 						<div>b</div>
 						<p>How would we find the <b>time</b> it is at a specific height?</p>
-						<p class="fragment">The \(x\) value of the vertex</b></p>
+						<div class="fragment">
+							<p>The <b>\(\boldsymbol{x}\)-value</b> of the vertex (\(h\) in vertex form)</p>
+							<ul>
+								<li><p>OR plug in \(y=\) max (or min) and solve for \(x\)</p></li>
+							</ul>
+						</div>
 					</div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>(Lots of) Examples</h2>
 				</div></section>
 
 				<section><div class="bodySlide">
@@ -78,78 +120,82 @@
 					<div class="problem long withNum">
 						<div>a</div>
 						<p>What is the <b>equation</b> for this problem?</p>
-						<p class="fragment">\(h(t) = -16t^2 + 116t + 101\)</b></p>
+						<p class="fragment">\(h(t) = -16t^2 + 116t + 101\)</p>
 					</div>
 					<div class="problem long withNum">
 						<div>b</div>
 						<p>Use the quadratic formula find out <b>how long</b> the rocket will take to hit the ground after it is launched.</p>
-						<p class="fragment">\(t=8\) seconds</b></p>
+						<p class="fragment">asking for: the <i>positive</i> real zero &nbsp; <span class="fragment finalAnswer">\(t=8\) seconds</span></p>
 					</div>
 				</div></section>
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>58</div><div>Example 2</div></div>
 					<p>An object is launched directly upward at 64 ft/s from a platform 80 feet high.</p>
+					<p class="fragment blue">\(h(t) = -16t^2 + 64t + 80\)</p>
 					<div class="problem long withNum">
 						<div>a</div>
 						<p><b>When</b> will it attain its maximum height?</p>
-						<div class="fragment">
-							<p>\(h(t) = -16t^2 + 64t + 80\)</p>
-							<p class="fragment">\(t =2\) seconds</p>
-						</b></div>
+						<p class="fragment">asking for: \(t\)-value of vertex &nbsp; <span class="fragment finalAnswer">\(t =2\) seconds</span></p>
 					</div>
 					<div class="problem long withNum">
 						<div>b</div>
 						<p>What will be the object’s <b>maximum height</b>?</p>
-						<p class="fragment">\(h=144\) feet</b></p>
+						<p class="fragment">asking for: \(h\)-value of vertex &nbsp; <span class="fragment finalAnswer">\(h=144\) feet</span></p>
 					</div>
 				</div></section>
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>58-59</div><div>Example 3</div></div>
 					<p>A football is punted into the air. Its height \(h\), in meters, after \(t\) seconds is given by the equation \(h(t) = -4.9t^2 + 24.5t + 1\).</p>
-					<div class="problem withNum">
+					<div class="problem withNum long">
 						<div>a</div>
 						<p>How <b>high</b> is the ball after 1s?</p>
-						<p class="fragment">\(h =20.6\) meters</p>
+						<p class="fragment">asking for: \(h\) at \(t=1\) &nbsp; <span class="finalAnswer fragment">\(h =20.6\) meters</span></p>
 					</div>
-					<div class="problem withNum">
+					<div class="problem withNum long">
 						<div>b</div>
 						<p>Find the <b>max height</b> of the ball.</p>
-						<p class="fragment">\(h=31.6\) meters</b></p>
+						<p class="fragment">asking for: \(h\) of vertex &nbsp; <span class="finalAnswer fragment">\(h=31.6\) meters</span></p>
 					</div>
-					<div class="problem withNum">
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>58-59</div><div>Example 3</div></div>
+					<p>A football is punted into the air. Its height \(h\), in meters, after \(t\) seconds is given by the equation \(h(t) = -4.9t^2 + 24.5t + 1\).</p>
+					<div class="problem withNum long">
 						<div>c</div>
 						<p><b>When</b> does the ball reach its maximum height?</p>
-						<p class="fragment">\(t=2.5\) seconds</b></p>
+						<p class="fragment">asking for: \(t\) of vertex &nbsp; <span class="finalAnswer fragment">\(t=2.5\) seconds</span></p>
 					</div>
-					<div class="problem withNum">
+					<div class="problem withNum long">
 						<div>d</div>
 						<p><b>When</b> does the ball hit the ground?</p>
-						<p class="fragment">\(t=5\) seconds</b></p>
+						<p class="fragment">asking for: positive real zero &nbsp; <span class="finalAnswer fragment">\(t=5\) seconds</span></p>
 					</div>
 				</div></section>
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>59</div><div>Example 4</div></div>
 					<p>Faye is making basketball hoop that is at a height of 10 feet. The height, in feet, of the ball after \(t\) seconds is \(h(t) = -16t^2 + 20t + 6\). <b>How long</b> would it take to make the basket?</p>
-					<div class="blue fragment">$$ h(t) = -16t^2 + 20t + 6$$</div>
-					<div class="blue fragment">\(0.25\) or <span class="finalAnswer">\(1\) second</span></div>
+					<p class="blue fragment">\( h(t) = -16t^2 + 20t + 6\)</p>
+					<p class="blue fragment">asking for: <i>second</i> time the ball is at 10ft (\(h=10\))</p>
+					<p class="blue fragment">\(t=0.25,1\)</p>
+					<p class="blue fragment finalAnswer">\(t=1\) second</p>
 				</div></section>
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>60</div><div>Example 5</div></div>
-					<p>The height h in feet of a projectile launched vertically upward from the top of a 96-foot-tall tower when time \(t = 0\) is given by \(h(t) = 96 + 80t - 16t^2\).</p>
+					<p style="max-width: 43ch;">The height \(h\) in feet of a projectile launched vertically upward from the top of a 96-foot-tall tower when time \(t = 0\) is given by \(h(t) = 96 + 80t - 16t^2\).</p>
 					
 					<div class="problem long withNum">
 						<div>a</div>
 						<p><b>How long</b> will it take the projectile to strike the ground?</p>
-						<p class="fragment">\(t=6\) seconds</b></p>
+						<p class="fragment">asking for: positive real zero &nbsp; <span class="finalAnswer fragment">\(t=6\) seconds</span></p>
 					</div>
 					<div class="problem long withNum">
 						<div>b</div>
-						<p><b>When</b> does the ball hit the ground?</p>
-						<p class="fragment">\(h=196\) meters</b></p>
+						<p>What is the <b>maximum height</b> that the projectile reaches?</p>
+						<p class="fragment">asking for: \(h\) of vertex &nbsp; <span class="finalAnswer fragment">\(h=196\) meters</span></p>
 					</div>
 				</div></section>
 
@@ -164,17 +210,17 @@
 					<div class="problem withNum">
 						<div>b</div>
 						<p>What is the <b>max height</b> of the balloon?</p>
-						<p class="fragment">\(h=55\) meters</b></p>
+						<p class="fragment">\(h=55\) meters</p>
 					</div>
 					<div class="problem withNum">
 						<div>c</div>
 						<p><b>When</b> will the balloon burst as it hits the ground?</p>
-						<p class="fragment">\(t=6.3\) seconds</b></p>
+						<p class="fragment">\(t=6.3\) seconds</p>
 					</div>
 					<div class="problem withNum">
 						<div>d</div>
 						<p>For <b>how long</b> is the balloon more than 30m high?</p>
-						<p class="fragment">\(4.4\) seconds</b></p>
+						<p class="fragment">\(4.4\) seconds</p>
 					</div>
 				</div></section>
 

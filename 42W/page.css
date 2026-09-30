@@ -99,7 +99,7 @@ ul {
 /* CUSTOM ----------------------------------------------------------------------------------------------------------- */
 
 .header {
-    padding: 10rem max(calc(50% - 450px), 5%) 0 max(calc(50% - 450px), 5%);
+    padding: 6rem max(calc(50% - 450px), 5%) 0 max(calc(50% - 450px), 5%);
     box-sizing: border-box;
 }
 

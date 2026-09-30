@@ -33,7 +33,7 @@
 						<h5 class="time" id="time"></h5>
 					</div>
 
-					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					<p style="margin-bottom: -2rem;">Write your <u>name & answers</u> on a sheet of paper. (Scratch paper at front of classroom.)</p>
 					$$(x+7)(x-2)=0$$
 
 					<div class="problem withNum long" style="margin-top: -2rem;">
@@ -126,7 +126,7 @@
 
 				<section data-transition="fade-out slide-in"><div class="callout">
 					<p>What patterns do you notice between<br>the <b>equation</b> and the <b>graph</b>?</p>
-					<div style="height: 40vh">
+					<div style="height: 40vh" class="fragment">
 						$$ f(x) = (x{\color{#386ef6} \underbrace{-1 }_{\text{right by 1}} })^2{\color{#386ef6} \underbrace{ -4}_{\text{down by 4}} } $$
 					</div>
 				</div></section>
@@ -143,22 +143,47 @@
 					</div>
 				</div></section>
 
-				<section><div class="bodySlide">
+				<section data-transition="fade-out slide-in"><div class="bodySlide">
 					<div class="definition">Parabola</div>
-					<div class="definitionText">
-						<p>a <b>parabola</b> is the <span>U-shaped graph</span> that a quadratic makes</p>
+					<div class="row">
+						<div class="definitionText">
+							<p>a <b>parabola</b> is the <span>U-shaped graph</span> that a quadratic makes</p>
+						</div>
+						
+						<div data-id="grid" class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane"></div>
+							<div class="pointBox">
+								<img src="../../images/parabola.svg" style="width: 64%; bottom: 9%; left: 28%;">
+							</div>
+						</div>
 					</div>
 				</div></section>
-				<section><div class="bodySlide">
+				<section data-transition="fade"><div class="bodySlide">
 					<div class="definition">Vertex</div>
-					<div class="definitionText">
-						<p>the <b>vertex</b> is the <span>maximum or minimum</span> of the parabola</p>
+					<div class="row">
+						<div class="definitionText">
+							<p>the <b>vertex</b> is the <span>maximum or minimum</span> of the parabola</p>
+						</div>
+						
+						<div data-id="grid" class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane"></div>
+							<div class="pointBox">
+								<img src="../../images/parabola.svg" style="width: 64%; bottom: 9%; left: 28%;">
+								<div class="point blueFill alignTL" style="top: 90%; left: 60%;"></div>
+							</div>
+						</div>
 					</div>
 				</div></section>
-				<section><div class="bodySlide">
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
 					<div class="definition">Axis of Symmetry</div>
-					<div class="definitionText">
-						<p>the <b>axis of symmetry</b> is the <span>vertical line</span> that splits a parabola into perfectly symmetrical halves</p>
+					<div class="row">
+						<div class="definitionText">
+							<p>the <b>axis of symmetry</b> is the <span>vertical line</span> that splits a parabola into perfectly symmetrical halves</p>
+						</div>
+						
+						<div data-id="grid" class="graphColumn centerBox removeMargin"><div class="imgBox"><div class="xyplane"></div>
+							<div class="pointBox">
+								<img src="../../images/parabola-withSymmetry.svg" style="width: 64%; bottom: 9%; left: 28%;">
+							</div>
+						</div>
 					</div>
 				</div></section>
 
@@ -166,6 +191,24 @@
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
 					<h2>Reading Vertex Form</h2>
+				</div></section>
+				
+				<section data-auto-animate><div class="callout">
+					<h5>Vertex Form</h5>
+					<div style="margin: calc(var(--spaceLargest) * -1) 0">
+						$$ f(x) =  a (x-h)^2 + k $$
+					</div>
+					<p>The vertex of the parabola is at \( (h,k) \).</p>
+					<h6>Note: the \(a\) is the same one in \(ax^2+bx+c\)!</h6>
+				</div></section>
+				
+				<section data-auto-animate><div class="callout">
+					<h5>Vertex Form</h5>
+					<div style="margin: calc(var(--spaceLargest) * -1) 0">
+						$$ f(x) = {\color{#386ef6} \overbrace{\phantom{.}a\phantom{.}}^{\mathclap{ \text{flip across }x\text{-axis if negative}}}} (x{\color{#386ef6} \underbrace{-\phantom{..}h }_{\phantom{2}x\text{-offset\\(opposite!)}}})^2{\color{#386ef6} \underbrace{ +\phantom{/}k}_{y\text{-offset}} } $$
+					</div>
+					<p>The vertex of the parabola is at \( (h,k) \).</p>
+					<h6>Note: the \(a\) is the same one in \(ax^2+bx+c\)!</h6>
 				</div></section>
 
 				<section><div class="bodySlide">
@@ -206,21 +249,27 @@
 
 				<section><div class="bodySlide">
 					<div class="definition">Vertex Form, ABC Form</div>
-					<div class="col3" style="margin-top: var(--spaceLargest);">
+					<div class="col3" style="margin-top: var(--spaceLargest); gap: calc(var(--spaceLargest) * 1.8);">
 						<div>
 							<h5 style="margin: var(--spaceLarge) auto 0 auto; text-align: center;">Vertex Form</h5>
-							$$ a(x-h)^2+k $$
-							<p style="text-align: center;">Good for: identifying vertex</p>
+							<div style="height: calc(var(--spaceLargest)*2.5);">
+								$$ a(x-h)^2+k $$
+							</div>
+							<p style="text-align: center;">Good for identifying <span class="blue">vertex</span></p>
 						</div>
 						<div>
 							<h5 style="margin: var(--spaceLarge) auto 0 auto; text-align: center;">ABC Form</h5>
-							$$ ax^2+bx+c $$
-							<p style="text-align: center;">Good for: seeing everything (expanded)</p>
+							<div style="height: calc(var(--spaceLargest)*2.5);">
+								$$ ax^2+bx+c $$
+							</div>
+							<p style="text-align: center;">Good for identifying <span class="blue">\(y\)-intercept</span></p>
 						</div>
 						<div class="fragment">
 							<h5 style="margin: var(--spaceLarge) auto 0 auto; text-align: center;">Factored</h5>
-							$$ (x+?)(x+?)... $$
-							<p style="text-align: center;">Good for: identifying real zeroes</p>
+							<div style="height: calc(var(--spaceLargest)*2.5);">
+								$$ (x+?)(x+?)... $$
+							</div>
+							<p style="text-align: center;">Good for identifying <span class="blue">real zeroes</span></p>
 						</div>
 					</div>
 				</div></section>
@@ -228,7 +277,7 @@
 <!-- COMPLETING THE SQUARE ------------------------------------------------------------------------------------------------------>
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
-					<p>Factoring: Method 3(ish)</p>
+					<p>Method 1</p>
 					<h2>Completing the Square</h2>
 				</div></section>
 
@@ -273,33 +322,33 @@
 						<h2>Completing the Square</h2>
 						<ol>
 							<li>
-								<div class="problem" style="margin:0; padding: 0;">
-									<p style="width: 32ch;">Identify \(a\), \(b\), and \(c\)</p>
-									<p style="max-width: 100ch; width: 18ch;">\(0 = x^2 + 2x + 2\)</p>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Identify \(a\), \(b\), and \(c\). If \(a\neq 0\), factor out \(a\).</p>
+									<p style="max-width: 100ch; width: 18ch;">\(f(x) = x^2 - 2x - 3\)</p>
 								</div>
 							</li>
 							<li class="fragment">
-								<div class="problem" style="margin:0; padding: 0;">
-									<p style="width: 32ch;">Calculate \(h=b/2a\)</p>
-									<p class="fragment">\( h = 2/(2\cdot 1) = \)<span class="answerBox" style="margin-left: 4px;">\(1\)</span></p>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Calculate \(h=-b/2a\).</p>
+									<p class="fragment">\( h = -(-2)/(2\cdot 1) = \)<span class="answerBox" style="margin-left: 4px;">\(1\)</span></p>
 								</div>
 							</li>
 							<li class="fragment">
-								<div class="problem" style="margin:0; padding: 0;">
-									<p style="width: 32ch;">Add AND subtract \(h^2\) from one side (add “\(0\)”)</p>
-									<p class="fragment" style="max-width: 100ch; width: 18ch;">\( 0= x^2 + 2x\)<span class="answerBox" style="margin-left: 4px;">\(+1\)</span><span class="answerBox" style="margin-left: 4px;">\(-1\)</span>\(+2\)</p>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Add <b>AND</b> subtract \(h^2\) (add “\(0\)”).</p>
+									<p class="fragment" style="max-width: 100ch; width: 24ch;">\( f(x)= \) <span style="color: var(--primary)">\(x^2 - 2x\)<span class="answerBox" style="margin-left: 4px;">\(+(1)^2\)</span></span><span class="answerBox" style="margin-left: 4px;">\(-(1)^2\)</span>\(-3\)</p>
 								</div>
 							</li>
 							<li class="fragment">
-								<div class="problem" style="margin:0; padding: 0;">
-									<p style="width: 32ch;">Change \(ax^2+bx+h\) into the squared form</p>
-									<p class="fragment" style="max-width: 100ch; width: 18ch;">\( 0 = (x+1)^2 \)<span class="answerBox" style="margin-left: 4px;">\(-1\)</span>\(+2\)</p>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Swap \(x^2\pm\frac{b}{a}x+h^2\) into perfect squares form \((x\pm h)^2\).</p>
+									<p class="fragment" style="max-width: 100ch; width: 24ch;">\( f(x) = \) <span style="color: var(--primary)">\((x-1)^2 \)</span><span class="answerBox" style="margin-left: 4px;">\(-(1)^2\)</span>\(-3\)</p>
 								</div>
 							</li>
 							<li class="fragment">
-								<div class="problem" style="margin:0; padding: 0;">
-									<p style="width: 32ch;">Simplify</p>
-									<p class="fragment finalAnswer">\( 0 = (x+1)^2+1 \)</p>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Distribute \(a\), and simplify.</p>
+									<p class="fragment finalAnswer">\( f(x) = (x-1)^2-2\)</p>
 								</div>
 							</li>
 						</ol>
@@ -307,82 +356,76 @@
 					<div class="blue columnWorkbook">
 					</div>
 				</div></section>
-				<!-- <section><div class="slideRow">
+				<section><div class="slideRow">
 					<div class="columnWorkbook">
-						<h2>Completing the Square</h2>
+						<h2>Completing the Square (Template)</h2>
 						<ol>
-							<li><p>Identify \(a\), \(b\), and \(c\)</p></li>
-							<li class="fragment" data-fragment-index="1"><p>Calculate \(h=b/2a\) <span class="fragment blue" data-fragment-index="2">\(  = 2/(2\cdot 1) = \)<span class="answerBox" style="margin-left: 4px;">\(1\)</span></span></p></li>
-							<li class="fragment" data-fragment-index="5"><p>Add AND subtract \(h^2\) from one side (add “\(0\)”)</p></li>
-							<li class="fragment" data-fragment-index="11"><p>Change \(ax^2+bx+h\) into the squared form</p></li>
-							<li class="fragment" data-fragment-index="15"><p>Simplify</p></li>
+							<li>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Identify \(a\), \(b\), and \(c\). If \(a\neq 0\), factor out \(a\).</p>
+									<div style="height: 1rem;">
+										<p style="max-width: 100ch; width: 18ch;">\(f(x) = ax^2 + bx +c \)</p>
+										<p style="max-width: 100ch; width: 18ch;">\( f(x) = a(x^2 + \frac{b}{a}x + \frac{c}{a})\)</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Calculate \(h=-b/2a\).</p>
+									<p></p>
+									<!-- <p>\( h = -(-2)/(2\cdot 1) = \)<span class="answerBox" style="margin-left: 4px;">\(1\)</span></p> -->
+								</div>
+							</li>
+							<li>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Add <b>AND</b> subtract \(h^2\) (add “\(0\)”).</p>
+									<p style="max-width: 100ch; width: 28ch;">\( f(x)= a(\)<span style="color: var(--primary)">\(x^2 + \frac{b}{a}x\)<span class="answerBox" style="margin-left: 4px;">\(+h^2\)</span></span><span class="answerBox" style="margin-left: 4px;">\(-h^2\)</span>\(-\frac{c}{a})\)</p>
+								</div>
+							</li>
+							<li>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Swap \(x^2\pm\frac{b}{a}x+h^2\) into perfect squares form \((x\pm h)^2\).</p>
+									<p style="max-width: 100ch; width: 24ch;">\( f(x) = a(\)<span style="color: var(--primary)">\((x+ h)^2 \)</span><span class="answerBox" style="margin-left: 4px;">\(-h^2\)</span>\(-\frac{c}{a})\)</p>
+								</div>
+							</li>
+							<li>
+								<div class="problem" style="margin:-1.15rem 0;">
+									<p style="width:28ch;">Distribute \(a\), and simplify.</p>
+									<p class="finalAnswer">\( f(x) = a(x+h)^2-h^2a+c\)</p>
+								</div>
+							</li>
 						</ol>
 					</div>
 					<div class="blue columnWorkbook">
-						<p style="margin-top: 2rem;">\(0 = x^2 + 2x + 2\)</p>
-						<p class="fragment" data-fragment-index="6" style="margin-top: 14.5rem">\( 0= x^2 + 2x\)<span class="answerBox" style="margin-left: 4px;">\(+1\)</span><span class="answerBox" style="margin-left: 4px;">\(-1\)</span>\(+2\)</p>
-						<p class="fragment" data-fragment-index="12" style="margin-top: 1.5rem">\( 0 = (x+1)^2 \)<span class="answerBox" style="margin-left: 4px;">\(-1\)</span>\(+2\)</p>
-						<p class="fragment finalAnswer" data-fragment-index="16" style="margin-top: 0.79rem">\( 0 = (x+1)^2+1 \)</p>
 					</div>
-				</div></section> -->
-				<!-- <section><div class="slideRow">
-					<div class="columnWorkbook">
-						<h2>Completing the Square</h2>
-						<ol>
-							<li><p>Identify \(a\), \(b\), and \(c\), and then isolate \(c\)</p></li>
-							<li class="fragment" data-fragment-index="1"><p>Calculate \(h=-b/2a\) <span class="fragment blue" data-fragment-index="2">\(  = -2/(2\cdot 1) = \)<span class="answerBox" style="margin-left: 4px;">\(-1\)</span></span></p></li>
-							<li class="fragment" data-fragment-index="5"><p>Add \(h^2\) to BOTH sides</p></li>
-							<li class="fragment" data-fragment-index="10"><p>Change the side with \(x\) into the squared form</p></li>
-							<li class="fragment" data-fragment-index="15"><p>Move everything onto one side \(=0\)</p></li>
-						</ol>
-						<p class="fragment" data-fragment-index="16"><b>You should get</b>: \( a(x+h)^2 + c - h^2\)</p>
-					</div>
-					<div class="blue columnWorkbook">
-						<p style="margin-top: 2rem;">\(0 = x^2 + 2x + 2\)</p>
-						<p class="fragment" data-fragment-index="0" style="margin-top: 2rem;">\(-2 = x^2 + 2x\)</p>
-						<p class="fragment" data-fragment-index="6" style="margin-top: 6.5rem">\( -2\)<span class="answerBox" style="margin-left: 4px;">\(+1\)</span>\(= x^2 + 2x\)<span class="answerBox" style="margin-left: 4px;">\(+1\)</span></p>
-						<p class="fragment" data-fragment-index="10" style="margin-top: 0.79rem">\( -1 = (x+1)^2 \)</p>
-						<p class="fragment finalAnswer" data-fragment-index="15" style="margin-top: 0.79rem">\( 0 = (x+1)^2+1 \)</p>
-					</div>
-				</div></section> -->
+				</div></section>
 
 				<section><div class="bodySlide">
-					<div class="workbook"><div>52</div><div>Example 2</div></div>
+					<div class="workbook"><div>52</div><div>Example 2b</div></div>
 					<p>Complete the square.</p>
-					<div class="col2">
-						<div class="problem withNum long">
-							<div>a</div>
-							<p>\( f(x)=x^2-2x-3\)</p>
-							<p class="fragment">\( =(x - 1)^2 - 2 \)</p>
-						</div>
-						<div class="problem withNum long">
-							<div>b</div>
-							<p>\( f(x)=-x^2-4x+1\)</p>
-							<p class="fragment">\(= -(x + 2)^2 - 5 \)</p>
-						</div>
+					$$f(x)=-x^2-4x+1$$
+					<div class="fragment blue">
+						$$f(x)= -(x + 2)^2 - 5 $$
+						<p style="text-align: center; width: 100%; max-width: 100%;">Remember to factor out the negative first!</p>
 					</div>
-					<!-- <ol style="margin-top: 2rem;">
-						<li><p>Identify \(a\), \(b\), and \(c\), and then isolate \(c\)</p></li>
-						<li><p>Calculate \(h=-b/2a\)</p></li>
-						<li><p>Add \(h^2\) to BOTH sides</p></li>
-						<li><p>Change the side with \(x\) into the squared form</p></li>
-						<li><p>Move everything onto one side \(=0\)</p></li>
-					</ol> -->
 				</div></section>
 
 <!-- TYPES ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<p>Method 2</p>
+					<h2>Same, but with Formulas</h2>
+				</div></section>
 
 				<section><div class="bodySlide">
 					<h2>Switching from ABC to Vertex</h2>
 					<ol style="margin-top: 2rem;">
 						<li><p>Identify \(a\), \(b\), and \(c\)</p></li>
-						<li><p>Calculate \(h=-b/2a\)</p></li>
-						<li>
-							<p>Calculate \(k\) by plugging \(h\) into the ABC form</p>
-							<h6>The derivation for this is in the appendix.</h6>
-						</li>
-						<li><p>Plug \(a\), \(h\), and \(k\) into vertex form</p></li>
+						<li><p><b>Calculate</b> \(h=-b/2a\)</p></li>
+						<li><p><b>Calculate</b> \(k=f(h)\) (plug in \(x=h\))</p></li>
+						<li><p>Plug \(a\), \(h\), and \(k\) into vertex form \(f(x) = a(x-h)^2+k\), and <b>watch out</b> for double negatives when plugging in \(h\)!</p></li>
 					</ol>
+					<h6>Note: the chart on p.52 is wrong; the formula for \(h\) should have a negative.</h6>
 				</div></section>
 
 				<section><div class="bodySlide">
@@ -407,7 +450,7 @@
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>55</div><div>Example 4</div></div>
-					$$ f(x) = -3x^2 -600x - 31000$$
+					$$ f(x) = -3x^2 -606x - 31000$$
 					<div class="problem withNum long">
 						<div>a</div><p>Write \(f(x)\) in <b>vertex form.</b></p><p class="fragment">\(f(x)= -3(x + 101)^2 - 397 \)</p>
 					</div>

@@ -1,0 +1,240 @@
+:root {
+    --background: #FAFAFA;
+    --primary: #111111;
+    --secondary: #ececec;
+    --accent: 56, 110, 246; /* #386ef6 */
+    --definition: 120, 46, 211; /* #782ED3 */
+    --theorem: 233, 84, 15; /* e9540f */
+    --warning: #d10808;
+}
+
+html, body {
+    background-color: var(--background);
+    padding: 0;
+    margin: 0;
+    color: var(--primary);
+    line-height: 135%;
+    font-weight: 400;
+    font-family: "Instrument Sans", Helvetica, sans-serif;
+    margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    line-height: 135%;
+    font-weight: 400;
+    font-family: "Instrument Sans", Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: "Instrument Serif", Cambria, serif;
+    font-size: 5rem;
+}
+
+h2 { /* subtitle */
+    font-size: 2rem;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 15%; */
+    margin: 4rem 0 1rem 0;
+    font-weight: 700;
+}
+
+h4 { /* chapter titles */
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 3rem 0 1rem 0;
+    line-height: 1.5;
+}
+
+h5 { /* dates */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 5%;
+    font-weight: 600;
+    text-align: right;
+    color: rgb(var(--accent));
+    /* opacity: 30%; */
+    margin: 0 0.35rem 0 0;
+    width: 100%;
+    padding: 0.8rem 0 0 0;
+} h5>b {
+    font-weight: 900;
+}
+
+p {
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    padding: 0;
+    max-width: 62ch;
+}
+
+span {
+    font-weight: 600;
+    color: rgb(var(--accent));
+}
+
+a {
+    color: var(--primary);
+    transition: 0.25s ease-in-out;
+    text-decoration: underline 2px rgba(var(--accent), 0.5);
+    text-underline-offset: 0.25rem;
+} a:hover {
+    color: rgb(var(--accent));
+    text-decoration-color: rgba(var(--accent), 1);
+    transition: 0.25s ease-in-out;
+}
+
+code {
+    color: rgb(var(--accent));
+}
+
+ul {
+    display: block;
+    padding-left: 1.5rem;
+    list-style-type: square;
+}
+
+/* CUSTOM ----------------------------------------------------------------------------------------------------------- */
+
+.header {
+    padding: 10rem max(calc(50% - 450px), 5%) 0 max(calc(50% - 450px), 5%);
+    box-sizing: border-box;
+}
+
+.content {
+    width: min(90%, 900px);
+    margin: 4rem auto;
+    transition: 0.35s ease-in-out;
+}
+
+.callout {
+    display: block;
+    padding: 0 0 0 1rem;
+    border-left: rgb(var(--accent)) 3px solid;
+    color: rgb(var(--accent));
+    margin: 2rem 0;
+} .callout b {
+    font-weight: 600;
+} li .callout {
+    margin: 1rem 0;
+}
+
+.col2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.box {
+    background-color: var(--secondary);
+    border-radius: 1.35rem;
+    padding: 1.65rem 1.65rem 1.55rem 1.65rem;
+    margin: 0.35rem 0;
+    position: relative;
+    font-weight: 500;
+} .dates {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.85rem;
+    row-gap: 0.35rem;
+} .pdf { /* review sheet button */
+    display: block;
+    /* background-color: rgba(var(--accent), 0.15); */
+    background-color: var(--primary);
+    color: var(--background);
+    width: fit-content;
+    height: fit-content;
+    padding: 0.85rem;
+    font-size: 1.15rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 0.65rem;
+    transition: 0.25s ease-in-out;
+} .pdf:hover {
+    background-color: rgb(var(--accent));
+    transition: 0.25s ease-in-out;
+} .box h4 {
+    margin-top: 0;
+} .box p {
+    margin: 0.35rem 0;
+} .dates p {
+    line-height: 165%;
+} .dates p a b {
+    font-weight: 600;
+} .pdf:before {
+    font-weight: 900;
+    font-size: 0.9rem;
+    letter-spacing: 8%;
+    opacity: 50%;
+    content: 'PDF';
+    margin-right: 0.5rem;
+}
+
+.home {
+    position: fixed;
+    left: 0;
+    top: 2rem;
+    height: 3rem;
+    width: 3rem;
+    z-index: 1000000;
+    background-color: rgba(var(--accent), 0.65);
+    border-radius: 0 2rem 2rem 0;
+    overflow: hidden;
+    color: var(--background);
+    font-family: var(--fontSecondary);
+    font-weight: 600;
+    font-size: 1.15rem;
+    transition: 0.25s ease-in-out;
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: 1rem;
+    opacity: 65%;
+} .home:hover {
+    background-color: rgba(var(--accent), 1);
+    transition: 0.25s ease-in-out;
+    width: 15rem;
+    opacity: 100%;
+} .home::after {
+    content: '<- \00a0 \00a0\00a0\00a0 Back to All Lessons';
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin: 2rem 0;
+} .grid > * {
+    display: block;
+    box-sizing: border-box;
+    outline: #dbdbdb 2px solid;
+    outline-offset: -1px;
+    margin: 0;
+    padding: 0.65rem 0.2rem;
+} .grid > .top {
+    background-color: #dbdbdb;
+    font-weight: 500;
+}
+
+.next {
+    display: block;
+    position: relative;
+    width: fit-content;
+    margin: 2rem 0 2rem auto;
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+} .next::after {
+    content: 'Next Lesson ->';
+    color: var(--background);
+    font-size: 1.35rem;
+    font-weight: 500;
+} .next:hover {
+    background-color: rgb(var(--accent));
+    transition: 0.3s ease-in-out;
+} a .next { text-decoration: none !important; }

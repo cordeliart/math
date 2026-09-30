@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="stylesheet" href="../main.css"/>
+		<link rel="icon" href="../images/favicon.png">
+
+		<title>MATH-42 Discrete Mathematics</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>MATH 42 ⁠— Discrete Mathematics</h1>
+			<h2>SJSU • Fall 2026 • Lena Pang</h2>
+
+			<div class="tabList">
+				<div class="tab selected" onclick="openCity(event, 'slides')">Slides</div>
+				<div class="tab" onclick="openCity(event, 'info')">Class Info</div>
+			</div>
+		</div>
+
+		<div class="content active" id="slides">
+			<div style="margin-bottom:4rem;">
+				<p>Material listed is made by Lena Pang, using <code>mathJax.js</code> for LaTeX and <code>reveal.js</code>. All decks are navigated using the space bar (or arrow keys).</p>
+			</div>
+
+			<div class="box">
+				<h4>1 ⁠— Logic</h4>
+				<p><a href="1/1-propositionalLogic.html"><b>1.1</b>&nbsp;&nbsp;Operators & Quantifiers</a></p>
+				<p><a href="1/2"><b>1.2</b>&nbsp;&nbsp;Types of Proofs</a></p>
+				<!-- <a href="exam1-review.pdf" target="_blank"><div class="pdf">Exam 1 Review ➔</div></a> -->
+			</div>
+			<div class="box">
+				<h4>2 ⁠— Sets</h4>
+				<p><a href="2/1"><b>2.1</b>&nbsp;&nbsp;Set Notation</a></p>
+			</div>
+		</div>
+
+		<div class="content" id="info">
+			<div>
+				<p>Material listed is made by Lena Pang, using <code>mathJax.js</code> for LaTeX and <code>reveal.js</code>. All decks are navigated using the space bar (or arrow keys).</p>
+				<p>Source text is the SJSU <i>College Algebra Workbook V4</i> by Amanda Frank. Because the workbook is used only by SJSU, please <b>do not share outside of SJSU</b>.</p>
+				<p style="opacity: 0.35; font-style: italic;">Any links not listed here are considered incomplete. For your own sake, do not reference.</p>
+			</div>
+			<h4>Course Description</h4>
+			<p>Review of basic algebra. Complex numbers, functions, graphs, polynomials, inverse functions, exponential and logarithmic functions. <i>3 units.</i></p>
+			<p>Satisfies B4: Mathematics/Quantitative Reasoning.</p>
+			<h4>Resources</h4>
+			<p><span>email</span>: lena.pang@sjsu.edu</p>
+			<p><span>office hours</span>: TBD in MQH 426 (Math Help Center)</p>
+			<h4></h4>
+		</div>
+
+		<script>
+			function openCity(evt, cityName) {
+				// Declare all variables
+				var i, content, tabs;
+
+				// Get all elements with class="content" and hide them
+				content = document.getElementsByClassName("content");
+				for (i = 0; i < content.length; i++) { content[i].style.display = "none";}
+
+				// Get all elements with class="tablinks" and remove the class "active"
+				tabs = document.getElementsByClassName("tab");
+				for (i = 0; i < tabs.length; i++) { tabs[i].className = tabs[i].className.replace("selected", "");}
+
+				// Show the current tab, and add an "active" class to the button that opened the tab
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += " selected";
+			}
+			function toggleDesc(event) {
+				toggles = document.getElementsByClassName("toggle");
+				for (i = 0; i < toggles.length; i++) { toggles[i].classList.toggle('visible');}
+			}
+		</script>
+	</body>
+</html>

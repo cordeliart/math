@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="stylesheet" href="../page.css"/>
+		<link rel="icon" href="../images/favicon.png">
+
+		<title>Quantifiers | 42</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<!-- <h2>MATH 42 ⁠> LOGIC</h2> -->
+			<!-- <h2 style="opacity: 35%;">SJSU • Fall 2026 • Lena Pang</h2> -->
+			<h1>Quantifiers</h1>
+		</div>
+
+		<div class="content">
+			<h2>Quantifiers</h2>
+			<p><b>universal quantifier</b> \(\forall\) — "for all"</p>
+			<ul>
+				<li><p><b>For all</b> weekends, I do not have to go to school.</p></li>
+				<li><p><b>For all</b> even numbers, the remainder when divided by two is zero.</p></li>
+				<li><p>\(\forall x\) in the real numbers, \(x^2\) is even</p></li>
+			</ul>
+			<p><b>existential quantifier</b> \(\exists\) — "there exists"</p>
+			<ul>
+				<li><p><u>There exists</u> a California State University in San Jose.</p></li>
+				<li><p><u>There exists</u> a person with short hair.</p></li>
+				<li><p>\(\exists x\) such that \(x^3=8\)</p></li>
+			</ul>
+
+			<div class="callout">
+				<p><b>A Combined Example:</b></p>
+					<p><b>Every</b> rose <u>has</u> a petal.</p>
+					<p>\(\equiv\) <b>For every</b> rose, <u>there exists</u> a petal.</p>
+					<p>\(\equiv \forall\) rose, \(\exists\) petal</p>
+					<p>\(\equiv \forall r\) \(\exists p\)</p>
+			</div>
+
+			<h2>Order Matters</h2>
+			<p>When working with multiple quantifiers, order is very important. Let's learn the difference by looking at some examples:</p>
+
+			<p style="margin: 2rem 0 -1.15rem 0;">\(\forall x\) \(\exists y\): <b>Every \(x\) can have a different \(y\).</b></p>
+			<div class="col2">
+				<div class="callout">
+					<p>\(\forall x\) \(\exists y\) such that \(x\cdot y=0\)</p>
+					<p>This is read: "For all \(x\), there is a \(y\) such that \(x\cdot y=0\)."</p>
+					<p>This statement is TRUE, because for each \(x\), we can pick the corresponding \(y\) to be \(0\).</p>
+				</div>
+				<div class="callout">
+					<p>\(\forall x\) \(\exists y\) such that \(x+y=0\)</p>
+					<p>This is read: "For all \(x\), there is a \(y\) such that \(x+y=0\)."</p>
+					<p>This statement is TRUE, because for each \(x\), we can pick the corresponding \(y\) to be \(-x\).</p>
+				</div>
+			</div>
+			<p style="margin: 0 0 -1.15rem 0;">\(\exists y\) \(\forall x\): <b>One \(y\) needs to work with all \(x\)'s.</b></p>
+			<div class="col2">
+				<div class="callout">
+					<p>\(\exists y\) \(\forall x\) &nbsp; \(x\cdot y=0\)</p>
+					<p>This is read: "There exists a \(y\) such that for all \(x\), \(x\cdot y=0\)."</p>
+					<p>This statement is TRUE, because for \(y=0\) works for all \(x\)'s.</p>
+				</div>
+				<div class="callout">
+					<p>\(\exists y\) \(\forall x\) &nbsp; \(x+y=0\)</p>
+					<p>This is read: "There exists a \(y\) such that for all \(x\), \(x+y=0\)."</p>
+					<p>This statement is <b style="color:var(--warning)">FALSE</b>, because we can't find <i>one</i> \(y\) that works for <i>all</i> \(x\)'s.</p>
+				</div>
+			</div>
+
+			<h2>Negation with Quantifiers</h2>
+
+			<p>\( \forall x\) \(P(x)\) negated becomes \(\exists x\) \(\neg P(x)\)</p>
+			<p>\( \exists x\) \(P(x)\) negated becomes \(\forall x\) \(\neg P(x)\)</p>
+
+			<a href="2-quantifiers.html"><div class="next"></div></a>
+		</div>
+
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

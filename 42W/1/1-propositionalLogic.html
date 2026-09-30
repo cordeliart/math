@@ -2,73 +2,140 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>1.1-1.2 Propositional Logic | 42W</title>
-		<meta name="description" content="42W Discrete Math, Lesson 1.1-1.2"/>
-		<meta name="author" content="Lena Pang"/>
-
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
-		<link rel="icon" href="../../images/favicon.png">
+		<link rel="stylesheet" href="../page.css"/>
+		<link rel="icon" href="../images/favicon.png">
 
-		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
-		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
-		<link rel="stylesheet" href="../../black.css" id="theme" />
-		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
-		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+		<title>Propositional Logic | 42</title>
 	</head>
 
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background="var(--primary)"><div class="titleSlide">
-					<h4>Thursday, August 20, 2026</h4>
-					<h1><span>MATH 42W</span> Discrete Math <i>Workshop</i></h1>
-					<!-- <div class="stickerBox"><div class="sticker">Welcome! <span>Please make a name tag :)</span></div></div> -->
-				</div></section>
-
-<!-- INTRODUCTIONS ------------------------------------------------------------------------------------------------------>
-
-				<section data-background="rgb(var(--accent))"><div class="cover">
-					<h2>Introductions</h2>
-				</div></section>
-
-				<section><div class="bodySlide">
-					<h2>About Me</h2>
-					<ul>
-						<li><p>Lena Pang</p></li>
-						<li><p>BFA in New Media Design + BS in Applied Math + Minor in Japanese @ Rochester Institute of Technology</p></li>
-						<li><p>likes: skiing, Radiohead, tattoos</p></li>
-						<li><p>dislikes: cooked tomatoes, hot weather</p></li>
-					</ul>
-				</div></section>
-
-				<section><div class="callout">
-					<h2>Now your turn!</h2>
-					<h4>Share your name, your major, & one of your hobbies.</h4>
-				</div></section>
-
-<!-- PHILOSOPHY ------------------------------------------------------------------------------------------------------>
-
-				<section data-background="var(--primary)"><div class="endSlide">
-					<h2>See you next class!</h2>
-					<!-- <h5>Your to-do’s:</h5>
-					<p>-> 1.1 homework</p>
-					<p>-> welcome survey</p>
-					<p>-> buy workbook</p> -->
-				</div></section>
-
-			</div>
+		<div class="header">
+			<!-- <h2>MATH 42 ⁠> LOGIC</h2> -->
+			<!-- <h2 style="opacity: 35%;">SJSU • Fall 2026 • Lena Pang</h2> -->
+			<h1>Propositional Logic</h1>
 		</div>
 
-<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+		<div class="content">
+			<h2>Propositions</h2>
+			<p><b>propositional statement</b> — a declarative sentence which is either true or false (also called a "proposition" or a "statement"); often represented with variables \(p\), \(q\), or \(r\)</p>
+			<ul>
+				<li><p>a statement is <b>atomic</b> if it cannot be divided into smaller statements; otherwise it is <b>molecular</b></p></li>
+			</ul>
 
-		<div class="footer"></div>
+			<div class="callout">
+				<p><b>What is NOT a propositional statement?</b></p>
+				<ul>
+					<li><p>anything that is sometimes true and sometimes false (The letter "y" is a vowel.)</p></li>
+					<li><p>anything with unknowns or variables (\(x=3\))</p></li>
+					<li><p>incomplete statements (\(3+4\), The sum of two squares. )</p></li>
+					<li><p>questions, commands, etc</p></li>
+				</ul>
+			</div>
+
+			<h2>Logical Operators</h2>
+			<div class="grid" style="grid-template-columns: 0.6fr 1fr 1fr 1fr 1fr; text-align: center;">
+				<p class="top">symbol</p>
+				<p class="top">name</p>
+				<p class="top">meaning</p>
+				<p class="top">in operators</p>
+				<p class="top">in English</p>
+
+				<p>\(\wedge \)</p>
+				<p>conjunction</p>
+				<p>and</p>
+				<p>\(p\wedge q\)</p>
+				<p>"p and q"</p>
+
+				<p>\(\vee \)</p>
+				<p>disjunction</p>
+				<p>or</p>
+				<p>\(p\vee q\)</p>
+				<p>"p or q"</p>
+
+				<p>\(\neg \)</p>
+				<p>negation</p>
+				<p>not</p>
+				<p>\(\neg p\)</p>
+				<p>"not p"</p>
+
+				<p>\(\implies \)</p>
+				<p>conditional</p>
+				<p>if, then<br>implies</p>
+				<p>\(p\implies q\)</p>
+				<p>"if p, then q"<br>"p implies q"</p>
+
+				<p>\(\iff \)</p>
+				<p>biconditional</p>
+				<p>if and only if</p>
+				<p>\(p\iff q\)</p>
+				<p>"p if and only if q"</p>
+			</div>
+
+			<p>You can think of the biconditional as a two-way conditional. So \(p\iff q\) is the same thing as saying \(p\implies q\) and \(q\implies p\). That is, \(p\) and \(q\) must both exist simultaneously, or they must both not exist simultaneously; you cannot have one without the other.</p>
+			<p>For example: "I like math if and only if I don't get a bad grade." I either: a) like math and get a good grade, or b) don't like math and get a bad grade. There is no in-between.</p>
+			
+			<div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; text-align: center;">
+				<p class="top">\(p\)</p>
+				<p class="top">\(q\)</p>
+				<p class="top">\(p\wedge q\)</p>
+				<p class="top">\(p \vee q\)</p>
+				<p class="top">\(p \oplus q\)</p>
+				<p class="top">\(p \implies q\)</p>
+				<p class="top">\(p \iff q\)</p>
+				
+				<p><b>T</b></p>
+				<p><b>T</b></p>
+				<p>T</p>
+				<p>T</p>
+				<p style="color: var(--warning);">F</p>
+				<p>T</p>
+				<p>T</p>
+				
+				<p><b>T</b></p>
+				<p><b>F</b></p>
+				<p style="color: var(--warning);">F</p>
+				<p>T</p>
+				<p>T</p>
+				<p style="color: var(--warning);">F</p>
+				<p style="color: var(--warning);">F</p>
+				
+				<p><b>F</b></p>
+				<p><b>T</b></p>
+				<p style="color: var(--warning);">F</p>
+				<p>T</p>
+				<p>T</p>
+				<p>T*</p>
+				<p style="color: var(--warning);">F</p>
+				
+				<p><b>F</b></p>
+				<p><b>F</b></p>
+				<p style="color: var(--warning);">F</p>
+				<p style="color: var(--warning);">F</p>
+				<p style="color: var(--warning);">F</p>
+				<p>T*</p>
+				<p>T</p>
+			</div>
+
+			<p>*Implications are <b>vacuously true</b> if the first term (the "antecedent") is false, regardless of the value of the second term.</p>
+			
+			<h2>Logical Equivalences</h2>
+			
+			<p>Statements that have the same truth tables are <b>logically equivalent</b>, denoted with the symbol \(\equiv\). Here are some common/useful equivalencies:</p>
+
+			<ul>
+				<li><p><b>De Morgan's Laws</b><br>\(\neg(p\vee q) \equiv \neg p \wedge \neg q \)<br>\(\neg(p\wedge q) \equiv \neg p \vee \neg q \)</p></li>
+				<li><p><b>Distributive Law</b><br>\(p\wedge(q\vee r) \equiv (p \wedge q) \vee (p \wedge r) \)<br>\(p\vee(q\wedge r) \equiv (p \vee q) \wedge (p \vee r) \)</p></li>
+				<li><p><b>Implications</b><br>\((p\Rightarrow q) \equiv (\neg p \wedge q)\)</p></li>
+			</ul>
+
+			<a href="2-quantifiers.html"><div class="next"></div></a>
+		</div>
+
 		<a href="../index.html"><div class="home"></div></a>
 		<script src="../../reveal/dist/reveal.js"></script>
 		<script src="../../reveal/dist/plugin/zoom.js"></script>

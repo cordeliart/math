@@ -37,23 +37,75 @@
 					
 					<div class="problem long withNum">
 						<div>1</div>
-						<div class="columnWorkbook">
-							<p>Rewrite \(f(x)=2x^2-4x+7\) in <b>vertex form</b>.</p>
-							<!-- <p>Step 1: factor out \(a\)</p> -->
-							<p><b style="font-weight: 500">Step 1</b>: solve \( h=-b/2a\) <span class="blue fragment">\(=\dfrac{-(-4)}{2\cdot 2} =\) <span class="answerBox">\(1\)</span></span></p>
-							<p style="width: 100%; max-width: 100%;"><b style="font-weight: 500">Step 2</b>: plug \(x=h\) to solve \( k=f(h) \) <span class="blue fragment">\(=f(1)=2(1)^2-4(1)+7=\) <span class="answerBox">\(5\)</span></span></p>
-							<p style="margin-top:calc(var(--space)*0.8);"><b style="font-weight: 500">Step 3</b>: plug into \(f(x)=a(x-h)^2+k\)</p>
-						</div>
-						<div class="fragment columnWorkbook">
-							
-							
-							<p class="finalAnswer">\( f(x)=2\left(x-1\right)^2+5\)</p>
+						<p>What is the <b>formula</b> for vertex form?</p>
+						<p class="fragment">\( y=a(x-h)^2+k\) where \((h,k)\) is the parabola’s vertex</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>What are the <b>benefits</b> of ABC form, vertex form, and factored form, respectively? (Hint: what about the graph can you easily see in the equation?)</p>
+						<p class="fragment"><b>ABC</b>: y-intercept \((0,c)\), <b>vertex</b>: vertex \((h,k)\), <b>factored</b>: real zeroes</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Vertex Form Procedure</h2>
+					<ol>
+						<li>
+							<div class="problem even">
+								<p> solve \( h=-b/2a\)</p>
+								<div>
+									<p style="margin: -6.5rem 0 3rem 0;">\(f(x)=2x^2-4x+7\)</p>
+									<p class="fragment" style="margin: -1rem 0;">\(h=\dfrac{-(-4)}{2\cdot 2} =\) <span class="answerBox">\(1\)</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="problem even">
+								<p> solve \( k=f(h) \) (plug in \(x=h\))</p>
+								<p class="fragment">\(k=f(1)=2(1)^2-4(1)+7=\) <span class="answerBox">\(5\)</span></p>
+							</div>
+						</li>
+						<li>
+							<div class="problem even">
+									<p> plug into \(f(x)=a(x-h)^2+k\)</p>
+								<p class="finalAnswer fragment">\( f(x)=2\left(x-1\right)^2+5\)</p>
+							</div>
+							<h6 style="margin-top: -1.35rem">same \(a\) as in \(ax^2+bx+c\)</h6>
+						</li>
+					</ol>
+				</div></section>
+				
+				<section data-auto-animate><div class="callout">
+					<p>What <b>formula</b> gives us the real zeroes of a quadratic?</p>
+				</div></section>
+				<section data-auto-animate><div class="callout">
+					<p>What <b>formula</b> gives us the real zeroes of a quadratic?</p>
+					<p class="blue">Quadratic formula!<br>$$ x=\dfrac{-b \pm\sqrt{b^2-4ac}}{2a} $$</p>	
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="centerBox removeMargin">
+						<div class="imgBox">
+							<!-- <p class="xaxis">\(x\)</p>
+							<p class="yaxis">\(y\)</p> -->
+							<div class="xyplane"></div>
+							<div class="pointBox">
+								<img src="../../images/parabola.svg" style="width: 64%; bottom: 9%; left: 60%; transform: translateX(-50%);">
+								<div class="point blueFill alignTL" style="left: 40%; top: 50%;"></div>
+								<div class="point blueFill alignTL" style="left: 80%; top: 50%;"></div>
+								<p class="blue" style="bottom: 54%; left: 87%; max-width: 100%; width: 23ch;">\( x=\dfrac{-b{\color{#d10808} +\sqrt{b^2-4ac}}}{2a} \)</p>
+								<p class="blue" style="bottom: 54%; right: 67%; max-width: 100%; width: 23ch; text-align: right;">\( x=\dfrac{-b{\color{#d10808} -\sqrt{b^2-4ac}}}{2a} \)</p>
+
+								<img src="../../images/parabola-withSymmetry.svg" class="fragment" style="width: 64%; bottom: 9%; left: 60%; transform: translateX(-50%);">
+								<div class="fragment point blueFill alignTL" style="left: 60%; top: 90%;"></div>
+
+								<p class="fragment blue" style="top: 85%; left: 63%; max-width: 100%; width: 23ch;">\( x=\dfrac{-b}{2a} \)</p>
+							</div>
 						</div>
 					</div>
-					<!-- <div class="problem long withNum">
-						<div>2</div>
-						<p>??</p>
-						<p class="fragment">the highest power on the variable</p>
+					<!-- <div>
+						<b>real zeroes</b> at: $$ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} $$
+						<b>vertex</b> at: $$ x = \frac{-b \phantom{.}{\color{#cbcbcb} \pm\sqrt{b^2-4ac}}}{2a} $$
 					</div> -->
 				</div></section>
 
@@ -84,6 +136,14 @@
 					</div>
 				</div></section>
 
+				<section><div class="callout">
+					<div class="blue">
+						$$ h(t) = at^2+bt+c$$
+						<p style="font-size: 2.35rem; margin: -2.5rem 0 4rem 0; opacity: 65%;">\(a\) is \(\frac{1}{2}\cdot\)acceleration, \(b\) is velocity, \(c\) is position</p>
+					</div>
+					<p>You will <b>always</b> use either \(a=-12.5\)ft/s or \(a=-4.9\)m/s. (Negative because gravity pulls downward.)</p>
+				</div></section>
+
 				<section><div class="bodySlide">
 					<div class="workbook"><div>57</div><div></div></div>
 					<div class="problem long withNum">
@@ -99,13 +159,24 @@
 					<div class="problem long withNum">
 						<div>b</div>
 						<p>How would we find the <b>time</b> it is at a specific height?</p>
-						<div class="fragment">
+						<p class="fragment">Set the equation equal to the height and solve for \(t\)</p>
+						<!-- <div class="fragment">
 							<p>The <b>\(\boldsymbol{x}\)-value</b> of the vertex (\(h\) in vertex form)</p>
 							<ul>
 								<li><p>OR plug in \(y=\) max (or min) and solve for \(x\)</p></li>
 							</ul>
-						</div>
+						</div> -->
 					</div>
+				</div></section>
+
+				<section data-transition="fade-out slide-in"><div class="bodySlide">
+					<img src="../../images/2-5.svg">
+				</div></section>
+				<!-- <section data-transition="fade"><div class="bodySlide">
+					<img src="../../images/2-5b.svg">
+				</div></section> -->
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<img src="../../images/2-5c.svg">
 				</div></section>
 
 <!-- START ------------------------------------------------------------------------------------------------------>
@@ -136,12 +207,12 @@
 					<div class="problem long withNum">
 						<div>a</div>
 						<p><b>When</b> will it attain its maximum height?</p>
-						<p class="fragment">asking for: \(t\)-value of vertex &nbsp; <span class="fragment finalAnswer">\(t =2\) seconds</span></p>
+						<p class="fragment">asking for: time \(t\) of vertex &nbsp; <span class="fragment finalAnswer">\(t =2\) seconds</span></p>
 					</div>
 					<div class="problem long withNum">
 						<div>b</div>
 						<p>What will be the object’s <b>maximum height</b>?</p>
-						<p class="fragment">asking for: \(h\)-value of vertex &nbsp; <span class="fragment finalAnswer">\(h=144\) feet</span></p>
+						<p class="fragment">asking for: height \(h\) of vertex &nbsp; <span class="fragment finalAnswer">\(h=144\) feet</span></p>
 					</div>
 				</div></section>
 
@@ -151,12 +222,12 @@
 					<div class="problem withNum long">
 						<div>a</div>
 						<p>How <b>high</b> is the ball after 1s?</p>
-						<p class="fragment">asking for: \(h\) at \(t=1\) &nbsp; <span class="finalAnswer fragment">\(h =20.6\) meters</span></p>
+						<p class="fragment">asking for: height \(h\) at \(t=1\) &nbsp; <span class="finalAnswer fragment">\(h =20.6\) meters</span></p>
 					</div>
 					<div class="problem withNum long">
 						<div>b</div>
 						<p>Find the <b>max height</b> of the ball.</p>
-						<p class="fragment">asking for: \(h\) of vertex &nbsp; <span class="finalAnswer fragment">\(h=31.6\) meters</span></p>
+						<p class="fragment">asking for: height \(h\) of vertex &nbsp; <span class="finalAnswer fragment">\(h=31.6\) meters</span></p>
 					</div>
 				</div></section>
 				<section><div class="bodySlide">
@@ -165,7 +236,7 @@
 					<div class="problem withNum long">
 						<div>c</div>
 						<p><b>When</b> does the ball reach its maximum height?</p>
-						<p class="fragment">asking for: \(t\) of vertex &nbsp; <span class="finalAnswer fragment">\(t=2.5\) seconds</span></p>
+						<p class="fragment">asking for: time \(t\) of vertex &nbsp; <span class="finalAnswer fragment">\(t=2.5\) seconds</span></p>
 					</div>
 					<div class="problem withNum long">
 						<div>d</div>
@@ -195,7 +266,7 @@
 					<div class="problem long withNum">
 						<div>b</div>
 						<p>What is the <b>maximum height</b> that the projectile reaches?</p>
-						<p class="fragment">asking for: \(h\) of vertex &nbsp; <span class="finalAnswer fragment">\(h=196\) meters</span></p>
+						<p class="fragment">asking for: height \(h\) of vertex &nbsp; <span class="finalAnswer fragment">\(h=196\) meters</span></p>
 					</div>
 				</div></section>
 
@@ -215,12 +286,12 @@
 					<div class="problem withNum">
 						<div>c</div>
 						<p><b>When</b> will the balloon burst as it hits the ground?</p>
-						<p class="fragment">\(t=6.3\) seconds</p>
+						<p class="fragment">\(t=6.3\) sec</p>
 					</div>
 					<div class="problem withNum">
 						<div>d</div>
 						<p>For <b>how long</b> is the balloon more than 30m high?</p>
-						<p class="fragment">\(4.4\) seconds</p>
+						<p class="fragment">\(t=4.4\) sec</p>
 					</div>
 				</div></section>
 

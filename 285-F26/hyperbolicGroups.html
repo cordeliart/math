@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Hyperbolic Groups | 285 F26</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../images/favicon.png">
+
+		<link rel="stylesheet" href="../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../reveal/dist/plugin/highlight/monokai.css"/>
+
+		<style>
+			:root {
+				/* --accent: 183, 60, 231; */
+				--bodySize: 2.8rem;
+				--headerSize: 11rem;
+				--group: #b73ce7;
+				--monoid: #386ef6;
+				--semigroup: #00a597;
+			}
+			p { max-width: 40ch; margin: 0;}
+			p span {background: none; color: rgb(var(--accent));}
+			.group {color: var(--group)}
+			.semigroup {color: var(--semigroup)}
+			.monoid {color: var(--monoid)}
+			.bodySlide {font-size: var(--bodyLarge); justify-content: center !important;}
+			.bodySlide p span {color: var(--primary);}
+			.bodySlide h2 { margin-bottom: 0; }
+			.footer::after { content: 'SJSU • MATH285 Groups and Languages • Fall 2026 • Lena Pang'; }
+			.definitionText p { font-size: var(--bodyLarge); max-width: 35ch; }
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4 style="color: rgb(var(--accent)); opacity: 100%;"><b>MATH-285</b> • Groups and Languages</h4>
+					<h1>Hyperbolic Groups</h1>
+				</div></section>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Triangles</h2>
+				</div></section>
+
+				<section data-transition="fade-out slide-in">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+
+						<img src="../images/285-F26/points.svg" style="width: 700px; height: 428.5px;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLargest);">
+							<div class="definition">Geodesic Triangle</div>
+							<p>a <b>geodesic triangle \(\boldsymbol{xyz}\)</b> in \(\Gamma\) consists of <span>three points with geodesic paths</span> \([xy]\), \([yz]\), and \([xz]\)</p>
+						</div>
+					</div>
+				</section>
+				<section data-transition="fade">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+
+						<img src="../images/285-F26/mesaurements.svg" style="width: 700px; height: 428.5px;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLargest);">
+							<p>\( d_{\color{#386ef6}x} := \dfrac{d({\color{#386ef6}x},y) + d({\color{#386ef6}x},z) - d(y,z)}{2} \)</p>
+							<p>\( d_{\color{#b73ce7}y} := \dfrac{d({\color{#b73ce7}y},x) + d({\color{#b73ce7}y},z) - d(x,z)}{2} \)</p>
+							<p>\( d_{\color{#00a597}z} := \dfrac{d({\color{#00a597}z},y) + d({\color{#00a597}z},x) - d(x,y)}{2} \)</p>
+						</div>
+					</div>
+				</section>
+				<section data-transition="fade">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+
+						<img src="../images/285-F26/distance.svg" style="width: 700px; height: 428.5px;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLargest);">
+							<p>\( d_{\color{#386ef6}x} := \dfrac{d({\color{#386ef6}x},y) + d({\color{#386ef6}x},z) - d(y,z)}{2} \)</p>
+							<p>\( d_{\color{#b73ce7}y} := \dfrac{d({\color{#b73ce7}y},x) + d({\color{#b73ce7}y},z) - d(x,z)}{2} \)</p>
+							<p>\( d_{\color{#00a597}z} := \dfrac{d({\color{#00a597}z},y) + d({\color{#00a597}z},x) - d(x,y)}{2} \)</p>
+						</div>
+					</div>
+				</section>
+				<section data-transition="fade">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+
+						<img src="../images/285-F26/interior.svg" style="width: 700px; height: 428.5px;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLargest);">
+							<div class="definition">Interior Point</div>
+							<p>an <b>interior point</b> is geodesically equidistant from the corners, defined as:</p>
+							<p>\(d(c_x, y) = d_y\) &nbsp;and&nbsp; \(d(c_x,z) = d_z\)</p>
+							<p>\(d(c_y, x) = d_x\) &nbsp;and&nbsp; \(d(c_y,z) = d_z\)</p>
+							<p>\(d(c_z, x) = d_x\) &nbsp;and&nbsp; \(d(c_z,y) = d_y\)</p>
+						</div>
+					</div>
+				</section>
+				<section data-transition="fade">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+
+						<img src="../images/285-F26/corresponding.svg" style="width: 700px; height: 428.5px;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLargest);">
+							<div class="definition">Corresponding Points</div>
+							<p>two points on a path \([ab]\) are <b>corresponding</b> if they are equidistant from \(a\)</p>
+							<h6 style="max-width: 24ch;">Here, each \(p_i\) and \(q_i\) correspond. Also note that any two interior points correspond, too!</h6>
+						</div>
+					</div>
+				</section>
+				<section data-transition="fade-in slide-out">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+
+						<img src="../images/285-F26/corresponding2.svg" style="width: 700px; height: 428.5px;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLargest);">
+							<div class="definition">Corresponding Points</div>
+							<p>two points on a path \([ab]\) are <b>corresponding</b> if they are equidistant from \(a\)</p>
+							<h6 style="max-width: 24ch;">Here, each \(p_i\) and \(q_i\) correspond. Also note that any two interior points correspond, too!</h6>
+						</div>
+					</div>
+				</section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Slim Triangle</div>
+					<div class="definitionText">
+						<p style="max-width: 26ch;">a triangle is <b>\(\boldsymbol{\delta}\)-slim</b> if \(\exists \delta >0\) such that <span>for any point \(p\), \(\exists q\)</span> on another side such that \(d(p,q)\le\delta\)</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Thin Triangle</div>
+					<div class="definitionText">
+						<p>a triangle is <b>\(\boldsymbol{\delta}\)-thin</b> if \(\exists \delta >0\) such that \(d(p,q)\le\delta\) <span>whenever \(p\) and \(q\) correspond</span></p>
+						<h6>This is a stronger condition than slimness!</h6>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="theorem">6.1.3</div>
+					<div class="definitionText">
+						<p>Let \(xyz\) be a geodesic triangle. Then...</p>
+						<p style="margin-left: 2rem;"><span style="color: rgb(var(--theorem));" class="nobg">(i)</span> \(\delta\)-thin \(\implies\) \(\delta\)-slim</p>
+						<p style="margin-left: 2rem;"><span style="color: rgb(var(--theorem));" class="nobg">(ii)</span> \(\delta\)-slim \(\implies\) \(4\delta\)-thin</p>
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p>Let \(xyz\) be \(\delta\)-slim.</p>
+								<p>WLOG, suppose \(p \in [c_zy] \subseteq [xy]\), and let \(q\) correspond to \(p\) on \([c_xy]\).</p>
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3a.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p style="opacity: 35%;">Let \(xyz\) be \(\delta\)-slim.</p>
+								<p style="opacity: 35%;">WLOG, suppose \(p \in [c_zy] \subseteq [xy]\), and let \(q\) correspond to \(p\) on \([c_xy]\).</p>
+								<p style="max-width: 28ch;">By \(\delta\)-slimness of \(xyz\), \(\exists r \in [yz] \cup [xz]\) with \(d(p,r) \leq \delta\).</p>
+								<p>So we'll consider two cases: \(x\in[yz]\) and \(x\in[xz]\).</p>
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3b.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p><b>Case 1</b>: \(r \in [yz]\), so:</p>
+								<p>\( d(r, q) = |d(r, y) - d(q, y)| = |d(r, y) - d(p, y)|\)</p>
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3c.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p><b>Case 1</b>: \(r \in [yz]\), so:</p>
+								<p>\( d(r, q) = |d(r, y) - d(q, y)| = |d(r, y) - d(p, y)|\)</p>
+								<p>By the triangle inequality, we get:</p>
+								<p>\( d(p, y) - d(r, p) \leq d(r, y) \leq d(p, y) + d(r, p)\)</p>
+								<p>So we get \(d(r, q) \leq \delta\). So \(d(p, q)\leq 2\delta\).</p>
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3c.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p><b>Case 2</b>: \(r \in [xz]\), so:</p>
+								<p>\( d(r, q) = |d(r, x) - d(q, x)| = |d(r, x) - d(p, x)|\)</p>
+								<p>Similarly, by the triangle inequality, we get:</p>
+								<p>\( d(p, x) - d(r, p) \leq d(r, x) \leq d(p, x) + d(r, p)\)</p>
+								<!-- <p>So \( |d(r, x) - d(p, x)|\leq \delta \).</p> -->
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3d.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p><b>Case 2</b>: \(r \in [xz]\), so:</p>
+								<p>\( d(r, q) = |d(r, x) - d(q, x)| = |d(r, x) - d(p, x)|\)</p>
+								<p>Similarly, by the triangle inequality, we get:</p>
+								<p>\( d(p, x) - d(r, p) \leq d(r, x) \leq d(p, x) + d(r, p) \)</p>
+								<p>So \( |d(r, x) - d(p, x)|\leq \delta \).</p>
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3d.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p>We define:</p>
+
+								<div style="display: flex; flex-flow: row; gap: var(--spaceLargest);">
+									<p>\(  \delta_1 := d(p, x) - d_x\) <span class="fragment">\(\\ \phantom{\delta_1.} =d(p, c_z)\geq 0\)</span> <span class="fragment">\( \\ \phantom{\delta_1.}= d_y - d(p, y)\)</span></p>
+									<p>\(\delta_2 := d(r, x) - d_x\) <span class="fragment">\(\\ \phantom{\delta_1.}= d_z - d(r,z) \)</span></p>
+								</div>
+								<p class="fragment">\( |\delta_1 - \delta_2|\leq \delta \)</p>
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3e.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p>We define:</p>
+
+								<div style="display: flex; flex-flow: row; gap: var(--spaceLargest);">
+									<p>\(  \delta_1 := d(p, x) - d_x\) <span>\(\\ \phantom{\delta_1.} =d(p, c_z)\geq 0\)</span> <span>\( \\ \phantom{\delta_1.}= d_y - d(p, y)\)</span></p>
+									<p>\(\delta_2 := d(r, x) - d_x\) <span>\(\\ \phantom{\delta_1.}= d_z - d(r,z) \)</span></p>
+								</div>
+
+								<p>\( |\delta_1 - \delta_2|\leq \delta \)</p>
+
+								<p>By the triangle inequality:</p>
+
+								<p style="margin-top:-1rem;">\(  d(y,z) \leq d(p, y) + d(p,r) + d(r,z) \)</p>
+
+								<p class="fragment" style="margin-top:-1rem;">\( d_y + d_z \leq d_y - \delta_1 + d(p,r) + d_z - \delta_2\)</p>
+
+								<p class="fragment" style="margin-top:-1rem;">\( \implies \delta_1 + \delta_2 \leq d(p,r) \leq \delta  \)</p>
+
+								<p class="fragment" style="margin-bottom: -3rem;">\( \delta_1 = d(p, c_z) \leq \delta\)</p>
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3e.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div style="display: grid; grid-template-columns: 700px 1fr; gap: var(--spaceLarger); align-items: center;">
+						<div style="display: flex; flex-flow: column; gap: var(--spaceLarge);">
+							<div data-id="top" class="proof">6.1.3 (ii)</div>
+							<div class="proofText">
+								<p>If \( d_y = d(c_z, y) \leq \delta \), then \(d(p, q) \leq 2\delta \) and \(d_y >\delta \).</p>
+								<p class="fragment">So, we can say \(d_y ≥ \delta  + \varepsilon\) for some \( \varepsilon > 0\). Let \(p'\) be the point on \([c_zy]\) at distance \(\delta  + \varepsilon\) from \(c_z\) and let \(q'\) correspond to \(p'\) on \([c_xy]\).</p>
+								<p class="fragment">Since \(d(p', c_z) >\delta \), Case 1 must apply to \(p'\), and hence \(d(p', q') \leq 2\delta \).</p>
+								<p class="fragment" style="width: 150%; max-width: 36ch;">We can see \( d(q, q') = d(p, p') \leq d(c_z, p') = \delta  + \varepsilon\), and so \(d(p, q) \leq 4\delta  + 2\varepsilon\). Since this holds \(\forall\varepsilon>0\), we can say \(d(p, q) \leq 4\delta \). \(\blacksquare\)</p>
+							</div>
+						</div>
+						<img src="../images/285-F26/6-1-3f.svg" style="width: 700px; height: 428.5px;">
+					</div>
+				</div></section>
+
+<!-- HYPERBOLIC ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Inner Product</h2>
+				</div></section>
+				
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Inner Product</div>
+					<div class="definitionText">
+						<p>Given a base point \(w\) and some \(x,y\) in a geodesic metric space \(\Gamma\), the <b>inner product</b> is defined:</p>
+						<p>\( (x.y)_w = \dfrac{1}{2} \big(d(x,w) + d(w, y) - d(x, y)\big) \)</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Inner Product</div>
+					<div class="definitionText">
+						<p style="opacity: 35%;">Given a base point \(w\) and some \(x,y\) in a geodesic metric space \(\Gamma\), the <b>inner product</b> is defined:</p>
+						<p style="opacity: 35%;">\( (x.y)_w = \dfrac{1}{2} \big(d(x,w) + d(w, y) - d(x, y)\big) \)</p>
+						<p>The inner product (with respect to \(w\)) is <br><b>\(\boldsymbol{\delta}\)-hyperbolic</b> if \( \forall x, y,z \in \Gamma\):</p>
+						<p>\((x.y)_w \leq \min\{(x.z)_w, (z.y)_w\}-\delta \)</p>
+					</div>
+				</div></section>
+
+<!-- HYPERBOLIC ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Defining Hyperbolicity</h2>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Hyperbolic (Metric Space)</div>
+					<div class="definitionText">
+						<p>a geodesic metric space \((\Gamma,d)\) is <b>hyperbolic</b> if there exists a \(\delta\) such that all geodesic triangles in \(\Gamma\) are \(\delta\)-slim (or \(\delta\)-thin, for a modified \(\delta\))</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Hyperbolic (Metric Space)</div>
+					<div class="definitionText">
+						<p>a geodesic metric space \((\Gamma,d)\) is <b>hyperbolic</b> if there exists a \(\delta\) such that all geodesic triangles in \(\Gamma\) are \(\delta\)-slim (or \(\delta\)-thin, for a modified \(\delta\))</p>
+						<p style="max-width: 30ch;">OR, equivalently, it has an inner product that is \(\delta\)-hyperbolic</p>
+					</div>
+				</div></section>
+
+				<!-- <section><div class="bodySlide">
+					<div class="definition">Hyperbolic (Group)</div>
+					<div class="definitionText">
+						<p>a (not necessarily finite) group is <b>hyperbolic</b> if it has a hyperbolic inner product</p>
+					</div>
+				</div></section> -->
+
+				<section data-auto-animate data-auto-animate-restart><div class="bodySlide">
+					<div data-id="top" class="definition">Hyperbolic (Group)</div>
+					<div class="definitionText">
+						<p>a finitely-generated group \(G=\langle X\rangle\) is considered <b>word-hyperbolic</b> if its Cayley graph \(\Gamma(G,X)\) is hyperbolic with respect to the word metric (where all edges have length 1)</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Hyperbolic (Group)</div>
+					<div class="definitionText">
+						<p>a finitely-generated group \(G=\langle X\rangle\) is considered <b>word-hyperbolic</b> if its Cayley graph \(\Gamma(G,X)\) is hyperbolic with respect to the word metric (where all edges have length 1)</p>
+						<h6 style="max-width: 42ch;">Note: these definitions can be applied to infinitely generated groups, but we don't care about those in this class.</h6>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Nice things about Hyperbolicity</h2>
+					<ul>
+						<li><p>invariant under <b>change of generators</b></p></li>
+						<li>
+							<p>invariant under <b>quasi-isometry</b> (because of linear Dehn function)</p>
+							<ul><li><p>if two geodesic metric spaces are quasi-isometric and one is hyperbolic, so is the other</p></li></ul>
+						</li>
+					</ul>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="theorem">Milnor-Švarc Lemma</div>
+					<div class="definitionText">
+						<p style="max-width: 32ch;">If a group \(G\) acts geometrically (cocompactly & discretely by isometries) on a geodesic metric space \(\Gamma\). Then \(G\) is <b>finitely generated</b> and <b>quasi-isometric</b> to \(\Gamma\).</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="theorem">Milnor-Švarc Lemma</div>
+					<div class="definitionText">
+						<p style="max-width: 32ch;">If a group \(G\) acts geometrically (cocompactly & discretely by isometries) on a geodesic metric space \(\Gamma\). Then \(G\) is <b>finitely generated</b> and <b>quasi-isometric</b> to \(\Gamma\).</p>
+						<p>Thus if \(\Gamma\) is hyperbolic, then so is \(G\).</p>
+						<!-- <h6 style="max-width: 56ch; margin-bottom: -3rem;">"Since the fundamental group of a path connected, locally path connected and locally simply connected topological space \(X\) acts freely by deck transformations on the universal covering space of \(X\) with quotient space \(X\), it follows that the fundamental group of a negatively curved compact manifold or orbifold or convex manifold with boundary is hyperbolic." (GLA 154)</h6> -->
+					</div>
+				</div></section>
+
+			</div>
+		</div>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+
+		<div class="footer"></div>
+		<!-- <a href="../index.html"><div class="home"></div></a> -->
+		<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/dist/plugin/zoom.js"></script>
+		<script src="../reveal/dist/plugin/notes.js"></script>
+		<script src="../reveal/dist/plugin/search.js"></script>
+		<script src="../reveal/dist/plugin/markdown.js"></script>
+		<script src="../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../scripts.js"></script>
+	</body>
+</html>

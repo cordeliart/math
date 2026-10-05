@@ -346,7 +346,7 @@ sub { vertical-align: sub; font-size: smaller }
 
 /* labelled slides ----------------------------------------------------------------------------------------------------------- */
 
-.definition, .theorem, .workbook {
+.definition, .theorem, .workbook, .proof {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -356,7 +356,7 @@ sub { vertical-align: sub; font-size: smaller }
     color: rgb(var(--definition));
     font-family: var(--fontSecondary);
     height: 3.5rem;
-} .definition::before, .theorem::before {
+} .definition::before, .theorem::before, .proof::before {
     background-color: rgb(var(--definition));
     width: fit-content;
     padding: var(--spaceSmall);
@@ -385,6 +385,24 @@ sub { vertical-align: sub; font-size: smaller }
     content: 'Theorem';
     background-color: rgb(var(--theorem));
 } .theorem h4 { color: var(--primary); }
+
+.proof { color: rgb(var(--theorem)); }
+.proof::before {
+    content: 'Proof';
+    background-color: var(--background);
+    border: rgb(var(--theorem)) 2px solid;
+    color: rgb(var(--theorem));
+} .proof h4 { color: var(--primary); }
+.proofText {
+    height: calc(68vh - 3.5rem);
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-flow: column;
+    gap: var(--spaceLarge);
+    justify-content: center;
+} .proofText p {
+    font-size: var(--bodySmaller);
+}
 
 .workbook { margin-bottom: 2rem; }
 .workbook>*:first-child {

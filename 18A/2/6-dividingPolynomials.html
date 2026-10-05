@@ -38,12 +38,12 @@
 					<div class="problem long withNum">
 						<div>1</div>
 						<p>What do you call a number that’s <b>being</b> divided? (Like \(4\) in \(4\div 2\))</p>
-						<p class="fragment">the dividend</p>
+						<p class="fragment">The <b>dividend</b></p>
 					</div>
 					<div class="problem long withNum">
 						<div>2</div>
 						<p><b>Workbook Pg.62 #1</b> (DO NOT TURN IN):<br>Solve \(123\div 7\) using long division.</p>
-						<p class="fragment">\(17\) with a remainder of \(4/7\)</p>
+						<p class="fragment"><span class="finalAnswer">\( 17 +4/7\)</span>, or \(17\) with a remainder of \(4\)</p>
 					</div>
 				</div></section>
 
@@ -55,34 +55,173 @@
 
 <!-- START ------------------------------------------------------------------------------------------------------>
 
-				<section data-transition="slide-in fade-out"><div class="bodySlide">
+				<section data-auto-animate><div class="bodySlide">
 					<h2>Division Algorithm</h2>
-					<div class="blue">
+					<div data-id="section1" style="margin: 3.5rem 0 -7.35rem 0">
 						$$ \text{dividend} = \text{divisor} \cdot \text{quotient} + \text{remainder}$$
-						$$ \frac{123}{7} = 17 + \frac{4}{7} $$
+					</div>
+					<div class="blue" style="display: flex; flex-flow: row nowrap; justify-content: center; align-items: center; gap: var(--spaceLargest);">
+						<div data-id="uh">
+							$$ \frac{123}{7} = 17 + \frac{4}{7} $$
+						</div>
 					</div>
 				</div></section>
-				<section data-transition="fade-in slide-out"><div class="bodySlide">
+				<section data-auto-animate><div class="bodySlide">
 					<h2>Division Algorithm</h2>
-					<div class="blue">
+					<div data-id="section1" style="margin: 3.5rem 0 -7.35rem 0">
 						$$ \text{dividend} = \text{divisor} \cdot \text{quotient} + \text{remainder}$$
-						$$ 123 = 7\cdot 17 +4$$
+					</div>
+					<div class="blue" style="display: flex; flex-flow: row nowrap; justify-content: center; align-items: center; gap: var(--spaceLargest);">
+						<div data-id="uh" style="opacity: 50%;">
+							$$ \frac{123}{7} = 17 + \frac{4}{7} $$
+						</div>
+						<div>➔</div>
+						<div>
+							$$ 123 = 7\cdot 17 +4$$
+						</div>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<h2>Division Algorithm</h2>
+					<div data-id="section1" style="margin: 3.5rem 0 -7.35rem 0">
+						$$ \text{dividend} = \text{divisor} \cdot \text{quotient} + \text{remainder}$$
+					</div>
+					<div class="blue" style="display: flex; flex-flow: row nowrap; justify-content: center; align-items: center; gap: var(--spaceLargest);">
+						<div style="opacity: 50%;">
+							$$ \frac{7}{2} = 3 + \frac{1}{2} $$
+						</div>
+						<div>➔</div>
+						<div>
+							$$ 7 = 2\cdot 3 +1$$
+						</div>
 					</div>
 					<p class="fragment">If all the numbers are positive and the remainder \(<\) divisor, then this equation is <b>unique</b> for every pair of dividend and divisor.</p>
 				</div></section>
 
-				<section><div class="bodySlide">
-					
+				<section><div class="slideRow">
+					<img src="../../images/2-6-ex2.svg">
+				</div></section>
+
+<!-- EXAMPLES ------------------------------------------------------------------------------------------------------>
+
+				<section data-transition="fade-out slide-in"><div class="bodySlide">
+					<h2>Division Algorithm: Polynomials</h2>
+					<div class="row">
+						<div>
+							<ol>
+								<li><p>Write in descending order. Fill in any <b>missing terms</b> with zero.</p></li>
+								<li style="opacity: 0;"><p>What do you need to match <b>first term ONLY</b>? Put that on top.</p></li>
+								<li style="opacity: 0;"><p><b>Distribute</b> that term to entire divisor, & line up underneath the dividend.</p></li>
+								<li style="opacity: 0;"><p><b>Subtract</b> expression from dividend.</p></li>
+								<li style="opacity: 0;width: 2rem;"><p style="max-width: 34ch; width: 34ch;"><b>Repeat</b> until remaining degree \(<\) divisor.</p></li>
+							</ol>
+						</div>
+						<img src="../../images/2-6-ex3a.svg" style="width: 40rem;">
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<h2>Division Algorithm: Polynomials</h2>
+					<div class="row">
+						<div>
+							<ol>
+								<li><p>Write in descending order. Fill in any <b>missing terms</b> with zero.</p></li>
+								<li style="opacity: 0;"><p>What do you need to match <b>first terms ONLY</b>? Put that on top.</p></li>
+								<li style="opacity: 0;"><p><b>Distribute</b> that term to entire divisor, & line up underneath the dividend.</p></li>
+								<li style="opacity: 0;"><p><b>Subtract</b> expression from dividend.</p></li>
+								<li style="opacity: 0;width: 2rem;"><p style="max-width: 34ch; width: 34ch;"><b>Repeat</b> until remaining degree \(<\) divisor.</p></li>
+							</ol>
+						</div>
+						<img src="../../images/2-6-ex3b.svg" style="width: 40rem;">
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<h2>Division Algorithm: Polynomials</h2>
+					<div class="row">
+						<div>
+							<ol>
+								<li><p>Write in descending order. Fill in any <b>missing terms</b> with zero.</p></li>
+								<li><p>What do you need to match <b>first terms ONLY</b>? Put that on top.</p></li>
+								<li style="opacity: 0;"><p><b>Distribute</b> that term to entire divisor, & line up underneath the dividend.</p></li>
+								<li style="opacity: 0;"><p><b>Subtract</b> expression from dividend.</p></li>
+								<li style="opacity: 0;width: 2rem;"><p style="max-width: 34ch; width: 34ch;"><b>Repeat</b> until remaining degree \(<\) divisor.</p></li>
+							</ol>
+						</div>
+						<img src="../../images/2-6-ex3c.svg" style="width: 40rem;">
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<h2>Division Algorithm: Polynomials</h2>
+					<div class="row">
+						<div>
+							<ol>
+								<li><p>Write in descending order. Fill in any <b>missing terms</b> with zero.</p></li>
+								<li><p>What do you need to match <b>first terms ONLY</b>? Put that on top.</p></li>
+								<li style="opacity: 0;"><p><b>Distribute</b> that term to entire divisor, & line up underneath the dividend.</p></li>
+								<li style="opacity: 0;"><p><b>Subtract</b> expression from dividend.</p></li>
+								<li style="opacity: 0;width: 2rem;"><p style="max-width: 34ch; width: 34ch;"><b>Repeat</b> until remaining degree \(<\) divisor.</p></li>
+							</ol>
+						</div>
+						<img src="../../images/2-6-ex3c2.svg" style="width: 40rem;">
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<h2>Division Algorithm: Polynomials</h2>
+					<div class="row">
+						<div>
+							<ol>
+								<li><p>Write in descending order. Fill in any <b>missing terms</b> with zero.</p></li>
+								<li><p>What do you need to match <b>first terms ONLY</b>? Put that on top.</p></li>
+								<li><p><b>Distribute</b> that term to entire divisor, & line up underneath the dividend.</p></li>
+								<li style="opacity: 0;"><p><b>Subtract</b> expression from dividend.</p></li>
+								<li style="opacity: 0;width: 2rem;"><p style="max-width: 34ch; width: 34ch;"><b>Repeat</b> until remaining degree \(<\) divisor.</p></li>
+							</ol>
+						</div>
+						<img src="../../images/2-6-ex3d.svg" style="width: 40rem;">
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<h2>Division Algorithm: Polynomials</h2>
+					<div class="row">
+						<div>
+							<ol>
+								<li><p>Write in descending order. Fill in any <b>missing terms</b> with zero.</p></li>
+								<li><p>What do you need to match <b>first terms ONLY</b>? Put that on top.</p></li>
+								<li><p><b>Distribute</b> that term to entire divisor, & line up underneath the dividend.</p></li>
+								<li><p><b>Subtract</b> expression from dividend.</p></li>
+								<li style="opacity: 0;width: 2rem;"><p style="max-width: 34ch; width: 34ch;"><b>Repeat</b> until remaining degree \(<\) divisor.</p></li>
+							</ol>
+						</div>
+						<img src="../../images/2-6-ex3e.svg" style="width: 40rem;">
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<h2>Division Algorithm: Polynomials</h2>
+					<div class="row">
+						<div>
+							<ol>
+								<li><p>Write in descending order. Fill in any <b>missing terms</b> with zero.</p></li>
+								<li><p>What do you need to match <b>first terms ONLY</b>? Put that on top.</p></li>
+								<li><p><b>Distribute</b> that term to entire divisor, & line up underneath the dividend.</p></li>
+								<li><p><b>Subtract</b> expression from dividend.</p></li>
+								<li style="width: 2rem;"><p style="max-width: 34ch; width: 34ch;"><b>Repeat</b> until remaining degree \(<\) deg. of divisor.</p></li>
+							</ol>
+						</div>
+						<img src="../../images/2-6-ex3e.svg" style="width: 40rem;">
+					</div>
 				</div></section>
 
 				<section data-transition="slide-in fade-out"><div class="bodySlide">
 					<div class="workbook"><div>64</div><div>Example 3</div></div>
-					<img src="../../images/2-6-ex3-1.svg" style="height: 65vh;">
+					<img src="../../images/2-6-ex3e.svg" style="height: 65vh;">
 				</div></section>
-
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="workbook"><div>64</div><div>Example 3</div></div>
+					<img src="../../images/2-6-ex3.svg" style="height: 65vh;">
+				</div></section>
 				<section data-transition="fade-in slide-out"><div class="bodySlide">
 					<div class="workbook"><div>64</div><div>Example 3</div></div>
-					<img src="../../images/2-6-ex3-2.svg" style="height: 65vh;">
+					<p>Written in division algorithm form (\( d=pq+r\)), we get:</p>
+					$$ 3x^2+5x-4 = (x+2)(3x^2-x+2) -8$$
 				</div></section>
 
 				<section><div class="callout">
@@ -93,20 +232,42 @@
 				
 <!-- EXAMPLES ------------------------------------------------------------------------------------------------------>
 
-				<section data-background="rgb(var(--accent))"><div class="cover">
-					<h2>Split into Groups</h2>
-				</div></section>
-
 				<section data-transition="slide-in fade-out"><div class="bodySlide">
 					<div class="workbook"><div>65</div><div>Example 4</div></div>
 					<p>Divide \(f(x) = 2x^3 - 17x^2 + 38x - 4\) by \(d(x) = x - 5\).</p>
-					<img src="../../images/2-6-ex4-1.svg" style="height: 50vh;">
+					<div class="row" style="gap: var(--spaceLargest);">
+						<img src="../../images/2-6-ex4-1.svg" style="height: 50vh; width: auto;">
+						<p style="opacity: 0; max-width: 30ch;">\( f(x) = (x - 5)(2x^2 - 7x + 3) + 11 \)</p>
+					</div>
 				</div></section>
 				<section data-transition="fade-in slide-out"><div class="bodySlide">
 					<div class="workbook"><div>65</div><div>Example 4</div></div>
 					<p>Divide \(f(x) = 2x^3 - 17x^2 + 38x - 4\) by \(d(x) = x - 5\).</p>
-					<img src="../../images/2-6-ex4-2.svg" style="height: 50vh;">
-					<p class="fragment blue finalAnswer">\( f(x) = (x - 5)(2x^2 - 7x + 3) + 11 \)</p>
+					<div class="row" style="gap: var(--spaceLargest);">
+						<img src="../../images/2-6-ex4-2.svg" style="height: 50vh; width: auto;">
+						<p class="fragment blue finalAnswer" style="margin-top: -2rem; max-width: 30ch;">\( f(x) = (x - 5)(2x^2 - 7x + 3) + 11 \)</p>
+					</div>
+				</div></section>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Split into Groups</h2>
+				</div></section>
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Group Work</h2>
+						<p>Each group will either solve or check one problem on the board.</p>
+						<p>If you finish your assigned problem, <b>write your answer on the board</b>, and then move on to the next one!</p>
+						<p>Reconvene at 12:30!</p>
+					</div>
+					<div style="padding: 1.35rem 1.65rem 0.5rem 1.65rem; border: rgb(var(--accent)) 2px solid; border-radius: 1.35rem;" class="blue">
+						<ol style="margin-top:0">
+							<li style="margin-bottom: 1.5rem;"><p>Write in descending order. Fill in any <b>missing terms</b> with zero.</p></li>
+							<li style="margin-bottom: 1.5rem;"><p>What do you need to match <b>first terms ONLY</b>? Put that on top.</p></li>
+							<li style="margin-bottom: 1.5rem;"><p><b>Distribute</b> that term to entire divisor, & line up underneath the dividend.</p></li>
+							<li style="margin-bottom: 1.5rem;"><p><b>Subtract</b> the entire expression from the dividend.</p></li>
+							<li style="margin-bottom: 1.5rem;"><p><b>Repeat 2-4</b> until remaining degree is \(<\) degree of divisor.</p></li>
+						</ol>
+					</div>
 				</div></section>
 				
 				<section><div class="bodySlide">

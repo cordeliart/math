@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>3.3 Graphing Functions | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>?</p>
+						<p class="fragment">??</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>?</p>
+						<p class="fragment">??</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, October 18, 2026</h4>
+					<h1><span>3.3</span> Graphing Functions</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 89</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<h2>Graphing Equations</h2>
+					<p style="max-width: 35ch;">When we worked with \(x\) and \(y\), the horizontal axis was the independent variable \(x\), and the vertical axis was the <b>dependent variable</b> \(y\).</p>
+					<p style="max-width: 35ch;">Now, we're going to switch to the vertical axis being the <b>outputs of the function</b>, \(f(x)\). This value still depends on \(x\).</p>
+				</div></section>
+				<section><div class="bodySlide">
+					<h2>Function Notation (Review)</h2>
+					<p style="max-width: 40ch;">We write \(f(x)\) to represent the output of the a function, when the input is \(x\). (Recall: \(f(\)input\()=\) output.)</p>
+					<p style="max-width: 40ch;">Our ordered pairs on the graph, now, will be of the form: \(\big(x,f(x)\big)\) instead of \(\big(x,y\big)\).</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>89</div><div>Example 1</div></div>
+					<p style="max-width: 50ch;">Below is a sketch of the graph of the function \(f(x) = 7x^3 - 45x + 320\) (not to scale). Find the <b>coordinates</b> of the indicated point.</p>
+					<div class="col2">
+						<img src="../../images/3-3-ex1.svg">
+						<div class="blue fragment columnWorkbook">
+							<p>Our coordinate will be of the form \(\big(x,f(x)\big)\), and we know \(x=4\).</p>
+							<p class="fragment">Plugging that in to solve for the 2nd number, we get:</p>
+							<p class="fragment">\(f(4)=7(4)^3-45(4)+320\) <span class="fragment"> \( = 588\)</span></p>
+							<p class="fragment finalAnswer">\( (4,588) \)</p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- DOMAIN & RANGE ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="definition">Domain (Review from 3.1)</div>
+					<div class="definitionText">
+						<p>the <b>domain</b> \(D\) of a function is the collection of <span>all valid inputs</span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Range (Review from 3.1)</div>
+					<div class="definitionText">
+						<p>the <b>range</b> \(R\) of a function is the collection of <span>all possible outputs</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>90</div><div>Example 2</div></div>
+					<p>Find the domain & range.</p>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<div class="problem withNum">
+								<div>a</div>
+								<div class="columnWorkbook">
+								<p>Domain:</p>
+								<p>Range:</p>
+								</div>
+								<div class="fragment columnWorkbook">
+									<p>\([-3,4]\)</p>
+									<p>\([-2,2]\)</p>
+								</div>
+							</div>
+							<div class="problem withNum">
+								<div>b</div>
+								<div class="columnWorkbook">
+									<p>Domain:</p>
+									<p>Range:</p>
+								</div>
+								<div class="fragment columnWorkbook">
+									<p>\((-\infty,\infty)\)</p>
+									<p>\((-\infty,\infty)\)</p>
+								</div>
+							</div>
+						</div>
+						<div class="columnWorkbook">
+							<div class="problem withNum">
+								<div>c</div>
+								<div class="columnWorkbook">
+								<p>Domain:</p>
+								<p>Range:</p>
+								</div>
+								<div class="fragment columnWorkbook">
+									<p>\((-\infty,\infty)\)</p>
+									<p>\([1,\infty)\)</p>
+								</div>
+							</div>
+							<div class="problem withNum">
+								<div>d</div>
+								<div class="columnWorkbook">
+									<p>Domain:</p>
+									<p>Range:</p>
+								</div>
+								<div class="fragment columnWorkbook">
+									<p>\((-\infty,1]\cup (1,\infty)\)</p>
+									<p>\((-\infty,\infty)\)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+<!-- VERTICAL LINE TEST ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="definition">Function (Review from 3.1)</div>
+					<div class="definitionText">
+						<p>a <b>function</b> (of \(x\)) is an equation that assigns each element in the domain to <span>exactly one element</span> in the range</p>
+						<!-- <div class="exampleBox">Ex: \(7x^3+x+1\)</div> -->
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Vertical Line Test</div>
+					<div class="definitionText">
+						<p style="max-width: 32ch;">the <b>vertical line test</b> checks whether a graph is a <span>function or not</span>; if it fails, then there is an input that has more than one output</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>91</div><div>Example 3</div></div>
+					<p>Determine which of the graphs are functions using the <b>Vertical Line Test</b>. If it fails, draw a vertical line at one spot where the test fails.</p>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<div class="problem withNum">
+								<div>a</div>
+								<p>Yes</p>
+							</div>
+							<div class="problem withNum">
+								<div>b</div>
+								<p>NO!</p>
+							</div>
+						</div>
+						<div class="columnWorkbook">
+							<div class="problem withNum">
+								<div>c</div>
+								<p>NO!</p>
+							</div>
+							<div class="problem withNum">
+								<div>d</div>
+								<p>Yes</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+<!-- INCREASING ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="definition">Increasing</div>
+					<div class="definitionText">
+						<p>a function is <b>increasing</b> if, as the inputs increase, the <span>outputs increase</span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Decreasing</div>
+					<div class="definitionText">
+						<p>a function is <b>decreasing</b> if, as the inputs increase, the <span>outputs decrease</span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Constant</div>
+					<div class="definitionText">
+						<p>a function is <b>constant</b> if, as the inputs increase, the <span>outputs stay the same</span></p>
+					</div>
+				</div></section>
+
+<!-- MAXIMA/MINIMA ------------------------------------------------------------------------------------------------------>
+				
+				<section><div class="bodySlide">
+					<div class="definition">Local Maximum</div>
+					<div class="definitionText">
+						<p>a <b>local maximum</b> is where the function switches from <span>incresaing to decreasing</span> (like the top of a hill)</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Local Maximum</div>
+					<div class="definitionText">
+						<p>a <b>local minimum</b> is where the function switches from <span>decreasing to increasing</span> (like the bottom of a valley)</p>
+					</div>
+				</div></section>
+
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="workbook"><div>92</div><div>Example 4</div></div>
+					<div class="row" style="gap:0;">
+						<div class="columnWorkbook" style="max-width: 44vw;">
+							<div class="problem withNum long">
+								<div>a</div>
+								<p>What are the intervals (of \(x\)) where the function is <b>increasing</b>?</p>
+								<p class="fragment"> \( (-5, -2) \cup (4, 7)\)</p>
+							</div>
+							<div class="problem withNum long">
+								<div>b</div>
+								<p>What are the intervals (of \(x\)) where the function is <b>decreasing</b>?</p>
+								<p class="fragment">\( (-\infty, -5) \cup (-2, 4) \cup (7, 8)\)</p>
+							</div>
+						</div>
+						<img src="../../images/3-3-ex4a.svg" style="width: 44vw;">
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="workbook"><div>92</div><div>Example 4</div></div>
+					<div class="row" style="gap:0;">
+						<div class="columnWorkbook" style="max-width: 44vw;">
+							<div class="problem withNum long">
+								<div>a</div>
+								<p>What are the intervals (of \(x\)) where the function is <b>increasing</b>?</p>
+								<p> \( (-5, -2) \cup (4, 7)\)</p>
+							</div>
+							<div class="problem withNum long">
+								<div>b</div>
+								<p>What are the intervals (of \(x\)) where the function is <b>decreasing</b>?</p>
+								<p>\( (-\infty, -5) \cup (-2, 4) \cup (7, 8)\)</p>
+							</div>
+						</div>
+						<img src="../../images/3-3-ex4b.svg" style="width: 44vw;">
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="workbook"><div>92</div><div>Example 4</div></div>
+					<div class="row" style="gap:0;">
+						<div class="columnWorkbook" style="max-width: 44vw;">
+							<div class="problem withNum long">
+								<div>c</div>
+								<p>At what \(x\) are the <b>relative maximum(s)</b>?</p>
+								<p class="fragment">\(x=-2,7\) (we don't include \(-\infty\) because it's not a point!)</p>
+							</div>
+							<div class="problem withNum long">
+								<div>d</div>
+								<p>At what \(x\) are the <b>relative minimum(s)</b>?</p>
+								<p class="fragment">\(x=-5,4\)</p>
+							</div>
+						</div>
+						<img src="../../images/3-3-ex4b.svg" style="width: 44vw;">
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="workbook"><div>92</div><div>Example 4</div></div>
+					<div class="row" style="gap:0;">
+						<div class="columnWorkbook" style="max-width: 44vw;">
+							<div class="problem withNum long">
+								<div>c</div>
+								<p>At what \(x\) are the <b>relative maximum(s)</b>?</p>
+								<p>\(x=-2,7\) (we don't include \(-\infty\) because it's not a point!)</p>
+							</div>
+							<div class="problem withNum long">
+								<div>d</div>
+								<p>At what \(x\) are the <b>relative minimum(s)</b>?</p>
+								<p>\(x=-5,4\)</p>
+							</div>
+						</div>
+						<img src="../../images/3-3-ex4c.svg" style="width: 44vw;">
+					</div>
+				</div></section>
+
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 3.3 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>3.5 Algebra with Functions | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>?</p>
+						<p class="fragment">??</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>?</p>
+						<p class="fragment">??</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, October 18, 2026</h4>
+					<h1><span>3.5</span> Algebra with Functions</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 101</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<h2>Adding, Subtracting, Multiplying, & Dividing</h2>
+					<p>We have <b>shortahnds</b> for operations with functions:</p>
+					<ul>
+						<li class="fragment"><p>\( (f+g)(x) = f(x) + g(x) \)</p></li>
+						<li class="fragment"><p>\( (f-g)(x) = f(x) - g(x) \)</p></li>
+						<li class="fragment"><p>\( (fg) (x) = f(x) \cdot g(x) \)</p></li>
+						<li class="fragment"><p>\( \left(\frac{f}{g}\right)(x) = f(x) / g(x)\) where \(g(x)\neq 0\)</p></li>
+					</ul>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>101</div><div>Example 1</div></div>
+					<p>Let \(f(x) = x + 3\) and let \( g(x) = \dfrac{1}{x + 3} \).</p>
+					<div class="problem withNum">
+						<div>a</div>
+						<p>\( (f+g)(x) \)</p>
+						<p class="fragment">\( = x + 3 + \frac{1}{x+3}\)</p>
+					</div>
+					<div class="problem withNum">
+						<div>b</div>
+						<p>\( (f-g)(x) \)</p>
+						<p class="fragment">\( = x + 3 - \frac{1}{x+3}\)</p>
+					</div>
+					<div class="problem withNum">
+						<div>c</div>
+						<p>\( (fg)(x) \)</p>
+						<p class="fragment">\( = (x + 3) \cdot \left(\frac{1}{x+3} \right) = 1\) with \(x\neq -3\)</p>
+					</div>
+					<div class="problem withNum">
+						<div>d</div>
+						<p>\( \left(\frac{f}{g}\right)(x) \)</p>
+						<p class="fragment">\( = (x + 3)\div \left( \frac{1}{x+3} \right) = (x + 3)\cdot \left( \frac{x+3}{1} \right) = x^2 + 6x + 9\)</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>103</div><div>Example 2</div></div>
+					<p>Fully simplify the following expressions for \(f(x) = x^2 - 4x + 7\).</p>
+					<div class="problem withNum">
+						<div>a</div>
+						<p>\( f(3) \)</p>
+						<p class="fragment">\( =4 \)</p>
+					</div>
+					<div class="problem withNum">
+						<div>b</div>
+						<p>\( f(3+h) \)</p>
+						<p class="fragment">\( =h^2+2h+4 \)</p>
+					</div>
+					<div class="problem withNum">
+						<div>c</div>
+						<p>\( f(3+h)-f(3) \)</p>
+						<p class="fragment">\( = h^2+2h\)</p>
+					</div>
+					<div class="problem withNum">
+						<div>d</div>
+						<p>\( \dfrac{f(3+h)-f(3)}{h} \)</p>
+						<p class="fragment">\( = h+2\) with \(h\neq 0\)</p>
+					</div>
+				</div></section>
+
+<!-- COMPOSITION ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>104</div><div>Example 3</div></div>
+					<p>Functions have a <b>new, unique operation</b> which we cannot do with regular numbers. A function can take in a number and apply some operations to it to get a new number. Let’s think of an example where we function where we purchased several items \(S(x)\) and a function where we received a discount \(D(x)\).</p>
+					<p>Starting with the items we purchased \(x =\) we “plug into” that into our \(S(x)\) and \(D(x)\) to get an item on discount.</p>
+				</div></section>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Function Composition</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Composition</h2>
+					<p>Function composition is applying functions in sequential order, working from inside out.</p>
+					<ul>
+						<li>
+							<p>\( (f\circ g)(x) = f \big( g(x) \big) \), which is read "\(f\) of \(g\) of \(x\)"</p>
+						</li>
+						<li>
+							<p>\( (g\circ f)(x) = g \big( f(x) \big) \), which is read "\(g\) of \(f\) of \(x\)"</p>
+						</li>
+					</ul>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>105</div><div>Example 5</div></div>
+					<p>Let \(f(x) = x + 3\) and let \( g(x) = \frac{1}{x + 3} \).</p>
+					<div class="col2">
+						<div class="problem withNum long">
+							<div>a</div>
+							<p>\( ({\color{#386ef6} f}\circ g)(x) \)</p>
+							<div class="fragment columnWorkbook">
+								<p>\( = f\big( {\color{#111111} g(x)} \big) \)</p>
+								<p>\( = f\left( {\color{#111111} \frac{1}{x+3}} \right) \)</p>
+								<p>\( = {\color{#111111} \frac{1}{x+3}} + 3\)</p>
+								<p>\( = {\color{#111111} \frac{1}{x+3}} + \frac{3(x+3)}{x+3}\)</p>
+								<p>\( = \frac{3x+10}{x+3}\)</p>
+							</div>
+						</div>
+						<div class="problem withNum long">
+							<div>b</div>
+							<p>\( (g\circ {\color{#386ef6} f})(x)\)</p>
+							<div class="fragment columnWorkbook" style="color: var(--primary);">
+								<p>\( {\color{#386ef6} =} \phantom{.} g\big( {\color{#386ef6} f(x)} \big) \)</p>
+								<p>\( {\color{#386ef6} =} \phantom{.} g( {\color{#386ef6} x+3} ) \)</p>
+								<p>\( {\color{#386ef6} =} \phantom{.} \frac{1}{{\color{#386ef6} (x+3)}+3}\)</p>
+								<p class="blue">\( = \frac{1}{x+6}\)</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>106</div><div>Example 6</div></div>
+					<p>Find \(f(x)\) and \(g(x)\).</p>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<div class="problem withNum long">
+								<div>a</div>
+								<p>\( (f\circ g)(x) = (x + 3)^7 \)</p>
+								<div class="fragment columnWorkbook">
+									<p>inner: \( g(x) =x+3 \)</p>
+									<p>outer: \( f(x) = x^7\)</p>
+								</div>
+							</div>
+							<div class="problem withNum long">
+								<div>b</div>
+								<p>\( (f\circ g)(x) = \sqrt{x^2-16} \)</p>
+								<div class="fragment columnWorkbook">
+									<p>inner: \( g(x) =x^2-16 \)</p>
+									<p>outer: \( f(x) = \sqrt{x}\)</p>
+								</div>
+							</div>
+						</div>
+						<div class="columnWorkbook">
+							<div class="problem withNum long">
+								<div>c</div>
+								<p>\( (g\circ f)(x) = \sqrt[5]{8-x} \)</p>
+								<div class="fragment columnWorkbook">
+									<p>inner: \( f(x) = 8-x\)</p>
+									<p>outer: \( g(x) = \sqrt[5]{x}\)</p>
+								</div>
+							</div>
+							<div class="problem withNum long">
+								<div>d</div>
+								<p>\( (g\circ f)(x) = \frac{13}{x^4+x^2-3} \)</p>
+								<div class="fragment columnWorkbook">
+									<p>inner: \( f(x) = x^4+x^2-3 \)</p>
+									<p>outer: \( g(x) = \frac{13}{x}\)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></section>
+				
+<!-- COMPOSITION ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>107</div><div>Example 7a</div></div>
+					<ol>
+						<li><p>Pick an integer between 1 and 100.</p></li>
+						<li><p>Add 7 to your number.</p></li>
+						<li><p>Multiply the last result by 7.</p></li>
+						<li><p>Subtract 7 from that answer.</p></li>
+						<li><p>Divide what you just got by 7.</p></li>
+						<li><p>Give your final number to you instructor. They should be able to guess your original!</p></li>
+					</ol>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>107</div><div>Example 7b</div></div>
+					<div class="problem">
+						<p>Adding 7 to any number \(x\): \(k(x)=\) </p>
+						<p class="fragment">\( x+7 \)</p>
+					</div>
+					<div class="problem">
+						<p>Multiplying any number \(x\) by 7: \(j(x)=\) </p>
+						<p class="fragment">\( 7x\)</p>
+					</div>
+					<div class="problem">
+						<p>Subtracting 7 from any number \(x\): \(g(x)=\) </p>
+						<p class="fragment">\( x-7\)</p>
+					</div>
+					<div class="problem">
+						<p>Dividing any number \(x\) by 7: \(f(x)=\) </p>
+						<p class="fragment">\( x/7\)</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>108</div><div>Example 7c</div></div>
+					<p>Simplify \( (f\circ g\circ j\circ k)(x)\).</p>
+					<p class="fragment blue">\( (f\circ g\circ j\circ k)(x)\)</p>
+					<p class="fragment blue">\( = f(g(j(k(x)))) \)</p>
+					<p class="fragment blue">\( = f(g(j(x+7))) \)</p>
+					<p class="fragment blue">\( = f(g(7(x+7))) \) &nbsp;<span class="fragment"> \(= f(g(7x+49)) \)</span></p>
+					<p class="fragment blue">\( = f((7x+49)-7) \) &nbsp;<span class="fragment"> \(= f(7x+42) \)</span></p>
+					<p class="fragment blue">\( = (7x+42)/7\) &nbsp;<span class="fragment"> \(= \) &nbsp;<span class="finalAnswer">\(x+6\)</span></span></p>
+				</div></section>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 3.5 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

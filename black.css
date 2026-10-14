@@ -662,15 +662,15 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     height: 33.5rem;
     width: 33.5rem;
     /* background-color:#d1080827; */
-    background-image: url("images/graph-empty.svg");
+    background-image: url("images/18A/graph-empty.svg");
     background-size: contain;
     background-repeat: none;
 } .gridTen {
-    background-image: url("images/graph-gridTen.svg");
+    background-image: url("images/18A/graph-gridTen.svg");
 } .gridFive {
-    background-image: url("images/graph-gridFive.svg");
+    background-image: url("images/18A/graph-gridFive.svg");
 } .gridThree {
-    background-image: url("images/graph-gridThree.svg");
+    background-image: url("images/18A/graph-gridThree.svg");
 } .xaxis {
     right: 0;
     top: 50%;
@@ -684,7 +684,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     color: rgba(0,0,0,0.35);
     white-space: nowrap;
 } .xyparabola {
-    background-image: url("images/parabola-base.svg");
+    background-image: url("images/18A/parabola-base.svg");
     background-position: center;
 }
 
@@ -734,12 +734,12 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     top: 50%;
     height: 1.85rem;
     width: 1.01rem;
-    background-image: url('images/arrowhead.svg');
+    background-image: url('images/18A/arrowhead.svg');
     background-repeat: none;
     background-size:cover;
     overflow: visible;
 } .blueFill>.arrowL, .blueFill>.arrowR {
-    background-image: url('images/arrowheadBlue.svg');
+    background-image: url('images/18A/arrowheadBlue.svg');
 } .arrowL {
     left: 0;
     transform: translate(-2px, -50%);
@@ -768,7 +768,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     display: block;
     width: 10%;
     height: 10%;
-    background-image: url('images/triangle.svg');
+    background-image: url('images/18A/triangle.svg');
     background-size: cover;
     opacity: 20% !important;
 }
@@ -803,7 +803,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     top: 50%;
     height: 3rem;
     width: 1.65rem;
-    background-image: url('images/arrowhead.svg');
+    background-image: url('images/18A/arrowhead.svg');
     background-repeat: none;
     background-size:cover;
     overflow: visible;
@@ -835,7 +835,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     align-items: center;
     padding: var(--bodyLarger);
     box-sizing: border-box;
-    background-image: url(images/sticker.svg);
+    background-image: url(images/18A/sticker.svg);
     background-repeat: none;
     background-size: contain;
     font-size: var(--bodyRegular);
@@ -884,7 +884,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     position: relative;
     width: 12rem;
     height: 12rem;
-    background-image: url('images/diamond.svg');
+    background-image: url('images/18A/diamond.svg');
     background-size: contain;
     display: flex;
     flex-flow: column;

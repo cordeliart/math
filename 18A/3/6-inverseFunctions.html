@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>3.6 Inverse Functions | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>something with f(x)=\#</p>
+						<p class="fragment">??</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>How do you write \( g(f(k(x))) \) using composition notation?</p>
+						<p class="fragment">??</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Tuesday, November 3, 2026</h4>
+					<h1><span>3.6</span> Inverse Functions</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 109</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+				
+				<section data-transition="fade-out slide-in"><div class="callout">
+					<p>Functions are machines.</p>
+					<img src="../../images/18A/3-6-inverseBlank.svg" style="max-height: 36vh">
+					<p style="max-width: 30ch; opacity: 0;">An <b>inverse function</b> is a machine that UNDOES a function.</p>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="callout">
+					<p>Functions are machines.</p>
+					<img src="../../images/18A/3-6-inverse.svg" style="max-height: 36vh">
+					<p style="max-width: 30ch;">An <b>inverse function</b> is a machine that UNDOES a function.</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>109</div><div>Example 1</div></div>
+					<p>... The volume of all boxes are \( V(x) = x^3/ 32 \), where the input \(x\) is the width of the sheet of cardboard necessary:</p>
+					<div class="col3" style="gap:0;">
+						<div class="problem withNum long">
+							<div>a</div>
+							<p>\( V(x) = 2\) ft\(^3\)</p>
+							<div class="fragment columnWorkbook">
+								<p>\( \frac{x^3}{32} = 2\)</p>
+								<p class="fragment">\( x^3 = 2 \cdot 32\)</p>
+								<p class="fragment">\( x^3 = 64 \)</p>
+								<p class="fragment">\( \sqrt[3]{x^3} = \sqrt[3]{64} \)</p>
+								<p class="fragment finalAnswer">\( x = 4 \) ft</p>
+							</div>
+						</div>
+						<div class="problem withNum long">
+							<div>b</div>
+							<p>\( V(x) = 3\) ft\(^3\)</p>
+							<div class="fragment columnWorkbook">
+								<p>\( \frac{x^3}{32} = 3\)</p>
+								<p class="fragment">\( x^3 = 3 \cdot 32\)</p>
+								<p class="fragment">\( x^3 = 96 \)</p>
+								<p class="fragment">\( \sqrt[3]{x^3} = \sqrt[3]{96} \)</p>
+								<p class="fragment finalAnswer">\( x \approx 4.6 \) ft</p>
+							</div>
+						</div>
+						<div class="problem withNum long">
+							<div>c</div>
+							<p>\( V(x) = 4\) ft\(^3\)</p>
+							<div class="fragment columnWorkbook">
+								<p>\( \frac{x^3}{32} = 4\)</p>
+								<p class="fragment">\( x^3 = 4 \cdot 32\)</p>
+								<p class="fragment">\( x^3 = 128 \)</p>
+								<p class="fragment">\( \sqrt[3]{x^3} = \sqrt[3]{128} \)</p>
+								<p class="fragment finalAnswer">\( x \approx 5.0 \) ft</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>110</div><div>Example 2</div></div>
+					<p>How can we <b>generalize</b> this procedure? Let's rewrite the original function as: \(f = x^3/32\), and solve for \(f\).</p>
+					<div class="fragment columnWorkbook blue">
+						<p>\( \dfrac{x^3}{32} = y\)</p>
+						<p class="fragment">\( x^3 = 32y \)</p>
+						<p class="fragment">\( \sqrt[3]{x^3} = \sqrt[3]{32y} \)</p>
+						<p class="fragment finalAnswer">\( x= \sqrt[3]{32y} \)</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>110</div><div>Example 2</div></div>
+					<p>Now let's <b>check</b> to make sure this formula works! Let's plug in the same values we did earlier, and see if we get the same answers.</p>
+					<p>\( x = \sqrt[3]{32y}\)</p>
+					<div class="col3" style="gap:0">
+						<div class="problem withNum long">
+							<div>a</div>
+							<p>\( y = 2\)</p>
+							<p class="fragment blue">\( x = \sqrt[3]{32( 2)}\)</p>
+							<p class="fragment">\(\phantom{x} = 4 \phantom{.} \checkmark\)</p>
+						</div>
+						<div class="problem withNum long">
+							<div>b</div>
+							<p>\( y =3 \)</p>
+							<p class="fragment blue">\( x = \sqrt[3]{32( 3)}\)</p>
+							<p class="fragment">\(\phantom{x} \approx 4.6 \phantom{.} \checkmark\)</p>
+						</div>
+						<div class="problem withNum long">
+							<div>c</div>
+							<p>\( y =4 \)</p>
+							<p class="fragment blue">\( x = \sqrt[3]{32(4 )}\)</p>
+							<p class="fragment">\(\phantom{x} \approx 5.0 \phantom{.} \checkmark\)</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Inverse Function</div>
+					<div class="definitionText">
+						<div class="row" style="gap: 6rem;">
+							<p style="max-width: 22ch;">two functions \(f(x)\) and \(g(x)\) are <b>inverses</b> of each other when <span>\( f(a)=b \phantom{.}\) means \(\phantom{.} g(b)=a\)</span>, and vice versa, for any \(a\) and \(b\)</p>
+							<img src="../../images/18A/3-6-inverseDef.svg">
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<h2>Notation</h2>
+					<p style="max-width: 28ch;">Instead of vaguely saying \(f(x)\) and \(g(x)\), we write <span class="blue">\(f(x)\)</span> and <span class="blue">\(f^{-1}(x)\)</span>!</p>
+					<p style="max-width: 32ch;">\(f^{-1}\) is NOT an exponent; this is the <b>notation for inverse</b>, which is read "f inverse."</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Inverting: Step by Step</h2>
+					<ol>
+						<li><p>Rename the equation \(f(x)=...\) to \(y=...\)<br>to make it easier to work with</p></li>
+						<li><p>Solve for \(x\) (in terms of \(y\))</p></li>
+						<li><p>Make a NEW equation by swapping \(x\) and \(y\)</p></li>
+						<li><p>Rename the new equation \(y=...\) to \(f^{-1}(x)=...\)</p></li>
+						<li><p>Check your answer</p></li>
+					</ol>
+				</div></section>
+
+<!-- VERIFYING ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Checking Inverses</h2>
+				</div></section>
+
+				<section><div class="callout">
+					<img src="../../images/18A/3-6-inverseDef2.svg" style="max-height: 45vh;">
+					<div style="font-size: var(--bodyLarger); gap: 6rem;" class="row">
+						<div class="fragment" data-fragment-index="1">
+							\( f^{-1}\big( {\color{#386ef6} f(x)} \big) = x \)
+						</div>
+						<div class="fragment" data-fragment-index="2">
+							\( \color{#386ef6} f\big( {\color{#111111} f^{-1}(x)} \big) = x \)
+						</div>
+					</div>
+					<div style="font-size: var(--bodyLarger); gap: 6rem;" class="row">
+						<div class="fragment" data-fragment-index="3">
+							\( (f^{-1} \circ {\color{#386ef6} f})(x) = x \)
+						</div>
+						<div class="fragment" data-fragment-index="3">
+							\( ({\color{#386ef6}f}\circ f^{-1} )(x) = x \)
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Checking Inverses</h2>
+					<p>To verify that your functions are actually inverses, you must check:</p>
+					<p style="font-size: var(--bodyLarger)">$$ (f^{-1} \circ {\color{#386ef6} f})(x) = x $$</p>
+					<p style="font-size: var(--bodyLarger); text-align: center; max-width: 100%; margin: calc(var(--space) * -2) 0;"><b>AND</b></p>
+					<p style="font-size: var(--bodyLarger);">$$ ({\color{#386ef6}f}\circ f^{-1} )(x) = x $$</p>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>112</div><div>Example 3</div></div>
+					<p>Find a formula for the <b>inverse</b> of \( f(x) = (x+11)^5-8\).</p>
+					<p class="blue fragment">\( f^{-1} (x) = \sqrt[5]{x + 8} - 11 \)</p>
+					<p class="blue fragment">Check \(f\circ f^{-1}\) <span class="fragment">\(\phantom{.} \checkmark\)</span></p>
+					<p class="blue fragment">Check \( f^{-1} \circ f\) <span class="fragment">\(\phantom{.} \checkmark\)</span></p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>113</div><div>Example 4</div></div>
+					<p>Find a formula for the <b>inverse</b> of \( f(x) = \dfrac{1}{x}\).</p>
+					<p class="blue fragment">\( f^{-1} (x) = \dfrac{1}{x} \)</p>
+					<p class="blue fragment">Check \(f\circ f^{-1}\) <span class="fragment">\(\phantom{.} \checkmark\)</span></p>
+					<p class="blue fragment">Check \( f^{-1} \circ f\) <span class="fragment">\(\phantom{.} \checkmark\)</span></p>
+				</div></section>
+
+<!-- GRAPHS ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Graphs of Inverses</h2>
+				</div></section>
+
+				<section data-transition="slide-in fade-out"><div class="callout">
+					<img src="../../images/18A/3-6-ex3.svg" style="max-height: 80vh; max-width: 80vh;">
+				</div></section>
+				<section data-transition="slide-out fade-in"><div class="callout">
+					<img src="../../images/18A/3-6-ex3b.svg" style="max-height: 80vh; max-width: 80vh;">
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Comparing Graphs</h2>
+					<p>The graph of the inverse \(f^{-1}(x)\) will look like \( f(x)\) <b>flipped across the diagonal</b> (\(x=y\)).</p>
+					<p>This is because any point \((a,b)\) for \(f(x)\) will have a corresponding point \((b,a)\) for \(f^{-1}(x)\). Basically, we swap all of our ordered pairs; we can also think of this as swapping our axes.</p>
+					<p>ADD MORE</p>
+				</div></section>
+
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="workbook"><div>114</div><div>Example 5</div></div>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<p>This is the graph for Ex. 4, \(f(x) = \dfrac{1}{x}\).</p>
+							<p>Explain <b>why</b> the function is its own inverse, based on the graph.</p>
+						</div>
+						<img src="../../images/18A/3-6-ex5.svg" style="margin: 0 auto; max-width: 60vh; max-height: 60vh;">
+					</div>
+				</div></section>
+				<section data-transition="slide-out fade-in"><div class="bodySlide">
+					<div class="workbook"><div>114</div><div>Example 5</div></div>
+					<div class="col2">
+						<div class="columnWorkbook">
+							<p>This is the graph for Ex. 4, \(f(x) = \dfrac{1}{x}\).</p>
+							<p>Explain <b>why</b> the function is its own inverse, based on the graph.</p>
+							<p class="blue" style="margin-top: var(--spaceLargest)">It is <b>symmetrical</b> across the diagonal, so its inverse is itself!</p>
+						</div>
+						<img src="../../images/18A/3-6-ex5b.svg" style="margin: 0 auto; max-width: 60vh; max-height: 60vh;">
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>115</div><div>Example 6</div></div>
+					<p>Use the graph of \(f(x)\) to evaluate \(f^{-1}(x)\) at the given values.</p>
+					<div class="problem withNum">
+						<div>a</div>
+						<p>\( f^{-1} (0) = \)</p>
+						<p class="fragment">\( -1 \)</p>
+					</div>
+					<div class="problem withNum">
+						<div>b</div>
+						<p>\( f^{-1} (1) = \)</p>
+						<p class="fragment">\(  1\)</p>
+					</div>
+					<div class="problem withNum">
+						<div>c</div>
+						<p>\( f^{-1} (4) = \)</p>
+						<p class="fragment">\(  3\)</p>
+					</div>
+				</div></section>
+
+				
+
+
+
+
+
+
+				<section><div class="callout">
+					<p>Let's think about putting on socks and shoes.</p>
+					<p>If I want to <b>undo</b> that, what do I do?</p>
+					<p></p>
+				</div></section>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 3.5 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

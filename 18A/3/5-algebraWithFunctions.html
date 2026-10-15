@@ -165,7 +165,7 @@
 						<div class="problem withNum long">
 							<div>a</div>
 							<p>\( (f \circ {\color{#386ef6} g})(x) \)</p>
-							<div class="fragment columnWorkbook" style="color:var(--primary);">
+							<div class="fragment" style="color:var(--primary);">
 								<p>\( = f\big( {\color{#386ef6} g(x)} \big) \)</p>
 								<p>\( = f\left( {\color{#386ef6} \frac{1}{x+3}} \right) \)</p>
 								<p>\( = {\color{#386ef6} \frac{1}{x+3}} + 3\)</p>
@@ -176,7 +176,7 @@
 						<div class="problem withNum long">
 							<div>b</div>
 							<p>\( (g\circ {\color{#386ef6} f} )(x) \)</p>
-							<div class="fragment columnWorkbook" style="color:var(--primary);">
+							<div class="fragment" style="color:var(--primary);">
 								<p>\( = \phantom{.} g\big( {\color{#386ef6} f(x)} \big) \)</p>
 								<p>\( = \phantom{.} g( {\color{#386ef6} x+3} ) \)</p>
 								<p>\( = \phantom{.} \frac{1}{{\color{#386ef6} (x+3)}+3}\)</p>
@@ -195,7 +195,7 @@
 							<div class="problem withNum long">
 								<div>a</div>
 								<p>\( (f\circ g)(x) = (x + 3)^7 \)</p>
-								<div class="fragment columnWorkbook">
+								<div class="fragment">
 									<p>inner: \( g(x) \)<span class="fragment"> \( =x+3 \)</span></p>
 									<p>outer: \( f(x) \)<span class="fragment"> \( = x^7\)</span></p>
 								</div>
@@ -203,7 +203,7 @@
 							<div class="problem withNum long">
 								<div>b</div>
 								<p>\( (f\circ g)(x) = \sqrt{x^2-16} \)</p>
-								<div class="fragment columnWorkbook">
+								<div class="fragment">
 									<p>inner: \( g(x) \) <span class="fragment"> \( =x^2-16 \)</span></p>
 									<p>outer: \( f(x) \) <span class="fragment"> \( = \sqrt{x}\)</span></p>
 								</div>
@@ -213,7 +213,7 @@
 							<div class="problem withNum long">
 								<div>c</div>
 								<p>\( (g\circ f)(x) = \sqrt[5]{8-x} \)</p>
-								<div class="fragment columnWorkbook">
+								<div class="fragment">
 									<p>inner: \( f(x) \)<span class="fragment"> \( = 8-x\)</span></p>
 									<p>outer: \( g(x) \)<span class="fragment"> \( = \sqrt[5]{x}\)</span></p>
 								</div>
@@ -221,7 +221,7 @@
 							<div class="problem withNum long">
 								<div>d</div>
 								<p>\( (g\circ f)(x) = \frac{13}{x^4+x^2-3} \)</p>
-								<div class="fragment columnWorkbook">
+								<div class="fragment">
 									<p>inner: \( f(x) \)<span class="fragment"> \( = x^4+x^2-3 \)</span></p>
 									<p>outer: \( g(x) \)<span class="fragment"> \( = \frac{13}{x}\)</span></p>
 								</div>
@@ -246,45 +246,33 @@
 				<section><div class="bodySlide">
 					<div class="workbook"><div>107</div><div>Example 7b</div></div>
 					<div class="problem">
-						<div class="row">
-							<p style="width: 24ch;">Adding 7 to any number \(x\):</p>
-							<p>\(k(x)=\) </p>
-						</div>
+						<p><span style="width: 24ch;">Adding 7 to any number \(x\):</span> \(k(x)=\) </p>
 						<p class="fragment">\( x+7 \)</p>
 					</div>
 					<div class="problem">
-						<div class="row">
-							<p style="width: 24ch;">Multiplying any number \(x\) by 7:</p>
-							<p>\(j(x)=\) </p>
-						</div>
+						<p><span style="width: 24ch;">Multiplying any number \(x\) by 7:</span> \(j(x)=\) </p>
 						<p class="fragment">\( 7x\)</p>
 					</div>
 					<div class="problem">
-						<div class="row">
-							<p style="width: 24ch;">Subtracting 7 from any number \(x\):</p>
-							<p>\(g(x)=\) </p>
-						</div>
+						<p><span style="width: 24ch;">Subtracting 7 from any number \(x\):</span> \(g(x)=\) </p>
 						<p class="fragment">\( x-7\)</p>
 					</div>
 					<div class="problem">
-						<div class="row">
-							<p style="width: 24ch;">Dividing any number \(x\) by 7:</p>
-							<p>\(f(x)=\) </p>
-						</div>
+						<p><span style="width: 24ch;">Dividing any number \(x\) by 7:</span> \(f(x)=\) </p>
 						<p class="fragment">\( x/7\)</p>
 					</div>
 				</div></section>
 				<section><div class="bodySlide">
 					<div class="workbook"><div>108</div><div>Example 7c</div></div>
 					<div class="col2">
-						<div class="columnWorkbook">
+						<div>
 							<p>Simplify \( (f\circ g\circ j\circ k)(x)\).</p>
 							<p>\(\\k(x)= x+7 \)</p>
 							<p>\(j(x)= 7x\)</p>
 							<p>\(g(x)= x-7\)</p>
 							<p>\(f(x)= x/7\)</p>
 						</div>
-						<div class="columnWorkbook">
+						<div>
 							<p class="fragment">\( (f\circ g\circ j\circ k)(x)\)</p>
 							<p class="fragment">\( = f(g(j( {\color{#B73CE7} k({\color{#386ef6}x})} ))) \)</p>
 							<p class="fragment">\( = f(g( {\color{#B73CE7} j({\color{#386ef6}x+7})} )) \)</p>

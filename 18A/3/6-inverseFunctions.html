@@ -63,8 +63,22 @@
 				<section data-transition="fade-in slide-out"><div class="callout">
 					<p>Functions are machines.</p>
 					<img src="../../images/18A/3-6-inverse.svg" style="max-height: 36vh">
-					<p style="max-width: 30ch;">An <b>inverse function</b> is a machine that UNDOES a function.</p>
+					<p style="max-width: 33ch;">An <b>inverse function</b> is a machine that UNDOES another function. They cancel each other out.</p>
 				</div></section>
+
+				<section><div class="callout">
+					<p style="max-width: 31ch;">Let’s think about putting on socks and shoes. If I want to <b>undo</b> that, what do I do?</p>
+					<p class="blue fragment">Take off shoes, <i>then</i> take off socks.</p>
+					<p class="blue fragment" style="max-width:28ch;">Notice that we do the <b>opposite actions</b> in <b>REVERSE order</b>!!</p>
+				</div></section>
+
+				<section><div class="callout">
+					<p style="max-width: 31ch;">Now let’s think about \(x^2+4\). If I want to <b>undo</b> that (to get back to \(x\)), what do I do?</p>
+					<p class="blue fragment" style="max-width:28ch;">Remember, we do the <b>opposite actions</b> in <b>REVERSE order</b>!!</p>
+					<p class="blue fragment">Subtract four, <i>then</i> square root.</p>
+				</div></section>
+
+<!-- PRACTICE ------------------------------------------------------------------------------------------------------>
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>109</div><div>Example 1</div></div>
@@ -73,7 +87,7 @@
 						<div class="problem withNum long">
 							<div>a</div>
 							<p>\( V(x) = 2\) ft\(^3\)</p>
-							<div class="fragment columnWorkbook">
+							<div class="fragment">
 								<p>\( \frac{x^3}{32} = 2\)</p>
 								<p class="fragment">\( x^3 = 2 \cdot 32\)</p>
 								<p class="fragment">\( x^3 = 64 \)</p>
@@ -84,7 +98,7 @@
 						<div class="problem withNum long">
 							<div>b</div>
 							<p>\( V(x) = 3\) ft\(^3\)</p>
-							<div class="fragment columnWorkbook">
+							<div class="fragment">
 								<p>\( \frac{x^3}{32} = 3\)</p>
 								<p class="fragment">\( x^3 = 3 \cdot 32\)</p>
 								<p class="fragment">\( x^3 = 96 \)</p>
@@ -95,7 +109,7 @@
 						<div class="problem withNum long">
 							<div>c</div>
 							<p>\( V(x) = 4\) ft\(^3\)</p>
-							<div class="fragment columnWorkbook">
+							<div class="fragment">
 								<p>\( \frac{x^3}{32} = 4\)</p>
 								<p class="fragment">\( x^3 = 4 \cdot 32\)</p>
 								<p class="fragment">\( x^3 = 128 \)</p>
@@ -108,8 +122,8 @@
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>110</div><div>Example 2</div></div>
-					<p>How can we <b>generalize</b> this procedure? Let's rewrite the original function as: \(f = x^3/32\), and solve for \(f\).</p>
-					<div class="fragment columnWorkbook blue">
+					<p>How can we <b>generalize</b> this procedure? Let’s rewrite the original function as: \(f = x^3/32\), and solve for \(f\).</p>
+					<div class="fragment blue">
 						<p>\( \dfrac{x^3}{32} = y\)</p>
 						<p class="fragment">\( x^3 = 32y \)</p>
 						<p class="fragment">\( \sqrt[3]{x^3} = \sqrt[3]{32y} \)</p>
@@ -118,7 +132,7 @@
 				</div></section>
 				<section><div class="bodySlide">
 					<div class="workbook"><div>110</div><div>Example 2</div></div>
-					<p>Now let's <b>check</b> to make sure this formula works! Let's plug in the same values we did earlier, and see if we get the same answers.</p>
+					<p>Now let’s <b>check</b> to make sure this formula works! Let’s plug in the same values we did earlier, and see if we get the same answers.</p>
 					<p>\( x = \sqrt[3]{32y}\)</p>
 					<div class="col3" style="gap:0">
 						<div class="problem withNum long">
@@ -145,9 +159,12 @@
 				<section><div class="bodySlide">
 					<div class="definition">Inverse Function</div>
 					<div class="definitionText">
-						<div class="row" style="gap: 6rem;">
-							<p style="max-width: 22ch;">two functions \(f(x)\) and \(g(x)\) are <b>inverses</b> of each other when <span>\( f(a)=b \phantom{.}\) means \(\phantom{.} g(b)=a\)</span>, and vice versa, for any \(a\) and \(b\)</p>
-							<img src="../../images/18A/3-6-inverseDef.svg">
+						<div class="row">
+							<div class="columnWorkbook">
+								<p style="max-width: 22ch;">two functions \(f(x)\) and \(g(x)\) are <b>inverses</b> of each other when <span>\( f(a)=b \phantom{.}\) means \(\phantom{.} g(b)=a\)</span>, and vice versa, for any \(a\) and \(b\)</p>
+								<h6>Not every function has an inverse!!</h6>
+							</div>
+							<img src="../../images/18A/3-6-inverseDef.svg" style="max-width: 55vh; margin-left: auto;">
 						</div>
 					</div>
 				</div></section>
@@ -255,50 +272,168 @@
 						<div class="columnWorkbook">
 							<p>This is the graph for Ex. 4, \(f(x) = \dfrac{1}{x}\).</p>
 							<p>Explain <b>why</b> the function is its own inverse, based on the graph.</p>
-							<p class="blue" style="margin-top: var(--spaceLargest)">It is <b>symmetrical</b> across the diagonal, so its inverse is itself!</p>
+							<p class="blue">It is <b>symmetrical</b> across the diagonal, so its inverse is itself!</p>
 						</div>
 						<img src="../../images/18A/3-6-ex5b.svg" style="margin: 0 auto; max-width: 60vh; max-height: 60vh;">
 					</div>
 				</div></section>
 
+				<section data-transition="fade-out slide-in"><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>115</div><div>Example 6</div></div>
+						<p>Use the graph of \(f(x)\) to evaluate \(f^{-1}(x)\) at the given values.</p>
+						<p class="blue fragment">Remember, the \(\#\) is the OUTPUT of \(f\)!</p>
+						<div class="problem withNum"><div>a</div><p>\( f^{-1} (0) = \)</p><p>\( \)</p></div>
+						<div class="problem withNum"><div>b</div><p>\( f^{-1} (1) = \)</p><p>\( \)</p></div>
+						<div class="problem withNum"><div>c</div><p>\( f^{-1} (4) = \)</p><p>\( \)</p></div>
+					</div>
+					<img src="../../images/18A/3-6-ex6.svg" style="max-width: 65vh; max-height: 65vh;">
+				</div></section>
+				<section data-transition="fade"><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>115</div><div>Example 6</div></div>
+						<p>Use the graph of \(f(x)\) to evaluate \(f^{-1}(x)\) at the given values.</p>
+						<p class="blue">Remember, the \(\#\) is the OUTPUT of \(f\)!</p>
+						<div class="problem withNum"><div>a</div><p>\( f^{-1} (0) = \)</p><p>\( \)</p></div>
+						<div class="problem withNum"><div>b</div><p>\( f^{-1} (1) = \)</p><p>\( \)</p></div>
+						<div class="problem withNum"><div>c</div><p>\( f^{-1} (4) = \)</p><p>\( \)</p></div>
+					</div>
+					<img src="../../images/18A/3-6-ex6.svg" style="max-width: 65vh; max-height: 65vh;">
+				</div></section>
+				<section data-transition="fade"><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>115</div><div>Example 6</div></div>
+						<p>Use the graph of \(f(x)\) to evaluate \(f^{-1}(x)\) at the given values.</p>
+						<p class="blue">Remember, the \(\#\) is the OUTPUT of \(f\)!</p>
+						<div class="problem withNum"><div>a</div><p>\( f^{-1} (0) = \)</p><p class="fragment">\( -1 \)</p></div>
+						<div class="problem withNum"><div>b</div><p>\( f^{-1} (1) = \)</p><p>\( \)</p></div>
+						<div class="problem withNum"><div>c</div><p>\( f^{-1} (4) = \)</p><p>\( \)</p></div>
+					</div>
+					<img src="../../images/18A/3-6-ex6b.svg" style="max-width: 65vh; max-height: 65vh;">
+				</div></section>
+				<section data-transition="fade"><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>115</div><div>Example 6</div></div>
+						<p>Use the graph of \(f(x)\) to evaluate \(f^{-1}(x)\) at the given values.</p>
+						<p class="blue">Remember, the \(\#\) is the OUTPUT of \(f\)!</p>
+						<div class="problem withNum"><div>a</div><p>\( f^{-1} (0) = \)</p><p>\( -1 \)</p></div>
+						<div class="problem withNum"><div>b</div><p>\( f^{-1} (1) = \)</p><p class="fragment">\(  1\)</p></div>
+						<div class="problem withNum"><div>c</div><p>\( f^{-1} (4) = \)</p><p>\( \)</p></div>
+					</div>
+					<img src="../../images/18A/3-6-ex6c.svg" style="max-width: 65vh; max-height: 65vh;">
+				</div></section>
+				<section data-transition="fade"><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>115</div><div>Example 6</div></div>
+						<p>Use the graph of \(f(x)\) to evaluate \(f^{-1}(x)\) at the given values.</p>
+						<p class="blue">Remember, the \(\#\) is the OUTPUT of \(f\)!</p>
+						<div class="problem withNum"><div>a</div><p>\( f^{-1} (0) = \)</p><p>\( -1 \)</p></div>
+						<div class="problem withNum"><div>b</div><p>\( f^{-1} (1) = \)</p><p>\(  1\)</p></div>
+						<div class="problem withNum"><div>c</div><p>\( f^{-1} (4) = \)</p><p class="fragment">\(  3\)</p></div>
+					</div>
+					<img src="../../images/18A/3-6-ex6d.svg" style="max-width: 65vh; max-height: 65vh;">
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="workbook"><div>115</div><div>Example 6</div></div>
+						<p>Use the graph of \(f(x)\) to evaluate \(f^{-1}(x)\) at the given values.</p>
+						<p class="blue">Remember, the \(\#\) is the OUTPUT of \(f\)!</p>
+						<div class="problem withNum"><div>a</div><p>\( f^{-1} (0) = \)</p><p>\( -1 \)</p></div>
+						<div class="problem withNum"><div>b</div><p>\( f^{-1} (1) = \)</p><p>\(  1\)</p></div>
+						<div class="problem withNum"><div>c</div><p>\( f^{-1} (4) = \)</p><p>\(  3\)</p></div>
+					</div>
+					<img src="../../images/18A/3-6-ex6e.svg" style="max-width: 65vh; max-height: 65vh;">
+				</div></section>
+				
+<!-- ONE TO ONE ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2 style="max-width: 14ch;">What makes a function invertible?</h2>
+				</div></section>
+
 				<section><div class="bodySlide">
-					<div class="workbook"><div>115</div><div>Example 6</div></div>
-					<p>Use the graph of \(f(x)\) to evaluate \(f^{-1}(x)\) at the given values.</p>
-					<div class="problem withNum">
-						<div>a</div>
-						<p>\( f^{-1} (0) = \)</p>
-						<p class="fragment">\( -1 \)</p>
-					</div>
-					<div class="problem withNum">
-						<div>b</div>
-						<p>\( f^{-1} (1) = \)</p>
-						<p class="fragment">\(  1\)</p>
-					</div>
-					<div class="problem withNum">
-						<div>c</div>
-						<p>\( f^{-1} (4) = \)</p>
-						<p class="fragment">\(  3\)</p>
+					<div class="definition">One-to-One</div>
+					<div class="definitionText">
+						<p>a function is <b>one-to-one</b> if each input makes a <span>unique output</span></p>
+						<h6>This property is necessary for a function to have an inverse!</h6>
 					</div>
 				</div></section>
 
-				
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<div class="definition">Horizontal Line Test</div>
+						<div class="definitionText">
+							<p>the <b>horizontal line test</b> checks whether a function is one-to-one or not; <span>scan the graph</span> with a horizontal line, and if it intersects more than once, it FAILS</p>
+						</div>
+					</div>
+					<div style="width: 42vh;">
+						<img src="../../images/18A/3-4-test1.svg" style="width: 100%; height: 100%; max-width: 64vh; max-height: 64vh; background: grey">
+						<img src="../../images/18A/3-4-test2.svg" style="width: 100%; height: 100%; max-width: 64vh; max-height: 64vh; background: grey">
+					</div>
+				</div></section>
 
-
-
-
-
-
-				<section><div class="callout">
-					<p>Let's think about putting on socks and shoes.</p>
-					<p>If I want to <b>undo</b> that, what do I do?</p>
-					<p></p>
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="workbook"><div>116</div><div>Example 7</div></div>
+					<p style="max-width: 32ch;">Circle the functions that are <b>one-to-one</b>, and <b>draw a line</b> through the ones that aren’t.</p>
+					<div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr; margin-top: var(--spaceLarge);">
+						<img src="../../images/18A/3-4-ex1b.svg">
+						<img src="../../images/18A/3-4-ex1a.svg">
+						<img src="../../images/18A/3-4-ex1c.svg">
+						<img src="../../images/18A/3-4-ex1d.svg">
+						<img src="../../images/18A/3-4-ex1e.svg">
+						<p>\(x^3\)</p>
+						<p>\(x^2\)</p>
+						<p>\(|x|\)</p>
+						<p>\(\sqrt{x}\)</p>
+						<p>\(\sqrt[3]{x}\)</p>
+						<p class="blue fragment">\(\checkmark\)</p>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="workbook"><div>116</div><div>Example 7</div></div>
+					<p style="max-width: 32ch;">Circle the functions that are <b>one-to-one</b>, and <b>draw a line</b> through the ones that aren’t.</p>
+					<div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr; margin-top: var(--spaceLarge);">
+						<img src="../../images/18A/3-4-ex1b.svg">
+						<img src="../../images/18A/3-4-ex1a-onetoone.svg">
+						<img src="../../images/18A/3-4-ex1c.svg">
+						<img src="../../images/18A/3-4-ex1d.svg">
+						<img src="../../images/18A/3-4-ex1e.svg">
+						<p>\(x^3\)</p>
+						<p>\(x^2\)</p>
+						<p>\(|x|\)</p>
+						<p>\(\sqrt{x}\)</p>
+						<p>\(\sqrt[3]{x}\)</p>
+						<p class="blue">\(\checkmark\)</p>
+						<p style="color: var(--warning);"><b>:(</b></p>
+					</div>
+				</div></section>
+				<section data-transition="slide-out fade-in"><div class="bodySlide">
+					<div class="workbook"><div>116</div><div>Example 7</div></div>
+					<p style="max-width: 32ch;">Circle the functions that are <b>one-to-one</b>, and <b>draw a line</b> through the ones that aren’t.</p>
+					<div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr; margin-top: var(--spaceLarge);">
+						<img src="../../images/18A/3-4-ex1b.svg">
+						<img src="../../images/18A/3-4-ex1a-onetoone.svg">
+						<img src="../../images/18A/3-4-ex1c-onetoone.svg">
+						<img src="../../images/18A/3-4-ex1d.svg">
+						<img src="../../images/18A/3-4-ex1e.svg">
+						<p>\(x^3\)</p>
+						<p>\(x^2\)</p>
+						<p>\(|x|\)</p>
+						<p>\(\sqrt{x}\)</p>
+						<p>\(\sqrt[3]{x}\)</p>
+						<p class="blue">\(\checkmark\)</p>
+						<p style="color: var(--warning);"><b>:(</b></p>
+						<p style="color: var(--warning);"><b>:(</b></p>
+						<p class="blue fragment">\(\checkmark\)</p>
+						<p class="blue fragment">\(\checkmark\)</p>
+					</div>
 				</div></section>
 
 <!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
 				<section data-background="var(--primary)"><div class="endSlide">
 					<h2>See you next class!</h2>
 					<h5>Your to-do’s:</h5>
-					<p>-> 3.5 homework</p>
+					<p>-> 3.6 homework</p>
 				</div></section>
 			</div>
 		</div>

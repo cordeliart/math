@@ -143,7 +143,7 @@ h6 { /* extra notes/disclaimers with body text */
     max-width: 50ch;
     line-height: 135%;
     color: rgba(0,0,0,0.5);
-    margin: var(--spaceSmall) 0;
+    margin: 0 0 var(--spaceSmall) 0;
 }
 
 p {
@@ -151,7 +151,7 @@ p {
     max-width: 47ch;
     text-align: left;
     font-size: var(--bodyRegular);
-    margin: 0;
+    margin: 0 0 var(--spaceLarge) 0;
 }
 
 strong, b { font-weight: 700 }
@@ -162,7 +162,7 @@ iframe {margin: 0; padding: 0;}
 /* lists, tables, etc ----------------------------------------------------------------------------------------------------------- */
 
 ol, dl, ul {
-    margin: var(--bodySmallest) 0 0 var(--bodyRegular);
+    margin: 0 0 0 var(--bodyRegular);
     padding: 0;
     /* display: inline-block; */
     font-family: var(--fontSecondary);
@@ -261,7 +261,7 @@ th>p {
     text-align: center;
     /* width: 100%; */
 } tbody>tr>*:first-child {
-    background-color: var(--tertiary);
+    background-color: #d3d3d365;
 }
 
 sup { vertical-align: super; font-size: smaller }
@@ -289,7 +289,7 @@ sub { vertical-align: sub; font-size: smaller }
     display: flex;
     flex-flow: column;
     justify-content: flex-start !important;
-    gap: var(--spaceLarge) !important;
+    gap: var(--space) !important;
     font-size: var(--bodyLargish);
 }
 
@@ -306,6 +306,7 @@ sub { vertical-align: sub; font-size: smaller }
     letter-spacing: -1%;
     color: var(--background);
     text-align: center;
+    max-width: 20ch;
 } .cover p {
     color: var(--background);
     opacity: 65%;
@@ -318,6 +319,7 @@ sub { vertical-align: sub; font-size: smaller }
     text-align: center;
     font-size: var(--bodyLarger);
     margin: 0;
+    max-width: 34ch;
 } .callout h5 {
     font-size: var(--bodyLargish);
     margin: 0;
@@ -367,14 +369,15 @@ sub { vertical-align: sub; font-size: smaller }
     line-height: 1;
 } .definition h4 { color: rgb(var(--definition)); }
 .definitionText {
-    height: calc(100% - 3.5rem);
-    margin-bottom: 3.5rem;
+    height: calc(100%);
+    /* margin-top: 1rem; */
     display: flex;
     flex-flow: column;
     gap: var(--space);
     justify-content: center;
 } .definitionText p {
     font-size: var(--bodyLarger);
+    margin: 0;
     max-width: 30ch;
 } .definitionText span, span .highlight {
     background-color: #ffde8385;
@@ -441,14 +444,14 @@ sub { vertical-align: sub; font-size: smaller }
     display: grid;
     /* width: 100%; */
     position: relative;
-    margin: var(--spaceSmall) 0;
-    gap: var(--space);
+    margin: 0;
+    column-gap: var(--space);
+    row-gap: 0;
     grid-template-columns: auto 1fr;
-    padding: calc(var(--bodyRegular) * 0.21) 0 0 0;
+    padding: calc(var(--bodyRegular) * 0.21) 0;
 } .problem.long {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    flex-flow: column;
 } .withNum {
     padding-left: calc(var(--bodyLargest) * 1.5);
 } .problem>* {
@@ -473,6 +476,9 @@ sub { vertical-align: sub; font-size: smaller }
     align-self:flex-start;
 } .problem.even {
     grid-template-columns: 1fr 1fr;
+} .problem.dense {
+    /* gap: 0; */
+    margin-bottom: -1rem;
 }
 
 .finalAnswer, .answerBox {
@@ -512,8 +518,9 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     grid-template-columns: 1fr 1fr;
     width: 100%;
     gap: 2rem;
-    margin: 1.15rem 0;
-} .col2>.problems {
+    margin: 0 0 1.15rem 0;
+}
+/* .col2>.problems {
     row-gap: 8rem;
 } .col2>.problems>.answer {
     width: 100%;
@@ -528,7 +535,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 } .col2>.problems p {
     font-size: var(--bodyLargish);
     column-gap: 1.5rem;
-}
+} */
 
 .time {
     color: rgb(var(--accent));
@@ -616,7 +623,8 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     border-radius: var(--spaceSmall);
     font-size: var(--bodyRegular);
     font-weight: 500;
-    margin-top: 1.15rem;
+    /* margin-top: 1.15rem; */
+    margin-bottom: calc(var(--spaceLargest) * -1);
 }
 
 .examplesBelow { /* more examples below tag */
@@ -911,6 +919,7 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     font-size: var(--bodyLarge);
     padding: 2px 20px;
     text-align: center;
+    margin-bottom: 0;
 } .theBox>div {
     padding: 8px 20px;
     outline: 4px solid var(--primary);

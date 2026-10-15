@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>4.1 Exponential Functions | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>??</p>
+						<p class="fragment">??</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>?</p>
+						<p class="fragment">??</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, November 5, 2026</h4>
+					<h1><span>4.1</span> Exponential Functions</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 118</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>118</div><div>Example 1</div></div>
+					<!-- <p>Let's review exponent rules.</p> -->
+
+					<div style="display: grid; grid-template-columns: 2fr 1fr; row-gap: var(--space);">
+						<h5>Example</h5>
+						<h5>Generalized</h5>
+
+						<p style="margin-bottom: calc(var(--space) * -1)">\( x^{-2} \) <span class="fragment blue">\( = \dfrac{1}{x^{2}} \)</span></p>
+						<p style="margin-bottom: calc(var(--space) * -1)">\( x^{-A} \) <span class="fragment blue">\( = \dfrac{1}{x^{A}} \)</span></p>
+
+						<p>\( \dfrac{1}{y^{-5}} \) <span class="fragment blue">\( = \dfrac{1}{1/y^5} \) <span class="fragment blue">\( = 1\div \dfrac{1}{y^5} \) <span class="fragment blue">\( = 1\cdot \dfrac{y^5}{1} \) <span class="fragment blue">\( = y^{5} \)</span></span></span></span></p>
+						<p>\( \dfrac{1}{y^{-B}} \) <span class="fragment blue">\( = y^{B} \)</span></p>
+						
+						<p>\( \dfrac{x^{-2}}{y^{-5}} \) <span class="fragment blue">\( = x^{-2}\cdot\dfrac{1}{y^{-5}} \) <span class="fragment blue">\( = \dfrac{1}{x^2}\cdot \dfrac{y^{5}}{1} \) <span class="fragment blue">\( = \dfrac{y^{5}}{x^{2}} \)</span></span></span></p>
+						<p>\( \dfrac{x^{-A}}{y^{-B}} \) <span class="fragment blue">\( = \dfrac{y^{B}}{x^{A}} \)</span></p>
+						
+						<p>\( x^{2}\cdot x^{5} \) <span class="fragment blue">\(= x^{2+5} \) <span class="fragment blue">\(= x^{7} \)</span></span></p>
+						<p>\( x^{A}\cdot x^{B} \) <span class="fragment blue">\(= x^{A+B} \)</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>118</div><div>Example 1</div></div>
+					<!-- <p>Let's review exponent rules.</p> -->
+
+					<div style="display: grid; grid-template-columns: 3fr 2fr; row-gap: var(--space);">
+						<h5>Example</h5>
+						<h5>Generalized</h5>
+						
+						<p>\( \dfrac{x^{5}}{x^{2}} \) <span class="fragment blue">\(= x^{5-3} \) <span class="fragment blue">\(= x^{3} \)</span></span></p>
+						<p>If \(A> B \), then \( \dfrac{x^{A}}{x^{B}} \) <span class="fragment blue">\(= x^{A-B} \)</span></p>
+						
+						<p>\( \dfrac{x^{2}}{x^{5}} \) <span class="fragment blue">\(= x^{2-5} \) <span class="fragment blue">\(= x^{-3} \) <span class="fragment blue">\(= \dfrac{1}{x^{3}} \)</span></span></span></p>
+						<p>If \(A< B \), then \( \dfrac{x^{A}}{x^{B}} \) <span class="fragment blue">\( =\dfrac{1}{x^{B-A}} \)</span></p>
+						
+						<p>\( (x^{2})^5 \) <span class="fragment blue">\(= x^{2\cdot 5} \) <span class="fragment blue">\(= x^{10} \)</span></span></p>
+						<p>\( (x^{A})^B \) <span class="fragment blue">\(= x^{A\cdot B} \)</span></p>
+						
+						<p>\( x^{1/2} \) <span class="fragment blue">\( =\sqrt[2]{x^1} \) <span class="fragment blue">\( =\sqrt{x} \)</span></span></p>
+						<p>\( x^{A/B} \) <span class="fragment blue">\( =\sqrt[B]{x^A} \)</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>119</div><div>Example 1</div></div>
+					<!-- <p>Let's review exponent rules.</p> -->
+
+					<div style="display: grid; grid-template-columns: 1fr auto; row-gap: var(--space);">
+						<h5>Example</h5>
+						<h5>Generalized</h5>
+						
+						<p>\( (x\cdot y)^2 \) <span class="blue fragment">\( = x^2\cdot y^2 \)</span></p>
+						<p>\( (x\cdot y)^A \) <span class="blue fragment">\( = x^A\cdot y^A \)</span></p>
+						
+						<p>\( \left( \dfrac{x}{y} \right)^2 \) <span class="blue fragment">\( = \dfrac{x^2}{y^2} \)</span></p>
+						<p>\( \left( \dfrac{x}{y} \right)^A \) <span class="blue fragment">\( = \dfrac{x^A}{y^A} \)</span></p>
+						
+						<p>\( ( x+5 )^2 \) <span class="blue fragment">\( = (x+5)(x+5) \) <span class="blue fragment">\( = x^2+10x+25 \)</span></span></p>
+						<p>\( ( x+y )^A \) <span class="blue fragment">\( = \underbrace{(x+y)...(x+y)}_{A \text{ many times}} \)</span></p>
+						
+						<p>\( ( x-5 )^2 \) <span class="blue fragment">\( = (x-5)(x-5) \) <span class="blue fragment">\( = x^2-10x+25 \)</span></span></p>
+						<p>\( ( x-y )^A \) <span class="blue fragment">\( = \underbrace{(x-y)...(x-y)}_{A \text{ many times}} \)</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>119</div><div>Example 1</div></div>
+					<!-- <p>Let's review exponent rules.</p> -->
+
+					<div style="display: grid; grid-template-columns: 1fr 1fr; row-gap: var(--space);">
+						<h5>Example</h5>
+						<h5>Generalized</h5>
+						
+						<p>\( 1^{2000} \) <span class="blue fragment">\( = 1 \)</span></p>
+						<p>\( 1^{A} \) <span class="blue fragment">\( = 1 \)</span></p>
+						
+						<p>\( 2000^1 \) <span class="blue fragment">\( = 2000 \)</span></p>
+						<p>\( B^1 \) <span class="blue fragment">\( = B \)</span></p>
+						
+						<p>\( 0^{2000} \) <span class="blue fragment">\( = 0 \)</span></p>
+						<p>\( 0^{A} \) <span class="blue fragment">\( = 0 \)</span></p>
+						
+						<p>\( 2000^0 \) <span class="blue fragment">\( = 1 \)</span></p>
+						<p>If \(B\neq0\), then \( B^0 \) <span class="blue fragment">\( = 1 \)</span></p>
+					</div>
+				</div></section>
+
+<!-- EXP FUNCTIONS ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="definition">Exponential Function</div>
+					<div class="definitionText">
+						<p>an <b>exponential function</b> is <span>\(f(x) = b^x\)</span> where \(b\) is a fixed number \(>0\) and \(\neq1\) (notice, the variable is in the exponent!)</p>
+					</div>
+				</div></section>
+
+				<section data-transition="fade-out slide-in"><div class="bodySlide">
+					<div class="workbook"><div>120</div><div>Example 2</div></div>
+					<p>Fill out the table and sketch the graph of \(f(x) = 2^x\).</p>
+					<div class="slideRow">
+						<div class="grid" style="margin: 0 var(--spaceLargest); grid-template-columns: auto auto; width: fit-content; row-gap: var(--spaceSmall); column-gap: calc(var(--spaceLargest)*2);">
+							<h5>\( x \)</h5><h5>\( 2^x \)</h5>
+							<p>\( -3 \)</p><p class="fragment blue">\( 2^{-3} = 1/8 \)</p>
+							<p>\( -2 \)</p><p class="fragment blue">\( 2^{-2} = 1/4 \)</p>
+							<p>\( -1 \)</p><p class="fragment blue">\( 2^{-1} = 1/2 \)</p>
+							<p>\( 0 \)</p><p class="fragment blue">\( 2^{0} = 1 \)</p>
+							<p>\( 1 \)</p><p class="fragment blue">\( 2^{1} = 2 \)</p>
+							<p>\( 2 \)</p><p class="fragment blue">\( 2^{2} = 4 \)</p>
+							<p>\( 3 \)</p><p class="fragment blue">\( 2^{3} = 8 \)</p>
+						</div>
+						<img src="../../images/18A/graph-gridFive.svg" style="max-width: 55vh;">
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="workbook"><div>120</div><div>Example 2</div></div>
+					<p>Fill out the table and sketch the graph of \(f(x) = 2^x\).</p>
+					<div class="slideRow">
+						<div class="grid" style="margin: 0 var(--spaceLargest); grid-template-columns: auto auto; width: fit-content; row-gap: var(--spaceSmall); column-gap: calc(var(--spaceLargest)*2);">
+							<h5>\( x \)</h5><h5>\( 2^x \)</h5>
+							<p>\( -3 \)</p><p class="blue">\( 2^{-3} = 1/8 \)</p>
+							<p>\( -2 \)</p><p class="blue">\( 2^{-2} = 1/4 \)</p>
+							<p>\( -1 \)</p><p class="blue">\( 2^{-1} = 1/2 \)</p>
+							<p>\( 0 \)</p><p class="blue">\( 2^{0} = 1 \)</p>
+							<p>\( 1 \)</p><p class="blue">\( 2^{1} = 2 \)</p>
+							<p>\( 2 \)</p><p class="blue">\( 2^{2} = 4 \)</p>
+							<p>\( 3 \)</p><p class="blue">\( 2^{3} = 8 \)</p>
+						</div>
+						<img src="../../images/18A/4-1-ex2.svg" style="max-width: 55vh;">
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>120</div><div>Example 2</div></div>
+					<div class="problem long">
+						<p>Is there any power of \(2\) that gives you \(0\)?</p>
+						<p class="fragment">No</p>
+					</div>
+					<div class="problem long">
+						<p>Is there any power of \(2\) that gives you a negative number?</p>
+						<p class="fragment">No</p>
+					</div>
+				</div></section>
+
+<!-- ASYMPTOTES ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Asymptotes</h2>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="definition">Asymptote</div>
+					<div class="definitionText">
+						<p>instead of going up or down, the end behavior in some graphs flattens to an <span>invisible horizontal line</span>, which we call the <b>asymptote</b> </p>
+					</div>
+				</div></section>
+				
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 3.6 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

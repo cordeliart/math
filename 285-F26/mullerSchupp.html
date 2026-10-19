@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Hyperbolic Groups | 285 F26</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../images/favicon.png">
+
+		<link rel="stylesheet" href="../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../reveal/dist/plugin/highlight/monokai.css"/>
+
+		<style>
+			:root {
+				/* --accent: 183, 60, 231; */
+				--bodySize: 2.8rem;
+				--headerSize: 11rem;
+				--group: #b73ce7;
+				--monoid: #386ef6;
+				--semigroup: #00a597;
+			}
+			p { max-width: 40ch; margin: 0;}
+			p span {background: none; color: rgb(var(--accent));}
+			.group {color: var(--group)}
+			.semigroup {color: var(--semigroup)}
+			.monoid {color: var(--monoid)}
+			.bodySlide {font-size: var(--bodyLarge); justify-content: center !important;}
+			.bodySlide p span {color: var(--primary);}
+			.bodySlide h2 { margin-bottom: 0; }
+			.footer::after { content: 'SJSU • MATH285 Groups and Languages • Fall 2026 • Lena Pang'; }
+			/* .definitionText p { font-size: var(--bodyLarger); max-width: 35ch; } */
+			.larger>p, .larger>ol>li>p, .larger>ul>li>p {font-size: var(--bodyLarge);}
+			/* .proofText p {font-size: var(--bdoyRegular)} */
+			.proofText p {max-width: 52ch; font-size: calc(var(--bodyRegular) * 0.85);}
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4 style="color: rgb(var(--accent)); opacity: 100%;"><b>MATH-285</b> • Groups and Languages</h4>
+					<h1>Muller-Schupp Theorem <span style="color: var(--bg); opacity: 35%; font-style: italic;">(Part I)</span></h1>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="theorem">Muller-Schupp Theorem</div>
+					<div class="definitionText">
+						<p>If \(G\) is a finitely generated group, TFSAE:</p>
+						<p style="margin-left: 2rem;"><span style="color: rgb(var(--theorem));" class="nobg">(i)</span> &nbsp; \( WP(G) \in \mathcal{CF} \)</p>
+						<p style="margin-left: 2rem;"><span style="color: rgb(var(--theorem));" class="nobg">(ii)</span> &nbsp; \( WP(G) \in \mathcal{DCF} \)</p>
+						<p style="margin-left: 2rem;"><span style="color: rgb(var(--theorem));" class="nobg">(iii)</span> &nbsp; \( G \) is virtually free</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="theorem">Muller-Schupp Theorem</div>
+					<div class="definitionText">
+						<p style="opacity: 35%;">If \(G\) is a finitely generated group, TFSAE:</p>
+						<p style="margin-left: 2rem; opacity: 35%;"><span style="color: rgb(var(--theorem));" class="nobg">(i)</span> &nbsp; \( WP(G) \in \mathcal{CF} \)</p>
+						<p style="margin-left: 2rem; opacity: 35%;"><span style="color: rgb(var(--theorem));" class="nobg">(ii)</span> &nbsp; \( WP(G) \in \mathcal{DCF} \)</p>
+						<p style="margin-left: 2rem; opacity: 35%;"><span style="color: rgb(var(--theorem));" class="nobg">(iii)</span> &nbsp; \( G \) is virtually free</p>
+						<p style="color: rgb(var(--theorem));">virtually free (iii) \(\implies\) \(\in \mathcal{DCF}\) (ii)</p>
+					</div>
+				</div></section>
+
+<!-- GROUP THEORY ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Group Theory:<br>Index <i>&</i> Cosets</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Virtually Free Group</div>
+					<div class="definitionText">
+						<p style="max-width: 24ch;">a group is <b>virtually free</b> if it has a <span> free subgroup of finite index</span> (remember “free” = no relators)</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Index</div>
+					<div class="definitionText">
+						<p>the <b>index</b> of a subgroup \(H\subseteq G\) is the <span>number of equivalence classes</span> it has in \(G\) (by left-side or right-side operation), denoted \(|G:H|\)</p>
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Coset</div>
+					<div class="definitionText">
+						<p style="max-width: 32ch;">each <span>equivalence class</span> of a subgroup \(H\subseteq G\) is called a <b>coset of \(\boldsymbol{H}\)</b>; notably, each coset that is not \(H\) will not be a subgroup</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Coset</div>
+					<div class="definitionText">
+						<p style="max-width: 32ch;">each <span>equivalence class</span> of a subgroup \(H\subseteq G\) is called a <b>coset of \(\boldsymbol{H}\)</b>; notably, each coset that is not \(H\) will not be a subgroup</p>
+						<p style="font-size: var(--bodyLarge); max-width: 36ch; margin-top: var(--spaceLarge); opacity: 65%;">※ We can specify <b>left</b> or <b>right coset</b> if the operation is applied to the left (\(gH\)) or right (\(Hg\)) side, respectively.</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide larger">
+					<p>In \( G = (\mathbb{Z}, +)\), consider the subgroup</p>
+					$$ H= \{..., 0, 3, 6, 9, 12, ...\} $$
+					<p>What are the <b>cosets</b> of \(H\) in \(G\)?</p>
+					<div class="row larger">
+						<div class="larger columnWorkbook">
+							<p class="fragment">\( \{ ...,0,3,6,9,12,...\} = H \)</p>
+							<p class="fragment">\( \{ ...,1,4,7,10,13,...\} = H+1 \)</p>
+							<p class="fragment">\( \{ ...,2,5,8,11,14,...\} = H+2 \)</p>
+						</div>
+						<p class="fragment">\( \left. \begin{aligned} \phantom{.} \\ \phantom{.} \\ \phantom{.} \end{aligned} \right\rbrace \) index of \(H\) is \( |G:H| = 3\)</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2 style="margin-bottom: var(--spaceLargest);">More about Index</h2>
+					<div class="columnWorkbook larger">
+						<ul>
+							<li class="fragment"><p>\( |G| = |G:H| |H|\) <span style="opacity: 40%;">size of \(G\) = index of \(H\) \(\times\) size of \(H\)</span></p></li>
+							<li class="fragment"><p>the cosets of \(H\) form a disjoint partition of \(G\); equivalently, \( G\) is the disjoint union of all cosets of \(H\)</p></li>
+							<li class="fragment"><p>index can be infinite (for example, \(|\mathbb{R} : \mathbb{Z}| = \infty\) )</p></li>
+							<li class="fragment"><p>index does not change if you consider left or right cosets</p></li>
+						</ul>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Transversal</div>
+					<div class="definitionText">
+						<p>a <b>transversal</b> of a subgroup \(H\subseteq G\) is a set with <span>one element from each coset</span> (like a set of equivalence class representatives)</p>
+					</div>
+				</div></section>
+
+<!-- PROOF ------------------------------------------------------------------------------------------------------>
+				
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>The Proof</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="proof">Muller-Schupp Theorem</div>
+					<div class="proofText">
+						<p>Suppose \(G\) is a group with finitely-indexed, free subgroup \(F\) with transversal \(T\) that contains the identity.</p>
+						<p>Now we construct a \(2\text{-pda}\) with \(|T|+1\) states accepting \(WP(G)\). Each element in \(T\) has a state, except for the identity, which has two: the start state and only accepting state, and the other non-accepting.</p>
+						<p>As we read a word \(w\) from left to right, the \(\text{pda}\) <b>keeps track of the coset \(\boldsymbol{Ft}\)</b> of the prefix \(w(i)\) of \(w\) that has been read so far. When the current coset is \(F\), the \(\text{pda}\) is in the accepting state if and only if the stack is empty.</p>
+						<p>The stack <b>stores a reduced representative</b> of \(w(i)t^{-1}\) of \(F\) as we read, including a bottom of stack symbol \(\beta_0\). In the \(\beta_0\) is read and the result of the move is to remove the top symbol, then the new top symbol is \(\beta_0\), and the \(\text{pda}\) moves into an accept state.</p>
+						<p>By 2.6.34, which states </p>
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="theorem">2.6.34 Proposition</div>
+					<div class="definitionText">
+						<p>\( \mathcal{CF} \) and \( \mathcal{DCF} \) are closed under inverse GSMs, and subsequently inverse homomorphisms.</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="theorem">3.4.7 Proposition</div>
+					<div class="definitionText">
+						<p>Suppose that the language family \(C\) is closed under inverse GSMs and under intersection with regular languages.</p>
+						<p>Let \(F \leq G\) be groups with \(|G : F|\) finite and \(WP(F) \in C \implies WP(G) \in C\).</p>
+					</div>
+				</div></section>
+
+			</div>
+		</div>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+
+		<div class="footer"></div>
+		<!-- <a href="../index.html"><div class="home"></div></a> -->
+		<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/dist/plugin/zoom.js"></script>
+		<script src="../reveal/dist/plugin/notes.js"></script>
+		<script src="../reveal/dist/plugin/search.js"></script>
+		<script src="../reveal/dist/plugin/markdown.js"></script>
+		<script src="../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../scripts.js"></script>
+	</body>
+</html>

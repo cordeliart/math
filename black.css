@@ -18,7 +18,7 @@
     --header-margin: 0 0 2rem 0;
     --fontSecondary: "Instrument Sans", Helvetica, sans-serif;
     --block-margin: 1rem;
-    --bodyRegular: 4.15vh;
+    --bodyRegular: 4vh;
     --bodyLargest: calc(var(--bodyRegular) * 1.8);
     --bodyLargish: calc(var(--bodyRegular) * 1.5);
     --bodyLarger: calc(var(--bodyRegular) * 1.35);
@@ -397,8 +397,8 @@ sub { vertical-align: sub; font-size: smaller }
     color: rgb(var(--theorem));
 } .proof h4 { color: var(--primary); }
 .proofText {
-    height: calc(68vh - 3.5rem);
-    margin-bottom: 3.5rem;
+    height: calc(100%);
+    /* margin-bottom: 2rem; */
     display: flex;
     flex-flow: column;
     gap: var(--spaceLarge);

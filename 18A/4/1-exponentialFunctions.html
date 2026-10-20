@@ -81,7 +81,7 @@
 					<div class="workbook"><div>118</div><div>Example 1</div></div>
 					<!-- <p>Let's review exponent rules.</p> -->
 
-					<div style="display: grid; grid-template-columns: 3fr 2fr; row-gap: var(--space);">
+					<div style="display: grid; grid-template-columns: 1fr 1fr; row-gap: var(--space);">
 						<h5>Example</h5>
 						<h5>Generalized</h5>
 						
@@ -156,16 +156,21 @@
 					<div class="workbook"><div>120</div><div>Example 2</div></div>
 					<p>Fill out the table and sketch the graph of \(f(x) = 2^x\).</p>
 					<div class="slideRow">
-						<div class="grid" style="margin: 0 var(--spaceLargest); grid-template-columns: auto auto; width: fit-content; row-gap: var(--spaceSmall); column-gap: calc(var(--spaceLargest)*2);">
-							<h5>\( x \)</h5><h5>\( 2^x \)</h5>
-							<p>\( -3 \)</p><p class="fragment blue">\( 2^{-3} = 1/8 \)</p>
-							<p>\( -2 \)</p><p class="fragment blue">\( 2^{-2} = 1/4 \)</p>
-							<p>\( -1 \)</p><p class="fragment blue">\( 2^{-1} = 1/2 \)</p>
-							<p>\( 0 \)</p><p class="fragment blue">\( 2^{0} = 1 \)</p>
-							<p>\( 1 \)</p><p class="fragment blue">\( 2^{1} = 2 \)</p>
-							<p>\( 2 \)</p><p class="fragment blue">\( 2^{2} = 4 \)</p>
-							<p>\( 3 \)</p><p class="fragment blue">\( 2^{3} = 8 \)</p>
-						</div>
+						<table>
+							<thead><tr>
+								<th><p>\(x\)</p></th>
+								<th><p>\(2^x\)</p></th>
+							</tr></thead>
+							<tbody>
+								<tr><th><p>\(-3\)</p></th><th><p class="fragment blue">\( 2^{-3} = 1/8 \)</p></th></tr>
+								<tr><th><p>\(-2\)</p></th><th><p class="fragment blue">\( \phantom{-} 2^{-2} = 1/4 \phantom{-}\)</p></th></tr>
+								<tr><th><p>\(-1\)</p></th><th><p class="fragment blue">\( 2^{-1} = 1/2 \)</p></th></tr>
+								<tr><th><p>\(0\)</p></th><th><p class="fragment blue">\( 2^{0} = 1 \)</p></th></tr>
+								<tr><th><p>\(1\)</p></th><th><p class="fragment blue">\( 2^{1} = 2 \)</p></th></tr>
+								<tr><th><p>\(2\)</p></th><th><p class="fragment blue">\( 2^{2} = 4 \)</p></th></tr>
+								<tr><th><p>\(3\)</p></th><th><p class="fragment blue">\( 2^{3} = 8 \)</p></th></tr>
+							</tbody>
+						</table>
 						<img src="../../images/18A/graph-gridFive.svg" style="max-width: 55vh;">
 					</div>
 				</div></section>
@@ -173,16 +178,21 @@
 					<div class="workbook"><div>120</div><div>Example 2</div></div>
 					<p>Fill out the table and sketch the graph of \(f(x) = 2^x\).</p>
 					<div class="slideRow">
-						<div class="grid" style="margin: 0 var(--spaceLargest); grid-template-columns: auto auto; width: fit-content; row-gap: var(--spaceSmall); column-gap: calc(var(--spaceLargest)*2);">
-							<h5>\( x \)</h5><h5>\( 2^x \)</h5>
-							<p>\( -3 \)</p><p class="blue">\( 2^{-3} = 1/8 \)</p>
-							<p>\( -2 \)</p><p class="blue">\( 2^{-2} = 1/4 \)</p>
-							<p>\( -1 \)</p><p class="blue">\( 2^{-1} = 1/2 \)</p>
-							<p>\( 0 \)</p><p class="blue">\( 2^{0} = 1 \)</p>
-							<p>\( 1 \)</p><p class="blue">\( 2^{1} = 2 \)</p>
-							<p>\( 2 \)</p><p class="blue">\( 2^{2} = 4 \)</p>
-							<p>\( 3 \)</p><p class="blue">\( 2^{3} = 8 \)</p>
-						</div>
+						<table>
+							<thead><tr>
+								<th><p>\(x\)</p></th>
+								<th><p>\(2^x\)</p></th>
+							</tr></thead>
+							<tbody>
+								<tr><th><p>\(-3\)</p></th><th><p class="blue">\( 2^{-3} = 1/8 \)</p></th></tr>
+								<tr><th><p>\(-2\)</p></th><th><p class="blue">\( \phantom{-} 2^{-2} = 1/4 \phantom{-}\)</p></th></tr>
+								<tr><th><p>\(-1\)</p></th><th><p class="blue">\( 2^{-1} = 1/2 \)</p></th></tr>
+								<tr><th><p>\(0\)</p></th><th><p class="blue">\( 2^{0} = 1 \)</p></th></tr>
+								<tr><th><p>\(1\)</p></th><th><p class="blue">\( 2^{1} = 2 \)</p></th></tr>
+								<tr><th><p>\(2\)</p></th><th><p class="blue">\( 2^{2} = 4 \)</p></th></tr>
+								<tr><th><p>\(3\)</p></th><th><p class="blue">\( 2^{3} = 8 \)</p></th></tr>
+							</tbody>
+						</table>
 						<img src="../../images/18A/4-1-ex2.svg" style="max-width: 55vh;">
 					</div>
 				</div></section>
@@ -206,39 +216,54 @@
 				
 				<section><div class="bodySlide">
 					<div class="definition">Asymptote</div>
-					<div class="definitionText">
-						<div class="row" style="gap: var(--spaceLargest)">
-							<p>instead of going up or down, the end behavior in some graphs flattens to an <span>invisible horizontal line</span>, which we call the <b>asymptote</b> </p>
-							<img src="../../images/18A/4-1-asymptote.svg" style="max-width: 50vh;">
-						</div>
+					<div class="definitionImg">
+						<p>instead of going up or down, the end behavior in some graphs flattens to an <span>invisible horizontal line</span>, which we call the <b>asymptote</b> </p>
+						<img src="../../images/18A/4-1-asymptote.svg" style="max-width: 50vh; width: 50vw; margin-left:auto;">
 					</div>
 				</div></section>
 				
 				<section><div class="bodySlide">
 					<div class="definition">Exponential Growth</div>
-					<div class="definitionText">
-						<div class="row" style="gap: var(--spaceLargest)">
-							<p>when <span>\(b>1\)</span>, the graph is always increasing, which we call <b>exponential growth</b></p>
-							<img src="../../images/18A/4-1-growth.svg" style="max-width: 50vh;">
-						</div>
+					<div class="definitionImg">
+						<p>when <span>\(b>1\)</span>, the graph is always increasing, which we call <b>exponential growth</b></p>
+						<img src="../../images/18A/4-1-growth.svg" style="max-width: 50vh; width: 50vw; margin-left:auto;">
 					</div>
 				</div></section>
 				<section><div class="bodySlide">
 					<div class="definition">Exponential Decay</div>
-					<div class="definitionText">
-						<div class="row" style="gap: var(--spaceLargest)">
-							<p>when <span>\(0< b< 1\)</span>, the graph is always decreasing, which we call <b>exponential decay</b></p>
-							<img src="../../images/18A/4-1-decay.svg" style="max-width: 50vh;">
-						</div>
+					<div class="definitionImg">
+						<p>when <span>\(0< b< 1\)</span>, the graph is always decreasing, which we call <b>exponential decay</b></p>
+						<img src="../../images/18A/4-1-decay.svg" style="max-width: 50vh; width: 50vw; margin-left:auto;">
 					</div>
 				</div></section>
 				
+				<section><div class="bodySlide">
+					<h2>Transformations of Exponentials</h2>
+					$$ b^x \rightarrow a\cdot b^{x-h}+k$$
+					<p class="fragment" style="margin-bottom:0;">BUT we <b>won't be transforming</b> in this class! We'll only have \(b^x\), so all of our exponentials will be very consistent:</p>
+					<ul>
+						<li class="fragment"><p>horizontal asymptote is <i>always</i> the \(x\)-axis</p></li>
+						<li class="fragment"><p>\(f\)-intercept is <i>always</i> at \((0,1)\) <span class="blue">because \(f(0)=b^0=1\)</span></p></li>
+						<li class="fragment"><p>there is <i>always</i> a point at \((1,b)\) <span class="blue">because \(f(1)=b^1=b\)</span></p></li>
+					</ul>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>122</div><div>Example 3</div></div>
+					<p>Let's graph an exponential \(f(x) = 2^x\).</p>
+					<ol>
+						<li><p>Mark and label \(f\)-<b>intercept</b></p></li>
+						<li><p>Mark and label the <b>point</b> \((1,b)\)</p></li>
+						<li><p>Mark and label the <b>horizontal asymptote</b></p></li>
+						<li><p>Draw a <b>smooth line</b> to connect</p></li>
+					</ol>
+				</div></section>
 
 <!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
 				<section data-background="var(--primary)"><div class="endSlide">
 					<h2>See you next class!</h2>
 					<h5>Your to-do’s:</h5>
-					<p>-> 3.6 homework</p>
+					<p>-> 4.1 homework</p>
 				</div></section>
 			</div>
 		</div>

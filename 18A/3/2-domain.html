@@ -37,14 +37,33 @@
 					
 					<div class="problem long withNum">
 						<div>1</div>
-						<p>What is an <b>extraneous solution</b>?</p>
-						<p class="fragment">A solution that doesn’t work with the original equation.</p>
+						<p style="margin-bottom:0;">What value(s) of \(x\) would <b>break</b> the expression...</p>
+						<h6 style="padding: 0.85rem 0;">Hint: think extraneous solutions!</h6>
+						<div class="col2">
+							<div class="problem long withNum">
+								<div>a</div>
+								<p>\( \dfrac{1}{x-2} \)</p>
+								<p class="fragment">\(x\neq 2\)</p>
+							</div>
+							<div class="problem long withNum">
+								<div>b</div>
+								<p>\( \sqrt{x} \)</p>
+								<p class="fragment">\(x\neq \) negative #</p>
+							</div>
+						</div>
+						<p></p>
 					</div>
-					<div class="problem long withNum">
+					<div class="problem withNum">
 						<div>2</div>
-						<p>What value of \(x\) would <b>break</b> the expression \(1/x\)?</p>
-						<p class="fragment">The leading term has the variable with the <b>highest exponent</b>.</p>
+						<p>Write your answer for part (b) in <b>interval notation</b>.</p>
+						<p class="fragment">\( [0,\infty)\)</p>
 					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<h2>Lumen Updates</h2>
+					<p><span style="color:var(--warning);">The Lumen paywall ($35) is now active.</span> Please pay within the next <b>two weeks</b>, or you will lose access to the homeworks.</p>
+					<h6>If payment is an issue, come talk to me ASAP.</h6>
 				</div></section>
 
 				<section data-background="var(--primary)"><div class="titleSlide">
@@ -58,13 +77,13 @@
 				<section><div class="bodySlide">
 					<div class="definition">Domain (Review from 3.1)</div>
 					<div class="definitionText">
-						<p>the <b>domain</b> \(D\) of a function is the collection of <span>all valid inputs</span></p>
+						<p style="max-width: 24ch;">the <b>domain</b> \(D\) of a function is the collection of <span>all valid inputs</span></p>
 					</div>
 				</div></section>
 				<section><div class="bodySlide">
 					<div class="definition">Range (Review from 3.1)</div>
 					<div class="definitionText">
-						<p>the <b>range</b> of a function is the collection of <span>all possible outputs</span></p>
+						<p style="max-width: 24ch;">the <b>range</b> \(R\) of a function is the collection of <span>all possible outputs</span></p>
 					</div>
 				</div></section>
 				
@@ -80,7 +99,7 @@
 								<div class="problem"><p>\(f(-1) =\)</p><p class="fragment">\( -3\)</p></div>
 								<div class="problem"><p>\(f(0) =\)</p><p class="fragment">\( -2\)</p></div>
 							</div>
-							<div class="columnWorkbook">
+							<div class="columnWorkbook" style="margin-left:-2rem;">
 								<div class="problem"><p>\(f(1) =\)</p><p class="fragment">\( -1\)</p></div>
 								<div class="problem"><p>\(f(2) =\)</p><p class="fragment">\( 0\)</p></div>
 								<div class="problem"><p>\(f(3) =\)</p><p class="fragment">\( 1\)</p></div>
@@ -105,7 +124,7 @@
 								<div class="problem"><p>\(f(-1) =\)</p><p class="fragment">\( -1/3\)</p></div>
 								<div class="problem"><p>\(f(0) =\)</p><p class="fragment">\( -1/2\)</p></div>
 							</div>
-							<div class="columnWorkbook">
+							<div class="columnWorkbook" style="margin-left:-2rem;">
 								<div class="problem"><p>\(f(1) =\)</p><p class="fragment">\( -1\)</p></div>
 								<div class="problem"><p>\(f(2) =\)</p><p class="fragment">undefined</p></div>
 								<div class="problem"><p>\(f(3) =\)</p><p class="fragment">\( 1\)</p></div>
@@ -131,7 +150,7 @@
 								<div class="problem"><p>\(f(-1) =\)</p><p class="fragment">\( \sqrt[3]{-3 } \approx -1.4422\)</p></div>
 								<div class="problem"><p>\(f(0) =\)</p><p class="fragment">\( \sqrt[3]{-2 } \approx -1.2599\)</p></div>
 							</div>
-							<div class="columnWorkbook">
+							<div class="columnWorkbook" style="margin-left:-2rem;">
 								<div class="problem"><p>\(f(1) =\)</p><p class="fragment">\( -1 \)</p></div>
 								<div class="problem"><p>\(f(2) =\)</p><p class="fragment">\( 0\)</p></div>
 								<div class="problem"><p>\(f(3) =\)</p><p class="fragment">\( 1\)</p></div>
@@ -156,7 +175,7 @@
 								<div class="problem"><p>\(f(-1) =\)</p><p class="fragment">\( \sqrt{-3} =\) error</p></div>
 								<div class="problem"><p>\(f(0) =\)</p><p class="fragment">\( \sqrt{-2} =\) error</p></div>
 							</div>
-							<div class="columnWorkbook">
+							<div class="columnWorkbook" style="margin-left:-2rem;">
 								<div class="problem"><p>\(f(1) =\)</p><p class="fragment">\( \sqrt{-1}=\) error</p></div>
 								<div class="problem"><p>\(f(2) =\)</p><p class="fragment">\(0\)</p></div>
 								<div class="problem"><p>\(f(3) =\)</p><p class="fragment">\( 1\)</p></div>
@@ -186,26 +205,26 @@
 						<p style="margin: calc(var(--space)*-1)">Positive #s</p>
 
 						<h5 style="text-align:right;">fraction</h5>
-						<p>\( \dfrac{\text{top}}{ {\color{#d10808} \text{bottom}}} \)</p>
-						<p>\(\checkmark\)</p>
-						<p style="color: var(--warning);">✘</p>
-						<p>\(\checkmark\)</p>
+						<p class="fragment" data-fragment-index="1">\( \dfrac{\text{top}}{ {\color{#d10808} \text{bottom}}} \)</p>
+						<p class="fragment" data-fragment-index="2">\(\checkmark\)</p>
+						<p class="fragment" data-fragment-index="3" style="color: var(--warning);">✘</p>
+						<p class="fragment" data-fragment-index="4">\(\checkmark\)</p>
 
 						<h5 style="text-align:right;">even root</h5>
-						<p>\( \sqrt[\text{even}]{ {\color{#d10808} \text{inside} } } \)</p>
-						<p style="color: var(--warning);">✘</p>
-						<p>\(\checkmark\)</p>
-						<p>\(\checkmark\)</p>
+						<p class="fragment" data-fragment-index="5">\( \sqrt[\text{even}]{ {\color{#d10808} \text{inside} } } \)</p>
+						<p class="fragment" data-fragment-index="6" style="color: var(--warning);">✘</p>
+						<p class="fragment" data-fragment-index="7">\(\checkmark\)</p>
+						<p class="fragment" data-fragment-index="8">\(\checkmark\)</p>
 
-						<h5 style="text-align:right;">even root <i>top</i></h5>
-						<p>\( \dfrac{\sqrt[\text{even}]{ {\color{#d10808} \text{inside} } }}{{\color{#d10808} \text{bottom}}} \)</p>
-						<p style="grid-column: span 3;">combine above</p>
+						<h5 style="text-align:right;">even root<br>on <i>top</i></h5>
+						<p class="fragment" data-fragment-index="10">\( \dfrac{\sqrt[\text{even}]{ {\color{#d10808} \text{inside} } }}{{\color{#d10808} \text{bottom}}} \)</p>
+						<p class="fragment" data-fragment-index="11" style="grid-column: span 3;">combine above</p>
 						
-						<h5 style="text-align:right;">even root<br><i>bottom</i></h5>
-						<p>\( \dfrac{\text{top}}{\sqrt[\text{even}]{ {\color{#d10808} \text{inside} } }} \)</p>
-						<p style="color: var(--warning);">✘</p>
-						<p style="color: var(--warning);">✘</p>
-						<p>\(\checkmark\)</p>
+						<h5 style="text-align:right;">even root<br>on <i>bottom</i></h5>
+						<p class="fragment" data-fragment-index="15">\( \dfrac{\text{top}}{\sqrt[\text{even}]{ {\color{#d10808} \text{inside} } }} \)</p>
+						<p class="fragment" data-fragment-index="16" style="color: var(--warning);">✘</p>
+						<p class="fragment" data-fragment-index="17" style="color: var(--warning);">✘</p>
+						<p class="fragment" data-fragment-index="18">\(\checkmark\)</p>
 					</div>
 				</div></section>
 
@@ -220,44 +239,111 @@
 				<section><div class="bodySlide">
 					<div class="workbook"><div>87</div><div>Example 3</div></div>
 					<p style="max-width: 100%;">Find the domain of \( f(x) = \dfrac{ x^2-4x-5 }{ x-5 }\) & express in interval notation.</p>
-					<div>
-						<p class="blue fragment">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
-						<p class="blue fragment">\( x-5\neq 0\)</p>
-						<p class="blue fragment">\( x\neq 5 \)</p>
-						<p class="blue fragment finalAnswer">\(D = ( -\infty, 5)\cup (5 ,\infty) \)</p>
+					<div class="row">
+						<div>
+							<p class="blue fragment">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
+							<p class="blue fragment">\( x-5\neq 0\)</p>
+							<p class="blue fragment">\( x\neq 5 \)</p>
+							<p class="blue fragment finalAnswer">\(D = ( -\infty, 5)\cup (5 ,\infty) \)</p>
+						</div>
+						<div class="fragment imgBox shortest">
+							<div class="line blueFill" style="width: 50%; left: 0; top: 50%; transform: translateY(-2.85rem);"><div class="arrowL"></div></div>
+							<div class="line blueFill" style="width: 50%; left: 50%; top: 50%; transform: translateY(-2.85rem);"><div class="arrowR"></div><div class="openL"></div></div>
+							<div class="line blueFill centerBoth" style="width: 100%;"><div class="arrowL"></div><div class="arrowR"></div></div>
+							<div class="line blueFill centerBoth" style="width: 2rem; transform: rotate(90deg) translateY(1rem);"></div>
+							<p class="centerBoth blue" style="transform: translate(-50%, 1rem);">\(5\)</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="slideRow">
+					<div class="columnWorkbook">
+						<h2>Group Work</h2>
+						<p style="margin-bottom: 0;">Groups 2 & 3: <b>#4</b></p>
+						<p style="margin-bottom: 0;">Groups 4 & 5: <b>#5</b></p>
+						<p>Groups 6 & 7: <b>#6</b></p>
+						<p>If you finish your assigned problem, <b>write your answer on the board</b>, and then move on to the next one!</p>
+						<p>Reconvene at 11:30!</p>
+					</div>
+					<div style="padding: 1.35rem 1.65rem 0rem 1.65rem; border: rgb(var(--accent)) 2px solid; border-radius: 1.35rem;" class="blue">
+						<p><u>EVEN groups</u>:</p>
+						<ul>
+							<li style="margin-bottom: 1rem;"><p>identify the <b>danger zone</b></p></li>
+							<li><p>solve for the \(x\) that are <b>not allowed</b>, like \(x\neq ...\)</p></li>
+						</ul>
+						<p style="padding-top: var(--spaceLarge);"><u>ODD groups</u>:</p>
+						<ul>
+							<li style="margin-bottom: 1rem;"><p>write the domain using <b>interval notation</b>, like \( (-\infty,a) \cup (a,\infty) \)</p></li>
+							<li><p>draw it on a <b>number line</b></p></li>
+						</ul>
 					</div>
 				</div></section>
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>87</div><div>Example 4</div></div>
 					<p style="max-width: 100%;">Find the domain of \( f(x) = \dfrac{ x+1 }{ x^2-4x-5 }\) & express in interval notation.</p>
-					<div>
-						<p class="blue fragment">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
-						<p class="blue fragment">\( x^2 - 4x - 5 \neq 0\)</p>
-						<p class="blue fragment">\( (x -5)(x+1) \neq 0\)</p>
-						<p class="blue fragment">\( x\neq -1,5\)</p>
+					<div class="row">
+						<div>
+							<p class="blue fragment">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
+							<p class="blue fragment">\( x^2 - 4x - 5 \neq 0\)</p>
+							<p class="blue fragment">\( (x -5)(x+1) \neq 0\)</p>
+							<p class="blue fragment">\( x\neq -1,5\)</p>
+							<p class="blue fragment finalAnswer" style="margin-right: -4rem;">\(D = ( -\infty, -1)\cup (-1,5) \cup (5,\infty) \)</p>
+						</div>
+						<div class="fragment imgBox shortest">
+							<div class="line blueFill" style="width: 30%; left: 0; top: 50%; transform: translateY(-2.85rem);"><div class="arrowL"></div></div>
+							<div class="line blueFill" style="width: 40%; left: 30%; top: 50%; transform: translateY(-2.85rem);"><div class="openL"></div></div>
+							<div class="line blueFill" style="width: 30%; left: 70%; top: 50%; transform: translateY(-2.85rem);"><div class="arrowR"></div><div class="openL"></div></div>
+							<div class="line blueFill centerBoth" style="width: 100%;"><div class="arrowL"></div><div class="arrowR"></div></div>
+							<div class="line blueFill centerVer" style="width: 2rem; left: 30%; transform: rotate(90deg) translateY(1rem);"></div>
+							<div class="line blueFill centerVer" style="width: 2rem; left: 70%; transform: rotate(90deg) translateY(1rem);"></div>
+							<p class="centerVer blue" style="left: 30%; transform: translate(-50%, 1rem);">\(-1\)</p>
+							<p class="centerVer blue" style="left: 70%; transform: translate(-50%, 1rem);">\(5\)</p>
+						</div>
 					</div>
-					<p class="blue fragment finalAnswer">\(D = ( -\infty, -1)\cup (-1,5) \cup (5,\infty) \)</p>
 				</div></section>
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>88</div><div>Example 5</div></div>
 					<p style="max-width: 100%;">Find the domain of \(f(x) = \dfrac{ x^2-4x-5 }{ x+11 } \) & express in interval notation.</p>
-					<div>
-						<p class="blue fragment">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
-						<p class="blue fragment">\( x+11 \neq 0\)</p>
-						<p class="blue fragment">\( x\neq -11 \)</p>
-						<p class="blue fragment finalAnswer">\(D = ( -\infty, -11)\cup (-11 ,\infty) \)</p>
+					<div class="row">
+						<div>
+							<p class="blue fragment">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
+							<p class="blue fragment">\( x+11 \neq 0\)</p>
+							<p class="blue fragment">\( x\neq -11 \)</p>
+							<p class="blue fragment finalAnswer">\(D = ( -\infty, -11)\cup (-11 ,\infty) \)</p>
+						</div>
+						
+						<div class="fragment imgBox shortest">
+							<div class="line blueFill" style="width: 50%; left: 0; top: 50%; transform: translateY(-2.85rem);"><div class="arrowL"></div></div>
+							<div class="line blueFill" style="width: 50%; left: 50%; top: 50%; transform: translateY(-2.85rem);"><div class="arrowR"></div><div class="openL"></div></div>
+							<div class="line blueFill centerBoth" style="width: 100%;"><div class="arrowL"></div><div class="arrowR"></div></div>
+							<div class="line blueFill centerBoth" style="width: 2rem; transform: rotate(90deg) translateY(1rem);"></div>
+							<p class="centerBoth blue" style="transform: translate(-50%, 1rem);">\(-11\)</p>
+						</div>
 					</div>
 				</div></section>
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>87</div><div>Example 6</div></div>
 					<p style="max-width: 100%;">Find the domain of \( f(x) = \dfrac{ x+11 }{ x^2-4x-5 }\) & express in interval notation.</p>
-					<div>
-						<p class="blue fragment">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
-						<p class="blue fragment">Same as previous example!</p>
-						<p class="blue fragment finalAnswer">\(D = ( -\infty, -1)\cup (-1,5) \cup (5,\infty) \)</p>
+					<div class="row">
+						<div>
+							<p class="blue fragment">Danger zone: when <span style="color:var(--warning);">bottom \(=0\)</span></p>
+							<p class="blue fragment">Same as example 4!</p>
+							<p class="blue fragment finalAnswer" style="margin-right: -4rem;">\(D = ( -\infty, -1)\cup (-1,5) \cup (5,\infty) \)</p>
+						</div>
+						
+						<div class="fragment imgBox shortest">
+							<div class="line blueFill" style="width: 30%; left: 0; top: 50%; transform: translateY(-2.85rem);"><div class="arrowL"></div></div>
+							<div class="line blueFill" style="width: 40%; left: 30%; top: 50%; transform: translateY(-2.85rem);"><div class="openL"></div></div>
+							<div class="line blueFill" style="width: 30%; left: 70%; top: 50%; transform: translateY(-2.85rem);"><div class="arrowR"></div><div class="openL"></div></div>
+							<div class="line blueFill centerBoth" style="width: 100%;"><div class="arrowL"></div><div class="arrowR"></div></div>
+							<div class="line blueFill centerVer" style="width: 2rem; left: 30%; transform: rotate(90deg) translateY(1rem);"></div>
+							<div class="line blueFill centerVer" style="width: 2rem; left: 70%; transform: rotate(90deg) translateY(1rem);"></div>
+							<p class="centerVer blue" style="left: 30%; transform: translate(-50%, 1rem);">\(-1\)</p>
+							<p class="centerVer blue" style="left: 70%; transform: translate(-50%, 1rem);">\(5\)</p>
+						</div>
 					</div>
 				</div></section>
 

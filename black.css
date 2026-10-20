@@ -21,7 +21,7 @@
     --bodyRegular: 4vh;
     --bodyLargest: calc(var(--bodyRegular) * 1.8);
     --bodyLargish: calc(var(--bodyRegular) * 1.5);
-    --bodyLarger: calc(var(--bodyRegular) * 1.35);
+    --bodyLarger: calc(var(--bodyRegular) * 1.3);
     --bodyLarge: calc(var(--bodyRegular) * 1.15);
     --bodySmaller: calc(var(--bodyRegular) * 0.8);
     --bodySmallest: calc(var(--bodyRegular) * 0.65);
@@ -375,12 +375,31 @@ sub { vertical-align: sub; font-size: smaller }
     flex-flow: column;
     gap: var(--space);
     justify-content: center;
-} .definitionText p {
+} .definitionText p, .definitionImg p {
     font-size: var(--bodyLarger);
     margin: 0;
     max-width: 30ch;
-} .definitionText span, span .highlight {
+} .definitionText span, span .highlight,  .definitionImg span {
     background-color: #ffde8385;
+} .definitionImg {
+    height: calc(100%);
+    /* margin-top: 1rem; */
+    display: flex;
+    flex-flow: row;
+    gap: calc(var(--spaceLargest) * 1.35);
+    justify-content: space-between;
+    align-items: center;
+} .definitionImg>div {
+    height: calc(100%);
+    display: flex;
+    flex-flow: column;
+    gap: var(--space);
+    justify-content: center;
+} .definitionImg>img {
+    max-width: 50vw;
+    width: 50vw;
+} .definitionImg p {
+    max-width: 21ch;
 }
 
 .theorem { color: rgb(var(--theorem)); }
@@ -504,13 +523,22 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
 } .col3 ul li {
     margin-top: 0;
     margin-bottom: 0;
-} .col4 {
+} .col4, .prob4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 6rem;
 } .col4 ul li {
     margin-top: 0;
     margin-bottom: 0;
+} .prob4>div {
+    display: flex;
+    flex-flow: column;
+    gap: var(--spaceLarge);
+    max-width: 17vw;
+    width: 17vw;
+} .prob4>img,  .prob4>div>img {
+    max-width: 17vw;
+    width: 17vw;
 }
 
 .col2 { /* two columns for 2 .problems */
@@ -742,12 +770,12 @@ p .answerBox { background: rgba(var(--accent), 0.15); }
     top: 50%;
     height: 1.85rem;
     width: 1.01rem;
-    background-image: url('images/18A/arrowhead.svg');
+    background-image: url('images/arrowhead.svg');
     background-repeat: none;
     background-size:cover;
     overflow: visible;
 } .blueFill>.arrowL, .blueFill>.arrowR {
-    background-image: url('images/18A/arrowheadBlue.svg');
+    background-image: url('images/arrowheadBlue.svg');
 } .arrowL {
     left: 0;
     transform: translate(-2px, -50%);

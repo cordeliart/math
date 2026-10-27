@@ -21,6 +21,71 @@
 		<link rel="stylesheet" href="../../black.css" id="theme" />
 		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
 		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+
+		<style>
+
+			.baseDiv {
+				position: relative;
+				background-image: url('../../images/18A/3-4-blank.svg');
+				width: 45vh;
+				height: 45vh;
+				background-position: center;
+				background-size:contain;
+				background-repeat: none;
+				margin: var(--spaceLargest) auto;
+				display: flex;
+				flex-flow: row;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.leftRight, .flip, .upDown, .flipX {
+				/* background-color: rgba(0,0,0,.2); */
+				position: relative;
+				width: 90%;
+				height: 90%;
+				margin: auto auto;
+				animation-name: leftRight;
+				animation-timing-function: linear;
+				animation-duration: 9s;
+				/* animation-direction: alternate; */
+				animation-iteration-count: infinite;
+				transform: translateX(-50%);
+			} .upDown {
+				animation-name: upDown;
+			} .flip {
+				animation-name: flipper;
+				/* animation-duration: 9s; */
+			} .flipX {
+				animation-name: flipperX;
+				/* animation-duration: 9s; */
+			}
+
+			@keyframes leftRight {
+				0% {margin-left: 89.5%; }
+				25% {margin-left: 30%; }
+				75% {margin-left: 150%; }
+				100% {margin-left: 89.5%; }
+			}
+
+			@keyframes flipper {
+				0% {transform: scaleY(120%); }
+				50% {transform: scaleY(-120%); }
+				100% {transform: scaleY(120%); }
+			}
+
+			@keyframes flipperX {
+				0% {transform: scaleX(180%); }
+				50% {transform: scaleX(-180%); }
+				100% {transform: scaleX(180%); }
+			}
+
+			@keyframes upDown {
+				0% { margin-top: -10%; margin-left: 89.5%; }
+				50% { margin-top: 40%; margin-left: 89.5%; }
+				100% { margin-top: -10%; margin-left: 89.5%; }
+			}
+		</style>
 	</head>
 
 	<body>
@@ -37,13 +102,66 @@
 					
 					<div class="problem long withNum">
 						<div>1</div>
-						<p>?</p>
-						<p class="fragment">??</p>
+						<p>What is the formula for <b>vertex form</b>? Challenge: what happens to the parabola if you change \(a\), \(h\), or \(k\)?</p>
+						<div class="fragment">
+							<p style="margin-bottom: 1rem">\(a(x-h)^2+k\) with vertex located at \((h,k)\)</p>
+							<p>-> negative \(a\) flips vertically across the \(x\)-axis<br>-> changing \(h\) moves the parabola left to right<br>-> changing \(k\) moves the parabola up and down</p>
+						</div>
 					</div>
+					
 					<div class="problem long withNum">
 						<div>2</div>
-						<p>?</p>
-						<p class="fragment">??</p>
+						<p><b>Sketch</b> a graph of \(x^2\), and \(-(x^2)\), and \((x-4)^2+1\). (Not to scale; can be on the same or different axes, up to you.)</p>
+						<p></p>
+					</div>
+				</div></section>
+
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="grid" style="grid-template-columns: 1fr 1fr 1fr; margin: auto 0; row-gap: var(--spaceLarger);">
+						<img src="../../images/18A/3-4-warmup.svg">
+						<img src="../../images/18A/3-4-warmup.svg">
+						<img src="../../images/18A/3-4-warmup.svg">
+						<p>\(x^2\)</p>
+						<p>\(-(x^2)\)</p>
+						<p>\((x-4)^2+1\)</p>
+						<p style="opacity:0">\((x+0)^2 + 0 \)</p>
+						<p style="opacity:0">\(-1(x+0)^2 + 0 \)</p>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="grid" style="grid-template-columns: 1fr 1fr 1fr; margin: auto 0; row-gap: var(--spaceLarger);">
+						<img src="../../images/18A/3-4-warmup1.svg">
+						<img src="../../images/18A/3-4-warmup.svg">
+						<img src="../../images/18A/3-4-warmup.svg">
+						<p>\(x^2\)</p>
+						<p>\(-(x^2)\)</p>
+						<p>\((x-4)^2+1\)</p>
+						<p style="opacity:0">\((x+0)^2 + 0 \)</p>
+						<p style="opacity:0">\(-1(x+0)^2 + 0 \)</p>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="grid" style="grid-template-columns: 1fr 1fr 1fr; margin: auto 0; row-gap: var(--spaceLarger);">
+						<img src="../../images/18A/3-4-warmup1.svg">
+						<img src="../../images/18A/3-4-warmup2.svg">
+						<img src="../../images/18A/3-4-warmup.svg">
+						<p>\(x^2\)</p>
+						<p>\(-(x^2)\)</p>
+						<p>\((x-4)^2+1\)</p>
+						<p style="opacity:0">\((x+0)^2 + 0 \)</p>
+						<p style="opacity:0">\(-1(x+0)^2 + 0 \)</p>
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="grid" style="grid-template-columns: 1fr 1fr 1fr; margin: auto 0; row-gap: var(--spaceLarger);">
+						<img src="../../images/18A/3-4-warmup1.svg">
+						<img src="../../images/18A/3-4-warmup2.svg">
+						<img src="../../images/18A/3-4-warmup3.svg" style="margin-left: 0.65rem;">
+						<p>\(x^2\)</p>
+						<p>\(-(x^2)\)</p>
+						<p>\((x-4)^2+1\)</p>
+						<p class="fragment"><span style="opacity: 50%;">\((x-0)^2 + 0 \)</span></p>
+						<p class="fragment"><span style="opacity: 50%;">\(-1(x-0)^2 + 0 \)</span></p>
 					</div>
 				</div></section>
 
@@ -89,7 +207,7 @@
 				<section><div class="bodySlide">
 					<div class="definition">Parent Function</div>
 					<div class="definitionText">
-						<p style="max-width: 26ch;">the <b>parent function</b> of a graph is the basic, <span>un-transformed</span> version</p>
+						<p style="max-width: 26ch;">the <b>parent function</b> of a graph is the original, <span>un-transformed</span> version</p>
 					</div>
 				</div></section>
 
@@ -159,11 +277,11 @@
 
 				<section><div class="bodySlide">
 					<h2>Outside vs. Inside</h2>
-					<p>The number <b>inside</b> has a HORIZONTAL effect.</p>
-					<p class="blue fragment" style="margin-top: -2rem;">We mean <b>literally</b> inside, like <i>inside</i> of parentheses, <i>inside</i> of roots, <i>inside</i> of absolute value, etc.</p>
-					<p>The number <b>outside</b> has a VERTICAL effect.</p>
-					<p class="blue fragment" style="margin-top: -2rem;">We mean <b>literally</b> outside, like <i>outside</i> of parentheses, <i>outside</i> of roots, <i>outside</i> absolute value, etc.</p>
 					<p><b>Try not to overthink this!!</b></p>
+					<p>The number <b>inside</b> has a HORIZONTAL effect.</p>
+					<p class="blue fragment" style="margin-top: -2rem;"><b>literally</b> inside! <i>inside</i> of parentheses, <i>inside</i> of roots, <i>inside</i> of absolute value, etc.</p>
+					<p>The number <b>outside</b> has a VERTICAL effect.</p>
+					<p class="blue fragment" style="margin-top: -2rem;"><b>literally</b> outside! <i>outside</i> of parentheses, <i>outside</i> of roots, <i>outside</i> absolute value, etc.</p>
 				</div></section>
 
 				<section data-transition="fade-out slide-in"><div class="bodySlide">
@@ -171,7 +289,6 @@
 					<div class="col2">
 						<div>
 							\( a\cdot f(x-h) + k \)
-							<!-- <img src="../../images/18A/3-4-formulaA.svg"> -->
 						</div>
 						<div class="columnWorkbook">
 							<p>This is the <b>general formula</b> for transformations.</p>
@@ -184,12 +301,12 @@
 					<div class="col2">
 						<div>
 							\( a\cdot {\color{#386ef6}f(}x-h{\color{#386ef6})} + k \)
-							<!-- <img src="../../images/18A/3-4-formulaA.svg"> -->
 						</div>
 						<div class="columnWorkbook">
-							<p>\( \boldsymbol{f(x)}\) is the <b>parent equation</b></p>
+							<p>\( \boldsymbol{f(x)}\) is the <b>parent function</b></p>
 							<ul class="fragment">
-								<li><p>for example, \(f(x)=\sqrt[3]{x}\) transformed is \(a\cdot \sqrt[3]{x-h}+k\)</p></li>
+								<li><p>we plug in \(a\), \(h\), and \(k\) into the parent function if we know them</p></li>
+								<li class="fragment"><p>for example, \(f(x)=\sqrt[3]{x}\) transformed is \(a\cdot \sqrt[3]{x-h}+k\)</p></li>
 							</ul>
 						</div>
 					</div>
@@ -199,15 +316,18 @@
 					<div class="col2">
 						<div>
 							\( {\color{#386ef6}a}\cdot f(x-h) + k \)
-							<img src="../../images/18A/3-4-formulaA.svg" style="max-width: 45vh; margin: var(--spaceLargest) auto;" class="fragment" data-fragment-index="2">
+							<div class="baseDiv" style="background-image: url('../../images/18A/3-4-blank1.svg')">
+								<img src="../../images/18A/blankParabola-noCenter.svg" class="flip">
+								<div style="position: absolute; top: 50%; left: 50%; background-color: #B73CE7; width: 1.4rem; height: 1.4rem; border-radius: 2rem; transform: translate(-50%,-50%);"></div>
+							</div>
 						</div>
 						<div class="columnWorkbook">
-							<p>\( \boldsymbol{a}\) controls <b>vertical flip</b> & <b>stretch/shrink</b></p>
+							<p>\( \boldsymbol{a}\) controls <b>vertical scaling</b> (flip/stretch/shrink)</p>
 							<ul class="fragment" data-fragment-index="1">
 								<li><p>negative \(a\) <b>flips</b> over the \(x\)-axis</p></li>
-								<li><p>\( |a| > 1 \) means <b>vertical stretch</b></p></li>
-								<li><p>\( |a| < 1 \) means <b>vertical shrink</b></p></li>
-								<li><p>\( |a| = 1 \) means <b>no</b> stretch/shrink</p></li>
+								<li class="fragment"><p>\( |a| > 1 \) means <b>vertical stretch</b></p></li>
+								<li class="fragment"><p>\( |a| < 1 \) means <b>vertical shrink</b></p></li>
+								<li class="fragment"><p>\( |a| = 1 \) means <b>no</b> stretch/shrink</p></li>
 							</ul>
 						</div>
 					</div>
@@ -217,19 +337,22 @@
 					<div class="col2">
 						<div>
 							\( a\cdot f(x-{\color{#386ef6}h}) + k \)
-							<img src="../../images/18A/3-4-formulaH.svg" style="max-width: 45vh; margin: var(--spaceLargest) auto;" class="fragment" data-fragment-index="2">
+							<div class="baseDiv" style="background-image: url('../../images/18A/3-4-blank2.svg')">
+								<img src="../../images/18A/blankParabola.svg" class="leftRight">
+							</div>						
 						</div>
 						<div class="columnWorkbook">
-							<p>\( \boldsymbol{h}\) controls <b>horizontal shift</b> <span style="color:var(--warning);">(because of the <i>minus</i> \(h\), this might work the opposite of how you’d expect!)</span></p>
+							<p>\( \boldsymbol{h}\) controls <b>horizontal shift</b></p>
 							<ul class="fragment" data-fragment-index="1">
 								<li>
 									<p>positive \(h\) means shift <b>right</b></p>
 									<p style="margin-top: -0.65rem;">\( f(x \phantom{.} - \phantom{.} {\color{#386ef6}\#})\)</p>
 								</li>
-								<li>
+								<li class="fragment">
 									<p>negative \(h\) means shift <b>left</b></p>
 									<p style="margin-top: -0.65rem;">\( f(x \phantom{.} + \phantom{.} \#) =  f(x - {\color{#386ef6}(-\#)})\)</p>
 								</li>
+								<li class="fragment" style="color:var(--warning);"><p>warning: because of the <i>minus</i> \(h\), this might work the opposite of how you’d expect!</p></li>
 							</ul>
 						</div>
 					</div>
@@ -239,7 +362,9 @@
 					<div class="col2">
 						<div>
 							\( a\cdot f(x-h) + {\color{#386ef6}k} \)
-							<img src="../../images/18A/3-4-formulaK.svg" style="max-width: 45vh; margin: var(--spaceLargest) auto;" class="fragment" data-fragment-index="2">
+							<div class="baseDiv" style="background-image: url('../../images/18A/3-4-blank3.svg')">
+								<img src="../../images/18A/blankParabola.svg" class="upDown">
+							</div>
 						</div>
 						<div class="columnWorkbook">
 							<p>\( \boldsymbol{k}\) controls <b>vertical shift</b></p>
@@ -334,15 +459,19 @@
 					<div class="col2">
 						<div>
 							\( a\)\(\cdot\)\(f\big({\color{#386ef6}b\cdot(}x-h{\color{#386ef6})}\big)\)\(+ k \)
-							<img src="../../images/18A/3-4-formulaB.svg" style="max-width: 45vh; margin: var(--spaceLargest) auto;" class="fragment" data-fragment-index="2">
+							<div class="baseDiv" style="background-image: url('../../images/18A/3-4-blank4.svg')">
+								<img src="../../images/18A/blankParabola-noCenter.svg" class="flipX">
+								<div style="position: absolute; top: 50%; left: 50%; background-color: #B73CE7; width: 1.4rem; height: 1.4rem; border-radius: 2rem; transform: translate(-50%,-50%);"></div>
+							</div>
 						</div>
 						<div class="columnWorkbook">
-							<p>\( \boldsymbol{b}\) controls <b>horizontal flip</b> & <b>stretch/shrink</b> <span style="color:var(--warning);">(warning: you must <b>factor out</b> \(\boldsymbol{b}\) to read \(h\) correctly!)</span></p>
+							<p>\( \boldsymbol{b}\) controls <b>horizontal scaling</b> (flip/stretch/shrink)</p>
 							<ul class="fragment" data-fragment-index="1">
 								<li><p>negative \(b\) is <b>flip</b> over the \(y\)-axis</p></li>
-								<li><p style="width: 25ch;">\( |b| > 1 \) is <b>horizontal shrink</b> (thinner)</p></li>
-								<li><p style="width: 25ch;">\( |b| < 1 \) is <b>horizontal stretch</b> (wider)</p></li>
-								<li><p>\( |b| = 1 \) is <b>no</b> stretch/shrink</p></li>
+								<li class="fragment"><p style="width: 25ch;">\( |b| > 1 \) is <b>horizontal shrink</b> (thinner)</p></li>
+								<li class="fragment"><p style="width: 25ch;">\( |b| < 1 \) is <b>horizontal stretch</b> (wider)</p></li>
+								<li class="fragment"><p>\( |b| = 1 \) is <b>no</b> stretch/shrink</p></li>
+								<li class="fragment" style="color:var(--warning);"><p>warning: you must <b>factor out</b> \(\boldsymbol{b}\) to read \(h\) correctly!</p></li>
 							</ul>
 						</div>
 					</div>
@@ -358,17 +487,17 @@
 					</div>
 					<div class="problem withNum long">
 						<div>b</div>
-						<p>List \(a\), \(b\), \(h\), and \(k\) & <b>explain</b> what each transformation causes.</p>
+						<p>List \(a\), \(b\), \(h\), and \(k\), and <b>explain</b> what each transformation causes.</p>
 						<div class="fragment">
 							<p style="margin: var(--space) 0;">\( 1\cdot \sqrt{-1\cdot (x-0)} +2 \)</p>
 							<div class="col2 fragment">
 								<div>
 									<p>\(a=1\) means <b>no</b> vertical stretch/shrink or flip</p>
-									<p>\(b=-1\) means <b>horizontal flip</b></p>
+									<p class="fragment">\(b=-1\) means <b>horizontal flip</b></p>
 								</div>
 								<div>
-									<p>\(h=0\) means <b>no</b> horizontal shift</p>
-									<p>\(k=2\) means vertical shift <b>up by 2</b></p>
+									<p class="fragment">\(h=0\) means <b>no</b> horizontal shift</p>
+									<p class="fragment">\(k=2\) is vertical shift <b>up by 2</b></p>
 								</div>
 							</div>
 						</div>
@@ -397,7 +526,7 @@
 					<p>Consider the function \(f(x-1)-3\).</p>
 					<div class="problem withNum long">
 						<div>a</div>
-						<p>List \(a\), \(h\), and \(k\) & <b>explain</b> what each transformation causes.</p>
+						<p>List \(a\), \(h\), and \(k\), and <b>explain</b> what each transformation causes.</p>
 						<div class="fragment">
 							<p>\( 1\cdot f\big(x-(1)\big) +(-3) \)</p>
 							<p class="fragment">\(a=1\) means <b>no</b> vertical stretch/shrink or flip</p>

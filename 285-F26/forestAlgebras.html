@@ -44,6 +44,7 @@
 			.larger>p, .larger>ol>li>p, .larger>ul>li>p {font-size: var(--bodyLarge);}
 			/* .proofText p {font-size: var(--bdoyRegular)} */
 			.proofText p {max-width: 52ch; font-size: calc(var(--bodyRegular) * 0.85);}
+			.smaller p {font-size: var(--bodyRegular); max-width: 100%;}
 		</style>
 	</head>
 
@@ -57,13 +58,27 @@
 
 				<section><div class="bodySlide">
 					<div class="definition">Forest Algebra</div>
-					<div class="definitionText">
+					<div class="definitionText smaller">
 						<p>a <b>forest algebra</b> \( (H,V,act,in_l,in_r) \) is:</p>
 						<ul>
-							<li><p><u>two monoids</u> \((H,+)\) with identity \(0\), and \( (V,\cdot ) \) with identity \(1\)</p></li>
-							<li><p><u>one action</u> \(act: H\times V \rightarrow H \text{ of } V \text{ on } H\), denoted \(vh\) instead of \(act(h,v)\)</p>
-							<h6>thanks french ppl :/</h6></li>
-							<li><p><u>two operations</u> \(in_l\) & \(in_r\) from \(H\rightarrow V\)</p></p></li>
+							<li class="fragment"><p><span>horizontal monoid</span> \((H,+)\) with identity \(0\)</p></li>
+							<li class="fragment"><p><span>vertical monoid</span> \( (V,\cdot ) \) with identity \(1\)</p></li>
+							<li class="fragment"><p><span>one action</span> \(act: H\times V \rightarrow H \text{ of } V \text{ on } H\), denoted \(vh\)</p>
+							<h6>instead of \(act(h,v)\), thanks french ppl :/</h6></li>
+							<li class="fragment"><p><span>two operations</span> \(in_l\) & \(in_r\) from \(H\rightarrow V\)</p></p></li>
+						</ul>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Forest Algebra</div>
+					<div class="definitionText smaller">
+						<h5>Forest Algebra Axioms</h5>
+						<ul>
+							<li class="fragment"><p><u>action</u>: \( (v\cdot w) h = v(wh) \) <span class="nobg" style="color:#386ef6;">-> often written \(vwh\)</span></p></li>
+							<li class="fragment"><p><u>insertion</u>:</p>
+								<p>\( in_l(g)h=g+h \)</p>
+								<p>\( in_r(g)h=g+h \)</p></li>
+							<li class="fragment"><p style="margin-right: -8rem; max-width: 100%;"><u>faithfulness</u>: for all distinct \(v,w\in V\), \(\exists h\in H\) such that \(vh\neq wh\)</p></li>
 						</ul>
 					</div>
 				</div></section>

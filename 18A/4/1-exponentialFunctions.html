@@ -37,8 +37,8 @@
 					
 					<div class="problem long withNum">
 						<div>1</div>
-						<p>??</p>
-						<p class="fragment">??</p>
+						<p>What is the general formula for <b>transformations</b> of a function?</p>
+						<p class="fragment">\( a\cdot f\big( b\cdot (x-h) \big) +k\)</p>
 					</div>
 					<div class="problem long withNum">
 						<div>2</div>
@@ -57,7 +57,7 @@
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>118</div><div>Example 1</div></div>
-					<!-- <p>Let's review exponent rules.</p> -->
+					<!-- <p>Let’s review exponent rules.</p> -->
 
 					<div style="display: grid; grid-template-columns: 2fr 1fr; row-gap: var(--space);">
 						<h5>Example</h5>
@@ -79,7 +79,7 @@
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>118</div><div>Example 1</div></div>
-					<!-- <p>Let's review exponent rules.</p> -->
+					<!-- <p>Let’s review exponent rules.</p> -->
 
 					<div style="display: grid; grid-template-columns: 1fr 1fr; row-gap: var(--space);">
 						<h5>Example</h5>
@@ -101,7 +101,7 @@
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>119</div><div>Example 1</div></div>
-					<!-- <p>Let's review exponent rules.</p> -->
+					<!-- <p>Let’s review exponent rules.</p> -->
 
 					<div style="display: grid; grid-template-columns: 1fr auto; row-gap: var(--space);">
 						<h5>Example</h5>
@@ -123,7 +123,7 @@
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>119</div><div>Example 1</div></div>
-					<!-- <p>Let's review exponent rules.</p> -->
+					<!-- <p>Let’s review exponent rules.</p> -->
 
 					<div style="display: grid; grid-template-columns: 1fr 1fr; row-gap: var(--space);">
 						<h5>Example</h5>
@@ -240,7 +240,7 @@
 				<section><div class="bodySlide">
 					<h2>Transformations of Exponentials</h2>
 					$$ b^x \rightarrow {\color{#386ef6} a\cdot {\color{#111111}b}^{{\color{#111111}x}-h}+k}$$
-					<p class="fragment" style="margin-bottom:0;">BUT we <b>won't be transforming</b> in this class! We'll only have \(b^x\), so all of our exponentials will be very consistent:</p>
+					<p class="fragment" style="margin-bottom:0;">BUT we <b>won’t be transforming</b> in this class! We’ll only have \(b^x\), so all of our exponentials will be very consistent:</p>
 					<ul>
 						<li class="fragment"><p>horizontal asymptote is <i>always</i> the \(x\)-axis</p></li>
 						<li class="fragment"><p>\(f\)-intercept is <i>always</i> at \((0,1)\) <span class="blue">because \(f(0)=b^0=1\)</span></p></li>
@@ -250,13 +250,105 @@
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>122</div><div>Example 3</div></div>
-					<p>Let's graph an exponential \(f(x) = 2^x\).</p>
-					<ol>
-						<li><p>Mark and label \(f\)-<b>intercept</b></p></li>
-						<li><p>Mark and label the <b>point</b> \((1,b)\)</p></li>
-						<li><p>Mark and label the <b>horizontal asymptote</b></p></li>
-						<li><p>Draw a <b>smooth line</b> to connect</p></li>
-					</ol>
+					<p>Let’s graph an exponential \(f(x) = 2^x\).</p>
+					<div class="row top" style="width: 100%; justify-content: space-between;">
+						<ol>
+							<li><p>Mark & label \(f\)-<b>intercept</b> \( (0,1) \)</p></li>
+							<li><p>Mark & label the <b>point</b> \((1,b)\)</p></li>
+							<li><p>Mark & label the<br><b>horizontal asymptote</b></p></li>
+							<li><p>Draw a <b>smooth line</b> to connect</p></li>
+						</ol>
+
+						<div class="imgBox" alt="6x6 graph with y=(1/2)x+1">
+							<div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(f(x)\)</p>
+
+							<div class="pointBox">
+								<!-- <div class="point alignTL offsetY" style="left: 70%; top: 20%"><p>\(A\)</p><p class="fragment">\( (2,3) \)</p></div> -->
+								<div class="point alignTL fragment blueFill" style="left: 50%; top: 40%;" data-fragment-index="1"><p class="blue" style="margin-top: -0.65rem;">\( (0,1) \)</p></div>
+								<div class="point alignTL fragment blueFill offset" style="left: 40%; top: 45%;" data-fragment-index="2"><p class="blue" style="margin-top: -1rem; margin-left: 0.35rem;">\( (1,\frac{1}{2}) \)</p></div>
+								<div class="row dashed fragment" data-fragment-index="3" style="top: 50%; transform: translateY(-50%);"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+								<p class="blue fragment" data-fragment-index="3" style="top: 52.2%; right: -7%;">HA \(f(x)=0\)</p>
+							</div>
+							<img src="../../images/18A/4-1-exponential.svg" class="fragment" data-fragment-index="4" style="left: 50%; top: 50%; transform: translate(-50%,-50%);">
+						</div>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>123</div><div>Example 4</div></div>
+					<p>Let’s graph an exponential \(f(x) = \left(\frac{1}{2}\right)^x\).</p>
+					<div class="row top" style="width: 100%; justify-content: space-between;">
+						<ol>
+							<li><p>Mark & label \(f\)-<b>intercept</b> \( (0,1) \)</p></li>
+							<li><p>Mark & label the <b>point</b> \((1,b)\)</p></li>
+							<li><p>Mark & label the<br><b>horizontal asymptote</b></p></li>
+							<li><p>Draw a <b>smooth line</b> to connect</p></li>
+						</ol>
+
+						<div class="imgBox" alt="6x6 graph with y=(1/2)x+1">
+							<div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(f(x)\)</p>
+
+							<div class="pointBox">
+								<!-- <div class="point alignTL offsetY" style="left: 70%; top: 20%"><p>\(A\)</p><p class="fragment">\( (2,3) \)</p></div> -->
+								<div class="point alignTL fragment blueFill offsetX" style="left: 50%; top: 40%;" data-fragment-index="1"><p class="blue" style="margin-top: -0.85rem;">\( (0,1) \)</p></div>
+								<div class="point alignTL fragment blueFill offsetY" style="left: 60%; top: 45%;" data-fragment-index="2"><p class="blue" style="margin-top: -1rem;">\( (1,\frac{1}{2}) \)</p></div>
+								<div class="row dashed fragment" data-fragment-index="3" style="top: 50%; transform: translateY(-50%);"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+								<p class="blue fragment" data-fragment-index="3" style="top: 52.2%; right: -7%;">HA \(f(x)=0\)</p>
+							</div>
+							<img src="../../images/18A/4-1-exponential.svg" class="fragment" data-fragment-index="4" style="left: 50%; top: 50%; transform: translate(-50%,-50%) scaleX(-1);">
+						</div>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>123</div><div>Example 4</div></div>
+					<div class="problem withNum long">
+						<div>b</div>
+						<p>Suppose \(g(x) = 2^x\) is the parent graph for \( f(x) = \left( \frac{1}{2} \right)^x\). Based on the graph you just drew, what <b>transformation</b> happened?</p>
+						<p class="fragment">horizontal reflection/flip (across \(y\)-axis)</p>
+					</div>
+					<div class="problem withNum long">
+						<div>c</div>
+						<p>How can we change \(g(x)=2^x\) to indicate that transformation?</p>
+						<div class="fragment">
+							<p>horizontal flip means \(b=-1\)</p>
+							<p class="fragment">so we plug \(b\) INSIDE the parent function:<br>\(g(x)=2^x\) becomes \(f(x)=2^{-1\cdot x}=\) &nbsp;<span class="finalAnswer">\(2^{- x}\)</span></p>
+						</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>123</div><div>Example 4</div></div>
+					<div class="problem withNum long">
+						<div>d</div>
+						<p><b>Why</b> is that \(f(x)=2^{- x}\) the same as \(f(x) = \left( \frac{1}{2}\right)^x\)?</p>
+						<div class="fragment columnWorkbook">
+							<p>\(f(x)= \left( \dfrac{1}{2} \right)^x \)</p>
+							<p class="fragment">\( \phantom{f(x)} = \dfrac{1}{2^x} \) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <- distribute exponent</p>
+							<p class="fragment">\( \phantom{f(x)} = 2^{-x}\) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <- rewrite as negative</p>
+							<p class="fragment">\( \phantom{f(x)=} \checkmark\)</p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- NATURAL BASE ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>e</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Natural Base</div>
+					<div class="definitionText">
+						<p>the <b>natural base \(\boldsymbol{e}\)</b> is an irrational number used as the <span>exponential base</span> in many real-world scenarios</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>124</div><div>Example 5</div></div>
+					<p>Write out as many digits of \(e\) as your calculator will give you.</p>
+					<p style="color:var(--warning);margin-bottom:0;"><b>Use the calculator you use for exams!!!</b> If you don't have it with you, make sure to practice later—you’ll need to know how to do this!!</p>
+					<p style="color:var(--warning)">Ask me if you need help figuring it out!</p>
+					<p class="fragment blue">\(e \approx 2.718281828459045235360287471352662497757247093699\\9595749669676277240766303535475945713821785251664274274\\6639193200305992181741359662904357290033429526059563073\\8132328627943490763233829880753195251019011573834187930\\7021540891499348841675092447614606680822648001684774118\\5374234544243710753907774499206955170276183860626133138\\45830007520449338265602976067371132007093287091274437470\\47230696977209310141692836819025515108657463772111252389\\\)</p>
 				</div></section>
 
 <!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>4.2 Logarithmic Functions | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>What is the <b>horizontal line test</b>?</p>
+						<p class="fragment">The horizontal line test checks if a function is <b>one-to-one</b>, which is a required property for a function to be invertible</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>?</p>
+						<p class="fragment">??</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, November 5, 2026</h4>
+					<h1><span>4.2</span> Logarithmic Functions</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 125</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<div class="definition">Logarithm</div>
+					<div class="definitionText">
+						<p>a <b>logarithm</b> is the <span>inverse of an exponential</span>, denoted \(\log_b(x)\)</p>
+						<h6>same as before, \(b\) is called the <b>base</b></h6>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Evaluating Logarithms</h2>
+					<h5>Option 1: Thinking in Words</h5>
+					<p>\(\log_b(\#) \) is asking, “what power on the base \(b\) gives me \(\#\)?”</p>
+					<h5>Option 2: Boomerang</h5>
+					<p>\(\log_b(x)=a\) means the same thing as \(b^a=x\)</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>125</div><div>Example 1</div></div>
+					<p><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
+					<div class="problem withNum long">
+						<div>a</div>
+						<p>\( \log_3 (9) = x \)</p>
+						<div class="fragment">
+							<p><b>Words</b>: What power \(x\) on the base \(3\) would give me \(9\)?</p>
+							<p class="fragment"><b>Boomerang</b>: \(3^x=9\)</p>
+							<p class="fragment"><span class="finalAnswer">\(x=2\)</span> because \(3^2=9\)</p>
+						</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>125</div><div>Example 1</div></div>
+					<p><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
+					<div class="problem withNum long">
+						<div>b</div>
+						<p>\( \log_4 (x) = 3 \)</p>
+						<div class="fragment">
+							<p><b>Words</b>: What does the base \(4\) raised to the power \(3\) give me?</p>
+							<p class="fragment"><b>Boomerang</b>: \(3^x=9\)</p>
+							<p class="fragment"><span class="finalAnswer">\(x=64\)</span> because \(4^3=64\)</p>
+						</div>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>125</div><div>Example 1</div></div>
+					<p><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
+					<div class="problem withNum long">
+						<div>c</div>
+						<p>\( \log_x (25) = 2 \)</p>
+						<div class="fragment">
+							<p><b>Words</b>: What base \(x\) raised to the power \(2\) would give me \(25\)?</p>
+							<p class="fragment"><b>Boomerang</b>: \(x^2=25\)</p>
+							<p class="fragment"><span class="finalAnswer">\(x=2\)</span> because \(5^2=25\)</p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- PROPERTIES ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Properties of Log</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Basic Log Properties</h2>
+					<div class="problem dense">
+						<p>\( b^{\log_b (x)} = \)</p>
+						<p class="fragment">\( x\)</p>
+					</div>
+					<div class="problem dense">
+						<p>\( \log_b (b^x) = \)</p>
+						<p class="fragment">\( x\)</p>
+					</div>
+					<div class="problem dense">
+						<p>\( \log_b (b) = \)</p>
+						<p class="fragment">\( 1\)</p>
+					</div>
+					<div class="problem dense">
+						<p>\( \log_b (1) = \)</p>
+						<p class="fragment">\(0 \)</p>
+					</div>
+					<div class="problem dense">
+						<p>\( \log_b (9) = \)</p>
+						<p class="fragment">undefined</p>
+					</div>
+					<div class="problem dense">
+						<p>\( \log_b (-\#) = \)</p>
+						<p class="fragment">undefined</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>126</div><div>Example 2</div></div>
+					<p>Evaluate the following logarithms <b>by hand</b>.</p>
+					<div class="problem withNum">
+						<div>a</div>
+						<p>\( \log_7(49) = \)</p>
+						<p class="fragment">\( \log_7(7^2) = \) &nbsp; <span class="finalAnswer">\(2\)</span></p>
+					</div>
+					<div class="problem withNum">
+						<div>b</div>
+						<p>\( \log_{1000}(1) = \)</p>
+						<p class="fragment"> <span class="finalAnswer">\(0\)</span></p>
+					</div>
+					<div class="problem withNum">
+						<div>c</div>
+						<p>\( \log_8(2) = \)</p>
+						<p class="fragment">\( \log_8 \big(\sqrt[3]{8} \big) = \log_8 \big(8^{1/3} \big) =\) &nbsp; <span class="finalAnswer">\(1/3\)</span></p>
+					</div>
+					<div class="problem withNum dense">
+						<div>d</div>
+						<p>\( \log_{12} \big( \frac{1}{144} \big) = \)</p>
+						<p class="fragment">\( \log_{12} \big( \frac{1}{12^2} \big) = \log_{12} \big( 12^{-2} \big) =\) &nbsp; <span class="finalAnswer">\(-2\)</span></p>
+					</div>
+					<div class="problem withNum">
+						<div>e</div>
+						<p>\( \log_\pi (\pi) = \)</p>
+						<p class="fragment"><span class="finalAnswer">\(1\)</span></p>
+					</div>
+				</div></section>
+
+<!-- DIFFERENT BASES ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2 style="max-width: 14ch;">Working with Different Bases</h2>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Common Log</div>
+					<div class="definitionText">
+						<p style="max-width: 26ch;"><b>common log</b> is log with <span>base \(b=10\)</span>, denoted \(\log (x)\)</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div data-id="top" class="definition">Common Log</div>
+					<div class="definitionText">
+						<p style="max-width: 26ch;"><b>common log</b> is log with <span>base \(b=10\)</span>, denoted \(\log (x)\)</p>
+						<p>-> if no base is specified, default to base 10</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Common Log</div>
+					<div class="definitionText">
+						<p style="max-width: 24ch;"><b>natural log</b> is log with <span>base \(b=e\)</span>, denoted \(ln (x)\)</p>
+						<h6>Remember: \(e\) is <b>not a variable!</b><br>\(e\approx 2.1718\) is a fixed, irrational number</h6>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<h2>Comparing Common & Natural Log</h2>
+					<div class="col2">
+						<div>
+							<h5 style="margin-bottom: var(--spaceLarge);">Common Log (Base 10)</h5>
+							<p>\( \log(10^x)=x\)</p>
+							<p>\( 10^{\log(x)}=x\)</p>
+							<p>\( \log(10)=1\)</p>
+							<p>\( \log(1)=0\)</p>
+							<p>\( \log(0)=\) undefined</p>
+							<p>\( \log(-\#)=\) undefined</p>
+						</div>
+						<div>
+							<h5 style="margin-bottom: var(--spaceLarge);">Natural Log (Base \(e\))</h5>
+							<p>\( ln(e^x)=x\)</p>
+							<p>\( e^{ln(x)}=x\)</p>
+							<p>\( ln(10)=1\)</p>
+							<p>\( ln(1)=0\)</p>
+							<p>\( ln(0)=\) undefined</p>
+							<p>\( ln(-\#)=\) undefined</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<h2>Changing Bases</h2>
+					<p>If we can't do the calculations by hand, we can use these formulas with our calculators:</p>
+					<div class="grid blue" style="grid-template-columns: 1fr 1fr; column-gap: var(--spaceLargest);">
+						$$ \log_b(\#) = \dfrac{\log(\#)}{\log(b)} $$
+						$$ \log_b(\#) = \dfrac{ln(\#)}{ln(b)} $$
+						<p style="margin-top: -3rem; color:var(--primary);">using <b>common</b> log</p>
+						<p style="margin-top: -3rem; color:var(--primary);">using <b>natural</b> log</p>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<h2>Changing Bases</h2>
+					<p>If we can't do the calculations by hand, we can use these formulas with our calculators:</p>
+					<div class="grid blue" style="grid-template-columns: 1fr;">
+						$$ \log_b(\#) = \dfrac{\log_a(\#)}{\log_a(b)} $$
+						<p style="margin-top: -3rem; color:var(--primary);">using <b>base-\(\boldsymbol{a}\)</b> log</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>128</div><div>Example 3</div></div>
+					<p><b>Rewrite</b> with either \(\log\) or \(ln\), and evaluate with a <b>calculator</b>.</p>
+					<div class="problem withNum dense">
+						<div>a</div>
+						<p>\( \log_7(49) = \)</p>
+						<p class="fragment">\( \frac{ln(49)}{ln(7)} = \) &nbsp; <span class="finalAnswer">\(2\)</span> &nbsp; same as Ex. 2 \(\checkmark\)</p>
+					</div>
+					<div class="problem withNum dense">
+						<div>b</div>
+						<p>\( \log_{1000}(1) = \)</p>
+						<p class="fragment">\( \frac{ln(1)}{ln(1000)} = \) &nbsp; <span class="finalAnswer">\(0\)</span> &nbsp; same as Ex. 2 \(\checkmark\)</p>
+					</div>
+					<div class="problem withNum dense">
+						<div>c</div>
+						<p>\( \log_8(2) = \)</p>
+						<p class="fragment">\( \frac{ln(2)}{ln(8)} = \) &nbsp; <span class="finalAnswer">\(1/3\)</span> &nbsp; same as Ex. 2 \(\checkmark\)</p>
+					</div>
+					<div class="problem withNum dense">
+						<div>d</div>
+						<p>\( \log_{12} \big( \frac{1}{144} \big) = \)</p>
+						<p class="fragment">\( \frac{ln(1/144)}{ln(12)} = \) &nbsp; <span class="finalAnswer">\(-2\)</span> &nbsp; same as Ex. 2 \(\checkmark\)</p>
+					</div>
+					<div class="problem withNum dense">
+						<div>e</div>
+						<p>\( \log_\pi (\pi) = \)</p>
+						<p class="fragment">\( \frac{ln(\pi)}{ln(\pi)} = \) &nbsp; <span class="finalAnswer">\(1\)</span> &nbsp; same as Ex. 2 \(\checkmark\)</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>128</div><div>Example 3</div></div>
+					<p><b>Rewrite</b> with either \(\log\) or \(ln\), and evaluate with a <b>calculator</b>.</p>
+					<div class="problem withNum">
+						<div>f</div>
+						<p>\( \log_{33}(4) = \)</p>
+						<p class="fragment">\( \frac{ln(4)}{ln(33)} \approx \) &nbsp; <span class="finalAnswer">\(0.3965\)</span></p>
+					</div>
+					<div class="problem withNum">
+						<div>g</div>
+						<p>\( \log_6(231) = \)</p>
+						<p class="fragment">\( \frac{ln(231)}{ln(6)} \approx \) &nbsp; <span class="finalAnswer">\(3.0375\)</span></p>
+					</div>
+					<div class="problem withNum">
+						<div>h</div>
+						<p>\( \log_{17}(52) = \)</p>
+						<p class="fragment">\( \frac{ln(52)}{ln(17)} \approx \) &nbsp; <span class="finalAnswer">\(1.3946\)</span></p>
+					</div>
+				</div></section>
+				
+				
+
+
+				
+
+<!-- DIFFERENT BASES ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Graphing</h2>
+				</div></section>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 4.2 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

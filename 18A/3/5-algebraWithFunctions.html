@@ -63,14 +63,8 @@
 				<section data-auto-animate><div class="callout">
 					<p><b>Absolute value</b>, sometimes known as magnitude, turns the inside positive; denoted \(|x|\)</p>
 					<div class="col2 blue">
-						<div>
-							<p>\( |3| = 3 \)</p>
-							<p style="margin-top: 1.35rem;">positive stays <b>positive</b></p>
-						</div>
-						<div>
-							<p>\( |-3| = 3 \)</p>
-							<p style="margin-top: 1.35rem;">negative turns <b>positive</b></p>
-						</div>
+						<div><p>\( |3| = 3 \)</p><p style="margin-top: 1.35rem;">positive stays <b>positive</b></p></div>
+						<div><p>\( |-3| = 3 \)</p><p style="margin-top: 1.35rem;">negative turns <b>positive</b></p></div>
 					</div>
 				</div></section>
 				<section><div class="callout">
@@ -100,23 +94,19 @@
 					<div class="workbook"><div>101</div><div>Example 1</div></div>
 					<p>Let \(f(x) = x + 3\) and let \( g(x) = \dfrac{1}{x + 3} \).</p>
 					<div class="problem withNum">
-						<div>a</div>
-						<p>\( (f+g)(x) \)</p>
+						<div>a</div><p>\( (f+g)(x) \)</p>
 						<p class="fragment">\( = x + 3 + \frac{1}{x+3}\)</p>
 					</div>
 					<div class="problem withNum">
-						<div>b</div>
-						<p>\( (f-g)(x) \)</p>
+						<div>b</div><p>\( (f-g)(x) \)</p>
 						<p class="fragment">\( = x + 3 - \frac{1}{x+3}\)</p>
 					</div>
 					<div class="problem withNum">
-						<div>c</div>
-						<p>\( (fg)(x) \)</p>
+						<div>c</div><p>\( (fg)(x) \)</p>
 						<p class="fragment">\( = (x + 3) \cdot \left(\frac{1}{x+3} \right) = 1\) with \(x\neq -3\)</p>
 					</div>
 					<div class="problem withNum">
-						<div>d</div>
-						<p>\( \left(\frac{f}{g}\right)(x) \)</p>
+						<div>d</div><p>\( \left(\frac{f}{g}\right)(x) \)</p>
 						<p class="fragment" style="margin-right: -2rem;">\( = (x + 3)\div \left( \frac{1}{x+3} \right) = (x + 3)\cdot \left( \frac{x+3}{1} \right) = x^2 + 6x + 9\)</p>
 					</div>
 				</div></section>
@@ -159,23 +149,19 @@
 					<div class="workbook"><div>103</div><div>Example 2</div></div>
 					<p>Fully simplify the following expressions for \(f(x) = x^2 - 4x + 7\).</p>
 					<div class="problem withNum">
-						<div>a</div>
-						<p>\( f(3) \)</p>
+						<div>a</div><p>\( f(3) \)</p>
 						<p class="fragment">\( =4 \)</p>
 					</div>
 					<div class="problem withNum">
-						<div>b</div>
-						<p>\( f(3+h) \)</p>
+						<div>b</div><p>\( f(3+h) \)</p>
 						<p class="fragment">\( =h^2+2h+4 \)</p>
 					</div>
 					<div class="problem withNum">
-						<div>c</div>
-						<p>\( f(3+h)-f(3) \)</p>
+						<div>c</div><p>\( f(3+h)-f(3) \)</p>
 						<p class="fragment">\( = h^2+2h\)</p>
 					</div>
 					<div class="problem withNum">
-						<div>d</div>
-						<p>\( \dfrac{f(3+h)-f(3)}{h} \)</p>
+						<div>d</div><p>\( \dfrac{f(3+h)-f(3)}{h} \)</p>
 						<p class="fragment">\( = h+2\) with \(h\neq 0\)</p>
 					</div>
 				</div></section>
@@ -206,22 +192,14 @@
 					<h2>Composition</h2>
 					<p>Function composition is applying functions in sequential order, working from inside out. In other words, a function is an input for another function. <b>Order matters!</b></p>
 					<ul>
-						<li>
-							<p>\( (f\circ g)(x) = f \big( g(x) \big) \), which is read "\(f\) of \(g\) of \(x\)"</p>
-						</li>
-						<li>
-							<p>\( (g\circ f)(x) = g \big( f(x) \big) \), which is read "\(g\) of \(f\) of \(x\)"</p>
-						</li>
+						<li><p>\( (f\circ g)(x) = f \big( g(x) \big) \), which is read "\(f\) of \(g\) of \(x\)"</p></li>
+						<li><p>\( (g\circ f)(x) = g \big( f(x) \big) \), which is read "\(g\) of \(f\) of \(x\)"</p></li>
 					</ul>
 				</div></section>
 
 				<section><div class="callout">
-					<div style="font-size: var(--bodyLargest)">
-						$$ (f\circ {\color{#386ef6}g})(x) = f\big( {\color{#386ef6}g(x)} \big)$$
-					</div>
-
+					<div style="font-size: var(--bodyLargest)">$$ (f\circ {\color{#386ef6}g})(x) = f\big( {\color{#386ef6}g(x)} \big)$$</div>
 					<p style="max-width: 34ch;">We call the leftmost function the <b>outer</b> function, and the rightmost one the <span class="blue"><b>inner</b> function</span>.</p>
-
 					<p>The inner function is ALWAYS applied first.</p>
 				</div></section>
 
@@ -230,8 +208,7 @@
 					<p>Let \(f(x) = x + 3\) and let \( g(x) = \frac{1}{x + 3} \).</p>
 					<div class="col2">
 						<div class="problem withNum long">
-							<div>a</div>
-							<p>\( (f \circ {\color{#386ef6} g})(x) \)</p>
+							<div>a</div><p>\( (f \circ {\color{#386ef6} g})(x) \)</p>
 							<div class="fragment" style="color:var(--primary);">
 								<p>\( = f\big( {\color{#386ef6} g(x)} \big) \)</p>
 								<p>\( = f\left( {\color{#386ef6} \frac{1}{x+3}} \right) \)</p>
@@ -241,8 +218,7 @@
 							</div>
 						</div>
 						<div class="problem withNum long">
-							<div>b</div>
-							<p>\( (g\circ {\color{#386ef6} f} )(x) \)</p>
+							<div>b</div><p>\( (g\circ {\color{#386ef6} f} )(x) \)</p>
 							<div class="fragment" style="color:var(--primary);">
 								<p>\( = \phantom{.} g\big( {\color{#386ef6} f(x)} \big) \)</p>
 								<p>\( = \phantom{.} g( {\color{#386ef6} x+3} ) \)</p>
@@ -260,16 +236,14 @@
 					<div class="col2">
 						<div class="columnWorkbook">
 							<div class="problem withNum long">
-								<div>a</div>
-								<p>\( (f\circ g)(x) = (x + 3)^7 \)</p>
+								<div>a</div><p>\( (f\circ g)(x) = (x + 3)^7 \)</p>
 								<div class="fragment">
 									<p>inner: \( g(x) \)<span class="fragment"> \( =x+3 \)</span></p>
 									<p>outer: \( f(x) \)<span class="fragment"> \( = x^7\)</span></p>
 								</div>
 							</div>
 							<div class="problem withNum long">
-								<div>b</div>
-								<p>\( (f\circ g)(x) = \sqrt{x^2-16} \)</p>
+								<div>b</div><p>\( (f\circ g)(x) = \sqrt{x^2-16} \)</p>
 								<div class="fragment">
 									<p>inner: \( g(x) \) <span class="fragment"> \( =x^2-16 \)</span></p>
 									<p>outer: \( f(x) \) <span class="fragment"> \( = \sqrt{x}\)</span></p>
@@ -278,16 +252,14 @@
 						</div>
 						<div class="columnWorkbook">
 							<div class="problem withNum long">
-								<div>c</div>
-								<p>\( (g\circ f)(x) = \sqrt[5]{8-x} \)</p>
+								<div>c</div><p>\( (g\circ f)(x) = \sqrt[5]{8-x} \)</p>
 								<div class="fragment">
 									<p>inner: \( f(x) \)<span class="fragment"> \( = 8-x\)</span></p>
 									<p>outer: \( g(x) \)<span class="fragment"> \( = \sqrt[5]{x}\)</span></p>
 								</div>
 							</div>
 							<div class="problem withNum long">
-								<div>d</div>
-								<p>\( (g\circ f)(x) = \frac{13}{x^4+x^2-3} \)</p>
+								<div>d</div><p>\( (g\circ f)(x) = \frac{13}{x^4+x^2-3} \)</p>
 								<div class="fragment">
 									<p>inner: \( f(x) \)<span class="fragment"> \( = x^4+x^2-3 \)</span></p>
 									<p>outer: \( g(x) \)<span class="fragment"> \( = \frac{13}{x}\)</span></p>

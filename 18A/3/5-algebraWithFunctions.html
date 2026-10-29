@@ -35,16 +35,46 @@
 
 					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
 					
+					<p>\(3(x-7)^3+8\)</p>
 					<div class="problem long withNum">
 						<div>1</div>
-						<p>?</p>
-						<p class="fragment">??</p>
+						<p><b>Identify</b> the parent function, \(a\), \(h\), and \(k\), and <b>explain</b> what transformations \(a\), \(h\), and \(k\) cause.</p>
+						<div class="row" style="gap: calc(var(--spaceLarger) * 2)">
+							<p class="fragment" style="margin-bottom:0.15rem;">\(x^3\)<br>parent function</p>
+							<p class="fragment" style="margin-bottom:0.15rem;">\(a=3\)<br>vertical stretch by 3</p>
+							<p class="fragment" style="margin-bottom:0.15rem;">\(h=7\)<br>shift right by 7</p>
+							<p class="fragment" style="margin-bottom:0.15rem;">\(k=8\)<br>shift up by 8</p>
+						</div>
 					</div>
 					<div class="problem long withNum">
 						<div>2</div>
-						<p>?</p>
-						<p class="fragment">??</p>
+						<p>On the same graph, <b>sketch</b> the parent & transformed functions.</p>
+						<p></p>
 					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<img src="../../images/18A/3-5-warmups.svg" style="width: auto; height: 80vh;">
+				</div></section>
+
+				<section data-auto-animate><div class="callout">
+					<p><b>Absolute value</b>, sometimes known as magnitude, turns the inside positive; denoted \(|x|\)</p>
+				</div></section>
+				<section data-auto-animate><div class="callout">
+					<p><b>Absolute value</b>, sometimes known as magnitude, turns the inside positive; denoted \(|x|\)</p>
+					<div class="col2 blue">
+						<div>
+							<p>\( |3| = 3 \)</p>
+							<p style="margin-top: 1.35rem;">positive stays <b>positive</b></p>
+						</div>
+						<div>
+							<p>\( |-3| = 3 \)</p>
+							<p style="margin-top: 1.35rem;">negative turns <b>positive</b></p>
+						</div>
+					</div>
+				</div></section>
+				<section><div class="callout">
+					<img src="../../images/18A/3-5-absoluteValue.svg" style="width: auto; height: 80vh;">
 				</div></section>
 
 				<section data-background="var(--primary)"><div class="titleSlide">
@@ -92,6 +122,40 @@
 				</div></section>
 
 				<section><div class="bodySlide">
+					<h2>Domain Danger Zones</h2>
+					<p>Domain needs to determined <b>before</b> simplifying. When we cancel out a denominator, we can lose track of our danger zones.</p>
+					<p>So, anything left out of the domain for \(f(x)\) or \(g(x)\) <b>must</b> also be left out for the domain of \((fg)(x)\).</p>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="row top" style="width: 100%; justify-content: space-between;">
+						<div class="columnWorkbook">
+							<h2>Domain Danger Zones</h2>
+							<p>Example 2, we had:</p>
+							<div class="row" style="margin-bottom: var(--spaceLarger);">
+								<div>
+									<p>\( f(x) = x+3\)</p>
+									<p>\( g(x) = \frac{1}{x+3} \)</p>
+								</div>
+								<p>&nbsp;&nbsp;<span class="blue">-></span> &nbsp;&nbsp;&nbsp; \( (fg)(x)=1 \)</p>
+							</div>
+							<p style="max-width: 32ch;">If we just look at \((fg)(x)\), we can’t see the danger zone in \(g\). <b>This is why  we need to find domain first.</b></p>
+						</div>
+						<div>
+							<img src="../../images/18A/3-5-domain.svg" style="width: 40vh; margin-bottom: 2rem;">
+							<img src="../../images/18A/3-5-domainb.svg" style="width: 40vh;">
+						</div>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<h2>When to Plug In</h2>
+					<p>You might be asked to plug values in <b>before</b> combining functions.</p>
+					<p>In that case, plug in your inputs, and <i>then</i> combine the outputs. You cannot combine inputs first!!</p>
+					$$ f(a) + f(b) \neq f(a+b) $$
+					<p>You can consider this an order of operations thing. Inputs become outputs first, and then PEMDAS.</p>
+				</div></section>
+
+				<section><div class="bodySlide">
 					<div class="workbook"><div>103</div><div>Example 2</div></div>
 					<p>Fully simplify the following expressions for \(f(x) = x^2 - 4x + 7\).</p>
 					<div class="problem withNum">
@@ -118,10 +182,13 @@
 
 <!-- COMPOSITION ------------------------------------------------------------------------------------------------------>
 
-				<section><div class="bodySlide">
+				<!-- <section><div class="bodySlide">
 					<div class="workbook"><div>104</div><div>Example 3</div></div>
 					<p>Functions have a <b>new, unique operation</b> which we cannot do with regular numbers. A function can take in a number and apply some operations to it to get a new number. Let’s think of an example where we function where we purchased several items \(S(x)\) and a function where we received a discount \(D(x)\).</p>
 					<p>Starting with the items we purchased \(x =\) we “plug into” that into our \(S(x)\) and \(D(x)\) to get an item on discount.</p>
+				</div></section> -->
+				<section><div class="callout">
+					<p><b>Skipping</b> Example 3...</p>
 				</div></section>
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
@@ -240,7 +307,7 @@
 						<li><p>Multiply the last result by 7.</p></li>
 						<li><p>Subtract 7 from that answer.</p></li>
 						<li><p>Divide what you just got by 7.</p></li>
-						<li><p>Give your final number to you instructor. They should be able to guess your original!</p></li>
+						<li><p>Give your final number to you instructor (me). They should be able to guess your original!</p></li>
 					</ol>
 				</div></section>
 				<section><div class="bodySlide">

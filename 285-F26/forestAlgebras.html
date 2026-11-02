@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Hyperbolic Groups | 285 F26</title>
+		<title>Forest Algebras | 285 F26</title>
 		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
 		<meta name="author" content="Lena Pang"/>
 
@@ -57,32 +57,196 @@
 				</div></section>
 
 				<section><div class="bodySlide">
+					<div class="definition">Algebra</div>
+					<div class="definitionText">
+						<p>an <b>algebra</b> is a <span>set</span> with <span>operations</span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Algebra</div>
+					<div class="definitionText">
+						<p>a <b>forest algebra</b> is a set of <span><i>forests</i></span> with <span><i>concatenation</i> and <i>composition</i></span></p>
+						<h6>where a <b>forest</b> is an ordered sequence of unranked trees</h6>
+					</div>
+				</div></section>
+
+				<section><div class="callout">
+					<h2>What’s in a forest algebra?</h2>
+				</div></section>
+
+				<section data-auto-animate><div class="bodySlide">
+					<div class="grid" style="grid-template-columns: 1fr 1fr; column-gap:0; row-gap: 4rem;">
+						<h5>forests \(\boldsymbol{h}\)</h5>
+						<h5>contexts \(\boldsymbol{v}\)</h5>
+
+						<div class="row" style="gap:5rem; justify-content: center;">
+							<img src="../images/285-F26/forest1.svg" style="height: 30vh; width: auto;">
+							<img src="../images/285-F26/forest2.svg" style="height: 30vh; width: auto;">
+						</div>
+						<div class="row" style="gap:5rem; justify-content: center;">
+							<img src="../images/285-F26/context1.svg" style="height: 30vh; width: auto;">
+							<img src="../images/285-F26/context2.svg" style="height: 30vh; width: auto;">
+						</div>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div class="grid" style="grid-template-columns: 1fr 1fr; row-gap: 4rem;">
+						<h5>forests \(\boldsymbol{h}\)</h5>
+						<h5>contexts \(\boldsymbol{v}\)</h5>
+						
+						<div><p style="margin-top: -3rem;">under composition (\( + \))</p><h6>\(h+h,h+v,v+h\)</h6></div>
+						<div><p style="margin-top: -3rem;">under concatenation (\( \cdot \))</p><h6>\(v\cdot v, v\cdot h\)</h6></div>
+						
+						<div class="row" style="gap:0.5rem; justify-content: center;">
+							<img src="../images/285-F26/forest1.svg" style="height: 18vh; width: auto;"><p>\( + \)</p>
+							<img src="../images/285-F26/forest2.svg" style="height: 18vh; width: auto;"><p>\( = \)</p>
+							<img src="../images/285-F26/forests.svg" style="height: 18vh; width: auto;">
+						</div>
+						<div class="row" style="gap:0.5rem; justify-content: center;">
+							<img src="../images/285-F26/context1.svg" style="height: 18vh; width: auto;"><p>\( \cdot \)</p>
+							<img src="../images/285-F26/context2.svg" style="height: 18vh; width: auto;"><p>\( = \)</p>
+							<img src="../images/285-F26/contexts.svg" style="height: 18vh; width: auto;">
+						</div>
+					</div>
+				</div></section>
+				<section data-auto-animate><div class="bodySlide">
+					<div class="grid" style="grid-template-columns: 1fr 1fr; row-gap: 4rem;">
+						<h5>forests \(\boldsymbol{h}\)</h5>
+						<h5>contexts \(\boldsymbol{v}\)</h5>
+
+						<div><p style="margin-top: -3rem;">under composition (\( + \))</p><h6>\(h+h,h+v,v+h\)</h6></div>
+						<div><p style="margin-top: -3rem;">under concatenation (\( \cdot \))</p><h6>\(v\cdot v, v\cdot h\)</h6></div>
+						
+						<div class="row" style="gap:0.5rem; justify-content: center;">
+							<img src="../images/285-F26/forest1.svg" style="height: 18vh; width: auto;"><p>\( + \)</p>
+							<img src="../images/285-F26/forest2.svg" style="height: 18vh; width: auto;"><p>\( = \)</p>
+							<img src="../images/285-F26/forests.svg" style="height: 18vh; width: auto;">
+						</div>
+						<div class="row" style="gap:0.5rem; justify-content: center;">
+							<img src="../images/285-F26/context1.svg" style="height: 18vh; width: auto;"><p>\( \cdot \)</p>
+							<img src="../images/285-F26/context2.svg" style="height: 18vh; width: auto;"><p>\( = \)</p>
+							<img src="../images/285-F26/contexts.svg" style="height: 18vh; width: auto;">
+						</div>
+						
+						<div>
+							<img src="../images/285-F26/bracket.svg">
+							<p>“horizontal” monoid \(H\)</p>
+						</div>
+						<div>
+							<img src="../images/285-F26/bracket.svg">
+							<p>“vertical” monoid \(V\)</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
 					<div class="definition">Forest Algebra</div>
 					<div class="definitionText smaller">
-						<p>a <b>forest algebra</b> \( (H,V,act,in_l,in_r) \) is:</p>
+						<p>a <b>forest algebra</b> \( (H,V,act,in_l,in_r) \) consists of:</p>
 						<ul>
-							<li class="fragment"><p><span>horizontal monoid</span> \((H,+)\) with identity \(0\)</p></li>
-							<li class="fragment"><p><span>vertical monoid</span> \( (V,\cdot ) \) with identity \(1\)</p></li>
-							<li class="fragment"><p><span>one action</span> \(act: H\times V \rightarrow H \text{ of } V \text{ on } H\), denoted \(vh\)</p>
-							<h6>instead of \(act(h,v)\), thanks french ppl :/</h6></li>
-							<li class="fragment"><p><span>two operations</span> \(in_l\) & \(in_r\) from \(H\rightarrow V\)</p></p></li>
+							<li class="fragment"><p><span>horizontal monoid</span> \((H,+)\) with identity “\(0\)”</p></li>
+							<li class="fragment"><p><span>vertical monoid</span> \( (V,\cdot ) \) with identity “\(1\)”</p></li>
+							<li class="fragment">
+								<p>a <span>left-monoidal action</span> of \(V\) on \(H\), \(act: H\times V \rightarrow H\) &nbsp;&nbsp;&nbsp;<span class="nobg" style="color:var(--monoid)">(\( v \cdot h \in H\))</span></p>
+							</li>
+							<li class="fragment">
+								<p><span>two operations</span> \(in_l\) & \(in_r : H\rightarrow V\) &nbsp;&nbsp;&nbsp;<span class="nobg" style="color:var(--monoid)">(\( v+h,h+v \in V\))</span></p>
+								<p class="fragment" style="margin-top: 0.85rem;">※ monoid morphisms! \(in(h_1+h_2)=in(h_1)in(h_2)\) and \(in(0)=1\)</p>
+							</li>
 						</ul>
 					</div>
 				</div></section>
+				
+				<section><div class="callout">
+					<h5>A Note on (Polish) Notation</h5>
+					<div style="color:var(--monoid)">
+						$$ qf_1f_2f_3 = f_3(f_2(f_1(q)))$$
+					</div>
+					<p style="font-size:var(--bodyRegular); max-width: 40ch;">Action on the right is easier to follow for linguistic purposes (reading left to right, applying automata from left to right, etc), so we write \(act(h,v)\) as \(vh\).</p>
+				</div></section>
+
 				<section><div class="bodySlide">
 					<div class="definition">Forest Algebra</div>
 					<div class="definitionText smaller">
 						<h5>Forest Algebra Axioms</h5>
 						<ul>
-							<li class="fragment"><p><u>action</u>: \( (v\cdot w) h = v(wh) \) <span class="nobg" style="color:#386ef6;">-> often written \(vwh\)</span></p></li>
-							<li class="fragment"><p><u>insertion</u>:</p>
-								<p>\( in_l(g)h=g+h \)</p>
-								<p>\( in_r(g)h=g+h \)</p></li>
-							<li class="fragment"><p style="margin-right: -8rem; max-width: 100%;"><u>faithfulness</u>: for all distinct \(v,w\in V\), \(\exists h\in H\) such that \(vh\neq wh\)</p></li>
+							<li class="fragment"><p><u>action</u>: \( (v\cdot w) h = v(wh)\)</li>
+							<li class="fragment"><p><u>insertion</u>: \( in_l(g)h=g+h \) and &bs \( in_r(g)h=h+g \)</p></li>
+							<li class="fragment"><p style="max-width: 34ch;"><u>faithfulness</u>: for all distinct \(v,w\in V\), there exists an \(h\in H\) such that \(vh\neq wh\)</p></li>
 						</ul>
 					</div>
 				</div></section>
 
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Morphisms</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Morphism</div>
+					<div class="definitionText smaller">
+						<p style="max-width: 44ch;">a <b>morphism</b> from one forest algebra \((H,V)\) to another \( (G,W) \) is a <span>pair of monoid morphisms</span> \( (\alpha: H\rightarrow G, \beta: V\rightarrow W) \) such that \(\forall h\in H, \forall v\in V\):</p>
+						<ul>
+							<li><p>\(\alpha (vh) = \beta(v) \alpha(h) \)</p></li>
+							<li><p>\( \beta\big(in_l(h) \big) = in_l\big( \alpha(h) \big) \) and \( \beta\big(in_r(h) \big) = in_r\big( \alpha(h) \big) \)</p></li>
+						</ul>
+						<div class="fragment" style="margin-top: -1rem;">
+							<p>Given a morphism \(\beta\), \(\alpha\) can be determined using:</p>
+							<p>\( \alpha(h) = \alpha(h+0) = \alpha\big( in_l(h)0 \big) = \beta\big( in_l(h) \big) \alpha(0) \)</p>
+						</div>
+					</div>
+				</div></section>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Free Forest Algebras</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Free Forest Algebra</div>
+					<div class="definitionText smaller">
+						<p>a <b>free forest algebra</b> \(A^\triangle\) over an alphabet \(A\)</p>
+						<ul>
+							<li><p>horizontal monoid: set of <span>forests</span> over \(A\)</p></li>
+							<li><p>vertical monoid: set of <span>contexts</span> over \(A\)</p></li>
+							<li><p>action: <span>substitution</span> of forests in contexts</p></li>
+							<li><p style="max-width: 42ch;">\(in_l\) and \(in_r\): transform a forest into a context by adding a hole to the <i>right or left</i>, respectively, of all its roots</p></li>
+						</ul>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="lemma">Bojańczyk 3.6</div>
+					<div class="definitionText smaller">
+						<p>The free forest algebra \(A^\triangle\) is a forest algebra.</p>
+						<p style="max-width: 44ch;">For every forest algebra \((H, V )\), every function \(f : A \rightarrow V\) can be uniquely extended to a morphism \( (\alpha,\beta): A^\triangle\rightarrow (H,V) \) such that \(\beta(a(*)) = f(a)\) for every \(a \in A\).</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Recognizing Morphism</div>
+					<div class="definitionText smaller">
+						<p style="max-width: 44ch;">A set \(L\) of \(A\)-forests is said to be <b>recognized</b> by a surjective morphism \( (\alpha, \beta) : A^\triangle \rightarrow (H, V)\) if \(L\) is the <span>inverse image</span> \(\alpha^{-1}(G)\) of some \(G \subseteq H\).</p>
+						<p style="max-width: 44ch;">The morphism \( (\alpha, \beta) \) is said to <b>recognize</b> \(L\), the set \(G\) is called the <b>accepting set</b>, and \(L\) is said to be <b>recognized by</b> \((H, V)\).</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook">Example (3.8)</div>
+					<div class="definitionText smaller">
+						<p>Consider:</p>
+						<ul>
+							<li><p>\(L\): set of forests with even # of nodes</p></li>
+							<li><p>\(H\) and \(V\): \(\{0,2\}\) with addition \( \text{mod} 2\)</p></li>
+							<li><p>action: addition</p></li>
+						</ul>
+						<div class="row"><p><b>Recognizing morphism</b> maps...</p><p class="fragment" style="color:var(--monoid)"> context \(\rightarrow\) 0 if it has even # of nodes</p></div>
+						<div class="row"><p><b>Accepting set</b> is....</p><p class="fragment" style="color:var(--monoid)"> \( \{0\} \)</p></div>
+					</div>
+				</div></section>
+				
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>That’s all folks!</h2>
+				</div></section>
 			</div>
 		</div>
 

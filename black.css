@@ -348,7 +348,7 @@ sub { vertical-align: sub; font-size: smaller }
 
 /* labelled slides ----------------------------------------------------------------------------------------------------------- */
 
-.definition, .theorem, .workbook, .proof {
+.definition, .theorem, .workbook, .proof, .lemma {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -358,7 +358,7 @@ sub { vertical-align: sub; font-size: smaller }
     color: rgb(var(--definition));
     font-family: var(--fontSecondary);
     height: 3.5rem;
-} .definition::before, .theorem::before, .proof::before {
+} .definition::before, .theorem::before, .proof::before, .lemma::before {
     background-color: rgb(var(--definition));
     width: fit-content;
     padding: var(--spaceSmall);
@@ -402,11 +402,15 @@ sub { vertical-align: sub; font-size: smaller }
     max-width: 21ch;
 }
 
-.theorem { color: rgb(var(--theorem)); }
+.theorem, .lemma { color: rgb(var(--theorem)); }
 .theorem::before {
     content: 'Theorem';
     background-color: rgb(var(--theorem));
-} .theorem h4 { color: var(--primary); }
+} .theorem h4, .lemma h4 { color: var(--primary); }
+.lemma::before {
+    content: 'Lemma';
+    background-color: rgb(var(--theorem));
+}
 
 .proof { color: rgb(var(--theorem)); }
 .proof::before {

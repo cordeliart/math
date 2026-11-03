@@ -33,17 +33,30 @@
 						<h5 class="time" id="time"></h5>
 					</div>
 
-					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					<p style="margin-bottom:0;">Write your <u>name & answers</u> on a sheet of paper.</p>
+					<p>Let \( f(x) = x^2\) and \(g(x) = \sqrt{x}\).</p>
 					
-					<div class="problem long withNum">
+					<div class="problem long withNum dense">
 						<div>1</div>
-						<p style="margin-bottom:1rem;">Let \(f(x) = x^3-6\). Find \(x\) that makes \(f(x)=2\).</p>
+						<p style="margin-bottom:0;"><b>Solve</b> & <b>simplify</b> \( (f\circ g)(x) \) and \( (g\circ f)(x)\).</p>
+						<div class="fragment">
+							<p style="margin-bottom:0;">\( (f \circ g )(x)\) <span class="fragment"> \(= f\big( g(x) \big)\) <span class="fragment"> \(= f(\sqrt{x}) \) <span class="fragment"> \(= \sqrt{x}^2 \) <span class="fragment">\(=\) <span class="finalAnswer"> \(x\)</span></span></span></span></span></p>
+							<p style="margin-bottom:1rem;">\( (g \circ f )(x)\) <span class="fragment"> \(= g\big( f(x) \big)\) <span class="fragment"> \(= g(x^2) \) <span class="fragment"> \( =\sqrt{x^2} \) <span class="fragment">\(=\) <span class="finalAnswer"> \(x\)</span></span></span></span></span><p>
+						</div>
+					</div>
+					<!-- <div class="problem long withNum">
+						<div>2</div>
+						<p style="margin-bottom:0;">How do you write \( g\Big(f \big(k(x)\big)\Big) \) using composition notation (\(\circ\))?</p>
+						<p class="fragment">\( (g \circ f \circ k)(x) \)</p>
+					</div> -->
+					<div class="problem long withNum dense">
+						<div>2</div>
+						<p style="margin-bottom:1rem;"><b>Find \(\boldsymbol{x}\)</b> that makes \(f(x)=2\).</p>
 						<div class="fragment row top">
 							<div style="max-width:65%;">
-								<p>Is \(2\) the input or output? <span class="fragment"><b>Output!</b></span></p>
-								<p class="fragment">That means we replace “\(f(x)\)” with the definition “\(x^3+6\)”, and then solve for \(x\).</p>
+								<p>Is \(2\) the input or output? <span class="fragment"><b>Output!</b> So we replace “\(f(x)\)” with the definition “\(x^3+6\)”, and then solve for \(x\).</span></p>
 							</div>
-							<div style="padding-left:1rem">
+							<div style="padding-left:4rem; margin-top: -7.5rem;">
 								<p class="fragment" style="margin-bottom:0.85rem;">\(x^3-6 = 2\)</p>
 								<p class="fragment" style="margin-bottom:0.85rem;">\(x^3 = 8\)</p>
 								<p class="fragment" style="margin-bottom:0.85rem;">\(\sqrt[3]{x^3} = \sqrt[3]{8}\)</p>
@@ -51,10 +64,27 @@
 							</div>
 						</div>
 					</div>
-					<div class="problem long withNum">
-						<div>2</div>
-						<p style="margin-bottom:0;">How do you write \( g\Big(f \big(k(x)\big)\Big) \) using composition notation (\(\circ\))?</p>
-						<p class="fragment">\( (g \circ f \circ k)(x) \)</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p>If it helps you, replace the \(x\)’s with other placeholders!</p>
+					<p>Let \( f(😾) = 😾^2\) and \(g(🐟) = \sqrt{🐟}\).</p>
+					
+					<div class="col2">
+						<div class="blue">
+							<p>\( (f \circ g )(x)\) </p>
+							<p class="fragment"> \(= f\big( g( \phantom{.}\underbrace{\phantom{.}x\phantom{.}}_{🐟} \phantom{.}) \big)\) </p>
+							<p class="fragment"> \(= f\big(\phantom{.}\underbrace{\phantom{.}\sqrt{x} \phantom{.}}_{😾}\phantom{.}\big) \) </p>
+							<p class="fragment"> \(= (\sqrt{x} \phantom{.})^2 \) </p>
+							<p class="fragment">\(=\) <span class="finalAnswer"> \(x\)</span></p>
+						</div>
+						<div class="blue">
+							<p>\( (g \circ f )(x)\) </p>
+							<p class="fragment"> \(= g\big( f( \phantom{.} \underbrace{\phantom{.}x\phantom{.}}_{😾} \phantom{.}) \big)\) </p>
+							<p class="fragment"> \(= g\big( \phantom{.} \underbrace{\phantom{.}x^2\phantom{.}}_🐟 \phantom{.}\big) \) </p>
+							<p class="fragment"> \( =\sqrt{x^2} \) </p>
+							<p class="fragment">\(=\) <span class="finalAnswer"> \(x\)<span></p>
+						</div>
 					</div>
 				</div></section>
 

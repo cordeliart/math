@@ -131,10 +131,12 @@
 						<div>
 							<img src="../images/285-F26/bracket.svg">
 							<p>“horizontal” monoid \(H\)</p>
+							<p class="fragment">with identity = empty forest</p>
 						</div>
 						<div>
 							<img src="../images/285-F26/bracket.svg">
 							<p>“vertical” monoid \(V\)</p>
+							<p class="fragment">with identity = \(\square\)</p>
 						</div>
 					</div>
 				</div></section>
@@ -164,6 +166,15 @@
 					</div>
 					<p style="font-size:var(--bodyRegular); max-width: 40ch;">Action on the right is easier to follow for linguistic purposes (reading left to right, applying automata from left to right, etc), so we write \(act(h,v)\) as \(vh\).</p>
 				</div></section>
+				
+				<section><div class="callout">
+					<h5>Another Note on Notation</h5>
+					<div style="color:var(--monoid)">
+						$$ in_l(h) = h+1 $$
+						$$ in_r(h) = 1+h $$
+					</div>
+					<p style="font-size:var(--bodyRegular); max-width: 36ch;">For the way that we will define \(in_l\) and \(in_r\), we can simply rewrite as shown above.</p>
+				</div></section>
 
 				<section><div class="bodySlide">
 					<div class="definition">Forest Algebra</div>
@@ -186,18 +197,14 @@
 					<div class="definitionText smaller">
 						<p style="max-width: 44ch;">a <b>morphism</b> from one forest algebra \((H,V)\) to another \( (G,W) \) is a <span>pair of monoid morphisms</span> \( (\alpha: H\rightarrow G, \beta: V\rightarrow W) \) such that \(\forall h\in H, \forall v\in V\):</p>
 						<ul>
-							<li><p>\(\alpha (vh) = \beta(v) \alpha(h) \)</p></li>
-							<li><p>\( \beta\big(in_l(h) \big) = in_l\big( \alpha(h) \big) \) and \( \beta\big(in_r(h) \big) = in_r\big( \alpha(h) \big) \)</p></li>
+							<li><p>preserves action: \(\alpha (vh) = \beta(v) \alpha(h) \)</p></li>
+							<li><p>preserves operations: \( \beta\big(in_l(h) \big) = in_l\big( \alpha(h) \big) \) and \( \beta\big(in_r(h) \big) = in_r\big( \alpha(h) \big) \)</p></li>
 						</ul>
 						<div class="fragment" style="margin-top: -1rem;">
-							<p>Given a morphism \(\beta\), \(\alpha\) can be determined using:</p>
+							<p>Given a monoid morphism \(\beta\), the corresponding \(\alpha\) is:</p>
 							<p>\( \alpha(h) = \alpha(h+0) = \alpha\big( in_l(h)0 \big) = \beta\big( in_l(h) \big) \alpha(0) \)</p>
 						</div>
 					</div>
-				</div></section>
-
-				<section data-background="rgb(var(--accent))"><div class="cover">
-					<h2>Free Forest Algebras</h2>
 				</div></section>
 
 				<section><div class="bodySlide">
@@ -217,7 +224,39 @@
 					<div class="lemma">Bojańczyk 3.6</div>
 					<div class="definitionText smaller">
 						<p>The free forest algebra \(A^\triangle\) is a forest algebra.</p>
-						<p style="max-width: 44ch;">For every forest algebra \((H, V )\), every function \(f : A \rightarrow V\) can be uniquely extended to a morphism \( (\alpha,\beta): A^\triangle\rightarrow (H,V) \) such that \(\beta(a(*)) = f(a)\) for every \(a \in A\).</p>
+						<p style="max-width: 44ch;">For every forest algebra \((H, V )\), every function \(f : A \rightarrow V\) can be uniquely extended to a morphism \( (\alpha,\beta): A^\triangle\rightarrow (H,V) \) such that \(\beta\big(a(*)\big) = f(a)\) for every \(a \in A\).</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="proof">Bojańczyk 3.6</div>
+					<div class="definitionText smaller">
+						<p>Given \(f:A\rightarrow V\), define \(\alpha\) and \(\beta\) as:</p>
+						<div class="col2">
+							<p>\( \begin{align} \alpha(0) & =  0 \\ \alpha(ah) &= f(a)\big( \alpha(h) \big) \\ \alpha(h_1+h_2) &= \alpha(h_1)+\alpha(h_2) \end{align}\)</p>
+							<p>\( \begin{align} \beta(*) &= 1 \\ \beta\big( a(v) \big) &= f(a) \beta(v) \\ \beta(h_1+v+h_2) &= in_l\big( \alpha(h_1) \big) in_r\big( \alpha(h_2) \big) \beta(v) \end{align} \)</p>
+						</div>
+						<p style="max-width: 40ch;">Both of which are well defined, and \(\alpha\) clearly preserves \(+\), and we can induct on \(v\) to show \(\beta\) preserves \(\cdot\).</p>
+						<p style="max-width: 44ch;">Additionally, these mappings are uniquely specific to \(f\), so there is a unique morphism using those \(\alpha\) and \(\beta\).</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="proof">Bojańczyk 3.6</div>
+					<div class="definitionText smaller">
+						<!-- <div class="col2">
+							<p>\( \begin{align} \alpha(0) & =  0 \\ \alpha(ah) &= f(a)\big( \alpha(h) \big) \\ \alpha(h_1+h_2) &= \alpha(h_1)+\alpha(h_2) \end{align}\)</p>
+							<p>\( \begin{align} \beta(*) &= 1 \\ \beta\big( a(v) \big) &= f(a) \beta(v) \\ \beta(h_1+v+h_2) &= in_l\big( \alpha(h_1) \big) in_r\big( \alpha(h_2) \big) \beta(v) \end{align} \)</p>
+						</div> -->
+						<p>To prove \((\alpha,\beta)\) is a morphism, all that's left is to prove preservation:</p>
+						<ul>
+							<li>
+								<p style="margin-bottom: var(--space)">\(\alpha(vh) = \beta(v)\alpha(h)\)</p>
+								<p class="fragment" style="color:var(--monoid)">\(\checkmark\) done by induction on \(p\)</p>
+							</li>
+							<li>
+								<p style="margin-bottom: var(--space)">\( \beta\big(in_l(h)\big) = \beta(h + *) = \alpha(h) + \beta(1) = in_l\big(\alpha(h)\big)\beta(1) = in_l\big(\alpha(h)\big) \)</p>
+								<p class="fragment" style="color:var(--monoid)">\(\checkmark\) done by definition</p>
+							</li>
+						</ul>
 					</div>
 				</div></section>
 
@@ -230,7 +269,29 @@
 				</div></section>
 
 				<section><div class="bodySlide">
-					<div class="workbook">Example (3.8)</div>
+					<div class="workbook">Example (Bojańczyk 3.8)</div>
+					<div class="definitionText smaller">
+						<p>Consider the set \(L\) of forests over alphabet \(A\) with <b>even # of nodes</b>:</p>
+						<p style="max-width: 100%; text-align:center; margin-top: var(--space);">\( (\alpha, \beta) : A^\triangle \rightarrow (H, V)\)</p>
+						<div class="grid" style="grid-template-columns: 1fr 1fr;">
+							<p class="fragment" style="color:var(--monoid)">\( \alpha : \{\)set of all forests\(\} \rightarrow H\)</p>
+							<p class="fragment" style="color:var(--monoid)">\( \beta : \{\)set of all contexts\(\} \rightarrow V\)</p>
+							<p class="fragment" style="color:var(--monoid)">\(H=\{0,1\}\) with addition \( \text{mod} 2\)</p>
+							<p class="fragment" style="color:var(--monoid)">\(V=\{0,1\}\) with addition \( \text{mod} 2\)</p>
+						</div>
+
+						<p style="max-width: 100%; text-align:center; margin-top: var(--space);">\(\alpha^{-1}(G\subseteq H) = L\)</p>
+						<!-- <ul>
+							<li><p>\(H\) and \(V\): \(\{0,1\}\) with addition \( \text{mod} 2\)</p></li>
+							<li><p>action: addition</p></li>
+						</ul> -->
+						<div class="row"><p><b>Recognizing morphism</b> maps...</p><p class="fragment" style="color:var(--monoid)"> element \(\rightarrow\) 0 if it has even # of nodes</p></div>
+						<div class="row"><p><b>Accepting set</b> is....</p><p class="fragment" style="color:var(--monoid)"> \( \{0\} \)</p></div>
+					</div>
+				</div></section>
+
+				<!-- <section><div class="bodySlide">
+					<div class="workbook">Example (Bojańczyk 3.8)</div>
 					<div class="definitionText smaller">
 						<p>Consider:</p>
 						<ul>
@@ -241,7 +302,7 @@
 						<div class="row"><p><b>Recognizing morphism</b> maps...</p><p class="fragment" style="color:var(--monoid)"> context \(\rightarrow\) 0 if it has even # of nodes</p></div>
 						<div class="row"><p><b>Accepting set</b> is....</p><p class="fragment" style="color:var(--monoid)"> \( \{0\} \)</p></div>
 					</div>
-				</div></section>
+				</div></section> -->
 				
 <!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
 				<section data-background="var(--primary)"><div class="endSlide">

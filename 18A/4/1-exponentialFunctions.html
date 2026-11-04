@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>4.1 Exponential Functions | 18A</title>
-		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="description" content="18A College Algebra, Lesson 4.1"/>
 		<meta name="author" content="Lena Pang"/>
 
 		<meta name="mobile-web-app-capable" content="yes" />
@@ -33,17 +33,23 @@
 						<h5 class="time" id="time"></h5>
 					</div>
 
-					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					<p>Memory check! Write your <u>name & answers</u> on a sheet of paper.</p>
 					
 					<div class="problem long withNum">
 						<div>1</div>
-						<p>What is the general formula for <b>transformations</b> of a function?</p>
-						<p class="fragment">\( a\cdot f\big( b\cdot (x-h) \big) +k\)</p>
+						<p>What is the general formula for <b>transformations</b>, and what transformations do \(a\), \(b\), \(h\), and \(k\) control? (3.4)</p>
+						<div class="fragment">
+							<p>\( a\cdot f\big( b\cdot (x-h) \big) +k\)</p>
+							<div class="row top" style="gap:4rem; margin-top: -1.35rem; margin-bottom: -1.35rem">
+								<p>\( \boldsymbol{a}\): vertical scaling (flip/stretch/squash)<br>\(\boldsymbol{b}\): horizontal scaling (flip/stretch/squash)</p>
+								<p>\(\boldsymbol{h}\): horizontal shifting<br>\(\boldsymbol{k}\): vertical shifting</p>
+							</div>
+						</div>
 					</div>
 					<div class="problem long withNum">
 						<div>2</div>
-						<p>?</p>
-						<p class="fragment">??</p>
+						<p>How do you <b>check</b> if an inverse is correct? (3.6)</p>
+						<p class="fragment">Check that \( (f^{-1}\circ)(x) = x\) <b>AND</b> \( (f\circ f^{-1})(x) =x\).</p>
 					</div>
 				</div></section>
 
@@ -113,10 +119,10 @@
 						<p>\( \left( \dfrac{x}{y} \right)^2 \) <span class="blue fragment">\( = \dfrac{x^2}{y^2} \)</span></p>
 						<p>\( \left( \dfrac{x}{y} \right)^A \) <span class="blue fragment">\( = \dfrac{x^A}{y^A} \)</span></p>
 						
-						<p>\( ( x+5 )^2 \) <span class="blue fragment">\( = (x+5)(x+5) \) <span class="blue fragment">\( = x^2+10x+25 \)</span></span></p>
+						<p>\( ( x+5 )^2 \) <span class="blue fragment">\( = (x+5)(x+5) \)</span></p>
 						<p>\( ( x+y )^A \) <span class="blue fragment">\( = \underbrace{(x+y)...(x+y)}_{A \text{ many times}} \)</span></p>
 						
-						<p>\( ( x-5 )^2 \) <span class="blue fragment">\( = (x-5)(x-5) \) <span class="blue fragment">\( = x^2-10x+25 \)</span></span></p>
+						<p>\( ( x-5 )^2 \) <span class="blue fragment">\( = (x-5)(x-5) \)</span></p>
 						<p>\( ( x-y )^A \) <span class="blue fragment">\( = \underbrace{(x-y)...(x-y)}_{A \text{ many times}} \)</span></p>
 					</div>
 				</div></section>
@@ -333,13 +339,14 @@
 <!-- NATURAL BASE ------------------------------------------------------------------------------------------------------>
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
-					<h2>e</h2>
+					<h2><i>e</i></h2>
 				</div></section>
 
 				<section><div class="bodySlide">
 					<div class="definition">Natural Base</div>
 					<div class="definitionText">
 						<p>the <b>natural base \(\boldsymbol{e}\)</b> is an irrational number used as the <span>exponential base</span> in many real-world scenarios</p>
+						<div class="exampleBox">Example: \(e^4\)</div>
 					</div>
 				</div></section>
 

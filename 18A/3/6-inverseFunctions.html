@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>3.6 Inverse Functions | 18A</title>
-		<meta name="description" content="18A College Algebra, Lesson 1.1"/>
+		<meta name="description" content="18A College Algebra, Lesson 3.6"/>
 		<meta name="author" content="Lena Pang"/>
 
 		<meta name="mobile-web-app-capable" content="yes" />
@@ -12,7 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2yfamily=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
 		<link rel="icon" href="../../images/favicon.png">
 
@@ -40,27 +40,26 @@
 						<div>1</div>
 						<p style="margin-bottom:0;"><b>Solve</b> & <b>simplify</b> \( (f\circ g)(x) \) and \( (g\circ f)(x)\).</p>
 						<div class="fragment">
-							<p style="margin-bottom:0;">\( (f \circ g )(x)\) <span class="fragment"> \(= f\big( g(x) \big)\) <span class="fragment"> \(= f(\sqrt{x}) \) <span class="fragment"> \(= \sqrt{x}^2 \) <span class="fragment">\(=\) <span class="finalAnswer"> \(x\)</span></span></span></span></span></p>
+							<p style="margin-bottom:0;">\( (f \circ g )(x)\) <span class="fragment"> \(= f\big( g(x) \big)\) <span class="fragment"> \(= f(\sqrt{x}) \) <span class="fragment"> \(= \sqrt{x}^2 \) <span class="fragment">\(=\) <span class="finalAnswer"> \(x\) with \(x\geq 0\)</span></span></span></span></span></p>
 							<p style="margin-bottom:1rem;">\( (g \circ f )(x)\) <span class="fragment"> \(= g\big( f(x) \big)\) <span class="fragment"> \(= g(x^2) \) <span class="fragment"> \( =\sqrt{x^2} \) <span class="fragment">\(=\) <span class="finalAnswer"> \(x\)</span></span></span></span></span><p>
 						</div>
 					</div>
 					<!-- <div class="problem long withNum">
 						<div>2</div>
-						<p style="margin-bottom:0;">How do you write \( g\Big(f \big(k(x)\big)\Big) \) using composition notation (\(\circ\))?</p>
+						<p style="margin-bottom:0;">How do you write \( g\Big(f \big(k(x)\big)\Big) \) using composition notation (\(\circ\))y</p>
 						<p class="fragment">\( (g \circ f \circ k)(x) \)</p>
 					</div> -->
 					<div class="problem long withNum dense">
 						<div>2</div>
-						<p style="margin-bottom:1rem;"><b>Find \(\boldsymbol{x}\)</b> that makes \(f(x)=2\).</p>
+						<p style="margin-bottom:1rem;"><b>Find \(\boldsymbol{x}\)</b> that makes \(g(x)=2\).</p>
 						<div class="fragment row top">
 							<div style="max-width:65%;">
-								<p>Is \(2\) the input or output? <span class="fragment"><b>Output!</b> So we replace “\(f(x)\)” with the definition “\(x^3+6\)”, and then solve for \(x\).</span></p>
+								<p>Is \(2\) the input or outputy <span class="fragment"><b>Output!</b> So we replace “\(g(x)\)” with the definition “\(\sqrt{x}\)”, and then solve for \(x\).</span></p>
 							</div>
-							<div style="padding-left:4rem; margin-top: -7.5rem;">
-								<p class="fragment" style="margin-bottom:0.85rem;">\(x^3-6 = 2\)</p>
-								<p class="fragment" style="margin-bottom:0.85rem;">\(x^3 = 8\)</p>
-								<p class="fragment" style="margin-bottom:0.85rem;">\(\sqrt[3]{x^3} = \sqrt[3]{8}\)</p>
-								<p class="fragment finalAnswer" style="margin-bottom:-1.5rem;">\(x = 2\)</p>
+							<div style="padding-left:4rem; margin-top: -3rem;">
+								<p class="fragment" style="margin-bottom:0.85rem;">\(\sqrt{x} = 2\)</p>
+								<p class="fragment" style="margin-bottom:0.85rem;">\((\sqrt{x})^2 = 2^2\)</p>
+								<p class="fragment finalAnswer" style="margin-bottom:-1.5rem;">\(x = 4\)</p>
 							</div>
 						</div>
 					</div>
@@ -108,19 +107,19 @@
 				</div></section>
 
 				<section><div class="callout">
-					<p style="max-width: 31ch;">Let’s think about putting on socks and shoes. If I want to <b>undo</b> that, what do I do?</p>
+					<p style="max-width: 31ch;">Let’s think about putting on socks and shoes. If I want to <b>undo</b> that, what do I doy</p>
 					<p class="blue fragment">Take off shoes, <i>then</i> take off socks.</p>
 					<p class="blue fragment" style="max-width:28ch;">Notice that we do the <b>opposite actions</b> in <b>REVERSE order</b>!!</p>
 				</div></section>
 
 				<section><div class="callout">
-					<p style="max-width: 31ch;">Now let’s think about \(x^2\). If I want to <b>undo</b> that (to get back to \(x\)), what do I do?</p>
-					<p class="blue fragment">Take the square root.<br>\(\sqrt{?}\)</p>
+					<p style="max-width: 31ch;">Now let’s think about \(x^2\). If I want to <b>undo</b> that (to get back to \(x\)), what do I doy</p>
+					<p class="blue fragment">Take the square root.<br>\(\sqrt{y}\)</p>
 				</div></section>
 				<section><div class="callout">
-					<p style="max-width: 31ch; margin-bottom: -1.35rem;">How about \(x^2+4\). If I want to <b>undo</b> that (to get back to \(x\)), what do I do?</p>
+					<p style="max-width: 31ch; margin-bottom: -1.35rem;">How about \(x^2+4\). If I want to <b>undo</b> that (to get back to \(x\)), what do I doy</p>
 					<p style="font-size: var(--bodyRegular); opacity: 50%; max-width: 100%;">Remember, we do the <b>opposite actions</b> in <b>REVERSE order</b>!!</p>
-					<p class="blue fragment">Subtract four, <i>then</i> square root.<br>\(\sqrt{?-4}\)</p>
+					<p class="blue fragment">Subtract four, <i>then</i> square root.<br>\(\sqrt{y-4}\)</p>
 				</div></section>
 
 <!-- PRACTICE ------------------------------------------------------------------------------------------------------>
@@ -167,7 +166,7 @@
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>110</div><div>Example 2</div></div>
-					<p>How can we <b>generalize</b> this procedure? Let’s rewrite the original function as: \(f = x^3/32\), and solve for \(f\).</p>
+					<p>How can we <b>generalize</b> this procedurey Let’s rewrite the original function as: \(y = x^3/32\), and solve for \(x\).</p>
 					<div class="fragment blue">
 						<p>\( \dfrac{x^3}{32} = y\)</p>
 						<p class="fragment">\( x^3 = 32y \)</p>
@@ -238,19 +237,21 @@
 					<ol>
 						<li>
 							<p style="margin-bottom:0;">Rename the eq \(f(x)=...\) as \(y=...\) to make it easier to work with.</p>
-							<p class="fragment blue">Replace \(f(x)\) with \(?\), or some other placeholder.</p>
+							<!-- <p class="fragment blue">Replace \(f(x)\) with \(y\), or some other placeholder.</p> -->
 						</li>
 						<li><p style="margin-bottom:0;">Solve the equation for \(x\).</p>
-							<p class="fragment blue">Isolate \(x\).</p>
+							<!-- <p class="fragment blue">Isolate \(x\).</p> -->
 						</li>
 						<li><p style="margin-bottom:0;">Make a new equation by swapping \(x\) and \(y\) in that result.</p>
-							<p class="fragment blue">Swap \(x\) and \(?\).</p>
+							<!-- <p class="fragment blue">Swap \(x\) and \(y\).</p> -->
 						</li>
 						<li>
 							<p style="margin-bottom:0;">Rename the resulting \(y=...\) to \(f^{-1}(x)=...\)</p>
-							<p class="fragment blue">Replace \(?\) with \(f^{-1}(x)\).</p>
+							<!-- <p class="fragment blue">Replace \(y\) with \(f^{-1}(x)\).</p> -->
 						</li>
-						<li><p>Check your answer. <span class="fragment blue">\(\checkmark\)</span></p></li>
+						<li><p>Check your answer.</p>
+						 <!-- <span class="fragment blue">\(\checkmark\)</span> -->
+						</li>
 					</ol>
 				</div></section>
 				
@@ -260,17 +261,17 @@
 					<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
 						<!-- <p>Original</p> -->
 						<!-- <p class="blue">\( f(x) = (x+11)^5-8\)</p> -->
-						<p class="fragment">Replace \(f(x)\) with \(?\)</p>
-						<p class="fragment">\( ? = (x+11)^5-8\)</p>
+						<p class="fragment">Replace \(f(x)\) with \(y\)</p>
+						<p class="fragment">\( y = (x+11)^5-8\)</p>
 						<p class="fragment">Isolate \(x\)</p>
 						<div style="margin-bottom:var(--spaceLarge);">
-							<p class="fragment">\( ?+8 = (x+11)^5\)</p>
-							<p class="fragment">\( \sqrt[5]{?+8} = x+11\)</p>
-							<p class="fragment">\( \sqrt[5]{?+8}-11 = x\)</p>
+							<p class="fragment">\( y+8 = (x+11)^5\)</p>
+							<p class="fragment">\( \sqrt[5]{y+8} = x+11\)</p>
+							<p class="fragment">\( \sqrt[5]{y+8}-11 = x\)</p>
 						</div>
-						<p class="fragment">Swap \(x\) and \(?\)</p>
-						<p class="fragment">\( \sqrt[5]{x + 8} - 11 = ?\)</p>
-						<p class="fragment" style="margin-bottom:0;">Replace \(?\) with \(f^{-1}(x)\)</p>
+						<p class="fragment">Swap \(x\) and \(y\)</p>
+						<p class="fragment">\( \sqrt[5]{x + 8} - 11 = y\)</p>
+						<p class="fragment" style="margin-bottom:0;">Replace \(y\) with \(f^{-1}(x)\)</p>
 						<p class="fragment finalAnswer">\( \sqrt[5]{x + 8} - 11 = f^{-1} (x) \)</p>
 					</div>
 				</div></section>
@@ -359,9 +360,14 @@
 
 				<section><div class="bodySlide">
 					<h2>Comparing Graphs</h2>
-					<p>The graph of the inverse \(f^{-1}(x)\) will look like \( f(x)\) <b>flipped across the diagonal</b> (\(x=y\)).</p>
-					<p>This is because any point \((a,b)\) for \(f(x)\) will have a corresponding point \((b,a)\) for \(f^{-1}(x)\). Basically, we swap all of our ordered pairs; we can also think of this as swapping our axes.</p>
-					<p>ADD MORE</p>
+					<p>Remember that ordered pairs look like (input,output).</p>
+					<div style="margin-top: -4rem; margin-bottom: -2rem">
+						$$ f(a) = b \iff f^{-1}(b)=a$$
+					</div>
+					<p>For \(f(x)\), input \(a\) gives us output \(b\), so we’ll have \( (a,b) \) as an ordered pair on its graph. On the other hand, for \(f^{-1}(x)\), input \(b\) gives us output \(a\), so we’ll have \( (b,a) \) as an ordered pair on its graph.</p>
+					<!-- <p>This is because any point \((a,b)\) for \(f(x)\) will have a corresponding point \((b,a)\) for \(f^{-1}(x)\). Basically, we swap all of our ordered pairs; we can also think of this as swapping our axes.</p> -->
+					<p>So the graph of the inverse \(f^{-1}(x)\) will look like \( f(x)\) <b>flipped across the diagonal</b> (\(x=y\)).</p>
+					<!-- <p>ADD MORE</p> -->
 				</div></section>
 
 				<section data-transition="slide-in fade-out"><div class="bodySlide">
@@ -487,7 +493,7 @@
 <!-- ONE TO ONE ------------------------------------------------------------------------------------------------------>
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
-					<h2 style="max-width: 14ch;">What makes a function invertible?</h2>
+					<h2 style="max-width: 14ch;">What makes a function invertibley</h2>
 				</div></section>
 
 				<section><div class="bodySlide">

@@ -57,9 +57,13 @@
 
 				<section><div class="bodySlide">
 					<div class="definition">Logarithm</div>
-					<div class="definitionText">
-						<p>a <b>logarithm</b> is the <span>inverse of an exponential</span>, denoted \(\log_b(x)\)</p>
-						<h6>same as before, \(b\) is called the <b>base</b></h6>
+					<div class="definitionImg">
+						<div>
+							<p style="max-width: 18ch;">a <b>logarithm</b> \(b^x\) is the <span>inverse of an exponential</span></p>
+							<p>\( f(x)= b^x\) <br>\( \rightarrow f^{-1}(x)=\log_b(x) \)</p>
+							<h6>same as before, \(b\) is called the <b>base</b></h6>
+						</div>
+						<img src="../../images/18A/4-2-log.svg" style="max-width: 50vh;">
 					</div>
 				</div></section>
 
@@ -73,7 +77,7 @@
 
 				<section><div class="bodySlide">
 					<div class="workbook"><div>125</div><div>Example 1</div></div>
-					<p><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
+					<p style="max-width: 34ch;"><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
 					<div class="problem withNum long">
 						<div>a</div><p>\( \log_3 (9) = x \)</p>
 						<div class="fragment">
@@ -85,7 +89,7 @@
 				</div></section>
 				<section><div class="bodySlide">
 					<div class="workbook"><div>125</div><div>Example 1</div></div>
-					<p><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
+					<p style="max-width: 34ch;"><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
 					<div class="problem withNum long">
 						<div>b</div><p>\( \log_4 (x) = 3 \)</p>
 						<div class="fragment">
@@ -97,7 +101,7 @@
 				</div></section>
 				<section><div class="bodySlide">
 					<div class="workbook"><div>125</div><div>Example 1</div></div>
-					<p><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
+					<p style="max-width: 34ch;"><b>Rewrite</b> these logarithmic equations as questions in words, then use that to <b>solve</b> for \(x\).</p>
 					<div class="problem withNum long">
 						<div>c</div><p>\( \log_x (25) = 2 \)</p>
 						<div class="fragment">
@@ -260,16 +264,121 @@
 						<p class="fragment">\( \frac{ln(52)}{ln(17)} \approx \) &nbsp; <span class="finalAnswer">\(1.3946\)</span></p>
 					</div>
 				</div></section>
-				
-				
 
-
-				
-
-<!-- DIFFERENT BASES ------------------------------------------------------------------------------------------------------>
+<!-- GRAPHING ------------------------------------------------------------------------------------------------------>
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
 					<h2>Graphing</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>129</div><div>Example 4</div></div>
+					<p></p>
+					<div class="row top" style="width: 100%; justify-content: space-between;">
+						<div class="imgBox" alt="6x6 graph with y=(1/2)x+1">
+							<div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(f(x)\)</p>
+
+							<img src="../../images/18A/4-1-exponential.svg" style="left: 50%; top: 50%; transform: translate(-50%,-50%);">
+							<div class="pointBox">
+								<!-- <div class="point alignTL offsetY" style="left: 70%; top: 20%"><p>\(A\)</p><p class="fragment">\( (2,3) \)</p></div> -->
+								<div class="point alignTL offset" style="left: 50%; top: 40%;"><p class="blue" style="margin-top: -0.65rem;">\( (0,1) \)</p></div>
+								<div class="point alignTL" style="left: 60%; top: 30%;"><p class="blue" style="margin-top: -2.4rem; margin-left: 0.5rem;">\( (1,b) \)</p></div>
+								<div class="row dashed" style="top: 50%; transform: translateY(-50%);"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+								<p class="blue" style="top: 52.2%; right: -7%;">HA \(f(x)=0\)</p>
+							</div>
+						</div>
+
+						<div class="imgBox" alt="6x6 graph with y=(1/2)x+1">
+							<div class="xyplane gridFive"></div><p class="xaxis">\(x\)</p><p class="yaxis">\(f(x)\)</p>
+
+							<img src="../../images/18A/4-1-exponential.svg" class="fragment" data-fragment-index="4" style="left: 50%; top: 50%; transform: translate(-50%,-50.1%) scaleX(-100%) rotate(-90deg);">
+							<div class="pointBox">
+								<!-- <div class="point alignTL offsetY" style="left: 70%; top: 20%"><p>\(A\)</p><p class="fragment">\( (2,3) \)</p></div> -->
+								<div class="point alignTL fragment" style="left: 60%; top: 50%;" data-fragment-index="1"><p class="blue" style="margin-top: 0.6rem;">\( (1,0) \)</p></div>
+								<div class="point alignTL fragment offset" style="left: 70%; top: 40%;" data-fragment-index="2"><p class="blue" style="margin-top: -1rem; margin-left: 0.65rem;">\( (b,1) \)</p></div>
+								<div class="row dashed fragment" data-fragment-index="3" style="top: 50%; transform: translateY(-50%) rotate(90deg);"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+								<p class="blue fragment" data-fragment-index="3" style="top: 1%; left: 55%;">VA \(x=0\)</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="definition">Vertical Asymptote</div>
+					<div class="definitionImg">
+						<p>sometimes a function will approach (but NEVER reach!) an <span>invisible vertical line</span>, called the <b>vertical asymptote</b>, where the function is undefined</p>
+						<img src="../../images/18A/4-2-asymptote.svg" style="max-width: 50vh; width: 50vw; margin-left:auto;">
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<h2>Transformations of Logarithms</h2>
+					$$ \log_b(x) \rightarrow {\color{#386ef6} a\cdot {\color{#111111}log_b}{{\color{#111111}(x}-h{\color{#111111})}}+k}$$
+					<p class="fragment" style="margin-bottom:0;">BUT, just like exponentials, we <b>won’t be transforming</b> in this class! So all of our logarithms will be very consistent:</p>
+					<ul>
+						<li class="fragment"><p>vertical asymptote is <i>always</i> at \(x=0\)</p></li>
+						<li class="fragment"><p>\(x\)-intercept is <i><b>always</b></i> at \((1,0)\) <span class="blue">because \(f(1)=\log_b(1)=0\)</span></p></li>
+						<li class="fragment"><p>there is <i><b>always</b></i> a point at \((b,1)\) <span class="blue">because \(f(b)=\log_b(b)=1\)</span></p></li>
+					</ul>
+				</div></section>
+
+<!-- DOMAIN ------------------------------------------------------------------------------------------------------>
+
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<h2>Finding Domains of Logarithms</h2>
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<div style="max-width: 15ch;">
+							<p>We know \( \log_b(0) = \) undefined, and \( \log_b(-\#) = \) undefined.</p>
+							<p class="fragment">So the domain is where the <b>inside is positive</b>: "inside \(>0\)"</p>
+						</div>
+						<img src="../../images/18A/4-2-log.svg" style="max-width: 60vh;">
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<h2>Finding Domains of Logarithms</h2>
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<div style="max-width: 15ch;">
+							<p>We know \( \log_b(0) = \) undefined, and \( \log_b(-\#) = \) undefined.</p>
+							<p>So the domain is where the <b>inside is positive</b>: "inside \(>0\)"</p>
+						</div>
+						<img src="../../images/18A/4-2-domain.svg" style="max-width: 60vh;">
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook"><div>130</div><div>Example 5</div></div>
+					<p>Find the <b>domain</b> of the following logarithmic functions.</p>
+					<div class="row top">
+						<div class="problem withNum long" style="width: 40%;">
+							<div>a</div>
+							<p>\(f(x) = \log_7(x-2) \)</p>
+							<div>
+								<p class="fragment">inside \(> 0\)</p>
+								<p class="fragment">\(x-2 > 0\)</p>
+								<p class="fragment">\(x > 2\)</p>
+								<p class="fragment finalAnswer">\( (2,\infty) \)</p>
+							</div>
+							<!-- <div></div> -->
+						</div>
+						<div>
+							<div class="problem withNum long">
+								<div>b</div>
+								<p>\(f(x) = \log_{100}(x-2) \)</p>
+								<div>
+									<p class="fragment" style="margin-bottom:1rem;">same inside as before, so...</p>
+									<p class="fragment finalAnswer" style="margin-bottom: var(--spaceLargest);">\( (2,\infty) \)</p>
+								</div>
+							</div>
+							<div class="problem withNum long">
+								<div>c</div>
+								<p>\(f(x) = \log_\pi(x-2) \)</p>
+								<div>
+									<p class="fragment" style="margin-bottom:1rem;">same inside as before, so...</p>
+									<p class="fragment finalAnswer" style="margin-bottom: var(--spaceLargest);">\( (2,\infty) \)</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div></section>
 
 <!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>

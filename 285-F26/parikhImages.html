@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Parikh Images & Semilinearity | 285 F26</title>
+		<meta name="description" content="Math 285 Groups and Languages (Fall 2026)"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../images/favicon.png">
+
+		<link rel="stylesheet" href="../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../reveal/dist/plugin/highlight/monokai.css"/>
+
+		<style>
+			:root {
+				/* --accent: 183, 60, 231; */
+				--bodySize: 2.8rem;
+				--headerSize: 11rem;
+				--group: #b73ce7;
+				--monoid: #386ef6;
+				--semigroup: #00a597;
+			}
+			p { max-width: 40ch; margin: 0;}
+			p span {background: none; color: rgb(var(--accent));}
+			.group {color: var(--group)}
+			.semigroup {color: var(--semigroup)}
+			.monoid {color: var(--monoid)}
+			.bodySlide {font-size: var(--bodyLarge); justify-content: center !important;}
+			.bodySlide p span {color: var(--primary);}
+			.bodySlide h2 { margin-bottom: 0; }
+			.footer::after { content: 'SJSU • MATH285 Groups and Languages • Fall 2026 • Lena Pang'; }
+			/* .definitionText p { font-size: var(--bodyLarger); max-width: 35ch; } */
+			.larger>p, .larger>ol>li>p, .larger>ul>li>p {font-size: var(--bodyLarge);}
+			/* .proofText p {font-size: var(--bdoyRegular)} */
+			.proofText p {max-width: 52ch; font-size: calc(var(--bodyRegular) * 0.85);}
+			.smaller p {font-size: var(--bodyRegular); max-width: 100%;}
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4 style="color: rgb(var(--accent)); opacity: 100%;"><b>MATH-285</b> • Groups and Languages</h4>
+					<h1>Parikh Images<br><i>&</i> Semilinearity</h1>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p style="font-size:var(--bodyLarger)">Let \(L \subseteq \{ a_1, a_2, ..., a_n\}^*\) be a language.</p>
+					<p style="font-size:var(--bodyLarger)">Let \(w\) be a word in the language \(L\).</p>
+				</div></section>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Parikh Images</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Parikh Image</div>
+					<div class="definitionText">
+						<p>the <b>Parikh image</b>, or <b>length characteristic</b>, of a <i>word</i> \(w\) is a <span>vector</span> whose entries count the occurrences of every symbol</p>
+						<p style="color:var(--monoid);">\( \psi(w) = \big\langle \psi_{a_1} (w), . . ., \psi_{a_k} (w) \big\rangle \) </p>
+						<!-- <p>the <b>Parikh image</b> of a <i>language</i> \(L\) is the <span>set of all vectors</span></p> -->
+						<h6 style="font-size: calc(var(--bodyRegular) * 0.95);">\( \psi_{a_i} (w) \) is the # of occurrences of \(a_i\) in \(w\)</h6>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook">Example 1</div>
+					<div class="definitionText">
+						<p>Let \(L \subseteq \{a,b,c\}^* \). What is \( \psi( aabba) \)?</p>
+						<p class="fragment" style="color:var(--monoid);">\( \psi(aaba) = \langle 3,2,0 \rangle \)</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Parikh Image</div>
+					<div class="definitionText">
+						<p style="max-width: 28ch;">the <b>Parikh image</b>, or <b>length profile</b>, of a <i>language</i> \(L\) is the <span>set of all Parkih images</span> (vectors) of its words</p>
+						<p style="color:var(--monoid);">\( \psi(L) = \{ \psi(w) \mid w\in L\} \) </p>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook">Example 2</div>
+					<div class="definitionText">
+						<p>Let \(L \subseteq \{a,b\}^* \) be the language consisting of words of the form \( a^n b^m\) with \(n,m\geq 0 \). What is \( \psi(L) \)?</p>
+						<p class="fragment" style="color:var(--monoid);">\( \psi(L) = \big\{ \langle n,m \rangle \mid n,m\in\mathbb{N}_0 \big\} \)</p>
+						<p class="fragment" style="color:var(--monoid);">\( \phantom{\psi(L)} = \big\{ \langle 0,1 \rangle, \langle 1,0 \rangle, \langle 1,1 \rangle, ... \big\} \)</p>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="workbook">Example 3</div>
+					<div class="definitionText">
+						<p>Let \(L \subseteq \{a,b,c\}^* \) be the language consisting of words \( a^n b^n c^n\) with \(n \geq 0 \). What is \( \psi(L) \)?</p>
+						<p class="fragment" style="color:var(--monoid);">\( \psi(L) = \big\{ \langle n,n,n \rangle \mid n\in\mathbb{N}_0 \big\} \)</p>
+						<p class="fragment" style="color:var(--monoid);">\( \phantom{\psi(L)} = \big\{ \langle 0,0,0 \rangle, \langle 1,1,1 \rangle, \langle 2,2,2 \rangle, ... \big\} \)</p>
+					</div>
+				</div></section>
+
+<!-- LINEARITY ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Semi-Linearity</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Linear Set</div>
+					<div class="definitionText">
+						<p>a set \(A \subseteq \mathbb{N}_k \) is <b>linear</b> if there are <span>\( u_0, u_1, ..., u_m \in \mathbb{N}_k \)</span> such that</p>
+						<p style="margin-top: var(--spaceLarge);">\( A = \{ u_0 + \sum^m_{i=1} c_iu_i \mid c_1, ..., c_m \in \mathbb{N} \} \)</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Semilinear Set</div>
+					<div class="definitionText">
+						<p style="max-width: 24ch;">a set \(\subseteq \mathbb{N}^k \) is <b>semilinear</b> if it is a <span>finite union of linear sets</span>; closed under selection and projection</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Semilinear Language</div>
+					<div class="definitionText">
+						<p>a language \( L\) is <b>semilinear</b> if and only if its <span>Parikh image is a semilinear subset of \(\mathbb{N}^k\)</span></p>
+					</div>
+				</div></section>
+
+				<!-- <section><div class="bodySlide">
+					<div class="definition">Constant Growth Property</div>
+					<div class="definitionText">
+						<p>a language \(L\) has the <b>constant growth property</b> if either:</p>
+						<ul>
+							<li><p>\(L\) is <span>finite</span></p></li>
+							<li><p>\(\exists\) constant \(c\) such that \(\forall w \in L\), there is a \(w' \in L\) with <span>\(|w| < |w'| \leq |w|+c\)</span></p></li>
+						</ul>
+					</div>
+				</div></section> -->
+
+<!-- PROOF ------------------------------------------------------------------------------------------------------>
+ 
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Trees of CFGs</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p style="font-size:var(--bodyLarger)">Let \(G (N, \Sigma, P, S) \) be a context-free grammar.</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Parse Tree</div>
+					<div class="definitionText smaller">
+						<p style="font-size: var(--bodyRegular) !important; margin-bottom: var(--space);">a <b>parse tree</b> is any tree that meets the following requirements:</p>
+						<ol>
+							<li><p style="max-width: 42ch;">every non-leaf label = <span>nonterminal</span> \(A\) (and \(G\) has a production \(A\rightarrow \alpha\) that is the string = labels of its children from L to R)</p></li>
+							<li><p style="max-width: 36ch;">every leaf label = <span>terminal or \(\varepsilon\)</span> (where any \(\varepsilon\)-labelled has no sibling)</p></li>
+							<li><p>root label = start symbol</p></li>
+						</ol>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Initial Parse Tree</div>
+					<div class="definitionText">
+						<p style="max-width: 26ch;">an <b>initial parse tree</b> is a parse tree where <span>no distinct nodes on the same path share the same label</span></p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Pump</div>
+					<div class="definitionText smaller">
+						<p style="font-size: var(--bodyRegular) !important; margin-bottom: var(--space); max-width: 32ch;">a <b>pump</b> is a tree with at least two nodes that meets the following requirements:</p>
+						<ol>
+							<li><p style="max-width: 42ch;">every non-leaf label = <span>nonterminal</span> \(A\) (and \(G\) has a production \(A\rightarrow \alpha\) that is the string = labels of its children from L to R)</p></li>
+							<li><p style="max-width: 36ch;">every leaf label = <span>terminal or \(\varepsilon\)</span> (where any \(\varepsilon\)-labelled has no sibling), <span class="nobg" style="color:var(--monoid)">except for one that is labelled by the same nonterminal as root</span></p></li>
+							<li style="text-decoration: line-through; opacity: 40%;"><p>root label = start symbol</p></li>
+						</ol>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Basic Pump</div>
+					<div class="definitionText">
+						<p>a <b>basic pump</b> is a pump where no distinct nodes <span>on the spine or on a path disjoint from spine</span> share the same label</p>
+					</div>
+				</div></section>
+				<section><div class="callout">
+					<p>In a \(\text{CFG}\), there are only finitely many initial parse trees and basic pumps.</p>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Spine</div>
+					<div class="definitionText">
+						<p>the <b>spine</b> of a pump is the <span>path from the root to the nonterminal-labelled leaf</span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Root</div>
+					<div class="definitionText">
+						<p>the <b>root</b> of a pump \(\nu\) is denoted <span>\( \text{root}( \nu )\)</span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Nonterminals</div>
+					<div class="definitionText">
+						<p style="max-width: 28ch;">the set of <b>nonterminals</b> of a parse tree \(\tau\) (or a pump) are denoted <span>\( \text{nont}(\tau) \)</span></p>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<div class="definition">Pump Sequence</div>
+					<div class="definitionText">
+						<p style="max-width: 32ch;">We write <span class="nobg" style="color:var(--monoid)">\(\tau \overset{\nu}{\triangleleft} \tau'\)</span> if \(\tau'\) is the result of adjoining \(\nu\) at a node of \(\tau\) labelled by \(\text{root}(\nu)\).</p>
+						<p style="max-width: 36ch;">This can extend to multiple pumps: <span class="nobg" style="color:var(--monoid)">\(\tau \overset{\nu_1,...,\nu_n}{\triangleleft} \tau'\)</span>.</p>
+						<p style="max-width: 36ch; margin-top: var(--spaceLarge);">We call this a <b>pump sequence</b>, denoted <span>\( (\tau, \nu_1, \nu_2, ..., \nu_n) \)</span>.</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Pump Sequence</div>
+					<div class="definitionText">
+						<ul>
+							<li><p>\(\tau \overset{\nu}{\triangleleft} \tau'\) is valid \(\iff \text{root}(\nu) \in \text{nont}(\tau) \)</p></li>
+							<li><p>\(\tau \overset{\nu_1,...,\nu_n}{\triangleleft} \tau' \implies \text{nont}(\tau')\)<br>\(= \text{nont}(\tau) \cup \text{nont}(\nu_1) \phantom{.}\cup\phantom{.} ... \cup \text{nont}(\nu_n) \)</p></li>
+						</ul>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="lemma">Kanazawa 5.7</div>
+					<div class="definitionText">
+						<p>If \( (\tau, \nu_1, \nu_2, ..., \nu_n) \) is a valid pump sequence, then...</p>
+						<ul>
+							<li><p>truncated is valid: \( (\tau, \nu_1, \nu_2, ..., \nu_{i< n} ) \)</p></li>
+							<li><p>skipped duplicates is valid: \( (\tau, \nu_1, \nu_2, ..., \nu_{j-1}, \nu_{j+1}, ...,  \nu_n ) \) if \(\nu_j=\nu_i\)</p></li>
+						</ul>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="lemma">Kanazawa 5.8</div>
+					<div class="definitionText">
+						<p>Let \(\tau\) be an initial parse tree.</p>
+						<p>Then \( \{ \psi(\tau ') \mid \tau \triangleleft \tau' \} \) is semilinear.</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="theorem">Parikh, 1966</div>
+					<div class="definitionText">
+						<p style="max-width: 32ch;">If \(L\) is a context-free language, then its Parikh image \( \{ \psi(w) \mid w \in L \} \) is semilinear.</p>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="theorem">Vijay-Shanker, 1987</div>
+					<div class="definitionText">
+						<p style="max-width: 32ch;">If \(L\) is a multiple-context-free language, then its Parikh image \( \{ \psi(w) \mid w \in L \} \) is semilinear.</p>
+					</div>
+				</div></section>
+
+				<!-- <section><div class="bodySlide">
+					<div class="definition">Parikh Image</div>
+					<div class="definitionText">
+						<p style="max-width: 22ch;">a <b>Parikh image</b> of a language \(L\) is the set <span>\( \psi (L) \in \mathbb{N}^k \)</span></p>
+					</div>
+				</div></section> -->
+				
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>That’s all folks!</h2>
+				</div></section>
+			</div>
+		</div>
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+
+		<div class="footer"></div>
+		<!-- <a href="../index.html"><div class="home"></div></a> -->
+		<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/dist/plugin/zoom.js"></script>
+		<script src="../reveal/dist/plugin/notes.js"></script>
+		<script src="../reveal/dist/plugin/search.js"></script>
+		<script src="../reveal/dist/plugin/markdown.js"></script>
+		<script src="../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../scripts.js"></script>
+	</body>
+</html>

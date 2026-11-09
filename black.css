@@ -402,15 +402,19 @@ sub { vertical-align: sub; font-size: smaller }
     max-width: 21ch;
 }
 
-.theorem, .lemma { color: rgb(var(--theorem)); }
+.theorem { color: rgb(var(--theorem)); }
 .theorem::before {
     content: 'Theorem';
     background-color: rgb(var(--theorem));
-} .theorem h4, .lemma h4 { color: var(--primary); }
+} .theorem h4 { color: var(--primary); }
+
+.lemma { color: rgb(var(--theorem)); }
 .lemma::before {
     content: 'Lemma';
-    background-color: rgb(var(--theorem));
-}
+    background-color: rgba(var(--theorem), 0.18);
+    color: rgb(var(--theorem));
+    font-weight: 700;
+} .lemma h4 { color: rgb(var(--theorem)); }
 
 .proof { color: rgb(var(--theorem)); }
 .proof::before {
@@ -1076,3 +1080,5 @@ section.has-light-background h6 {
 .nobg {
     background: none !important;
 }
+
+.smaller > p {font-size: calc(1.05 * var(--bodySmaller)) !important;}

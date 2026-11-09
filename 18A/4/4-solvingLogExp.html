@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>4.4 Solving Log & Exponential Equations | 18A</title>
+		<meta name="description" content="18A College Algebra, Lesson 4.4"/>
+		<meta name="author" content="Lena Pang"/>
+
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet">
+		<link rel="icon" href="../../images/favicon.png">
+
+		<link rel="stylesheet" href="../../reveal/dist/reset.css" />
+		<link rel="stylesheet" href="../../reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="../../black.css" id="theme" />
+		<!-- <link rel="stylesheet" href="../../pdf.css" id="theme" /> -->
+		<link rel="stylesheet" href="../../reveal/dist/plugin/highlight/monokai.css"/>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="problem long withNum">
+						<div>1</div>
+						<p>?</p>
+						<p class="fragment">The horizontal line test checks if a function is <b>one-to-one</b>, which is a required property for a function to be invertible</p>
+					</div>
+					<div class="problem long withNum">
+						<div>2</div>
+						<p>?</p>
+						<p class="fragment">??</p>
+					</div>
+				</div></section>
+
+				<section data-background="var(--primary)"><div class="titleSlide">
+					<h4>Thursday, November 5, 2026</h4>
+					<h1><span>4.3</span> Properties of Log</h1>
+					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 135</div></div>
+				</div></section>
+
+<!-- START ------------------------------------------------------------------------------------------------------>
+
+				<section><div class="bodySlide">
+					<h2>Recall</h2>
+					<div class="col2">
+							<div>
+								<p>Inverses <b>cancel</b> when composed:</p>
+								<p></p>
+								<p class="blue fragment">\( (f\circ f^{-1}) (x) = x\)</p>
+								<p class="blue fragment">\( (f^{-1} \circ f)(x) = x\)</p>
+							</div>
+							<div>
+								<p class="fragment">Logs are defined as the <b>inverses</b> of exponentials:</p>
+								<p class="fragment">\( f(x) = b^x \) gives us \( f^{-1}(x) = \log_b(x) \)</p>
+								<p class="blue fragment">-> so they <b>cancel each other out!</b></p>
+								<p class="blue fragment">\( (f\circ f^{-1}) (x) =  b^{\log_b(x)} = x \)</p>
+								<p class="blue fragment">\( (f^{-1}\circ f) (x) =  \log_b(b^x) = x \)</p>
+							</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Exponentiate</div>
+					<div class="definitionText">
+						<p><b>exponentiating</b> is when both sides of the equation <span>become the exponents</span> on the same base \(b\)</p>
+						<h6>Useful for cancelling logarithms!!</h6>
+						<div class="exampleBox"><p>\(x=y \phantom{"} \longleftrightarrow \phantom{"} b^x = b^y \)</p></div>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<h2>Solving for \(x\) Trapped in a Logarithm</h2>
+					<ol>
+						<li><p><b>Condense</b> into single log, if needed.</p></li>
+						<li><p><b>Isolate</b> single on one side if, needed.</p></li>
+						<li><p><b>Exponentiate</b> both sides (using the SAME BASE as the logarithm) to cancel.</p></li>
+						<li><p><b>Solve</b> for \(x\) as usual.</p></li>
+						<li><p><b>Check</b> your answer in the original. (Extraneous solutions!!)</p></li>
+					</ol>
+				</div></section>
+				
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="workbook"><div>136</div><div>Example 1</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log(30-x)+5=7 \) for \(x\).</p>
+					<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+						<p class="fragment">Condense log</p>
+						<p class="fragment">\( \checkmark \)</p>
+						<p class="fragment">Isolate log</p>
+						<p class="fragment">\( \log(30-x)=2  \)</p>
+						<p class="fragment">Exponentiate<br>& cancel</p>
+						<div>
+							<p class="fragment">What base do I use? <span class="fragment">\( b = 10\)</span></p>
+							<p class="fragment">\( 10^{\log(30-x)} = 10^2 \)</p>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="workbook"><div>136</div><div>Example 1</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log(30-x)+5=7 \) for \(x\).</p>
+					<div class="row top">
+						<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+							<p>Condense log</p>
+							<p>\( \checkmark \)</p>
+							<p>Isolate log</p>
+							<p>\( \log(30-x)=2  \)</p>
+							<p>Exponentiate<br>& cancel</p>
+							<div style="margin-bottom: var(--spaceLarge);">
+								<p>What base do I use? <span>\( b = 10\)</span></p>
+								<p style="margin-bottom: 1rem; margin-top:-1rem;">\( {\color{#d10808} \cancel{10}^{\cancel{\log(} {\color{#386ef6}30-x})} } = 10^2 \)</p>
+								<p class="fragment">\( 30-x = 100\)</p>
+							</div>
+							<p class="fragment" style="margin-bottom:0;">Solve</p>
+							<div>
+								<p class="fragment" style="margin-bottom: 1rem;">\( 30 = 100 + x\)</p>
+								<p class="fragment finalAnswer">\( -70 = x \)</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="workbook"><div>136</div><div>Example 1</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log(30-x)+5=7 \) for \(x\).</p>
+					<div class="row top" style="gap:var(--spaceLargest);">
+						<div class="blue" style="opacity: 40%; display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+							<p>Condense log</p>
+							<p>\( \checkmark \)</p>
+							<p>Isolate log</p>
+							<p>\( \log(30-x)=2  \)</p>
+							<p>Exponentiate<br>& cancel</p>
+							<div style="margin-bottom: var(--spaceLarge);">
+								<p>What base do I use? <span>\( b = 10\)</span></p>
+								<p style="margin-bottom: 1rem; margin-top:-1rem;">\( {\color{#d10808} \cancel{10}^{\cancel{\log(} {\color{#386ef6}30-x})} } = 10^2 \)</p>
+								<p>\( 30-x = 100\)</p>
+							</div>
+							<p style="margin-bottom:0;">Solve</p>
+							<div>
+								<p style="margin-bottom: 1rem;">\( 30 = 100 + x\)</p>
+								<p class="finalAnswer">\( -70 = x \)</p>
+							</div>
+						</div>
+						<div class="blue">
+							<p><u>Check</u>:</p>
+							<p class="fragment">\( \log \big( 30 - (-70) \big) + 5\)</p>
+							<p class="fragment">\( = \log ( 30 +70) + 5\)</p>
+							<p class="fragment">\( = \log ( 100) + 5\)</p>
+							<p class="fragment">\( = \log ( 10^2) + 5\)</p>
+							<p class="fragment">\( = 2 + 5\)</p>
+							<p class="fragment">\( = 7 \checkmark\)</p>
+						</div>
+					</div>
+				</div></section>
+				
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="workbook"><div>136</div><div>Example 2</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log_2(9x+1)=6 \) for \(x\).</p>
+					<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+						<p class="fragment">Condense log</p>
+						<p class="fragment">\( \checkmark \)</p>
+						<p class="fragment">Isolate log</p>
+						<p class="fragment">\( \checkmark\)</p>
+						<p class="fragment">Exponentiate<br>& cancel</p>
+						<div>
+							<p class="fragment">What base do I use? <span class="fragment">\( b = 2\)</span></p>
+							<p class="fragment">\( 2^{\log_2(9x+1)} = 2^6 \)</p>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="workbook"><div>136</div><div>Example 2</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log_2(9x+1)=6 \) for \(x\).</p>
+					<div class="row top">
+						<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+							<p>Condense log</p>
+							<p>\( \checkmark \)</p>
+							<p>Isolate log</p>
+							<p>\( \checkmark\)</p>
+							<p>Exponentiate<br>& cancel</p>
+							<div style="margin-bottom: var(--spaceLarge);">
+								<p>What base do I use? <span>\( b = 2\)</span></p>
+								<p style="margin-bottom: 1rem; margin-top:-1rem;">\( {\color{#d10808} \cancel{2}^{\cancel{\log_2(} {\color{#386ef6}9x+1})} } = 2^6 \)</p>
+								<p class="fragment">\( 9x+1 = 64\)</p>
+							</div>
+							<p class="fragment" style="margin-bottom:0;">Solve</p>
+							<div>
+								<p class="fragment" style="margin-bottom: 1rem;">\( 9x = 63 \)</p>
+								<p class="fragment finalAnswer">\( x = 7 \)</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="workbook"><div>136</div><div>Example 2</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log_2(9x+1)=6 \) for \(x\).</p>
+					<div class="row top" style="gap:var(--spaceLargest);">
+						<div class="blue" style="opacity: 40%; display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+							<p>Condense log</p>
+							<p>\( \checkmark \)</p>
+							<p>Isolate log</p>
+							<p>\( \checkmark\)</p>
+							<p>Exponentiate<br>& cancel</p>
+							<div style="margin-bottom: var(--spaceLarge);">
+								<p>What base do I use? <span>\( b = 2\)</span></p>
+								<p style="margin-bottom: 1rem; margin-top:-1rem;">\( {\color{#d10808} \cancel{2}^{\cancel{\log_2(} {\color{#386ef6}9x+1})} } = 2^6 \)</p>
+								<p>\( 9x+1 = 64\)</p>
+							</div>
+							<p style="margin-bottom:0;">Solve</p>
+							<div>
+								<p style="margin-bottom: 1rem;">\( 9x = 63 \)</p>
+								<p class="finalAnswer">\( x = 7 \)</p>
+							</div>
+						</div>
+						<div class="blue">
+							<p><u>Check</u>:</p>
+							<p class="fragment">\( \log_2 \big( 9(7) +1 \big) \)</p>
+							<p class="fragment">\( = \log_2 (63+1) \)</p>
+							<p class="fragment">\( = \log_2 (64) \)</p>
+							<p class="fragment">\( = \log_2 ( 2^6 ) \)</p>
+							<p class="fragment">\( = 6 \checkmark\)</p>
+						</div>
+					</div>
+				</div></section>
+				
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="workbook"><div>137</div><div>Example 3</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log_3(x+3)=3-\log_3(x-3) \) for \(x\).</p>
+					<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+						<p class="fragment">Condense log</p>
+						<div style="margin-bottom: var(--spaceLarge);">
+							<p class="fragment">\( \log_3(x+3) + \log_3(x-3) = 3 \)</p>
+							<p class="fragment">\( \log_3 \big( (x+3)(x-3) \big) = 3\)</p>
+						</div>
+						<p class="fragment">Isolate log</p>
+						<p class="fragment">\( \checkmark\)</p>
+						<p class="fragment">Exponentiate<br>& cancel</p>
+						<div>
+							<p class="fragment">What base do I use? <span class="fragment">\( b = 3\)</span></p>
+							<p class="fragment">\( 3^{\log_3 \big( (x+3)(x-3) \big)} = 3^3 \)</p>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="workbook"><div>137</div><div>Example 3</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log_3(x+3)=3-\log_3(x-3) \) for \(x\).</p>
+					<div class="row top">
+						<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+							<p>Condense log</p>
+							<div style="margin-bottom: var(--spaceLarge);">
+								<p>\( \log_3(x+3) + \log_3(x-3) = 3 \)</p>
+								<p>\( \log_3 \big( (x+3)(x-3) \big) = 3\)</p>
+							</div>
+							<p>Isolate log</p>
+							<p>\( \checkmark\)</p>
+							<p>Exponentiate<br>& cancel</p>
+							<div style="margin-bottom: var(--spaceLarge);">
+								<p>What base do I use? <span>\( b = 3\)</span></p>
+								<p style="margin-bottom: 1rem; margin-top:-1rem;">\( {\color{#d10808} \cancel{3}^{\cancel{\log_3 \big(} {\color{#386ef6} (x+3)(x-3) } \big)} } = 3^3 \)</p>
+								<p class="fragment">\( x^2-9 = 27\)</p>
+							</div>
+							<p class="fragment" style="margin-bottom:0;">Solve</p>
+							<div>
+								<p class="fragment" style="margin-bottom: 1rem;">\( x^2=36 \) &nbsp;&nbsp;&nbsp; <span class="fragment finalAnswer">\( x = \pm 6 \)</span></p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="workbook"><div>137</div><div>Example 3</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( \log_3(x+3)=3-\log_3(x-3) \) for \(x\).</p>
+					<div class="col2">
+						<div class="blue smaller">
+							<p><u>Check</u>: \(x=6\)</p>
+							<p class="fragment">\( \log_3 \big( (6) +3 \big) \overset{?}{=} 3-\log_3 \big( (6)-3 \big) \)</p>
+							<p class="fragment">\( \log_3(9) \overset{?}{=} 3-\log_3(3) \)</p>
+							<p class="fragment">\( \log_3(3^2) \overset{?}{=} 3-\log_3(3^1) \)</p>
+							<p class="fragment">\( 2 \overset{?}{=} 3-1 \)</p>
+							<p class="fragment">\( = 6 \checkmark\)</p>
+						</div>
+						<div class="blue smaller">
+							<p><u>Check</u>: \(x=-6\)</p>
+							<p class="fragment">\( \log_3\big( (-6)+3 \big) \overset{?}{=} 3-\log_3 \big( (-6)-3 \big) \)</p>
+							<p class="fragment">\( \log_3(-3) \overset{?}{=} 3-\log_3(-9) \)</p>
+							<p class="fragment">both sides are <b>undefined</b>! so &nbsp; <span class="finalAnswer">\( x\neq -6\)</span></p>
+						</div>
+					</div>
+				</div></section>
+				
+
+<!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
+				<section data-background="var(--primary)"><div class="endSlide">
+					<h2>See you next class!</h2>
+					<h5>Your to-do’s:</h5>
+					<p>-> 4.4 homework</p>
+				</div></section>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+		<a href="../index.html"><div class="home"></div></a>
+		<script src="../../reveal/dist/reveal.js"></script>
+		<script src="../../reveal/dist/plugin/zoom.js"></script>
+		<script src="../../reveal/dist/plugin/notes.js"></script>
+		<script src="../../reveal/dist/plugin/search.js"></script>
+		<script src="../../reveal/dist/plugin/markdown.js"></script>
+		<script src="../../reveal/dist/plugin/highlight.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+		<script src="../../scripts.js"></script>
+	</body>
+</html>

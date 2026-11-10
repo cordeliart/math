@@ -27,7 +27,7 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section><div class="bodySlide">
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
 					<div class="row" style="width: 100%; justify-content: space-between;">
 						<h2>Warmups (done @ 10:35am)</h2>
 						<h5 class="time" id="time"></h5>
@@ -35,15 +35,42 @@
 
 					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
 					
-					<div class="problem long withNum">
-						<div>1</div>
-						<p>?</p>
-						<p class="fragment">The horizontal line test checks if a function is <b>one-to-one</b>, which is a required property for a function to be invertible</p>
+					<div class="row top" style="gap: var(--spaceLargest)">
+						<div>
+							<div class="problem withNum">
+								<div>1</div>
+								<p><b>Sketch</b> the graph of \(2^x\) and the graph of \(\log_2(x)\).</p><p></p>
+							</div>
+							<div class="problem long withNum">
+								<div>2</div>
+								<p>How are \(b^x \) and \( \log_b(x)\) <b>related</b>? How can you see that relationship on the graph in #1?</p>
+								<p></p>
+							</div>
+						</div>
+						<img src="../../images/18A/4-3-warmup0.svg" style="max-height: 40vh; height: 40vh; width:auto;">
 					</div>
-					<div class="problem long withNum">
-						<div>2</div>
-						<p>?</p>
-						<p class="fragment">??</p>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="row" style="width: 100%; justify-content: space-between;">
+						<h2>Warmups (done @ 10:35am)</h2>
+						<h5 class="time" id="time"></h5>
+					</div>
+
+					<p>Write your <u>name & answers</u> on a sheet of paper.</p>
+					
+					<div class="row top" style="gap: var(--spaceLargest)">
+						<div>
+							<div class="problem withNum">
+								<div>1</div>
+								<p><b>Sketch</b> the graph of \(2^x\) and the graph of \(\log_2(x)\).</p><p></p>
+							</div>
+							<div class="problem long withNum">
+								<div>2</div>
+								<p>How are \(b^x \) and \( \log_b(x)\) <b>related</b>? How can you see that relationship on the graph in #1?</p>
+								<p class="fragment">They are <b>inverses</b> of each other, which means they are the same when flipped across the diagonal.</p>
+							</div>
+						</div>
+						<img src="../../images/18A/4-3-warmup.svg" style="max-height: 40vh; height: 40vh; width:auto;">
 					</div>
 				</div></section>
 
@@ -157,17 +184,29 @@
 					<p style="margin-bottom: 0;">\( \log (x-5) + 4\log (x+7) - \frac{1}{2}\log(x) \)</p>
 					<div class="blue">
 						<p class="fragment">\( = \log (x-5) + \log \big( (x+7)^4 \big) - \log(x^{1/2}) \) by power rule</p>
-						<p class="fragment">\( = \log \big( (x-5) (x+7)^4 \big) - \log(x^{1/2}) \) by product rule</p>
-						<p class="fragment">\( = \log \left( \dfrac{ (x-5)(x+7)^4} {x^{1/2} } \right) \) by quotient rule</p>
+						<p class="fragment">\( = \log (x-5) + \log \big( (x+7)^4 \big) - \log(\sqrt{x} \phantom{.}) \)</p>
+						<p class="fragment">\( = \log \big( (x-5) (x+7)^4 \big) - \log(\sqrt{x}  \phantom{.}) \) by product rule</p>
+						<p class="fragment">\( = \log \left( \dfrac{ (x-5)(x+7)^4} {\sqrt{x} } \right) \) by quotient rule</p>
 					</div>
 				</div></section>
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>134</div><div>Example 7</div></div>
 					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: quotient -> product -> power)</span></p>
-					<p style="margin-bottom: 0;">\( \log_2(x) - \log_2(y) + \log_2(z) \)</p>
+					<p style="margin-bottom: 0;">\( \log_2(x) - \log_2(y) - \log_2(z) \)</p>
 					<div class="blue">
 						<p class="fragment">\( = \log_2 \left( \dfrac{x}{y} \right) - \log_2(z) \) by quotient rule</p>
+						<p class="fragment">\( = \log_2 \left( \dfrac{x}{yz} \right) \) by quotient rule</p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>134</div><div>Example 7</div></div>
+					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: quotient -> product -> power)</span></p>
+					<p style="margin-bottom: var(--space);">\( \log_2(x) - \log_2(y) - \log_2(z) \)</p>
+					<div class="blue">
+						<p>Another way to think about it:</p>
+						<p>\(= \log_2(x) - \big(\log_2(y) + \log_2(z) \big) \)</p>
+						<p>\(= \log_2(x) - \big(\log_2(yz)\big) \) by product rule</p>
 						<p class="fragment">\( = \log_2 \left( \dfrac{x}{yz} \right) \) by quotient rule</p>
 					</div>
 				</div></section>

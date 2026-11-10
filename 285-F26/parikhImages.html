@@ -79,7 +79,7 @@
 					<div class="workbook">Example 1</div>
 					<div class="definitionText">
 						<p>Let \(L \subseteq \{a,b,c\}^* \). What is \( \psi( aabba) \)?</p>
-						<p class="fragment" style="color:var(--monoid);">\( \psi(aaba) = \langle 3,2,0 \rangle \)</p>
+						<p class="fragment" style="color:var(--monoid);">\( \psi(aabba) = \langle 3,2,0 \rangle \)</p>
 					</div>
 				</div></section>
 
@@ -147,14 +147,13 @@
 				</div></section> -->
 
 <!-- PROOF ------------------------------------------------------------------------------------------------------>
- 
 
 				<section data-background="rgb(var(--accent))"><div class="cover">
 					<h2>Trees of CFGs</h2>
 				</div></section>
 
 				<section><div class="bodySlide">
-					<p style="font-size:var(--bodyLarger)">Let \(G (N, \Sigma, P, S) \) be a context-free grammar.</p>
+					<p style="font-size:var(--bodyLarger)">Let \(G (N, \Sigma, P, S) \) be a CFG.</p>
 				</div></section>
 
 				<section><div class="bodySlide">
@@ -187,6 +186,12 @@
 					</div>
 				</div></section>
 				<section><div class="bodySlide">
+					<div class="definition">Spine</div>
+					<div class="definitionText">
+						<p>the <b>spine</b> of a pump is the <span>path from the root to the nonterminal-labelled leaf</span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
 					<div class="definition">Basic Pump</div>
 					<div class="definitionText">
 						<p>a <b>basic pump</b> is a pump where no distinct nodes <span>on the spine or on a path disjoint from spine</span> share the same label</p>
@@ -194,12 +199,6 @@
 				</div></section>
 				<section><div class="callout">
 					<p>In a \(\text{CFG}\), there are only finitely many initial parse trees and basic pumps.</p>
-				</div></section>
-				<section><div class="bodySlide">
-					<div class="definition">Spine</div>
-					<div class="definitionText">
-						<p>the <b>spine</b> of a pump is the <span>path from the root to the nonterminal-labelled leaf</span></p>
-					</div>
 				</div></section>
 				<section><div class="bodySlide">
 					<div class="definition">Root</div>
@@ -253,14 +252,44 @@
 				<section><div class="bodySlide">
 					<div class="theorem">Parikh, 1966</div>
 					<div class="definitionText">
-						<p style="max-width: 32ch;">If \(L\) is a context-free language, then its Parikh image \( \{ \psi(w) \mid w \in L \} \) is semilinear.</p>
+						<p style="max-width: 26ch;">If \(L\) is a CFL, then its Parikh image \( \{ \psi(w) \mid w \in L \} \) is semilinear.</p>
+					</div>
+				</div></section>
+
+<!-- PROOF ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Trees of MCFGs</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<p style="font-size:var(--bodyLarger); max-width: 26ch;">Let \(G (N, \Sigma, P, S) \) be a MCFG, where each rule is of the form:</p>
+					<p style="font-size:var(--bodyLarge); max-width: 42ch; width: 110%;">\( B (\alpha_1, ..., \alpha_r) \leftarrow B_1(x_{1,1}, ..., x_{1,r_1}), ..., B_n(x_{n,1}, ..., x_{n,r_n}) \)</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Derivation Tree</div>
+					<div class="definitionText smaller">
+						<p style="font-size: var(--bodyRegular) !important; margin-bottom: var(--space);">a <b>derivation tree</b> is any tree that meets the following requirements:</p>
+						<ol>
+							<li><p style="max-width: 42ch;">every node is labeled by a <span>rule</span></p></li>
+							<li><p style="max-width: 42ch;">children correspond (each node labelled by the rule <br>\( B (\alpha_1, ..., \alpha_r) \leftarrow B_1(x_{1,1}, ..., x_{1,r_1}), ..., B_n(x_{n,1}, ..., x_{n,r_n}) \) has \(n\) children, and the \(i\)th child is of type \(B_i\))</p></li>
+						</ol>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="definition">Derived String</div>
+					<div class="definitionText">
+						<p>the <b>derived string</b> of a derivation tree, denoted \(\text{distr}(\tau)\) is:</p>
+						<p>\( \text{distr}(\tau) = (\alpha_1, ..., \alpha_r)\sigma \)</p>
+						<h6>where \(\sigma\) maps \(x_{i,j}\) to \(w_{i,j}\)</h6>
 					</div>
 				</div></section>
 
 				<section><div class="bodySlide">
 					<div class="theorem">Vijay-Shanker, 1987</div>
 					<div class="definitionText">
-						<p style="max-width: 32ch;">If \(L\) is a multiple-context-free language, then its Parikh image \( \{ \psi(w) \mid w \in L \} \) is semilinear.</p>
+						<p style="max-width: 26ch;">If \(L\) is an MCFL, then its Parikh image \( \{ \psi(w) \mid w \in L \} \) is semilinear.</p>
 					</div>
 				</div></section>
 

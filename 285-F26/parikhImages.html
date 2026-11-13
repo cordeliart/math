@@ -238,8 +238,8 @@
 					<div class="definitionText">
 						<p>If \( (\tau, \nu_1, \nu_2, ..., \nu_n) \) is a valid pump sequence, then...</p>
 						<ul>
-							<li><p>truncated is valid: \( (\tau, \nu_1, \nu_2, ..., \nu_{i< n} ) \)</p></li>
-							<li><p>skipped duplicates is valid: \( (\tau, \nu_1, \nu_2, ..., \nu_{j-1}, \nu_{j+1}, ...,  \nu_n ) \) if \(\nu_j=\nu_i\)</p></li>
+							<li><p>adding duplicates is valid: \( (\tau, \nu_1, \nu_2, ..., \nu_n, \nu_i ) \) for \(i\in \{1,...,n\}\)</p></li>
+							<li><p>skipping duplicates is valid: \( (\tau, \nu_1, \nu_2, ..., \nu_{j-1}, \nu_{j+1}, ...,  \nu_n ) \) if \(\nu_j=\nu_i\)</p></li>
 						</ul>
 					</div>
 				</div></section>
@@ -312,7 +312,7 @@
 <!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
 
 		<div class="footer"></div>
-		<!-- <a href="../index.html"><div class="home"></div></a> -->
+		<!-- <a href="index.html"><div class="home"></div></a> -->
 		<script src="../reveal/dist/reveal.js"></script>
 		<script src="../reveal/dist/plugin/zoom.js"></script>
 		<script src="../reveal/dist/plugin/notes.js"></script>

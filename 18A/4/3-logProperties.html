@@ -75,7 +75,7 @@
 				</div></section>
 
 				<section data-background="var(--primary)"><div class="titleSlide">
-					<h4>Thursday, November 5, 2026</h4>
+					<h4>Thursday, November 19, 2026</h4>
 					<h1><span>4.3</span> Properties of Log</h1>
 					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 131</div></div>
 				</div></section>
@@ -84,9 +84,20 @@
 
 				<section><div class="bodySlide">
 					<h2>Logs are Functions!</h2>
-					<p>Like with all functions, we can't just directly distribute operations. Instead, we have three rules...</p>
-					$$ f(a+b) \neq f(a)+f(b)$$
-					$$ \log(a+b) \neq \log(a)+\log(b)$$
+					<p>Like with all functions, we <b>can’t directly distribute</b> operations.</p>
+					<div style="margin-top: -4rem; margin-bottom: -8rem;">
+						$$ {\color{#386ef6} f(a+b) \neq f(a)+f(b)} $$
+					</div>
+					<div>
+						$$\log(a+b) \neq \log(a)+\log(b)$$
+					</div>
+					<div style="margin-top: -5rem; margin-bottom: -8rem;">
+						$$ {\color{#386ef6}f(a-b) \neq f(a)-f(b)}$$
+					</div>
+					<div style="margin-bottom: -3rem;">
+						$$\log(a-b) \neq \log(a)-\log(b)$$
+					</div>
+					<p>Instead, we have three rules...</p>
 				</div></section>
 
 				<section><div class="bodySlide">
@@ -102,17 +113,21 @@
 						</div>
 						<div class="fragment">
 							<h5 class="blue" style="margin-top: var(--spaceLargest); margin-bottom: 0.65rem;">Power Rule &nbsp;&nbsp; <span class="nobg" style="font-weight: 400;">power -> multiple</span></h5>
-							<p>\( \log_b(A)^B = B\log_b(A) \)</p>
+							<p>\( \log_b(A^B) = B\log_b(A) \)</p>
 						</div>
 					</div>
 				</div></section>
 				
 				<section><div class="callout">
-					<p>Another useful exponent rule to remember...</p>
-					<h2>\( \sqrt[B]{x^A} =\) <span class="fragment">\(b^{A/B} \)</span></h2>
+					<p>Another useful exponent rule to remember: rewriting roots as rational (fraction) exponents</p>
+					<h2>\( \sqrt[B]{x^A} =\) <span class="fragment">\(x^{A/B} \)</span></h2>
 				</div></section>
 
 <!-- EXPANDING ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Expanding</h2>
+				</div></section>
 
 				<section><div class="bodySlide">
 					<h2>Expanding Logarithms</h2>
@@ -141,7 +156,7 @@
 					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>expand</b> the logarithm as a sum, difference, and/or multiple of logarithms. <span style="opacity:40%;">(Remember: quotient -> product -> power)</span></p>
 					<p style="margin-bottom: 0;">\( ln \left( \dfrac{ (x+1)^4 }{e} \right) \)</p>
 					<div class="blue">
-						<p class="fragment">\( = ln \left( (x+1)^4 \right) - ln \left( e \right) \) by quotient rule</p>
+						<p class="fragment">\( = ln \big( (x+1)^4 \big) - ln \left( e \right) \) by quotient rule</p>
 						<p class="fragment">\( = 4ln \left( x+1 \right) - ln \left( e \right) \) by power rule</p>
 						<p class="fragment" style="color:var(--warning)">we CANNOT distribute over addition!!</p>
 						<p class="fragment">\( = 4ln \left( x+1 \right) - 1 \) by property of log</p>
@@ -153,14 +168,18 @@
 					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>expand</b> the logarithm as a sum, difference, and/or multiple of logarithms. <span style="opacity:40%;">(Remember: quotient -> product -> power)</span></p>
 					<p style="margin-bottom: 0;">\( \log \left( \dfrac{\sqrt[3]{x^2-6} }{x^7(x-2)^5} \right) \)</p>
 					<div class="blue">
-						<p class="fragment">\( = \log \left( \sqrt[3]{x^2-6} \right) - \log \left( x^7(x-2)^5 \right) \) by quotient rule</p>
-						<p class="fragment">\( = \log \left( \sqrt[3]{x^2-6} \right) - \big( \log ( x^7 ) + \log \left( (x-2)^5 \right) \big) \) by product rule</p>
+						<p class="fragment">\( = \log \left( \sqrt[3]{x^2-6} \right) - \log \big( x^7(x-2)^5 \big) \) by quotient rule</p>
+						<p class="fragment">\( = \log \left( \sqrt[3]{x^2-6} \right) - \Big( \log ( x^7 ) + \log \big( (x-2)^5 \big) \Big) \) by product rule</p>
 						<p class="fragment">\( = \frac{1}{3} \log \left( {x^2-6} \right) - 7\log ( x ) - 5 \log \left(x-2 \right) \) by power rule</p>
 						<!-- <p class="fragment">\( = 4ln \left( x+1 \right) - 1 \) by property of log</p> -->
 					</div>
 				</div></section>
 
 <!-- CONDENSING ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Condensing</h2>
+				</div></section>
 
 				<section><div class="bodySlide">
 					<h2>Condensing Logarithms</h2>
@@ -170,7 +189,7 @@
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>133</div><div>Example 5</div></div>
-					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: quotient -> product -> power)</span></p>
+					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: power -> product -> quotient)</span></p>
 					<p style="margin-bottom: 0;">\(2 ln(x) - ln(13) \)</p>
 					<div class="blue">
 						<p class="fragment">\( = ln(x^2) - ln(13) \) by power rule</p>
@@ -180,7 +199,7 @@
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>134</div><div>Example 6</div></div>
-					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: quotient -> product -> power)</span></p>
+					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: power -> product -> quotient)</span></p>
 					<p style="margin-bottom: 0;">\( \log (x-5) + 4\log (x+7) - \frac{1}{2}\log(x) \)</p>
 					<div class="blue">
 						<p class="fragment">\( = \log (x-5) + \log \big( (x+7)^4 \big) - \log(x^{1/2}) \) by power rule</p>
@@ -192,7 +211,7 @@
 				
 				<section><div class="bodySlide">
 					<div class="workbook"><div>134</div><div>Example 7</div></div>
-					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: quotient -> product -> power)</span></p>
+					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: power -> product -> quotient)</span></p>
 					<p style="margin-bottom: 0;">\( \log_2(x) - \log_2(y) - \log_2(z) \)</p>
 					<div class="blue">
 						<p class="fragment">\( = \log_2 \left( \dfrac{x}{y} \right) - \log_2(z) \) by quotient rule</p>
@@ -201,7 +220,7 @@
 				</div></section>
 				<section><div class="bodySlide">
 					<div class="workbook"><div>134</div><div>Example 7</div></div>
-					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: quotient -> product -> power)</span></p>
+					<p style="max-width: 44ch; margin-bottom: var(--space);">Fully <b>condense</b> the logarithms into a single logarithm. <span style="opacity:40%;">(Remember: power -> product -> quotient)</span></p>
 					<p style="margin-bottom: var(--space);">\( \log_2(x) - \log_2(y) - \log_2(z) \)</p>
 					<div class="blue">
 						<p>Another way to think about it:</p>

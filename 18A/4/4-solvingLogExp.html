@@ -37,25 +37,28 @@
 					
 					<div class="problem long withNum">
 						<div>1</div>
-						<p><b>Expand</b> \( \log\left( \dfrac{(x-1)^2}{3x} \right)\) as much as possible.</p>
-						<p class="fragment">The horizontal line test checks if a function is <b>one-to-one</b>, which is a required property for a function to be invertible</p>
+						<p style="margin-top: calc(var(--space) * -1);"><b>Expand</b> \( \log\left( \dfrac{(x+7)^3}{100} \right)\) as much as possible.</p>
+						<p class="fragment">\( =\log\big( (x+7)^3 \big)- \log\left( 10^2 \right) \) <span class="fragment"> \(=\) &nbsp;<span class="finalAnswer"> \( 3\log\left(x+7\right)- 2\)</span></span></p>
 					</div>
 					<div class="problem long withNum">
 						<div>2</div>
-						<p>?</p>
-						<p class="fragment">??</p>
+						<p><b>Condense</b> \( 5 ln(x)+ln(3-x)+1\) as much as possible.</p>
+						<div>
+							<p class="fragment">\( = ln(x^5)+ln(3-x)+1 \) <span class="fragment"> \(= ln\big(x^5(3-x)\big)+1 \)</span></p>
+							<p class="fragment">\( = ln\big(x^5(3-x)\big)+ln(e) \) <span class="fragment"> \(=\) &nbsp;<span class="finalAnswer"> \( ln\big(x^5(3-x)e\big) \)</span></span></p>
+						</div>
 					</div>
 				</div></section>
 
 				<section data-background="var(--primary)"><div class="titleSlide">
-					<h4>Thursday, November 5, 2026</h4>
-					<h1><span>4.3</span> Properties of Log</h1>
+					<h4>Tuesday, November 25, 2026</h4>
+					<h1><span>4.4</span> Solving Log <i>&</i> Exponential Equations</h1>
 					<div class="stickerBox"><div class="miniSticker"><span>Starting on</span>Pg. 135</div></div>
 				</div></section>
 
 <!-- START ------------------------------------------------------------------------------------------------------>
 
-				<section><div class="bodySlide">
+				<!-- <section><div class="bodySlide">
 					<h2>Recall</h2>
 					<div class="col2">
 							<div>
@@ -72,6 +75,24 @@
 								<p class="blue fragment">\( (f^{-1}\circ f) (x) =  \log_b(b^x) = x \)</p>
 							</div>
 					</div>
+				</div></section> -->
+				<section data-transition="slide-in fade-out"><div class="callout">
+					<h2>Recall</h2>
+					<p>Inverses <b>cancel</b> each other out.</p>
+					<p>\( {\color{#d10808}(f\circ f^{-1}) ({\color{#111111}x})} = x \)</p>
+					<p>\( {\color{#d10808}(f^{-1}\circ f) ({\color{#111111}x})} = x \)</p>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="callout">
+					<h2>Recall</h2>
+					<p>Exponentials and logs are inverses (by definition), so they <b>cancel</b> each other out.</p>
+					<p>\( {\color{#d10808}b^{\log_b({\color{#111111}x})} } = x \)</p>
+					<p>\( {\color{#d10808}\log_b(b^{\color{#111111}x}) } = x \)</p>
+				</div></section>
+
+<!-- IN LOG ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>When \(x\) is in a Logarithm</h2>
 				</div></section>
 
 				<section><div class="bodySlide">
@@ -79,7 +100,7 @@
 					<div class="definitionText">
 						<p><b>exponentiating</b> is when both sides of the equation <span>become the exponents</span> on the same base \(b\)</p>
 						<h6>Useful for cancelling logarithms!!</h6>
-						<div class="exampleBox"><p>\(x=y \phantom{"} \longleftrightarrow \phantom{"} b^x = b^y \)</p></div>
+						<div class="exampleBox"><p>\(x=y\) &nbsp; -> &nbsp; \( b^x = b^y \)</p></div>
 					</div>
 				</div></section>
 				
@@ -87,8 +108,8 @@
 					<h2>Solving for \(x\) Trapped in a Logarithm</h2>
 					<ol>
 						<li><p><b>Condense</b> into single log, if needed.</p></li>
-						<li><p><b>Isolate</b> single on one side if, needed.</p></li>
-						<li><p><b>Exponentiate</b> both sides (using the SAME BASE as the logarithm) to cancel.</p></li>
+						<li><p><b>Isolate</b> single log on one side if, needed.</p></li>
+						<li><p style="max-width: 36ch;"><b>Exponentiate</b> both sides (using the SAME BASE as the logarithm) to cancel.</p></li>
 						<li><p><b>Solve</b> for \(x\) as usual.</p></li>
 						<li><p><b>Check</b> your answer in the original. (Extraneous solutions!!)</p></li>
 					</ol>
@@ -298,6 +319,194 @@
 						</div>
 					</div>
 				</div></section>
+
+<!-- IN EXPONENTIALS ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>When \(x\) is in an Exponents</h2>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="definition">Rules for Logarithms (Review from 4.3)</div>
+					<div class="definitionText">
+						<h5 class="blue" style="margin-bottom: 0.65rem;">Power Rule &nbsp;&nbsp; <span class="nobg" style="font-weight: 400;">power -> multiple</span></h5>
+						<p>\( \log_b(A^B) = B\log_b(A) \)</p>
+					</div>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<h2>Solving for \(x\) Trapped in an Exponent</h2>
+					<ol>
+						<li><p><b>Condense</b> into single exponential, if needed.</p></li>
+						<li><p><b>Isolate</b> single exponential on one side if, needed.</p></li>
+						<li><p style="max-width: 40ch;"><b>Take natural log</b> of both sides. (Natural log is easier to put into calculators!) *</p></li>
+						<li><p style="max-width: 32ch;">Apply the <b>power rule</b> to take out the exponent with \(x\). Use parentheses to be safe!!</p></li>
+						<li><p>Finish solving for \(x\) as usual.</p></li>
+						<!-- <li><p><b>Check</b> your answer in the original. (Extraneous solutions!!)</p></li> -->
+					</ol>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<h2>Solving for \(x\) Trapped in an Exponent on Base \(e\)</h2>
+					<p>Natural log and natural base just <b>cancel</b>!</p>
+					<div style="margin-top: -5rem;">
+						$$ e^{(...)} = \#$$
+					</div>
+					<div class="fragment blue" style="margin-top: -6rem; margin-bottom: -6rem;">
+						$$ ln \left( {\color{#111111}e^{(...)}} \right) = ln({\color{#111111}\#})$$
+					</div>
+					<div class="fragment" style="margin-bottom: -3rem;">
+						$$(...) = ln(\#)$$
+					</div>
+					<p class="fragment" style="max-width: 43ch;">Remember, \( ln(\#) \) is just a number! Plug it into your calculator to get your final answer.</p>
+				</div></section>
+				
+				<section><div class="bodySlide">
+					<h2>Solving for \(x\) Trapped in an Exponent on Base \(10\)</h2>
+					<p>Common log and base 10 just <b>cancel</b>!</p>
+					<div style="margin-top: -5rem;">
+						$$ 10^{(...)} = \#$$
+					</div>
+					<div class="fragment blue" style="margin-top: -6rem; margin-bottom: -6rem;">
+						$$ \log \left( {\color{#111111}10^{(...)}} \right) = \log({\color{#111111}\#})$$
+					</div>
+					<div class="fragment" style="margin-bottom: -3rem;">
+						$$(...) = \log(\#)$$
+					</div>
+					<p class="fragment" style="max-width: 43ch;">Remember, \( \log(\#) \) is just a number! Plug it into your calculator to get your final answer.</p>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>139</div><div>Example 4</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( 5^{x-7}=25 \) for \(x\).</p>
+					<div class="row top">
+						<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+							<p class="fragment">Take natural log</p>
+							<p class="fragment">\( ln(5^{x-7}) = ln(25)\)</p>
+							<p class="fragment">Power rule</p>
+							<p class="fragment">\( (x-7) \cdot ln(5) = ln(25)\)</p>
+							<p class="fragment" style="margin-bottom:0;">Solve</p>
+							<div>
+								<p class="fragment">\( (x-7) = \dfrac{ln(25)}{ln(5)}\)</p>
+								<p class="fragment">\( x = \dfrac{ln(25)}{ln(5)} + 7 \)</p>
+								<p class="fragment finalAnswer">\( x = 9 \)</p>
+							</div>
+						</div>
+					</div>
+				</div></section>
+
+				<section><div class="bodySlide">
+					<div class="workbook"><div>139</div><div>Example 5</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( 7^{x}=31 \) for \(x\), rounded to 4 decimal places.</p>
+					<div class="row top">
+						<div class="blue" style="display: grid; grid-template-columns: auto 1fr; column-gap: var(--spaceLargest);">
+							<p class="fragment">Take natural log</p>
+							<p class="fragment">\( ln(7^{x}) = ln(31)\)</p>
+							<p class="fragment">Power rule</p>
+							<p class="fragment">\( x \cdot ln(7) = ln(31)\)</p>
+							<p class="fragment" style="margin-bottom:0;">Solve</p>
+							<div>
+								<p class="fragment">\( x = \dfrac{ln(31)}{ln(7)}\)</p>
+								<p class="fragment finalAnswer">\( x \approx  1.7647 \)</p>
+							</div>
+						</div>
+					</div>
+					<p class="fragment" style="max-width: 44ch;"><b>TIP</b>: You can wait until the very end to plug into your calculator, OR use the “ANS” button to store the decimals, then you can avoid rounding errors!</p>
+				</div></section>
+
+<!-- MISTAKES ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Finding Mistakes</h2>
+				</div></section>
+
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="workbook"><div>140</div><div>Example 6</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( 2^{3x+4}=5 \) for \(x\), rounded to 4 decimal places.</p>
+					<div class="row top">
+						<div style="display: grid; grid-template-columns: 1fr; row-gap: var(--space);">
+							<p>\( ln(2^{3x+4}) = ln(5)\)</p>
+							<p>\( 3x \cancel{+4ln(2)} = ln(5)\\ \phantom{3x} \cancel{- 4ln(2)} \phantom{=} -4ln(2)\)</p>
+							<p>\( \dfrac{\cancel{3}x}{\cancel{3}} = \dfrac{ln(5) -4ln(2)}{3}\)</p>
+							<p>\( x\approx -0.3877\)</p>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade"><div class="bodySlide">
+					<div class="workbook"><div>140</div><div>Example 6</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( 2^{3x+4}=5 \) for \(x\), rounded to 4 decimal places.</p>
+					<div class="row top">
+						<div style="display: grid; grid-template-columns: 1fr; row-gap: var(--space);">
+							<p>\( ln(2^{3x+4}) = ln(5)\)</p>
+							<p>\( {\color{#d10808}3x} \cancel{{\color{#d10808}+4}ln(2)} = ln(5)\\ \phantom{3x} \cancel{- 4ln(2)} \phantom{=} -4ln(2)\)</p>
+							<p>\( \dfrac{\cancel{3}x}{\cancel{3}} = \dfrac{ln(5) -4ln(2)}{3}\)</p>
+							<p>\( x\approx -0.3877\)</p>
+						</div>
+						<div class="blue" style="padding-left: 4rem;">
+							<p><b>Mistake: forgot parenthesis</b></p>
+							<p style="max-width: 24ch;">Note: plugging the answer in to the calculator to check would’ve caught this mistake!!</p>
+						</div>
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="workbook"><div>140</div><div>Example 6</div></div>
+					<p style="margin-bottom: var(--space);"><b>Solve</b> \( 2^{3x+4}=5 \) for \(x\), rounded to 4 decimal places.</p>
+					<div class="row top">
+						<div style="display: grid; grid-template-columns: 1fr; row-gap: var(--space);">
+							<p>\( ln(2^{3x+4}) = ln(5)\)</p>
+							<p>\( {\color{#d10808}3x} \cancel{{\color{#d10808}+4}ln(2)} = ln(5)\\ \phantom{3x} \cancel{- 4ln(2)} \phantom{=} -4ln(2)\)</p>
+							<p>\( \dfrac{\cancel{3}x}{\cancel{3}} = \dfrac{ln(5) -4ln(2)}{3}\)</p>
+							<p>\( x\approx -0.3877\)</p>
+						</div>
+						<div class="blue" style="padding-left: 4rem;">
+							<!-- <p>\( ln(2^{3x+4}) = ln(5)\)</p> -->
+							<p>\( (3x +4) \cdot ln(2) = ln(5) \)</p>
+							<p class="fragment">\( (3x +4) = \dfrac{ln(5)}{ln(2)} \)</p>
+							<p class="fragment">\( 3x = \dfrac{ln(5)}{ln(2)} - 4 \)</p>
+							<p class="fragment">\( x = \left( \dfrac{ln(5)}{ln(2)} - 4 \right)/3 \)</p>
+							<p class="fragment finalAnswer">\( x\approx -0.5594\)</p>
+						</div>
+					</div>
+				</div></section>
+
+<!-- MISTAKES ------------------------------------------------------------------------------------------------------>
+
+				<section data-background="rgb(var(--accent))"><div class="cover">
+					<h2>Word Problem</h2>
+				</div></section>
+
+				<section data-transition="slide-in fade-out"><div class="bodySlide">
+					<div class="workbook"><div>141</div><div>Example 7</div></div>
+					<p style="margin-bottom: var(--space);">...The year began with 1,275 players, and \(t\) days after the beginning of the year there were \(P(t) = 1275e^{0.05t}\) players. How many days after the beginning of the year did the number of players reach 200,000?</p>
+					<div class="blue">
+						<p class="fragment">\( P(t) = 200000\) <b><-</b> here, 200,000 is the OUTPUT! so find the input \(t\)</p>
+						<p class="fragment">\( 1275 e ^{0.05t} = 200000\)</p>
+						<p class="fragment">\( e ^{0.05t} = 200000/1275\)</p>
+						<p class="fragment">\( ln \left(e ^{0.05t} \right) = ln(200000/1275) \)</p>
+						<p class="fragment">\( (0.05t) \cdot ln \left(e \right) = ln(200000/1275) \)</p>
+					</div>
+				</div></section>
+				<section data-transition="fade-in slide-out"><div class="bodySlide">
+					<div class="workbook"><div>141</div><div>Example 7</div></div>
+					<p style="margin-bottom: var(--space);">...The year began with 1,275 players, and \(t\) days after the beginning of the year there were \(P(t) = 1275e^{0.05t}\) players. How many days after the beginning of the year did the number of players reach 200,000?</p>
+					<div class="blue">
+						<p>\( P(t) = 200000\) <b><-</b> here, 200,000 is the OUTPUT! so find the input \(t\)</p>
+						<p>\( 1275 e ^{0.05t} = 200000\)</p>
+						<p>\( e ^{0.05t} = 200000/1275\)</p>
+						<p>\( ln \left(e ^{0.05t} \right) = ln(200000/1275) \)</p>
+						<p style="margin-top: -0.35rem; margin-bottom: 1rem;">\( (0.05t) \cdot \cancel{ln \left(e \right)} = ln(200000/1275) \)</p>
+						<p class="fragment">\( t = ln(200000/1275) \phantom{.} / \phantom{.} 0.05 \)&nbsp; <span class="fragment">\( = 101.11\) -> &nbsp;<span class="finalAnswer">approx. 101.11 days</span></span></p>
+					</div>
+				</div></section>
+				<section><div class="bodySlide">
+					<div class="workbook"><div>141</div><div>Example 7</div></div>
+					<p style="opacity: 35%; margin-bottom: var(--space);">...The year began with 1,275 players, and \(t\) days after the beginning of the year there were \(P(t) = 1275e^{0.05t}\) players. How many days after the beginning of the year did the number of players reach 200,000?</p>
+					<p>Why did we not use one of the values in the problem text (“the year began with 1,275 players”)?</p>
+					<div class="blue fragment">
+						<p>It was <b>already built into the equation</b> for us.</p>
+						<p>If we had to set up the equation ourselves (see the Appendix about <b>compound interest problems</b>), then we would have had to put the initial value in... But because it was given to us, we don’t need to repeat it anywhere else!</p>
+					</div>
+				</div></section>
 				
 
 <!-- FIXED ELEMENTS ------------------------------------------------------------------------------------------------------>
@@ -305,6 +514,7 @@
 					<h2>See you next class!</h2>
 					<h5>Your to-do’s:</h5>
 					<p>-> 4.4 homework</p>
+					<p>-> FINALS review topic requests!! (in Canvas)</p>
 				</div></section>
 			</div>
 		</div>
